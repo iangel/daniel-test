@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>UAT__c</fullName>
+    <defaultValue>0</defaultValue>
+    <description>Number of days estimated to complete UAT.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Number of days estimated to complete UAT.</inlineHelpText>
+    <label>UAT</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

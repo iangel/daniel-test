@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>MustDescribeOther</fullName>
+    <active>true</active>
+    <description>User must enter a description of &quot;Other&quot; if it is selected from the MS-Picklist field &#39;Category&#39;</description>
+    <errorConditionFormula>AND(INCLUDES(Category__c, &quot;Other&quot;),
+ISBLANK(Other_Description__c))</errorConditionFormula>
+    <errorDisplayField>Other_Description__c</errorDisplayField>
+    <errorMessage>You must enter a description in this field if &#39;Other&#39; is one of your selections for the category.</errorMessage>
+</ValidationRule>

@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk</fullName>
+    <active>true</active>
+    <description>Create/Update any risks with the project.</description>
+    <label>Risk</label>
+    <picklistValues>
+        <picklist>Category__c</picklist>
+        <values>
+            <fullName>Budget</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resources</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scope</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Solution</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Issue__c</picklist>
+        <values>
+            <fullName>Issue</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Risk</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Likelihood__c</picklist>
+        <values>
+            <fullName>10%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>25%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>50%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>75%25</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>90%25</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Related_Workstream__c</picklist>
+        <values>
+            <fullName>Account Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Migration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deployment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Overall Project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Risk__c</picklist>
+        <values>
+            <fullName>Executive Steering Committee</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Leadership Team</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Project Team</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Severity_Level__c</picklist>
+        <values>
+            <fullName>1 - Very Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>2 - Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>3 - Moderate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>4 - High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>5 - Critical</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

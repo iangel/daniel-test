@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Systems that get impacted due to this requirement. --></help>
+    <label><!-- Systems Impacted --></label>
+    <name>System_Impacted__c</name>
+    <picklistValues>
+        <masterLabel>Business Objects</masterLabel>
+        <translation><!-- Business Objects --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Master Database (CMD)</masterLabel>
+        <translation><!-- Customer Master Database (CMD) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enterprise Data Warehouse (EDW)</masterLabel>
+        <translation><!-- Enterprise Data Warehouse (EDW) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Systems Impacted</masterLabel>
+        <translation><!-- No Systems Impacted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outlook</masterLabel>
+        <translation><!-- Outlook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STARS</masterLabel>
+        <translation><!-- STARS --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

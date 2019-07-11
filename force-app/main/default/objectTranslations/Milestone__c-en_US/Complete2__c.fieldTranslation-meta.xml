@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- % Complete --></label>
+    <name>Complete2__c</name>
+    <picklistValues>
+        <masterLabel>0</masterLabel>
+        <translation><!-- 0 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>100</masterLabel>
+        <translation><!-- 100 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>25</masterLabel>
+        <translation><!-- 25 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>50</masterLabel>
+        <translation><!-- 50 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>75</masterLabel>
+        <translation><!-- 75 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>90</masterLabel>
+        <translation><!-- 90 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

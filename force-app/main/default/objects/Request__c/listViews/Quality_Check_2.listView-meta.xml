@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Quality_Check_2</fullName>
+    <columns>NAME</columns>
+    <columns>Request_Description__c</columns>
+    <columns>Requirement__c</columns>
+    <columns>Capability__c</columns>
+    <columns>Legacy_Capability__c</columns>
+    <columns>Mapping__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Non_functional__c</field>
+        <operation>equals</operation>
+        <value>1</value>
+    </filters>
+    <label>Quality Check_2</label>
+</ListView>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_CheckContactFromSameAccount</fullName>
+    <active>true</active>
+    <description>It checks if the Primary Contact selected by the user is associated to the selected Authorized Company.</description>
+    <errorConditionFormula>AND( NOT(ISBLANK( NS_PrimaryPartnerContact__c )), NS_PrimaryPartnerContact__r.AccountId  &lt;&gt;  NS_PartnerAccount__r.Id)</errorConditionFormula>
+    <errorMessage>Please select a Primary Contact who is associated to the selected Authorized Company</errorMessage>
+</ValidationRule>

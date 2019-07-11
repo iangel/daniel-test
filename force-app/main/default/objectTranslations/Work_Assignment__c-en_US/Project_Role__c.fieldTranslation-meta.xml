@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Project Role --></label>
+    <name>Project_Role__c</name>
+    <picklistValues>
+        <masterLabel>Business Analyst</masterLabel>
+        <translation><!-- Business Analyst --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Configuration Resource</masterLabel>
+        <translation><!-- Configuration Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Architect</masterLabel>
+        <translation><!-- Data Architect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Migration Resource</masterLabel>
+        <translation><!-- Data Migration Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Development Lead</masterLabel>
+        <translation><!-- Development Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Development Resource</masterLabel>
+        <translation><!-- Development Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integration Resource</masterLabel>
+        <translation><!-- Integration Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Program Manager</masterLabel>
+        <translation><!-- Program Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Manager</masterLabel>
+        <translation><!-- Project Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QA/Testing Lead</masterLabel>
+        <translation><!-- QA/Testing Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QA/Testing Resource</masterLabel>
+        <translation><!-- QA/Testing Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release Analyst</masterLabel>
+        <translation><!-- Release Analyst --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release Manager</masterLabel>
+        <translation><!-- Release Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Solution Architect</masterLabel>
+        <translation><!-- Solution Architect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Solution Lead</masterLabel>
+        <translation><!-- Solution Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical Architect</masterLabel>
+        <translation><!-- Technical Architect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical Lead</masterLabel>
+        <translation><!-- Technical Lead --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select a Region when Role is &apos;OSS Region&apos; --></help>
+    <label><!-- Assigned To Region --></label>
+    <name>NS_AssignedToRegion__c</name>
+    <picklistValues>
+        <masterLabel>Northern Region East  </masterLabel>
+        <translation><!-- Northern Region East   --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Northern Region West  </masterLabel>
+        <translation><!-- Northern Region West   --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Offline</masterLabel>
+        <translation><!-- Offline --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Southern Region East  </masterLabel>
+        <translation><!-- Southern Region East   --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Southern Region West</masterLabel>
+        <translation><!-- Southern Region West --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

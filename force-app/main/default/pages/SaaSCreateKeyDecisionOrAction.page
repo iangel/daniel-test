@@ -1,0 +1,149 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" extensions="SaaSCreateKeyDecisionOrActionCtrl" standardController="Key_Action_Decision__c" docType="html-5.0">
+    <style>
+    #top-panel {
+  line-height: 0px !important;
+        }
+    </style>
+    <c:SaaSToolkitPageTemplate >
+    <br/>
+       
+        <apex:form >
+        <apex:outputPanel id="errorBlock">
+      <c:CustomPageMessages closableErrors="true"></c:CustomPageMessages>
+      </apex:outputPanel>    
+      <div>      
+            <h4 style="float: left;font-size: 16px;margin: 15px 0px 0px;">New Key Action/Decision</h4>&nbsp;
+              <apex:commandLink action="{!saveKeyDecision}"  title="Save">
+                  <!--<i class="fa fa-check-circle fa-2x"></i> -->
+                  <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/save.png')}"/>
+              </apex:commandLink>  
+               <apex:commandLink action="{!createActionOrDecision}"  immediate="true"  REndered="{!isDETAIL}" title="New Key Action/Decision"> &nbsp; 
+                   <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>
+                
+                
+                </apex:commandLink>  &nbsp;
+               <apex:commandLink action="/apex/SaaSKeyActionOrDecisionListView" immediate="true" title="Cancel" rendered="{!NOT(isSaved)}" id="cancel">
+               <!--   <i class="fa fa-times-circle fa-2x"></i> -->
+                   <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/cancel.png')}"/>
+               </apex:commandLink>  
+               
+                <apex:commandLink action="/apex/SaaSKeyActionOrDecisionListView" reRender="errorBlock" immediate="true" rendered="{!isSaved}" id="back">
+               <!--   <i class="fa fa-times-circle fa-2x"></i> -->
+                          <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/back_1x.png')}"/>
+               </apex:commandLink>  
+               
+               </div>
+     <hr style="width: 100%; border-color: black;" />
+     
+     
+     
+     
+     
+     
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">      
+                    <div class="col-md-12">                 
+                       <h5 Style="font-weight: bold;" >Key Action/Decision Summary</h5>
+                        <hr class="hrBorder"/>
+                    </div>
+                    </div>
+                    
+                    <div class="row">
+        <div class="col-md-12">
+            <div class="form-group required">
+              <label class='control-label'>Record Type</label>
+            <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-html="true" title="Toolkit Mobile App" data-content="<b>Action Item</b>-Used to document Action Items that need to be completed by resources on the Program/Project. <br/><b>Key Decision</b>- Used to track Key Decisions that impact the Program/Project.">       <i class="fa fa-question-circle" style="color:orange"></i></a>
+             <apex:selectList value="{!actionOrDecisionType}" style="width:100%"  styleClass="form-control" size="1" multiselect="false" disabled="{!disableRecType}" id="recordType">  
+                   <apex:selectOptions value="{!RecordType}" ></apex:selectOptions>
+                   <apex:actionSupport event="onchange" action="{!disbaleRecordType}" reRender="detailBlk,recordType"/>
+             </apex:selectList>
+            </div>
+         </div>                    
+          </div>          
+<apex:outputPanel id="detailBlk">
+           <apex:outputPanel rendered="{!actionOrDecisionType != ''}">
+               <div class="row">
+     <!--   <div class="col-md-4">
+            <div class="form-group required">
+                <label class='control-label'>Record Type</label>   
+                <apex:selectList value="{!Key_Action_Decision__c.RecordTypeid}" style="width:100%" styleClass="form-control" size="1" multiselect="false"> 
+                <apex:selectOptions value="{!Recordtype}"/></apex:selectList>
+            </div>
+        </div> -->
+         <div class="col-md-4">
+            <div class="form-group required">
+                <label class='control-label'>Key Action/Decision Name</label>
+                <apex:inputField value="{!keyDecisionObj.Name}" style="width:100%;" styleClass="form-control"/>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group required">
+                <label class='control-label'>Status</label>
+                <apex:inputField value="{!keyDecisionObj.Status__c}" style="width:100%;" styleClass="form-control"/>
+            </div>
+        </div>
+          <div class="col-md-4">
+            <div class="form-group required">
+                <label class='control-label'>Priority</label>   
+                <apex:inputField value="{!keyDecisionObj.Priority__c}" styleClass="form-control"/> 
+            </div>
+        </div>
+    </div>
+    <div class="row">
+      
+        <div class="col-md-4">
+            <div class="form-group required">
+                <label class='control-label'>Due Date</label>
+                <apex:input value="{!dueDate}" style="width:100%;" styleClass="form-control" type="date" />
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="form-group required">
+                <label class='control-label'>Release</label>   
+                 <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="Release__c" valueField="Id" targetField="{!keyDecisionObj.Related_Release__c}" style="width:100%;" />
+                  
+            </div>
+        </div>
+        
+     </div>
+     
+     
+
+     <div class="row">
+        <div class="col-md-6">
+            <div class="form-group required">
+              <label class='control-label'>Description</label>
+              <apex:inputField value="{!keyDecisionObj.Description__c}" style="width:100%"  styleClass="form-control" />  
+            </div>
+         </div>
+         <div class="col-md-6">
+            <div class="form-group">
+                <label>Decision/Outcome</label>
+                <apex:inputField value="{!keyDecisionObj.Decision_Outcome__c}" style="width:100%"  styleClass="form-control"/>
+            </div>
+        </div>
+     </div>
+     <apex:outputPanel rendered="{!actionOrDecisionType == 'Key_Decision'}">
+         <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+              <label class='control-label'>Options</label>
+              <apex:inputField value="{!keyDecisionObj.Options__c}" style="width:100%"  styleClass="form-control" />  
+            </div>
+         </div>
+     </div>
+     
+     
+     </apex:outputPanel>    
+         </apex:outputPanel>
+ </apex:outputPanel>
+<!--    <apex:inputhidden value="{!Key_Action_Decision__c.RecordType.DeveloperName }" /> -->
+
+
+
+                 </div>   
+             </div>    
+        </apex:form>  
+    </c:SaaSToolkitPageTemplate>
+</apex:page>

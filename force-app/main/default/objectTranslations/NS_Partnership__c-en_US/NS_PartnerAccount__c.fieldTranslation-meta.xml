@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Who is the Partner (3PL, Contractor, Vendor, etc) that this Customer is related to? --></help>
+    <label><!-- Authorized Company --></label>
+    <lookupFilter>
+        <errorMessage><!-- Partner Account can only be of Type 3PL,Other Companies or Other Railroad --></errorMessage>
+    </lookupFilter>
+    <name>NS_PartnerAccount__c</name>
+    <relationshipLabel><!-- Authorized Customers --></relationshipLabel>
+</CustomFieldTranslation>

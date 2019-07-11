@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RICEFW_Inventory_Name__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalId>false</externalId>
+    <inlineHelpText>Choose a RICEFW Inventory record to fill the gap. You may need to create a RICEFW Inventory record if the applicable one does not yet exist.</inlineHelpText>
+    <label>RICEFW Inventory Name</label>
+    <referenceTo>RICEFW_Inventory__c</referenceTo>
+    <relationshipLabel>Requirements</relationshipLabel>
+    <relationshipName>Requirements</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

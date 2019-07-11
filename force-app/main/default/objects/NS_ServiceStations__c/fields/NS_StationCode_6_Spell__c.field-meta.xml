@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_StationCode_6_Spell__c</fullName>
+    <caseSensitive>true</caseSensitive>
+    <description>Station code 6 spell</description>
+    <externalId>true</externalId>
+    <label>Station Code 6 Spell</label>
+    <length>6</length>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>true</unique>
+</CustomField>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Relation Type --></label>
+    <name>NS_RelationType__c</name>
+    <picklistValues>
+        <masterLabel>Autoramp</masterLabel>
+        <translation><!-- Autoramp --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dock</masterLabel>
+        <translation><!-- Dock --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Warehouse</masterLabel>
+        <translation><!-- Warehouse --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

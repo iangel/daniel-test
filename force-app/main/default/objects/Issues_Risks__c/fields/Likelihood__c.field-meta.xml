@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Likelihood__c</fullName>
+    <description>Likelihood of a Risk.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>10% - Highly unlikely to occur
+25% - Somewhat likely to occur
+50% - Strong chance to occur
+75% - Likely to occur
+90% - Most likely to occur</inlineHelpText>
+    <label>Likelihood</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>10%</fullName>
+                <default>false</default>
+                <label>10%</label>
+            </value>
+            <value>
+                <fullName>25%</fullName>
+                <default>false</default>
+                <label>25%</label>
+            </value>
+            <value>
+                <fullName>50%</fullName>
+                <default>false</default>
+                <label>50%</label>
+            </value>
+            <value>
+                <fullName>75%</fullName>
+                <default>false</default>
+                <label>75%</label>
+            </value>
+            <value>
+                <fullName>90%</fullName>
+                <default>false</default>
+                <label>90%</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

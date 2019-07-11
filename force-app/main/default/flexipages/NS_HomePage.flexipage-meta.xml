@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlexiPage xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Home Page for OSS Reps</description>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>enableInlineEdit</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>entityName</name>
+                <value>Case</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>filterName</name>
+                <value>NS_My_Assigned_To_Cases</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideActionBar</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>hideSearchBar</name>
+                <value>false</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>pageSize</name>
+                <value>20</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:filterListCard</componentName>
+        </componentInstances>
+        <name>top</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>bottomLeft</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <name>bottomRight</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <flexiPageRegions>
+        <componentInstances>
+            <componentName>NS_CaseReleaseComp</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+                <value>Health of the Queue - OSS North</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>NS_QueueHealthCurrentNRE</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS North</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS North Ops</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>Health_of_the_Queue_OSS_North_Ops_Xwy</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS North</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS North Ops</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+                <value>Health of the Queue - OSS West</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>NS_QueueHealthCurrentNRW</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS West</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS West Ops</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>Health_of_the_Queue_OSS_West_Ops_V3K</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS West</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS West Ops</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+                <value>Health of the Queue - OSS East</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>NS_QueueHealthCurrentSRE</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS East</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS East Ops</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>Health_of_the_Queue_OSS_East_Ops_7oR</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS East Ops</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS East</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>label</name>
+                <value>Health of the Queue - OSS South</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>NS_QueueHealthCurrentSRW</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS South</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS South Ops</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>cacheAge</name>
+                <value>1440</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>reportName</name>
+                <value>Health_of_the_Queue_OSS_South_Ops_juv</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>showRefreshButton</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:reportChart</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2</booleanFilter>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS South</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>OSS South Ops</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>decorate</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;div&gt;&lt;span style=&quot;font-family:trebuchet ms,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;&lt;b&gt;Helpful Links&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family:trebuchet ms,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;font-size:14px;&quot;&gt;&lt;a href=&quot;http://www.nscorp.com/mktgpublic/webservices/nscorp/3pl_listing.jsp&quot; target=&quot;_blank&quot;&gt;3PL Access Sheet&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://dept.nscorp.com/ops/ossportal/QRGs/Home.aspx&quot; target=&quot;_blank&quot;&gt;ConnectNS User Guides&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://dept.nscorp.com/ops/ossportal/OSSGenInst/Forms/AllItems.aspx?InitialTabId=Ribbon%2ELibrary&amp;amp;VisibilityContext=WSSListAndLibrary&quot; target=&quot;_blank&quot;&gt;General Instructions&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://opsdashboard.nscorp.com&quot; target=&quot;_blank&quot;&gt;Ops Dashboard&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://oss.nscorp.com&quot; target=&quot;_blank&quot;&gt;OSS SharePoint&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://dept.nscorp.com/ops/ossportal/POD1/Forms/AllItems.aspx?InitialTabId=Ribbon%2ELibrary&amp;amp;VisibilityContext=WSSListAndLibrary&quot; target=&quot;_blank&quot;&gt;Personnel on Duty&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www2.nscorp.com/utcslite/&quot; target=&quot;_blank&quot;&gt;UTCS&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://www.nscorp.com/mktgpublic/webservices/nscorp/3pl_listing.jsp&quot; target=&quot;_blank&quot;&gt;3rd Party Provider Status&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+        </componentInstances>
+        <componentInstances>
+            <componentInstanceProperties>
+                <name>decorate</name>
+                <value>true</value>
+            </componentInstanceProperties>
+            <componentInstanceProperties>
+                <name>richTextValue</name>
+                <value>&lt;div&gt;&lt;span style=&quot;font-family:trebuchet ms,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;font-size:16px;&quot;&gt;&lt;b&gt;LSS Quick Links&lt;/b&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family:trebuchet ms,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;font-size:14px;&quot;&gt;&lt;a href=&quot;https://dept.nscorp.com/ops/mwp/mdc/Car%20General%20Documents/OTLwelcome.pdf&quot; target=&quot;_blank&quot;&gt;Car General Documents&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://www.aar.com/standards/damage-publications.php&quot; target=&quot;_blank&quot;&gt;Damage Publication Standards&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://www.aar.com/standards/pdfs/Intermodal%20Loading%20Guide%20January%202016.pdf&quot; target=&quot;_blank&quot;&gt;Intermodal Loading Guide Standards&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://sirs.nscorp.com/WebPages/Login.aspx?returnUrl=%2fWebPages%2fWelcome.aspx&quot; target=&quot;_blank&quot;&gt;SIRS&lt;/a&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;i&gt;Hump Links:&lt;/i&gt;&lt;br /&gt;
+&lt;a href=&quot;http://10.36.228.53:8080/TyTReporter/&quot; target=&quot;_blank&quot;&gt;Allentown&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://10.9.134.138:8080/TyTReporter/&quot; target=&quot;_blank&quot;&gt;Bellevue&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://10.5.206.89:8080/TyTReporter/&quot; target=&quot;_blank&quot;&gt;Brosnan&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family:trebuchet ms,helvetica,sans-serif;&quot;&gt;&lt;a href=&quot;http://10.6.57.146:8080/TyTReporter/&quot; target=&quot;_blank&quot;&gt;&lt;span style=&quot;font-size:14px;&quot;&gt;Debutts&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family:trebuchet ms,helvetica,sans-serif;&quot;&gt;&lt;span style=&quot;font-size:14px;&quot;&gt;&lt;a href=&quot;http://10.26.73.58:8080/TyTReporter/&quot; target=&quot;_blank&quot;&gt;Elkhart&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://10.38.57.69:8080/TyTReporter/&quot; target=&quot;_blank&quot;&gt;Norris&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;http://10.23.60.59:8080/TyTReporter/&quot; target=&quot;_blank&quot;&gt;Roanoke&lt;/a&gt;&lt;/span&gt;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family:trebuchet ms,helvetica,sans-serif;&quot;&gt;&lt;a href=&quot;http://10.38.30.63:8080/TyTReporter/&quot; target=&quot;_blank&quot;&gt;&lt;span style=&quot;font-size:14px;&quot;&gt;Sheffield&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;
+
+&lt;div style=&quot;text-align: center;&quot;&gt;&lt;span style=&quot;font-family:trebuchet ms,helvetica,sans-serif;&quot;&gt;&lt;a href=&quot;http://10.34.40.161:8080/TyTReporter/&quot; target=&quot;_blank&quot;&gt;&lt;span style=&quot;font-size:14px;&quot;&gt;Spencer&lt;/span&gt;&lt;/a&gt;&lt;/span&gt;&lt;/div&gt;</value>
+            </componentInstanceProperties>
+            <componentName>flexipage:richText</componentName>
+            <visibilityRule>
+                <booleanFilter>1 OR 2 OR 3</booleanFilter>
+                <criteria>
+                    <leftValue>{!$User.NS_Primary_Queue__c}</leftValue>
+                    <operator>EQUAL</operator>
+                    <rightValue>Loading &amp; Securement Solutions (LSS)</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.Profile.Name}</leftValue>
+                    <operator>CONTAINS</operator>
+                    <rightValue>OSS Support</rightValue>
+                </criteria>
+                <criteria>
+                    <leftValue>{!$User.Profile.Name}</leftValue>
+                    <operator>CONTAINS</operator>
+                    <rightValue>System Administrator</rightValue>
+                </criteria>
+            </visibilityRule>
+        </componentInstances>
+        <componentInstances>
+            <componentName>runtime_sales_activities:todayTaskContainer</componentName>
+        </componentInstances>
+        <name>sidebar</name>
+        <type>Region</type>
+    </flexiPageRegions>
+    <masterLabel>Home</masterLabel>
+    <template>
+        <name>home:desktopTemplate</name>
+    </template>
+    <type>HomePage</type>
+</FlexiPage>

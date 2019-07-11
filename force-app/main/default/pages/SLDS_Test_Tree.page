@@ -1,0 +1,566 @@
+<!--
+    @Author: Accenture
+    @Description: Updating Script execution status from Execution cycle level
+    @CreatedDate: 03/03/2017
+    @Version: <V.1.0>
+-->
+
+<apex:page standardController="Test_Execution_Cycle__c" extensions="VFC_EmployeeCycle_Releasee" sidebar="false">
+     <apex:stylesheet value="{!URLFOR($Resource.DEL_SLDS214, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- jQuery CDN Reference -->
+    
+    <style>
+        @media (max-width: 767px){
+   
+    [class*="span"], .uneditable-input[class*="span"], .row-fluid [class*="span"] {
+        float: left !important;
+        
+     }
+     }
+    
+    </style>
+    
+    <style>
+    
+        .spanClass{
+            font-weight: bold;
+            font-size: 34px;
+        }
+    
+        .treeSwitch{
+            color:#0070d2;
+            font-weight:bold;
+            float:left;
+            width:33%;
+        }
+        .selectedRow{
+           background-color: #237ed0;
+            color:white;
+            line-height: 20px;
+        
+        }
+        .selectedRow .treeSwitch{ 
+            color:white;
+        }
+        .slds .selectedRow a {
+            color: white;
+        }
+        .tree {
+            min-height: 20px;
+            padding: 19px;
+            margin-bottom: 20px;
+            background-color: #fbfbfb;
+            border: 0px solid #999;
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+            -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+            -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+            box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05)
+        }
+        
+        .tree li {
+            list-style-type: none;
+            margin: none;
+            padding: 10px 0px 0 0;
+            position: relative;
+        }
+
+        .tree li::before,
+        .tree li::after {
+            content: '';
+            left: -20px;
+            position: absolute;
+            right: auto;
+            backgound-color:white;
+        }
+
+        .tree li::before {
+            border-left: 1px solid #999;
+            bottom: 50px;
+            height: 100%;
+            top: 0;
+            width: 1px;
+        }
+
+     <!--   .tree li::after {
+            border-top: 1px solid #999;
+            height: 20px;
+            top: 25px;
+            width: 25px;
+        } -->
+
+        .tree li span {
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border: 3px solid #999;
+            border-radius: 5px;
+            display: inline-block;
+            padding: 3px 8px;
+            text-decoration: none;
+            border-color: white;
+            background-color:white;
+        } 
+
+        .tree li.parent_li>span {
+            cursor: pointer !important;
+        }
+
+        .tree>ul>li::before,
+        .tree>ul>li::after {
+            border: 0;
+             backgound-color:white;
+        }
+
+        .tree li:last-child::before {
+            height: 30px;
+        }
+
+        <!-- .tree li.parent_li>span:hover,
+        .tree li.parent_li>span:hover+ul li span {
+            background: #eee;
+            border: 0px solid #94a0b4;
+            color: #000;
+        }-->
+    </style> 
+  <apex:form id="frm">
+    
+           <div class="slds" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <div class="slds-page-header" role="banner">
+                  <div class="slds-grid">
+                    <div class="slds-col">
+                        <div class="slds-media">        
+                            <div class="slds-media__figure">
+                                <span class="slds-icon__container slds-icon__container--circle slds-icon-action-description">
+                                    <svg aria-hidden="true" class="slds-icon slds-icon--medium ">
+                                    <use xlink:href="{!URLFOR($Resource.DEL_SLDS214, '/assets/icons/action-sprite/svg/symbols.svg#new_custom43')}"></use>
+                                    </svg>              
+                                </span>
+                            </div>
+                            
+                            <div class="slds-media__body">
+                                <p class="slds-text-heading--label"> {!$Label.Delivery_TEC_Parent_Label}</p>
+                                <h1 class="slds-text-heading--medium">{!$Label.Delivery_TEC_Parent_Label_sub}</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="newAct" class="slds-col slds-no-flex slds-align-middle">                        
+                        <apex:actionFunction name="saveData" action="{!submitStpStaus}" /> 
+                        <button class="slds-button slds-button--neutral" type="button" onClick="saveData();">                              
+                          {!$Label.Delivery_Save} 
+                        </button>
+                    </div>                    
+                     <div id="newAct" class="slds-col slds-no-flex slds-align-middle">                        
+                        <apex:actionfunction name="callcancelJS" action="{!cancelB}"  />        
+                        <button class="slds-button slds-button--neutral" type="button" onClick="callcancelJS();">
+                          {!$Label.Delivery_Cancel}  
+                        </button>                
+                    </div>
+                  </div>
+                </div><br/><br/>
+                
+         <div class ="slds-grid">
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                
+                    <div class="slds-form-element__control">
+                       <b>{!$Label.Delivery_Execution_Cycle_Name} </b>
+                    </div>
+                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                    <div class="slds-form-element__control">
+                        <apex:outputField id="execId" html-data-rule-required="true" styleClass="slds-input" value="{!Test_Execution_Cycle__c.Name}" style="width:23%;min-height:0px;padding-left: 70%;height:25px;"/>
+                        
+                    </div>                
+            </div>
+            
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                
+                    <div class="slds-form-element__control">
+                       <b>{!$Label.Delivery_Environment} </b>
+                    </div>
+                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                    <div class="slds-form-element__control">
+                        <apex:outputField id="envId" html-data-rule-required="true" styleClass="slds-input" value="{!Test_Execution_Cycle__c.Environment__c}" style="width:23%;min-height:0px;padding-left: 70%;height:25px;"/>
+                        
+                    </div>                
+            </div>
+            </div><br/>
+            <div class="slds-grid">
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                
+                    <div class="slds-form-element__control">
+                       <b>{!$Label.Delivery_Execution_Start_Date} </b>
+                    </div>
+                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                    <div class="slds-form-element__control">
+                        <apex:outputField id="esdId" html-data-rule-required="true" styleClass="slds-input" value="{!Test_Execution_Cycle__c.Execution_Start_Date__c}" style="width:23%;min-height:0px;padding-left: 70%;height:25px;"/>
+                        
+                    </div>                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                
+                    <div class="slds-form-element__control">
+                       <b>{!$Label.Delivery_Execution_End_Date}</b>
+                    </div>
+                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                    <div class="slds-form-element__control">
+                        <apex:outputField id="eedId" html-data-rule-required="true" styleClass="slds-input" value="{!Test_Execution_Cycle__c.Execution_End_Date__c}" style="width:23%;min-height:0px;padding-left: 70%;height:25px;"/>
+                        
+                    </div>                
+            </div> 
+            </div><br/>
+            <div class="slds-grid">
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                
+                    <div class="slds-form-element__control">
+                       <b>{!$Label.Delivery_Release_Name} </b>
+                    </div>
+                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                    <div class="slds-form-element__control">
+                        <apex:outputField id="rnmId" html-data-rule-required="true" styleClass="slds-input" value="{!Test_Execution_Cycle__c.Release_Name__c}" style="width:23%;min-height:0px;padding-left: 70%;height:25px;"/>
+                        
+                    </div>                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                
+                    <div class="slds-form-element__control">
+                       <b>{!$Label.Delivery_Tex_Status}</b>
+                    </div>
+                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                    <div class="slds-form-element__control">
+                        <apex:inputField id="stsId" html-data-rule-required="true" styleClass="slds-input" value="{!Test_Execution_Cycle__c.Status__c}" style="width:45%;min-height:0px;height:25px;"/>
+                        
+                    </div>                
+            </div>
+            </div><br/>
+            <div class="slds-grid">            
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                
+                    <div class="slds-form-element__control">
+                       <b>{!$Label.Delivery_Execution_Type}</b>
+                    </div>
+                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                    <div class="slds-form-element__control">
+                        <apex:outputField id="etypeId" html-data-rule-required="true" styleClass="slds-input" value="{!Test_Execution_Cycle__c.Execution_Type__c}" style="width:23%;min-height:0px;padding-left: 40%;height:25px;"/>
+                        
+                    </div>                
+            </div>
+            
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                
+                    <div class="slds-form-element__control">
+                       <b>{!$Label.Delivery_Owner}</b>
+                    </div>
+                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                    <div class="slds-form-element__control">
+                        <apex:outputField id="ownrId" html-data-rule-required="true" styleClass="slds-input" value="{!Test_Execution_Cycle__c.ownerId}" style="width:23%;min-height:0px;padding-left: 70%;height:25px;"/>
+                        
+                    </div>                
+            </div>
+            </div><br/><br/>
+            
+            <!-- Child Object Information --------------- -->
+            <div>
+            <div class="slds-page-header" role="banner">
+                    <div class="slds-grid" style="height:20px;">
+                    <div class="slds-col">
+                        <div class="slds-media">        
+                           <!-- <div class="slds-media__figure">
+                                <span class="slds-icon__container slds-icon__container--circle slds-icon-action-description">
+                                    <svg aria-hidden="true" class="slds-icon slds-icon--medium ">
+                                    <use xlink:href="{!URLFOR($Resource.DEL_SLDS214, '/assets/icons/action-sprite/svg/symbols.svg#new_custom43')}"></use>
+                                    </svg>              
+                                </span>
+                            </div>-->
+                            
+                            <div class="slds-media__body">
+                                <p class="slds-text-heading--label">{!$Label.Delivery_TSE_Header_Label} </p>                                
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <div id="upscrExete" class="slds-col slds-no-flex slds-align-middle">
+                        
+                         <apex:actionFunction name="saveData" action="{!submitStpStaus}" />
+                        <button class="slds-button slds-button--neutral" type="button" onClick="saveData();">                              
+                          Save 
+                        </button>
+                    </div>                    
+                     <div id="upscrExest" class="slds-col slds-no-flex slds-align-middle">                        
+                        <apex:actionfunction name="callcancelJS" action="{!cancelB}" />       
+                        <button class="slds-button slds-button--neutral" type="button" onClick="callcancelJS();">
+                          Cancel 
+                        </button>
+                    </div>-->
+                    
+                    <div id="newAct" class="slds-col slds-no-flex slds-align-middle">
+                
+                <apex:actionFunction name="saveDatahe" action="{!submitStpStaus}" />
+                <button class="slds-button slds-button--neutral" type="button" onClick="saveDatahe();">
+                      
+                  {!$Label.Delivery_Save}  
+                </button>
+            </div>
+            
+             <div id="newAct" class="slds-col slds-no-flex slds-align-middle">
+                
+                <apex:actionfunction name="callcancelJShe" action="{!cancelB}"  />
+
+                <button class="slds-button slds-button--neutral" type="button" onClick="callcancelJShe();">
+                  {!$Label.Delivery_Cancel} 
+                </button>
+        
+            </div>
+                  </div>
+                </div><br/><br/>
+            </div>
+            <!------------------------ Child Table -------------------------------- -->
+                <!-- <apex:pageblock id="pb1"> -->
+    
+                 <div style="background-color:white;border-color:white;">
+                <div class="tree well" id="maindiv" style = "background-color:white;"> 
+                      <table width="100%" class="slds-table slds-table--bordered slds-table--cell-buffer">
+                    
+                        <thead style="background-Color:#4682B4;color:white;">
+                            <tr class="slds-text-title--caps">  
+                                <th scope="col"  style="width:33%;"> 
+                                <div class="slds-truncate" title=""> </div>
+                                </th>
+                                <th scope="col"  style="width:33%;"> 
+                                <div class="slds-truncate" title="Test Execution ID"> {!$Label.Delivery_TestExecutionId} </div>
+                                </th>
+                                <th scope="col"  style="width:33%;    padding-left: 1.5%;"> 
+                                <div class="slds-truncate" title="Status"> {!$Label.Delivery_Tex_Status} </div>
+                                </th>
+                            </tr>
+                        </thead>
+                    </table>
+                    <apex:repeat value="{!testEctn}"  var="EAcc">
+                        <div  style="width:100%;">
+                        <ul  style ="background-color:white;">
+                            <li  style ="min-height: 40px;width:100%;">
+                                <table style="width:100%;table-layout:fixed;white-space:nowrap;"> 
+                               <div class="spanClass treeSwitch" style="width:33%;white-space:nowrap;" id="sign">
+                                    <span> + </span>
+                                </div>  
+                                <!-- <div class="slds-modal__container">
+    
+                                <div class="slds-modal__content slds-grid slds-nowrap">
+                                <div class="slds-col slds-grid slds-grid--vertical slds-nowrap">
+                                <div class="slds-hint-parent">
+                                    <div role="gridcell" tabindex="-1" class="slds-text-align--right " style="width:3.75rem;color:#0070d2;font-weight:bold;float:left;width:33%;">
+                                        <div class="slds-checkbox--add-button">
+                                            <input type="checkbox" class="slds-assistive-text" id="add-checkbox-106" tabindex="-1" />
+                                            <label for="add-checkbox-106" class="slds-checkbox--faux">
+                                               <span class="slds-assistive-text">Select item 2</span>
+                                            </label>
+                                        </div>
+                                    </div>
+                                     </div>
+                                    </div>
+                                </div></div> -->
+                                 <div id="CyclName">
+                                    <a href="/{!EAcc.Id}" style="width: 33%; float:left;" target="_blank" >
+                                        <b style="text-align:middle;">{!EAcc.Name}</b>                
+                                    </a>
+                                </div>
+                               <div> <b style="text-align:middle;width: 33%;vertical-align: middle;"  >{!EAcc.Status__c}</b></div>
+                                </table>
+                                <ul  style ="background-color:white;">
+                                    
+                                        <li>
+                                        <div id="pb1" title="Execution Steps Information" style="width:100%;  margin: 0 auto;">
+                                            <div>
+                                            <table style="width:95%; margin-left:10px;" class="slds-table slds-table--bordered slds-table--cell-buffer slds-max-medium-table--stacked">
+                                                <thead style="background-Color:#6495ED;color:white;">
+                                                            <tr class="slds-text-title--caps">
+                                                               
+                                                                <th scope="col">
+                                                                    <div class="slds-truncate" title="Step Order"> {!$Label.Delivery_Step_Order} </div>
+                                                                </th>
+                                                                <th scope="col">
+                                                                    <div class="slds-truncate" title="Execution Step Name"> {!$Label.Delivery_Execution_Step_Name}  </div>
+                                                                </th>
+                                                                <th scope="col">
+                                                                    <div class="slds-truncate" title="Expected Result"> {!$Label.Delivery_Expected_Result} </div>
+                                                                </th>
+                                                                <th scope="col">
+                                                                    <div class="slds-truncate" title="Input Data"> {!$Label.Delivery_Input_Data} </div>
+                                                                </th>
+                                                                <th scope="col">
+                                                                    <div class="slds-truncate" title="User Login Details"> {!$Label.Delivery_User_Login_Details}  </div>
+                                                                </th>
+                                                                <th scope="col">
+                                                                    <div class="slds-truncate" title="Status"> {!$Label.Delivery_Tex_Status} </div>
+                                                                </th>
+                                                                <th scope="col">
+                                                                    <div class="slds-truncate" title="Actual Result"> {!$Label.Delivery_Actual_Result}  </div>
+                                                                </th>
+                                                            </tr>                                       
+                                                        </thead>
+                                                <apex:repeat value="{!wrpexctnsptsLst}" var="ex"  id="stageTable"   >
+                                                <!-- <apex:outputPanel rendered="{!if(EAcc.Id == ex.tes.Test_Execution_Name__r.Id,true,false)}" id="panel"> -->
+                                                        <tbody>
+                                                        <apex:outputpanel rendered="{!if(EAcc.Id == ex.tes.Test_Execution_Name__r.Id,true,false)}" id="panel">
+                                                            <tr >
+                                                               
+                                                                <td data-label="Step Order">
+                                                                      <div class="slds-truncate" title="StepOrder">{!ex.tes.Step_Order__c}</div>
+                                                                      </td>
+                                                                      <td data-label="Step Name">
+                                                                        <div class="slds-truncate" title="StepName">{!ex.tes.Name}</div>
+                                                                      </td>
+                                                                      <td data-label="Expected Result">
+                                                                        <div class="slds-truncate" title="ExpectResult">{!ex.tes.Expected_Result__c}</div>
+                                                                      </td>
+                                                                      <td data-label="Input Data">
+                                                                        <div class="slds-truncate" title="InputData">{!ex.tes.Input_Data__c}</div>
+                                                                      </td>
+                                                                      <td data-label="LoginDetails">
+                                                                        <div class="slds-truncate" title="LoginDetails">{!ex.tes.User_Login_Details__c}</div>
+                                                                      </td>
+                                                                      <td data-label="Status">
+                                                                        <div class="slds-truncate" title="Status">
+                                                                        <apex:inputField value="{!ex.tes.Status__c}" required="false" style="width:80%;"/></div>
+                                                                      </td>
+                                                                      <td data-label="Actual Result" style="height:20%;">
+                                                                        <div class="slds-truncate" title="actaulResult">                                
+                                                                        <apex:inputTextarea cols="2" value="{!ex.tes.Actual_Result__c}" required="false" style="width:100%;min-height:0px;height:50px;"/></div>
+                                                                      </td> 
+                                                                                                                                            
+                                                </tr>
+                                                 </apex:outputpanel>
+                                                </tbody>
+                                               <!-- </apex:outputPanel>-->
+                                                    
+                                                </apex:repeat>
+                                            </table>
+                                            </div>
+                                            </div>
+                                            
+                                        </li>
+                                   <!-- </apex:repeat> -->
+                                   
+                                </ul>
+                            </li>
+                        </ul>
+                        </div>
+                    </apex:repeat>
+                    
+                </div>
+                </div> 
+                
+                <div class="slds-page-header" role="banner">
+                    <div class="slds-grid" style="height:20px;">
+                    <div class="slds-col">
+                        <div class="slds-media">        
+                           <!-- <div class="slds-media__figure">
+                                <span class="slds-icon__container slds-icon__container--circle slds-icon-action-description">
+                                    <svg aria-hidden="true" class="slds-icon slds-icon--medium ">
+                                    <use xlink:href="{!URLFOR($Resource.DEL_SLDS214, '/assets/icons/action-sprite/svg/symbols.svg#new_custom43')}"></use>
+                                    </svg>              
+                                </span>
+                            </div>-->
+                            
+                            <div class="slds-media__body">
+                                <!-- <p class="slds-text-heading--label">Agile Test Script Executions </p> -->                               
+                            </div>
+                        </div>
+                    </div>
+                                        
+                    <div id="newAct" class="slds-col slds-no-flex slds-align-middle">
+                
+                <apex:actionFunction name="saveDatahe" action="{!submitStpStaus}" />
+                <button class="slds-button slds-button--neutral" type="button" onClick="saveDatahe();">
+                      
+                  {!$Label.Delivery_Save} 
+                </button>
+            </div>
+            
+             <div id="newAct" class="slds-col slds-no-flex slds-align-middle">
+                
+                <apex:actionfunction name="callcancelJShe" action="{!cancelB}"  />
+
+                <button class="slds-button slds-button--neutral" type="button" onClick="callcancelJShe();">
+                  {!$Label.Delivery_Cancel}  
+                </button>
+        
+            </div>
+                  </div>
+                </div><br/><br/>
+                
+                <!-- </apex:pageblock> -->
+            </div>
+
+  </apex:form>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <!-- Bootstarp css & Combined Css -->
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.1/css/bootstrap-combined.min.css" rel="stylesheet" />
+    <script>
+    $(function() {
+        $('.tree li:has(ul)').addClass('parent_li').find(' > .spanClass').attr('title', 'Collapse this branch');
+        $('.tree li:has(ul)').addClass('parent_li').find(' > ul > li').hide('slow');
+        $('.tree li.parent_li > .spanClass').on('click', function(e) {
+            //alert('clicked');
+            
+            var childrenAll = $('.tree li.parent_li > .spanClass').parent('li.parent_li').find(' > ul > li');
+                       if (childrenAll.is(":visible")) {
+                childrenAll.hide('fast');
+                $(".tree").find("li").removeClass('selectedRow');
+                $(".tree").find("li .spanClass").text('+');
+              // $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+              
+            } 
+            
+            
+            var children = $(this).parent('li.parent_li').find(' > ul > li');
+            if (children.is(":visible")) {
+                children.hide('fast');
+                 $(this).text("+");
+                $(this).parent().removeClass('selectedRow');
+                $(this).attr('title', 'Expand this branch').find(' > i').addClass('icon-plus-sign').removeClass('icon-minus-sign');
+                 
+            } else {
+                children.show('fast');
+                $(this).parent().addClass('selectedRow');
+                $(this).text("-");
+                $(this).attr('title', 'Collapse this branch').find(' > i').addClass('icon-minus-sign').removeClass('icon-plus-sign');
+                 
+            }
+            e.stopPropagation();
+        });
+    });
+    </script>
+    
+    <style>
+    
+     .tree li .clicked {
+        background-color:red;   
+    
+    }
+    </style>
+        
+    <script type="text/javascript">
+    function MyJavascript(chxbxss){
+        //alert('Changed the field');
+        var e = document.getElementById(chxbxss);
+        e.checked=true;
+    }
+</script>
+</apex:page>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Who is the Customer that this Partner is related to? --></help>
+    <label><!-- Customer --></label>
+    <lookupFilter>
+        <errorMessage><!-- Customer Account can only be of Type Corporate,Service,Business or Offline Customer --></errorMessage>
+    </lookupFilter>
+    <name>NS_CustomerAccount__c</name>
+    <relationshipLabel><!-- Authorized Companies --></relationshipLabel>
+</CustomFieldTranslation>

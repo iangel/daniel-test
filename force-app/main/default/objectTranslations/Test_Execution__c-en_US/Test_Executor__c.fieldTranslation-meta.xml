@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Test Executor --></label>
+    <name>Test_Executor__c</name>
+    <relationshipLabel><!-- Test Script Executions --></relationshipLabel>
+</CustomFieldTranslation>

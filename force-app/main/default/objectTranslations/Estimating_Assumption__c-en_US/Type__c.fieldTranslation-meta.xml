@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Application</masterLabel>
+        <translation><!-- Application --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Integration</masterLabel>
+        <translation><!-- Data Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Migration</masterLabel>
+        <translation><!-- Data Migration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deployment</masterLabel>
+        <translation><!-- Deployment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General</masterLabel>
+        <translation><!-- General --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Management</masterLabel>
+        <translation><!-- Project Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training</masterLabel>
+        <translation><!-- Training --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

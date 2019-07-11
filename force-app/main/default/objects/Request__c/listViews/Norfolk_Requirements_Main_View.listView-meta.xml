@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Norfolk_Requirements_Main_View</fullName>
+    <columns>NAME</columns>
+    <columns>Request_Title__c</columns>
+    <columns>Request_Description__c</columns>
+    <columns>Technical_Comments__c</columns>
+    <columns>Capability__c</columns>
+    <columns>Legacy_Capability__c</columns>
+    <columns>SOURCE_ID__c</columns>
+    <columns>Meeting__c</columns>
+    <columns>Business_Unit_Impacted__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NAME</field>
+        <operation>greaterThan</operation>
+        <value>425</value>
+    </filters>
+    <label>Norfolk Requirements Main View</label>
+</ListView>

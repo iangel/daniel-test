@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Milestone for an Asset or a Initiative. --></help>
+    <label><!-- Asset/Initiative Milestone --></label>
+    <name>Asset_Initiative_Milestone__c</name>
+    <picklistValues>
+        <masterLabel>Build/Develop Final Content</masterLabel>
+        <translation><!-- Build/Develop Final Content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deploy/Publish</masterLabel>
+        <translation><!-- Deploy/Publish --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design/Draft</masterLabel>
+        <translation><!-- Design/Draft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gain Stakeholder Buy-in</masterLabel>
+        <translation><!-- Gain Stakeholder Buy-in --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gather Requirements/ Define Scope</masterLabel>
+        <translation><!-- Gather Requirements/ Define Scope --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Optimize/Maintain</masterLabel>
+        <translation><!-- Optimize/Maintain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test/Validate</masterLabel>
+        <translation><!-- Test/Validate --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

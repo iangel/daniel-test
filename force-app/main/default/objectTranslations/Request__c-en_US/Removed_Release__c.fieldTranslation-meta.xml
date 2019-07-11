@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Indicate that a Request was removed from a Release only if it is removed after Design is complete. --></help>
+    <label><!-- Removed from Release --></label>
+    <name>Removed_Release__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,17 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false" cache="true" controller="SaaSOverviewCompCtrl">
+    <c:CrpiPageTemplate >
+    <br/>
+   <div class="col-xs-6 col-sm-6 col-md-6">
+        <p><b>&nbsp;{!valueSessionPrjName}&nbsp;&#9830;&nbsp;</b> </p>         
+        </div>
+        <br/>
+        <center> 
+            <img src="{!URLFOR($Resource.ValueDeliveryApproachV1 , 'img/ProjectManagement.png')}"  class="img-responsive"  alt="Responsive image" />
+        </center>
+        <div>
+             <a href="/apex/AnatomyofPlanAndAnalyzeCRP"> <div id="pos1"></div></a>
+             <a href="/apex/AnatomyofDesginCRP"> <div id="pos3"></div></a>
+             <a href="/apex/AnatomyofBuildCRP"> <div id="pos4"></div></a>         
+        </div>
+   </c:CrpiPageTemplate>
+</apex:page>

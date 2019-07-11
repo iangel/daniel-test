@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SaaS_Delivery_Question_Log</fullName>
+    <columns>NAME</columns>
+    <columns>Request__c</columns>
+    <columns>Assigned_To__c</columns>
+    <columns>Capability__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Question_Log__c.SaaS_Delivery_Question_Log</value>
+    </filters>
+    <label>SaaS Delivery Question Log</label>
+</ListView>

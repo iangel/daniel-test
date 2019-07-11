@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Business Unit or Units who do business with that particular individual. --></help>
+    <label><!-- Associated NS Business Unit(s) --></label>
+    <name>NS_BusinessUnit__c</name>
+    <picklistValues>
+        <masterLabel>Automotive</masterLabel>
+        <translation><!-- Automotive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Equipment Planning</masterLabel>
+        <translation><!-- Equipment Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intermodal</masterLabel>
+        <translation><!-- Intermodal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OSS</masterLabel>
+        <translation><!-- OSS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revenue Accounting</masterLabel>
+        <translation><!-- Revenue Accounting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revenue Waybilling</masterLabel>
+        <translation><!-- Revenue Waybilling --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unit Train</masterLabel>
+        <translation><!-- Unit Train --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

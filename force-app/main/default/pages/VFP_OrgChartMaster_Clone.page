@@ -1,0 +1,171 @@
+<!--
+   
+    @Author: Accenture
+    @CreatedDate: 12/30/2016 
+    @Description : User will able to travel into different tree nodes from Release
+    @Version: <V.1.0>
+
+    -->
+<apex:page standardStylesheets="true" standardController="Release__c" extensions="VFC_OrgChartMaster_Clone" id="orgc">
+<head>
+<title>Organization Chart Plugin</title>
+<apex:stylesheet value="{!URLFOR($Resource.PMOTOOLKIT_OrgChartMaster, '/OrgChart-master/examples/css/font-awesome.min.css')}" id="orgch"/>
+<apex:stylesheet value="{!URLFOR($Resource.PMOTOOLKIT_OrgChartMaster, '/OrgChart-master/examples/css/jquery.orgchart.css')}" id="orgcha"/>
+<apex:stylesheet value="{!URLFOR($Resource.PMOTOOLKIT_OrgChartMaster, '/OrgChart-master/examples/css/style.css')}" id="orgce"/>
+<apex:stylesheet value="style.css" id="orgchart"/>
+<apex:stylesheet value="https://cdn.rawgit.com/FortAwesome/Font-Awesome/master/css/font-awesome.min.css" id="orgchartt"/>
+
+<script type="text/javascript">
+
+
+(function($){
+
+  $(function() {
+
+    
+  
+   
+  var datascource = jQuery.parseJSON('{!JSENCODE(jsnstrLst)}'); 
+
+    
+    $('#chart-container').orgchart({
+      'data' : datascource,
+      'nodeContent': 'title',
+      'depth' : 3,
+      'direction' : 'l2r',
+      'exportButton': true,
+      'exportFilename': 'MyOrgChart',
+      
+    });
+
+  });
+
+ 
+
+})(jQuery);
+
+</script>
+
+
+<style type="text/css">
+
+   #chart-container {
+        text-align: left;
+        height: 640px;
+      }
+
+ 
+.orgchart {
+  background: #fff; 
+}
+.orgchart td.left, .orgchart td.right, .orgchart td.top {
+  <!--border-color: #aaa;-->
+}
+.orgchart td>.down {
+  <!--background-color: #aaa;-->
+}
+.orgchart .middle-level .title {
+  background-color: #006699;
+}
+.orgchart .middle-level .content {
+  border-color: #006699;
+}
+.orgchart .product-dept .title {
+  background-color: #009933;
+}
+.orgchart .product-dept .content {
+  border-color: #009933;
+}
+.orgchart .rd-dept .title {
+  background-color: #993366;
+}
+.orgchart .rd-dept .content {
+  border-color: #993366;
+}
+.orgchart .pipeline1 .title {
+  background-color: #996633;
+}
+.orgchart .pipeline1 .content {
+  border-color: #996633;
+}
+.orgchart .frontend1 .title {
+  background-color: #cc0066;
+}
+.orgchart .frontend1 .content {
+  border-color: #cc0066;
+}
+
+
+
+.orgchart .node .content {
+    width: 100%;
+    height: 60px;
+    font-size: 11px;
+    line-height: initial;
+    <!--border: 1px solid rgba(217, 83, 79, 0.8);-->
+    border-radius: 0 0 4px 4px;
+    text-align: center;
+    background-color: #fff;
+    color: #333;
+    overflow: hidden;
+    white-space: inherit;
+    text-overflow: ellipsis;
+    
+}
+
+.orgchart .node.focused {
+    background-color: rgb(255, 255, 255);
+    width: 5;
+}
+ .orgchart.l2r .node{
+    width: 90px;
+    height: 131px;
+    }
+    
+ .orgchart .node .title {
+    text-align: center;
+    font-size: 11px;
+    font-weight: inherit;
+    height: 21px;
+    line-height: 21px;
+    overflow: inherit;
+    text-overflow: ellipsis;
+    white-space: inherit;
+   
+    color: #fff;
+    border-radius: 4px 4px 0 0;
+}
+
+.oc-export-btn {
+    color: #222;
+    
+}
+
+    
+</style>
+</head> 
+
+
+<body>
+ <apex:outputPanel id="outp">   
+<div id="chart-container"></div>
+</apex:outputPanel>
+
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+    <apex:includeScript value="https://cdn.rawgit.com/niklasvh/html2canvas/master/dist/html2canvas.min.js" id="orgmaste"/>
+   <apex:includeScript value="{!URLFOR($Resource.PMOTOOLKIT_OrgChartMaster, '/OrgChart-master/examples/js/jquery.min.js')}" id="orgm"/> 
+    <apex:includeScript value="{!URLFOR($Resource.PMOTOOLKIT_OrgChartMaster, '/OrgChart-master/examples/js/jquery-3.1.0.min.js')}" id="orgma"/>
+    <apex:includeScript value="{!URLFOR($Resource.PMOTOOLKIT_OrgChartMaster, '/OrgChart-master/examples/js/jquery.orgchart.js')}" id="orgmast"/>
+     
+ <!---   <apex:includeScript value="{!URLFOR($Resource.OrgChartMaster, '/OrgChart-master/examples/local-datasource/scripts.js')}"/> -->
+
+</body>
+
+<style>
+
+.orgchart .middle-level{
+  background-color: #006699;
+}
+</style >
+
+</apex:page>

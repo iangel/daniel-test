@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Milestones__c</fullName>
+    <description>Stage of Milestone.</description>
+    <externalId>false</externalId>
+    <label>Milestone</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Preliminary Release Scope</fullName>
+                <default>false</default>
+                <label>Preliminary Release Scope</label>
+            </value>
+            <value>
+                <fullName>Requirements Definition</fullName>
+                <default>false</default>
+                <label>Requirements Definition</label>
+            </value>
+            <value>
+                <fullName>Level of Effort Estimates</fullName>
+                <default>false</default>
+                <label>Level of Effort Estimates</label>
+            </value>
+            <value>
+                <fullName>Preliminary Scope Lock</fullName>
+                <default>false</default>
+                <label>Preliminary Scope Lock</label>
+            </value>
+            <value>
+                <fullName>Design</fullName>
+                <default>false</default>
+                <label>Design</label>
+            </value>
+            <value>
+                <fullName>Final Scope Lock (Design Sign-off)</fullName>
+                <default>false</default>
+                <label>Final Scope Lock (Design Sign-off)</label>
+            </value>
+            <value>
+                <fullName>Development &amp; Unit Test</fullName>
+                <default>false</default>
+                <label>Development &amp; Unit Test</label>
+            </value>
+            <value>
+                <fullName>SIT</fullName>
+                <default>false</default>
+                <label>SIT</label>
+            </value>
+            <value>
+                <fullName>UAT</fullName>
+                <default>false</default>
+                <label>UAT</label>
+            </value>
+            <value>
+                <fullName>Deploy &amp; Train</fullName>
+                <default>false</default>
+                <label>Deploy &amp; Train</label>
+            </value>
+            <value>
+                <fullName>Optimize/Maintain</fullName>
+                <default>false</default>
+                <label>Optimize/Maintain</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

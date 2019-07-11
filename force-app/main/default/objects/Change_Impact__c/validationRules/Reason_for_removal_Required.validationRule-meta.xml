@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reason_for_removal_Required</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(ISPICKVAL(Change_Impact_Stage__c, &#39;Removed&#39;),
+ISBLANK(Reason_For_Removal__c))</errorConditionFormula>
+    <errorDisplayField>Reason_For_Removal__c</errorDisplayField>
+    <errorMessage>Reason for Removal is required when Change Impact Stage is set to &#39;Removed&#39;. Please enter details.</errorMessage>
+</ValidationRule>

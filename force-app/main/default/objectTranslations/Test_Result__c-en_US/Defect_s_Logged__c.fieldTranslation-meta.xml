@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Administrator Use Only: Have defect(s) been logged for all failed steps? --></help>
+    <label><!-- Defect(s) Logged? --></label>
+    <name>Defect_s_Logged__c</name>
+</CustomFieldTranslation>

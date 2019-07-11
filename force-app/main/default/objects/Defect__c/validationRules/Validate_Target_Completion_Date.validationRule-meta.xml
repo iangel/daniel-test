@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Target_Completion_Date</fullName>
+    <active>true</active>
+    <description>Prevent user from saving a past date as Target completion date</description>
+    <errorConditionFormula>AND(OR(Current_Status__c =&quot;Developer Assigned&quot;,Current_Status__c=&quot;Fixed&quot;, Current_Status__c =&quot;Fix in Process&quot;),Target_Completion_Date__c &lt;  TODAY())</errorConditionFormula>
+    <errorMessage>Target completion date cannot be in past date. Please enter current/future date or clear the value in the field</errorMessage>
+</ValidationRule>

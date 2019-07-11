@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Marketing Representative for this Account --></help>
+    <label><!-- Marketing Account Owner --></label>
+    <lookupFilter>
+        <errorMessage><!-- Please select a member of the Marketing Team --></errorMessage>
+    </lookupFilter>
+    <name>NS_MarketingOwner__c</name>
+    <relationshipLabel><!-- Accounts --></relationshipLabel>
+</CustomFieldTranslation>

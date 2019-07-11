@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Value is calculated by the selection of the Urgency of Request field: 
+High = 3 
+Medium = 2 
+Low = 1 --></help>
+    <label><!-- Urgency of Request Value --></label>
+    <name>Urgency_of_Request_Value__c</name>
+</CustomFieldTranslation>

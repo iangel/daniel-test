@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defect_Detected__c</fullName>
+    <description>It shows the Phase of the project in which the defect is identified</description>
+    <externalId>false</externalId>
+    <label>Defect Detected</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Requirement Stage</fullName>
+                <default>false</default>
+                <label>Requirement Stage</label>
+            </value>
+            <value>
+                <fullName>Design Stage</fullName>
+                <default>false</default>
+                <label>Design Stage</label>
+            </value>
+            <value>
+                <fullName>Design Review</fullName>
+                <default>false</default>
+                <label>Design Review</label>
+            </value>
+            <value>
+                <fullName>Build Stage</fullName>
+                <default>false</default>
+                <label>Build Stage</label>
+            </value>
+            <value>
+                <fullName>Build Review</fullName>
+                <default>false</default>
+                <label>Build Review</label>
+            </value>
+            <value>
+                <fullName>UAT</fullName>
+                <default>false</default>
+                <label>UAT</label>
+            </value>
+            <value>
+                <fullName>Post Go-Live</fullName>
+                <default>false</default>
+                <label>Post Go-Live</label>
+            </value>
+            <value>
+                <fullName>Code Review</fullName>
+                <default>false</default>
+                <label>Code Review</label>
+            </value>
+            <value>
+                <fullName>Test Script Review</fullName>
+                <default>false</default>
+                <label>Test Script Review</label>
+            </value>
+            <value>
+                <fullName>Regression Testing</fullName>
+                <default>false</default>
+                <label>Regression Testing</label>
+            </value>
+            <value>
+                <fullName>Unit Testing</fullName>
+                <default>false</default>
+                <label>Unit Testing</label>
+            </value>
+            <value>
+                <fullName>System Testing</fullName>
+                <default>false</default>
+                <label>System Testing</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

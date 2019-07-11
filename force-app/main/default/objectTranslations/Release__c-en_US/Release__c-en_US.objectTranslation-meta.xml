@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Release</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Releases</value>
+    </caseValues>
+    <layouts>
+        <layout>Releases Page Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Project Time Line --></label>
+            <section>Project Time Line</section>
+        </sections>
+        <sections>
+            <label><!-- Total Available Capacity --></label>
+            <section>Total Available Capacity</section>
+        </sections>
+        <sections>
+            <label><!-- Total Level of Effort (Days) --></label>
+            <section>Total Level of Effort (Days)</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Releases Tab Layout Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Estimate Summary --></label>
+            <section>Estimate Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Release --></label>
+            <section>Release</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Actual end date should not be greater  than today&apos;s date --></errorMessage>
+        <name>Release_Actual_End_Date_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Release Start/End Date should be later than Release Start Date. --></errorMessage>
+        <name>Releases_Date_Validation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Release_By_Employee_Allocation --></label>
+        <name>Release_By_Employee_Allocation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Value_Tree --></label>
+        <name>Value_Tree</name>
+    </webLinks>
+</CustomObjectTranslation>

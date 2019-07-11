@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Defect</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Defects</value>
+    </caseValues>
+    <layouts>
+        <layout>Defect Layout</layout>
+        <sections>
+            <label><!-- Attachment --></label>
+            <section>Attachment</section>
+        </sections>
+        <sections>
+            <label><!-- Defect Analysis --></label>
+            <section>Defect Analysis</section>
+        </sections>
+        <sections>
+            <label><!-- Developer Information --></label>
+            <section>Developer Information</section>
+        </sections>
+        <sections>
+            <label><!-- Failed Test Information --></label>
+            <section>Failed Test Information</section>
+        </sections>
+        <sections>
+            <label><!-- Retesting Information --></label>
+            <section>Retesting Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Enhancement Request</layout>
+        <sections>
+            <label><!-- Analysis --></label>
+            <section>Analysis</section>
+        </sections>
+        <sections>
+            <label><!-- Approved to Implement Information --></label>
+            <section>Approved to Implement Information</section>
+        </sections>
+        <sections>
+            <label><!-- Attachment --></label>
+            <section>Attachment</section>
+        </sections>
+        <sections>
+            <label><!-- Enhancement Information --></label>
+            <section>Enhancement Information</section>
+        </sections>
+        <sections>
+            <label><!-- Retesting Information --></label>
+            <section>Retesting Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Production Defect</layout>
+        <sections>
+            <label><!-- Analysis --></label>
+            <section>Analysis</section>
+        </sections>
+        <sections>
+            <label><!-- Attachment --></label>
+            <section>Attachment</section>
+        </sections>
+        <sections>
+            <label><!-- Defect Details --></label>
+            <section>Defect Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Defect --></label>
+        <name>Defect</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Enhancement Request --></label>
+        <name>Enhancement_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This record type is for defects logged after Go-Live --></description>
+        <label><!-- Production Defect --></label>
+        <name>Production_Defect</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter either the associated Test Scenario OR Test Result. --></errorMessage>
+        <name>Must_Enter_Test_Scenario_OR_Test_Result</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Developer Comments must be updated when Status is fixed or Ready to restest --></errorMessage>
+        <name>Validate_Developer_Comments</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Retest comments must be updated while reopening or closing error location defect --></errorMessage>
+        <name>Validate_Retest_Comments</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Retest status and Retest comment is required when closing or Re-opening a defect --></errorMessage>
+        <name>Validate_Retest_Status</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Target completion date cannot be in past date. Please enter current/future date or clear the value in the field --></errorMessage>
+        <name>Validate_Target_Completion_Date</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- New_Defect --></label>
+        <name>New_Defect</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_1__c</fullName>
+    <description>Type of work in phase1</description>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Configuration</fullName>
+                <default>false</default>
+                <label>Configuration</label>
+            </value>
+            <value>
+                <fullName>Workflow or Approval</fullName>
+                <default>false</default>
+                <label>Workflow or Approval</label>
+            </value>
+            <value>
+                <fullName>User Administration</fullName>
+                <default>false</default>
+                <label>User Administration</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>Customization</fullName>
+                <default>false</default>
+                <label>Customization</label>
+            </value>
+            <value>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+                <label>Data Migration</label>
+            </value>
+            <value>
+                <fullName>Integration (Real-Time)</fullName>
+                <default>false</default>
+                <label>Integration (Real-Time)</label>
+            </value>
+            <value>
+                <fullName>Integration (Batch)</fullName>
+                <default>false</default>
+                <label>Integration (Batch)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

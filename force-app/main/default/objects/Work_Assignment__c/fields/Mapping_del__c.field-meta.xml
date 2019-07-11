@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mapping_del__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Account Types&quot;), &quot;Account Types&quot;, NULL)  + BR() + 
+IF(INCLUDES( Requirement_Number__r.Mapping__c, &quot;Account Hierarchy&quot;), &quot;Account Hierarchy&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Account Visibility&quot;), &quot;Account Visibility&quot;, NULL)  + BR() + 
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Account Assignment &amp; Teams&quot;), &quot;Account Assignment &amp; Teams&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Account Processes&quot;), &quot;Account Processes&quot;, NULL)  + BR() + 
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Account Search&quot;), &quot;Account Search&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;CTI Screenpop&quot;), &quot;CTI Screenpop&quot;, NULL)  + BR() + 
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Account Key Attributes&quot;), &quot;Account Key Attributes&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Account Reports &amp; Dashboards&quot;), &quot;Account Reports &amp; Dashboards&quot;, NULL)  + BR() + 
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Account Reports &amp; Dashboards&quot;), &quot;Account Reports &amp; Dashboards&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Contact Processes&quot;), &quot;Contact Processes&quot;, NULL)  + BR() + 
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Contact Visibility&quot;), &quot;Contact Visibility&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Contact Key Attributes&quot;), &quot;Contact Key Attributes&quot;, NULL)  + BR() + 
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Contact Reports &amp; Dashboards&quot;), &quot;Contact Reports &amp; Dashboards&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Activity Visibility&quot;), &quot;Activity Visibility&quot;, NULL)  + BR() + 
+IF(INCLUDES( Requirement_Number__r.Mapping__c, &quot;Disposition Types&quot;), &quot;Disposition Types&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c, &quot;Task Key Attributes&quot;), &quot;Task Key Attributes&quot;, NULL)  + BR() + 
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Event Key Attributes&quot;), &quot;Event Key Attributes&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Activity Reports &amp; Dashboards&quot;), &quot;Activity Reports &amp; Dashboards&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Case Types&quot;), &quot;Case Types&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c, &quot;Case Visibility&quot;), &quot;Case Visibility&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Case Processes&quot;), &quot;Case Processes&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Case Assignment&quot;), &quot;Case Assignment&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c , &quot;Case Hierarchy&quot;), &quot;Case Hierarchy&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c, &quot;Case Key Attributes&quot;), &quot;Case Key Attributes&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c, &quot;Case Reports &amp; Dashboards&quot;), &quot;Case Reports &amp; Dashboards&quot;, NULL)  + BR() +
+IF(INCLUDES( Requirement_Number__r.Mapping__c, &quot;Other&quot;), &quot;Other&quot;, NULL)</formula>
+    <label>Mapping</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

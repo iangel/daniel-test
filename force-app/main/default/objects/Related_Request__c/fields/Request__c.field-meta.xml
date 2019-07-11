@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request__c</fullName>
+    <externalId>false</externalId>
+    <label>Request</label>
+    <referenceTo>Request__c</referenceTo>
+    <relationshipLabel>Related Requests</relationshipLabel>
+    <relationshipName>Related_Requests</relationshipName>
+    <relationshipOrder>1</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

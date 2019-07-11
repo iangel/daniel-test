@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>EmailMessage_UnreadEmailisFalse</fullName>
+        <field>NS_Unread_Email__c</field>
+        <literalValue>0</literalValue>
+        <name>fuEmailMsg_Case.UnreadEmail.False</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_ClosedCaseInboundEmailIsTrue</fullName>
+        <field>NS_ClosedCaseInboundEmail__c</field>
+        <literalValue>1</literalValue>
+        <name>Closed Case Inbound Email is True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_Reopened_Status</fullName>
+        <field>Status</field>
+        <literalValue>NS_Reopened</literalValue>
+        <name>fuEmailMsg_Case.Status.Reopened</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Reopened_Field</fullName>
+        <field>NS_Reopened__c</field>
+        <literalValue>1</literalValue>
+        <name>fuEmailMsg_Case.Reopened.True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Unread_Email_is_True</fullName>
+        <field>NS_Unread_Email__c</field>
+        <literalValue>1</literalValue>
+        <name>fuEmailMsg_Case.UnreadEmail.True</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Literal</operation>
+        <protected>false</protected>
+        <targetObject>ParentId</targetObject>
+    </fieldUpdates>
+    <rules>
+        <fullName>Closed Case Inbound Email</fullName>
+        <actions>
+            <name>NS_ClosedCaseInboundEmailIsTrue</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_Reopened_Status</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Reopened_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>If there is an unread email from a customer when the Case is closed, this workflow: updates the &quot;Closed Case Inbound Email&quot; field on the Case object to TRUE, sets the Reopened field on the Case to TRUE, and updates the Status of the Case to Reopened.</description>
+        <formula>OR(ISPICKVAL(Parent.Status,&#39;NS_Closed&#39;), ISPICKVAL(Parent.Status,&#39;NS_Cancelled&#39;)) &amp;&amp; (Incoming = True) &amp;&amp; ISPICKVAL(Status,&#39;New&#39;)&amp;&amp; (Parent.Subject != &#39;TYES LOPI - Warning Bypassed&#39;)&amp;&amp; (Parent.Subject != &#39;Case transferred to you.&#39;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Read Email on Case %28Email Message%29</fullName>
+        <actions>
+            <name>EmailMessage_UnreadEmailisFalse</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow clears the &quot;Unread Email&quot; field on the Case object if a response is sent to the customer</description>
+        <formula>(Incoming = True) &amp;&amp;  NOT(ISPICKVAL(Status,&#39;New&#39;))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Remove Unread Email Icon After Response</fullName>
+        <actions>
+            <name>EmailMessage_UnreadEmailisFalse</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>EmailMessage.Status</field>
+            <operation>equals</operation>
+            <value>Sent</value>
+        </criteriaItems>
+        <description>Remove unread email icon from Case after sending a response back</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Unread Email on Case</fullName>
+        <actions>
+            <name>Unread_Email_is_True</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>This workflow updates the &quot;Unread Email&quot; field on the Case object if there is an unread email from a customer.</description>
+        <formula>NOT(ISPICKVAL(Parent.Status,&#39;NS_New&#39;)||ISPICKVAL(Parent.Status,&#39;NS_Cancelled&#39;) ) &amp;&amp; (Incoming = True) &amp;&amp;  ISPICKVAL(Status,&#39;New&#39;)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,172 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false" controller="SaaSReleaseListViewCtrl">
+<style>
+        .relatedLstCss
+        {
+            overflow: auto; 
+            max-height: 150px;
+            overflow-x: hidden;
+        }
+
+    </style>
+    <c:SaaSToolkitPageTemplate >
+        <apex:form >
+            <br />
+            <c:CustomPageMessages closableErrors="true" />
+            <h4>Release Home <a href="#" onclick="openPage('/apex/SaaSCreateRelease');" title="New Release"> 
+                        <!--<i class="fa fa-plus-circle fa-2x" />-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>
+                    </a>&nbsp;&nbsp;</h4>
+            <hr style="width: 100%; border-color: black;" />
+            <div class="row">
+                
+                <div class="col-lg-8 col-sm-8 col-md-8">
+                    <apex:inputText styleClass="form-control" value="{!searchtxt}" style="height: 35px;" html-placeholder="Search by Name or Status">
+                     <apex:actionSupport event="onkeyup" action="{!Search}" reRender="listView,navPanel" /> 
+                    </apex:inputText>
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4 pull-left">
+                 <!--   <apex:commandLink action="{!updateRelease}" title="Edit">
+                      
+                       <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/edit.png')}"/>
+                    </apex:commandLink>-->
+                    &nbsp;
+                    <!--<apex:commandLink action="{!deleteRelease}" title="Delete" rendered="{!$ObjectType.Release__c.deletable}">-->
+                    <apex:commandLink title="Delete" rendered="{!$ObjectType.Release__c.deletable}"  html-data-toggle="modal" html-data-target="#deleteModel" reRender="a"> 
+
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/delete.png')}"/>
+                    </apex:commandLink> 
+                    &nbsp;
+                    <apex:commandLink action="{!cloneRelease}" title="Clone">
+                        <!--<i class="fa fa-files-o fa-2x" />-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/clone.png')}"/>
+                    </apex:commandLink>
+                    &nbsp;
+                </div>
+            </div>
+            <br />
+           <div class="row">
+           <!--    <div class="col-lg-12 col-sm-12 col-md-12 scroll" style="max-height: 550px;overflow: auto; width:97%;">  -->
+             <div class="col-lg-12 col-sm-12 col-md-12" style="width:97%;">
+                    <apex:outputPanel id="listView">
+                        <table class="table table-fixedheader table-bordered"> 
+                            <thead class="customTableHeader">
+                                <tr>
+                                    <th class="colWidth10">Select</th>
+                                    <th class="colWidth10">
+                                    
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Release Name {!IF(sortField=='Name',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Name" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    
+                                    </th>
+                                    <th class="colWidth10">
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Release {!IF(sortField=='Release__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Release__c" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+
+                                    
+                                    </th>
+                                    
+                                    <th class="colWidth20">Description</th>
+                                    
+                                    <th class="colWidth10">
+                                     <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Status {!IF(sortField=='Status__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Status__c" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    
+                                    
+                                    </th>
+                                    <th class="colWidth10">
+                                     <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView">  Release Start Date {!IF(sortField=='Release_Start_Date__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Release_Start_Date__c" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                   
+                                    
+                                    </th>
+                                    <th class="colWidth10">
+                                      <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView">   Release Planned End Date {!IF(sortField=='Release_Planned_End_Date__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Release_Planned_End_Date__c" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    </th>
+                                    
+                                    <th class="colWidth20">Comments</th>
+                                </tr>
+                            </thead>
+                            <!--<tr class="bg-primary">
+                                <th>Select<div>Select</div></th>
+                                <th>Release Name<div>Release Name</div></th>
+                                <th>Release<div>Release</div></th>
+                                <th>Description<div>Description</div></th>
+                                <th>Status<div>Status</div></th>
+                                <th>Answer?<div>Answer?</div></th>
+                                <th>Release Start Date<div>Release Start Date</div></th>
+                                <th>Release Planned End Date<div>Release Planned End Date</div></th>
+                                <th>Comments<div>Comments</div></th>
+                                <th></th>
+                            </tr>-->
+                            <apex:repeat VALue="{!ReleaseWrapLst}" VAr="releaseWrap">
+                               <tr>
+                                    <td class="colWidth10">
+                                        <center>
+                                            <apex:inputCheckbox value="{!releaseWrap.checked}" />
+                                        </center>
+                                    </td>
+                                    <td class="colWidth10"><a onclick="openPage('/apex/SaaSCreateRelease?detail=1&&id={!releaseWrap.releaseListObj.id}');"> 
+                                        {!releaseWrap.releaseListObj.Name} </a></td>
+                                    <!--<td>{!releaseWrap.releaseListObj.Name}</td>-->
+                                    <td class="colWidth10">{!releaseWrap.releaseListObj.Release__c}</td>
+                                    <td class="colWidth20">{!releaseWrap.releaseListObj.Description__c}</td>
+                                    <td class="colWidth10">{!releaseWrap.releaseListObj.Status__c}</td>
+                                    <td class="colWidth10"><apex:outputText value="{0, date,  MM/dd/yyyy}">
+                                            <apex:param value="{!releaseWrap.releaseListObj.Release_Start_Date__c}" />
+                                        </apex:outputText></td>
+                                    <td class="colWidth10"><apex:outputText value="{0, date,  MM/dd/yyyy}">
+                                            <apex:param value="{!releaseWrap.releaseListObj.Release_Planned_End_Date__c}" />
+                                        </apex:outputText></td>
+                                    <td class="colWidth20">{!releaseWrap.releaseListObj.Status_Update__c}</td>
+                                </tr>
+                            </apex:repeat>
+                        </table>
+                    </apex:outputPanel>
+               
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-md-12">
+                            <center>
+                                <apex:outputPanel id="navPanel">
+                                    <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOt(hasPrevious)}" />&nbsp;&nbsp;
+                                    <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!hasPrevious}" />&nbsp;&nbsp; 
+                                    <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!not(hasPrevious)}">Previous</apex:outputPanel>
+                                    <apex:commandLink value="Previous" action="{!Previous}" rendered="{!hasPrevious}" reRender="listView,navPanel" />&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <apex:commandLink value="Next" action="{!Next}" rendered="{!hasNext}" reRender="listView,navPanel" />&nbsp;&nbsp;
+                                    <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOt(hasNext)}">Next</apex:outputPanel>&nbsp;&nbsp; 
+                                    <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!hasNext}" />
+                                    <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOt(hasNext)}" /><br /><br />
+                                </apex:outputPanel>
+                            </center>            
+                       </div>
+                   </div>
+               </div>
+            </div>
+                        
+<!-- Modal -->
+            <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Toolkit Mobile App</h4>
+                  </div>
+                <div class="modal-body">
+                  Are you sure you want to delete records?
+                </div>
+                <div class="modal-footer">
+                    <apex:commandlink action="{!deleteRelease}" title="Ok" value="Ok" rendered="{!$ObjectType.Release__c.deletable}" styleclass="btn btn-primary" />
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>        
+                </div>
+            </div>
+          </div>
+        </div>
+        
+        </apex:form>
+    </c:SaaSToolkitPageTemplate>
+</apex:page>

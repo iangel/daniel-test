@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Level of Effort Complete --></label>
+    <name>TimeSpentOn_Level_of_Effort_Complete__c</name>
+</CustomFieldTranslation>

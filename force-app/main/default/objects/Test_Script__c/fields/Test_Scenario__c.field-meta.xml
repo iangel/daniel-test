@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Scenario__c</fullName>
+    <description>Test scenario of the test script</description>
+    <externalId>false</externalId>
+    <label>Test Scenario</label>
+    <referenceTo>Test_Scenario__c</referenceTo>
+    <relationshipLabel>Test Scripts</relationshipLabel>
+    <relationshipName>Test_Scripts</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

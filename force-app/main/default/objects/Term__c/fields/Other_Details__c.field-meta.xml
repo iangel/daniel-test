@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Other_Details__c</fullName>
+    <description>Used for any additional details or context</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used for any additional details or context</inlineHelpText>
+    <label>Other Details</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>8</visibleLines>
+</CustomField>

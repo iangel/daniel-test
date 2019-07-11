@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validating_Actual_and_Assigned_Approver</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+LEN(Agreement__c)&gt;0 , 
+Assigned_Approver__r.Id &lt;&gt; $User.Id 
+)</errorConditionFormula>
+    <errorMessage>Only the assigned approver can sign off. Please only fill out agreement if you are the capability owner and named as the assigned approver.</errorMessage>
+</ValidationRule>

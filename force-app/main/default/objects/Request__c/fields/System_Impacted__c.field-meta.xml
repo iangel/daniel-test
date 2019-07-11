@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>System_Impacted__c</fullName>
+    <description>Systems which gets impacted from the request</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Systems that get impacted due to this requirement.</inlineHelpText>
+    <label>Systems Impacted</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Objects</fullName>
+                <default>false</default>
+                <label>Business Objects</label>
+            </value>
+            <value>
+                <fullName>Customer Master Database (CMD)</fullName>
+                <default>false</default>
+                <label>Customer Master Database (CMD)</label>
+            </value>
+            <value>
+                <fullName>Enterprise Data Warehouse (EDW)</fullName>
+                <default>false</default>
+                <label>Enterprise Data Warehouse (EDW)</label>
+            </value>
+            <value>
+                <fullName>Outlook</fullName>
+                <default>false</default>
+                <label>Outlook</label>
+            </value>
+            <value>
+                <fullName>STARS</fullName>
+                <default>false</default>
+                <label>STARS</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>No Systems Impacted</fullName>
+                <default>false</default>
+                <label>No Systems Impacted</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>3</visibleLines>
+</CustomField>

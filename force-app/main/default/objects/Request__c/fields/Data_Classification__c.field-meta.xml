@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Data_Classification__c</fullName>
+    <defaultValue>&#39;N/A&#39;</defaultValue>
+    <externalId>false</externalId>
+    <label>Data Classification</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Customer Data</fullName>
+                <default>false</default>
+                <label>Customer Data</label>
+            </value>
+            <value>
+                <fullName>Transactional Data</fullName>
+                <default>false</default>
+                <label>Transactional Data</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

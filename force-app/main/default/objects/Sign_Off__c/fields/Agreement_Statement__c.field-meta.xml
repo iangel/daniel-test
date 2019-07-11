@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Agreement_Statement__c</fullName>
+    <defaultValue>&quot;I have reviewed the deliverables for the above specified stage and capability. I give official sign off and approval to move forward to the next stage.&quot;</defaultValue>
+    <description>Sign off agreement statement details</description>
+    <externalId>false</externalId>
+    <label>Agreement Statement</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

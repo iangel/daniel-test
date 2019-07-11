@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Does this requirement impact OSS Phase 1 Build? Used for Phase 2 Analysis --></help>
+    <label><!-- OSS Impacted --></label>
+    <name>OSS_Impacted__c</name>
+</CustomFieldTranslation>

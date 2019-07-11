@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Phase__c</fullName>
+    <description>In which phase of testing the defect was identified</description>
+    <externalId>false</externalId>
+    <label>Test Phase</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Unit Test</fullName>
+                <default>false</default>
+                <label>Unit Test</label>
+            </value>
+            <value>
+                <fullName>Peer Review</fullName>
+                <default>false</default>
+                <label>Peer Review</label>
+            </value>
+            <value>
+                <fullName>System Test</fullName>
+                <default>false</default>
+                <label>System Test</label>
+            </value>
+            <value>
+                <fullName>Migration Test</fullName>
+                <default>false</default>
+                <label>Migration Test</label>
+            </value>
+            <value>
+                <fullName>Regression Test</fullName>
+                <default>false</default>
+                <label>Regression Test</label>
+            </value>
+            <value>
+                <fullName>UAT</fullName>
+                <default>false</default>
+                <label>UAT</label>
+            </value>
+            <value>
+                <fullName>Client Team QA</fullName>
+                <default>false</default>
+                <label>Client Team QA</label>
+            </value>
+            <value>
+                <fullName>SIT</fullName>
+                <default>true</default>
+                <label>SIT</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

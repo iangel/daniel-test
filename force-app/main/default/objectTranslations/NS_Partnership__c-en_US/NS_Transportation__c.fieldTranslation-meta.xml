@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Is the 3PL authorized to discuss transportation information with this customer? --></help>
+    <label><!-- Transportation --></label>
+    <name>NS_Transportation__c</name>
+    <picklistValues>
+        <masterLabel>Authorized</masterLabel>
+        <translation><!-- Authorized --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Authorized</masterLabel>
+        <translation><!-- Not Authorized --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

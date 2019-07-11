@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If NS_Escalated, then Task Owner Group is required for push notification --></help>
+    <label><!-- Automotive On Create --></label>
+    <name>NS_AutomotiveStatus__c</name>
+    <picklistValues>
+        <masterLabel>NS_Closed</masterLabel>
+        <translation><!-- NS_Closed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NS_Escalated</masterLabel>
+        <translation><!-- NS_Escalated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NS_Working</masterLabel>
+        <translation><!-- NS_Working --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

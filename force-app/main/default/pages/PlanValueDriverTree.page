@@ -1,0 +1,224 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">CRM/ PRM Consolidated Value Driver Tree</div>
+       
+            
+            <!-- Table -->
+            <table class="table">
+              <tr>
+                  <th>Financial Lever
+ </th>
+                  <th> Business Objective
+</th>
+                  <th>Value Drivers
+ </th>
+                  <th colspan="2"> KPI/ Metrics
+</th>
+
+                                                                                          
+              </tr>
+<tr>
+   <td rowspan="7"   style="vertical-align:middle;" > Increase Total Revenues </td>
+   <td rowspan="2"  style="vertical-align:middle;" >Add New Customers </td>
+   <td>Increase Lead to Opportunity Conversion</td>   
+    <td>  
+   Lead Conversion Rate</td>   
+<td></td>
+</tr>
+
+<tr>
+
+   <td>Improve Opportunity Success
+</td>
+   <td>Increase Lead to Opportunity Conversion</td>   
+ 
+<td></td>
+</tr>
+<tr>
+
+   <td rowspan="2"  style="vertical-align:middle;" >Increase Revenue per Customer</td>
+   <td>Improve Deal Pricing</td>   
+  <td> Average Deal Size</td>
+<td></td>
+
+</tr>
+<tr>
+
+
+   <td>Increase Customer Satisfaction
+</td>   
+  <td> % Orders Renewed</td>
+
+  <td> Customer Satisfaction Scores</td>
+</tr>
+
+<tr>
+
+   <td >Increase Revenue per Rep</td>
+   <td>Increase Rep Time with Customers</td>   
+  <td>Revenue per Rep</td>
+
+<td>% Customer-facing Time per Rep</td>
+
+</tr>
+
+<tr>
+
+   <td rowspan="2"  style="vertical-align:middle;" >Increase Partner Revenues
+</td>
+   <td>Improve Partner Productivity
+</td>   
+  <td> Investment ROI
+</td>
+<td></td>
+
+</tr>
+   <tr>
+
+   <td >Improve Partner Satisfaction
+</td>
+   <td>Channel Penetration <br/>Partner Satisfaction Scores
+
+</td>   
+  <td>Revenue per Partner
+</td>
+
+
+</tr>    
+
+
+
+
+<tr>
+   <td rowspan="5"   style="vertical-align:middle;"   >Grow Operating Margin
+ </td>
+   <td rowspan="2" style="vertical-align:middle;"  >Reduce Cost of Sales
+ </td>
+   <td>Increase Deal Velocity
+</td>   
+    <td>  
+   Deal Velocity
+</td>   
+<td></td>
+</tr>
+
+<tr>
+
+   <td>Reduce Cost to Solution/ Review
+
+</td>
+   <td>Sales Solution Cost/ Rev $
+</td>   
+ 
+<td></td>
+</tr>
+<tr>
+
+   <td rowspan="2"  style="vertical-align:middle;" >Reduce Sales Ops Costs
+</td>
+   <td>Reduce Manual Transaction Costs
+</td>   
+<td>% of Automated Transactions </td>
+<td>Time Spent per Manual Transaction
+</td>
+
+</tr>
+<tr>
+
+
+   <td>Automation of Sales Processes
+
+</td>   
+  <td>SO Cost of Service (CPRD)
+</td>
+
+  <td></td>
+</tr>
+
+<tr>
+
+   <td >Reduce Rep Turnover Costs
+</td>
+   <td>Improve Employee Satisfaction
+</td>   
+  <td>Employee Satisfaction Scores
+</td>
+
+<td></td>
+
+</tr>
+
+
+
+
+<tr>
+   <td rowspan="5"  style="vertical-align:middle;"    >Improve Earnings Predictability
+
+ </td>
+   <td  >Improve Forecast Accuracy
+
+ </td>
+   <td>Reduce Revenue Variance vs. Projected
+
+</td>   
+    <td>  
+ Forecasting Accuracy
+
+</td>   
+<td></td>
+</tr>
+
+<tr>
+
+   <td rowSpan="2"  style="vertical-align:middle;" >Improve Pipeline Health
+
+
+</td>
+   <td>Improve Pipeline Visibility
+
+</td>   
+ 
+<td>Qualified Pipeline Size
+</td>
+<td></td>
+</tr>
+<tr>
+
+   <td rowspan="2"  style="vertical-align:middle;" >Optimize Funnel Shape
+
+</td>
+   <td>Pipeline Shape
+
+</td>   
+<td> </td>
+<td>
+</td>
+
+</tr>
+
+
+
+
+
+
+
+
+
+
+
+
+         
+            </table>
+        </div>
+        
+              
+       <!--  <ul class="pager">
+                  <li class="previous"><a href="/apex/PlanAndAnalyzeCRPTemplatesExamples">&larr; Back</a></li>
+
+              </ul> -->
+              
+    </c:CrpiPageTemplate>
+</apex:page>

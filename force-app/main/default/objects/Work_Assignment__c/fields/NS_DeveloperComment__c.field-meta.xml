@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_DeveloperComment__c</fullName>
+    <description>It is to capture developer comment on the particular request</description>
+    <externalId>false</externalId>
+    <label>Developer Comment</label>
+    <length>32768</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

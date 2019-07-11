@@ -1,0 +1,549 @@
+<apex:component controller="SaaSPageTemplateCtrl">
+<script>
+     $( window ).load(function() {
+    $( '.toggleIcon' ).bind( "click", function() {
+       
+        $('#click-more, #click-less').toggle();
+           
+           });
+         
+         
+         
+          $(function(){
+    // this will get the full URL at the address bar      
+    var url = window.location.href; 
+    var url1= url.substr(0, url.indexOf('?'));    
+      // passes on every "a" tag 
+    $("#header a").each(function() {
+            // checks if its the same on the address bar   
+        if((url1 == (this.href)) || (url == (this.href))) {            
+            $(this).parents("li").addClass("active");
+        }
+    });  
+              
+              $(function(){
+    var releases=document.getElementById("releases");
+    var request=document.getElementById("request");
+    var issues=document.getElementById("issues");
+    var decisions=document.getElementById("decisions");
+    var questionLog=document.getElementById("questionLog");
+     var str = window.location.href; 
+    var rel = str.match(/Release/gi);
+    var req = str.match(/Request/gi);
+    var issue = str.match(/Issue/gi);
+    var dec = str.match(/Decision/gi);
+    var que = str.match(/QuestionLog/gi);
+        if(rel){
+        
+            $(releases).parents("li").addClass("active");
+        }
+    if(req){
+        
+            $(request).parents("li").addClass("active");
+        }
+    if(issue){
+        
+            $(issues).parents("li").addClass("active");
+        }
+    if(dec){
+        
+            $(decisions).parents("li").addClass("active");
+        }
+    if(que){
+        
+            $(questionLog).parents("li").addClass("active");
+        }
+        
+     });
+
+
+  $('.collapse').on('shown.bs.collapse', function (e) 
+        {
+            $(e.target).prev('.panel-heading').find(".fa-chevron-down").removeClass("fa-chevron-down").addClass("fa-chevron-up");
+        })
+        
+        $('.collapse').on('hide.bs.collapse', function (e) 
+        {
+            $(e.target).prev('.panel-heading').find(".fa-chevron-up").removeClass("fa-chevron-up").addClass("fa-chevron-down");
+        })
+        
+  
+  
+});   
+
+});
+
+function openPage(pgUrl) 
+    {     
+         var s = pgUrl;
+       
+         if( (typeof sforce != 'undefined') && (sforce != null) )
+       {
+
+  //             sforce.one.navigateToURL(s,true);
+   window.top.location.href = s;       
+        }
+        else
+        {
+        window.top.location.href = s;       
+        }    
+    } 
+ 
+
+   
+</script>    
+<style>
+.active{ 
+    background-color: #0197D4; 
+    font-weight: bold;
+    color:#f0f0f0 !important;
+    }
+        
+.rating
+{
+   
+}
+.rating span
+{
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+}
+.rating a
+{
+    font-size: 25px;
+    cursor: pointer;
+    float: right;
+   
+}
+
+.rating a:hover, .rating a:hover ~ a
+{
+    color: orange;
+}
+
+.rating span:hover, .rating span:hover ~ span
+{
+    color: orange;
+}
+.intro
+{
+color: orange;
+}
+
+.form-group.required .control-label:after { 
+   content:" *";
+   color:red;font-size: 130%;
+}
+     .relatedLstCss
+        {
+            overflow: auto; 
+            max-height: 150px;
+            overflow-x: hidden;
+        }
+ .scroll{}
+    .scroll::-webkit-scrollbar {
+    width: 2px;
+}
+ 
+.scroll::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+.scroll::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  outline: 1px solid slategrey;
+}
+.hrBorder
+{   
+   border-top: 1px solid #0198d5; 
+   width: 100%;
+   margin-top: 0px
+}  
+
+.textAlign {
+    padding-top: 13px;
+    width: 73%;
+    text-align: left;
+}
+
+#dashboard {
+    background: url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/dashboard.png')}') no-repeat;
+    background-position: 95% 50%;
+    color:#58595b !important;
+}
+
+#dashboard:hover {
+    background: #0197d5 url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/white/dashboard_white.png')}') no-repeat;
+    background-position: 95% 50%;
+    color:#f0f0f0 !important;   
+}
+
+#releases {
+    background: url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/releases.png')}') no-repeat;
+    background-position: 95% 50%;
+    color:#58595b !important;
+}
+
+#releases:hover {
+    background: #0197d5 url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/white/releases_white.png')}') no-repeat;
+    background-position: 95% 50%;
+    color:#f0f0f0 !important;   
+}
+    
+
+
+#request {
+    background: url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/requests.png')}') no-repeat;
+    background-position: 95% 50%;
+    color:#58595b !important;
+}
+
+#request:hover {
+    background: #0197d5 url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/white/requests_white.png')}') no-repeat; 
+    background-position: 95% 50%;
+    color:#f0f0f0 !important;   
+}
+
+#issues {
+    background: url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/issues.png')}') no-repeat;
+    background-position: 95% 50%;
+    color:#58595b !important;
+}
+
+#issues:hover {
+    background: #0197d5 url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/white/issues_white.png')}') no-repeat;
+    background-position: 95% 50%;
+    color:#f0f0f0 !important;   
+}
+
+#decisions {
+    background: url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/decisions.png')}') no-repeat;
+    background-position: 95% 50%;
+    color:#58595b !important;
+}
+
+#decisions:hover {
+    background: #0197d5 url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/white/decisions_white.png')}') no-repeat;
+    background-position: 95% 50%;
+    color:#f0f0f0 !important;   
+}
+
+#questionLog {
+    background: url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/question_log.png')}') no-repeat;
+    background-position: 90% 50%;
+    color:#58595b !important;
+}
+
+#questionLog:hover {
+    background: #0197d5 url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/white/question_log_white.png')}') no-repeat; 
+    background-position: 90% 50%;
+    color:#f0f0f0 !important;   
+}
+
+
+#userStories{
+    background: url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/requirement1.png')}') no-repeat;
+    background-position: 90% 50%;
+    color:#58595b !important;
+}
+
+#userStories:hover {
+    background: #0197d5 url('{!URLFOR($Resource.SaasDelivery_Icons, 'icon/white/requirement1_hover.png')}') no-repeat; 
+    background-position: 90% 50%;
+    color:#f0f0f0 !important;   
+}
+
+
+@media (max-width: 767px) {
+    #dashboard, #dashboard:hover, #releases, #releases:hover, #request, #request:hover, #issues, #issues:hover, #decisions, #decisions:hover, #questionLog, #questionLog:hover, #userStories, #userStories:hover  {
+        background-position: center;
+        height: 63px;
+    }
+    .xsValueDelivery {
+        width: 49%;
+    }
+    .menuBar {
+        padding-left: 15px;
+    }
+    .xsHeaderText{
+        text-align: center;
+        font-size: 18px;
+        line-height: 18px;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+    .xsVerticalDivider {
+        height: 20px;
+        border-right:1px solid #ffffff;
+        float: left;
+        padding-left: 2px;
+    }
+}
+
+.horizantalLine {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-top: 1px solid #cccccc;
+}
+
+a.show-sidebar, a.show-sidebar:hover {
+    color: #ffffff;
+    padding-top: 13px;
+    padding-left: 10px;
+}
+
+@media (min-width: 768px) {
+    .sm6 {
+        width: 46%;
+    }
+    .sm3 {
+        width: 27%;
+    }
+    .smBlueBar {
+        width: 82.333333%;
+    }
+    .menuBar {
+        padding-left: 6px;
+    }
+    .headerText {
+        text-align: center;
+        font-size: 18px;
+        line-height: 18px;
+        color: #ffffff;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    #sidebar-left.col-sm-2 {
+      opacity: 1;
+      width: 20.666667%;
+      padding: 0 15px;
+    }
+    #content.col-sm-10 {
+      width: 79.333333%;
+    }
+    .verticalDivider {
+        border-right:1px solid #ffffff;
+        height: 35px;
+        float: left;
+        padding-left: 6px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .sm-comment-icon {
+        margin-top: 59px;
+    }
+
+    .submit-sm {
+        margin-bottom: 15px;
+    }
+    .smKeyActionInput {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .smKeyActionIcons {
+        padding-right: 0px;
+    }
+}
+
+@media (min-width: 992px) {
+    .submit-md {
+        margin-top: 75px;
+     }
+     .comment-icon {
+        margin-top: 59px;
+    }
+
+}
+.listDropdown {
+          display: block;
+          width: 100%;
+          height: 26px;
+          font-size: 14px;
+          line-height: 1.428571429;
+          color: #555;
+          background-color: #ffffff;
+          background-image: none;
+          border: 1px solid #cccccc;
+          border-radius: 4px;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;        
+}
+.listDropdown:focus {
+          border-color: #66afe9;
+          outline: 0;
+          -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+          box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, .6);
+}
+</style>
+       <head>
+        <meta charset="utf-8"/>
+        <title>SaaS Delivery Toolkit</title>
+        <meta name="description" content="description"/>
+        <meta name="author" content="DevOOPS"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <apex:stylesheet value="{!URLFOR($Resource.SaaS_Delivery_App, 'css/bootstrap.css')}"/>            
+        <apex:includeScript value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'plugins/jquery/jquery-2.1.0.min.js')}"/>      
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"/>
+       <apex:stylesheet value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'css/style.css')}"/>  
+    </head>
+<body>
+<!--Start Header-->
+<div id="screensaver">
+    <canvas id="canvas"></canvas>
+    <i class="fa fa-lock" id="screen_unlock"></i>
+</div>
+<div id="modalbox">
+    <div class="devoops-modal">
+        <div class="devoops-modal-header">
+            <div class="modal-header-name">
+                <span>Basic table</span>
+            </div>
+            <div class="box-icons">
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+        <div class="devoops-modal-inner">
+        </div>
+        <div class="devoops-modal-bottom">
+        </div>
+    </div>
+</div>
+
+
+<!-- <header class="navbar navbar-fixed-top"> -->
+<header class="navbar navbar-static-top">
+
+    <div class="container-fluid expanded-panel">
+        <div class="row">
+            <div class="col-xs-6 col-sm-1 navbar-brand xsValueDelivery" id="logo" style="margin-left: 0;padding: 8px 10px 10px;">
+                <a href="/apex/SaaSTabRediect" style="line-height: 13px;font-size: 12px;color:#BDBDBD;">
+                    <p style="text-align: center;">VALUE Delivery Approach</p>
+                </a>
+            </div>
+            <div style="height: 50px;float: left;background: #0197D5;width: 1%;padding-top: 8px;">
+                <div class="verticalDivider xsVerticalDivider"></div>
+            </div>
+
+            <div class="col-xs-6 col-sm-1 navbar-brand" id="logo" style="margin-left: 0px;padding: 8px 10px 10px 3px;">
+                <a href="/apex/SaaSDashboard" style="line-height: 13px;font-size: 12px;">
+                    <p style="text-align: center;">Toolkit Mobile App</p>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-10 smBlueBar" id="top-panel">
+                <div class="row"> 
+                    <div class="col-xs-3 col-sm-3 menuBar">
+                        <a class="show-sidebar" href="#">
+                       <!--   <i class="fa fa-bars" style="font-size: 2em;"></i>    -->
+                            
+                                <img src ="{!$Resource.open_icon}" id="click-more"  class="toggleIcon" style="display:none; "  />
+                                <img src ="{!$Resource.close_icon}" id="click-less"  class="toggleIcon"/>
+                           
+                            
+                               
+                          
+                        </a>
+                        
+                    </div>
+                    <div class="col-xs-5 col-sm-5 headerText xsHeaderText">Toolkit Mobile App</div>
+                    <div class="col-xs-4 col-sm-4 top-panel-right">
+                        <ul class="nav navbar-nav pull-right panel-menu">
+                                                    
+                            <li class="dropdown">
+                               <a href="#" class="dropdown-toggle account" data-toggle="dropdown">
+                                    <div class="avatar">
+                                        <img src="{!UserPhotoUrl}" class="img-circle" alt="avatar" />
+                                    </div>
+                                    <div class="user-mini pull-right">
+                                        <span class="welcome">Welcome,</span>
+                                        <span>{!$user.firstname}</span>
+                                    </div>
+                                </a>
+                                
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div id="main" class="container-fluid">
+    <div class="row">
+        <div id="sidebar-left" class="col-xs-2 col-sm-2 col-md-3 menu" style="margin-bottom: -2450px !important;">
+            <ul class="nav main-menu" id="header">
+                <li>
+                    <a href="/apex/SaaSDashboard" class="dropdown-toggle" id="dashboard">
+                        <!--<i class="fa fa-home"></i>-->
+                        <p class="hidden-xs textAlign">Dashboard</p>
+                    </a>
+                </li>
+                <hr class="horizantalLine"/>
+                <li class="dropdown">
+                    <a href="/apex/SaaSReleaseListView" class="dropdown-toggle" id="releases">
+                       <!-- <i class="fa fa-volume-off"></i>-->
+                        <p class="hidden-xs textAlign">Releases</p>
+                        </a>                            
+                </li>
+                <hr class="horizantalLine"/>
+                <li class="dropdown">
+                    <a href="/apex/SaaSRequestListView" class="dropdown-toggle" id="request">
+                        <!--<i class="fa fa-pencil-square-o"></i>-->
+                         <p class="hidden-xs textAlign">Requests</p>
+                    </a>                 
+                </li>
+                <hr class="horizantalLine"/>
+                <li class="dropdown">
+                    <a href="/apex/SaaSIssuesListView" class="dropdown-toggle" id="issues">
+                       <!-- <i class="fa fa-flag-o"></i>-->
+                         <p class="hidden-xs textAlign">Issues or Risks</p>
+                    </a>
+                    
+                </li>
+                <hr class="horizantalLine"/>
+                <li class="dropdown">
+                    <a href="/apex/SaaSKeyActionOrDecisionListView" class="dropdown-toggle" id="decisions">
+                        <!--<i class="fa fa-flag-o"></i>-->
+                         <p class="hidden-xs textAlign">Key Actions or Decisions</p>
+                    </a>
+                 </li>
+                 <hr class="horizantalLine"/>
+                <li class="dropdown">
+                    <a href="/apex/SaaSQuestionLogListView" class="dropdown-toggle" id="questionLog">
+                        <!--<i class="fa fa-file-text-o"></i>-->
+                         <p class="hidden-xs textAlign">Questions Log</p>
+                    </a>
+                    
+                </li>
+                <hr class="horizantalLine"/>
+                 <li class="dropdown">
+                    <a href="/apex/SaaSUserStoriesListView" class="dropdown-toggle" id="userStories">
+                        <!--<i class="fa fa-file-text-o"></i>-->
+                         <p class="hidden-xs textAlign">User Stories</p>
+                    </a>
+                    
+                </li>
+              <hr class="horizantalLine"/>
+            </ul>
+        </div>
+        <!--Start Content-->
+        <div id="content" class="col-xs-12 col-sm-10">
+          <apex:componentBody > </apex:componentBody>
+        </div>
+        <!--End Content-->
+    </div>
+</div>
+
+<apex:includeScript value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'plugins/bootstrap/bootstrap.min.js')}"/> 
+ <apex:includeScript value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'js/devoops.js')}"/>
+ 
+</body>
+</apex:component>

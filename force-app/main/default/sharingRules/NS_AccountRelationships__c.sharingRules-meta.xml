@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>NS_RelatedAccountVisibilityAccessToAll</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>All User will have view access to Related Account.</description>
+        <label>NS_RelatedAccountVisibilityAccessToAll</label>
+        <sharedTo>
+            <roleAndSubordinates>NS_Executive</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>Name</field>
+            <operation>notEqual</operation>
+            <value>null</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

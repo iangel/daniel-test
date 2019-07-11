@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Short Definition of term (255 limit) 
+
+Required for OFFICIAL Terms --></help>
+    <label><!-- Definition --></label>
+    <name>Definition__c</name>
+</CustomFieldTranslation>

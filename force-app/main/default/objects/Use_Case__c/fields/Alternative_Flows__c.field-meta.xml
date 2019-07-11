@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Alternative_Flows__c</fullName>
+    <description>Document branches from the main flow to handle special conditions</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Document branches from the main flow to handle special conditions</inlineHelpText>
+    <label>Alternative Flows</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>8</visibleLines>
+</CustomField>

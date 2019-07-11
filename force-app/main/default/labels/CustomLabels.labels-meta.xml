@@ -1,0 +1,590 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>ANI_ONLY_CONTACT</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>ANI ONLY CONTACT</shortDescription>
+        <value>ANI ONLY</value>
+    </labels>
+    <labels>
+        <fullName>Build_CRP_Deck</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Build CRP Deck</shortDescription>
+        <value>Build_CRP_Deck</value>
+    </labels>
+    <labels>
+        <fullName>Build_Functional_Design_Document_Template</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Build_Functional_Design_Document_Template</shortDescription>
+        <value>Build_Functional_Design_Document_Template</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Actual_Result</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Actual Result</shortDescription>
+        <value>Actual Result</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Back</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery_Back</shortDescription>
+        <value>Back</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Cancel</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Cancel</shortDescription>
+        <value>Cancel</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Comments</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Comments</shortDescription>
+        <value>Comments</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Description_of_Script</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Description of Script</shortDescription>
+        <value>Description of Script</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Environment</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery_Environment</shortDescription>
+        <value>Environment</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Execution_Cycle_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Execution Cycle Name</shortDescription>
+        <value>Execution Cycle Name</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Execution_End_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Execution End Date</shortDescription>
+        <value>Execution End Date</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Execution_Start_Date</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Execution Start Date</shortDescription>
+        <value>Execution Start Date</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Execution_Step_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Execution Step Name</shortDescription>
+        <value>Execution Step Name</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Execution_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery_Execution_Type</shortDescription>
+        <value>Execution Type</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Expected_Result</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Expected Result</shortDescription>
+        <value>Expected Result</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Input_Data</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Input Data</shortDescription>
+        <value>Input Data</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Milestone_Type</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Milestone Type</shortDescription>
+        <value>Milestone Type</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Milestones_and_Keydecisions</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery_Milestones_and_Keydecisions</shortDescription>
+        <value>No Milestones and keydecision records are for this search Criteria.</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Milestones_and_Releases</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Milestones and Releases</shortDescription>
+        <value>No Milestones are associated to this Release record.</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Owner</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Owner</shortDescription>
+        <value>Owner</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Print_View</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery_Print_View</shortDescription>
+        <value>Print View</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Release_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Release Name</shortDescription>
+        <value>Release Name</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Save</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery_Save</shortDescription>
+        <value>Save View</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Search</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery_Search</shortDescription>
+        <value>Search</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Select_Milestones</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Select Milestones</shortDescription>
+        <value>Select Milestones</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Step_Order</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Step Order</shortDescription>
+        <value>Step Order</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_TEC_Parent_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery TEC Parent Label</shortDescription>
+        <value>Test Execution Cycle</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_TEC_Parent_Label_sub</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery TEC Parent Label sub</shortDescription>
+        <value>My Test Execution Cycle</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_TSE_Header_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery_TSE_Header_Label</shortDescription>
+        <value>Test Script Executions</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_TestExecutionId</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery_TestExecutionId</shortDescription>
+        <value>Test Execution ID</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Test_Script_ID</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Test Script ID</shortDescription>
+        <value>Test Script ID</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Tex_Status</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery_Tex_Status</shortDescription>
+        <value>Status</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_User_Login_Details</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery User Login Details</shortDescription>
+        <value>User Login Details</value>
+    </labels>
+    <labels>
+        <fullName>Delivery_Valid_CSV_file</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Delivery Valid_CSV_file</shortDescription>
+        <value>Please Select the Valid .CSV File</value>
+    </labels>
+    <labels>
+        <fullName>Desgin_CRP_Deck</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Desgin_CRP_Deck</shortDescription>
+        <value>Desgin_CRP_Deck</value>
+    </labels>
+    <labels>
+        <fullName>Desgin_Functional_Design_Document_Template</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Desgin_Functional_Design_Document_Template</shortDescription>
+        <value>Desgin_Functional_Design_Document_Template</value>
+    </labels>
+    <labels>
+        <fullName>EmailDeleteErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>EmailDeleteErrorMessage</shortDescription>
+        <value>Only admin can delete emails</value>
+    </labels>
+    <labels>
+        <fullName>NS_3PLPrimaryVDN</fullName>
+        <categories>Hard Coded ID</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>It stores the ID of Primary VDN for 3PL Customers</shortDescription>
+        <value>a181I000001861aQAA</value>
+    </labels>
+    <labels>
+        <fullName>NS_AccessNSPortal</fullName>
+        <categories>Integration AccessNS endpoints</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>To annex the second part of the url</shortDescription>
+        <value>/nsdashboard</value>
+    </labels>
+    <labels>
+        <fullName>NS_AssocAccErrorMsg</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Associated Account Error Message</shortDescription>
+        <value>This Associated Account relationship already exists.</value>
+    </labels>
+    <labels>
+        <fullName>NS_CaseBUMap</fullName>
+        <categories>NS_CaseTriggerHelper</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case BU with Metadata Field Map</shortDescription>
+        <value>{ &quot;NS_AutomotiveStatus__c&quot;: &quot;Automotive&quot;,&quot;NS_EPStatus__c&quot;:&quot;Equipment Planning&quot;, &quot;NS_UTSStatus__c&quot; :&quot;Unit Train&quot;,&quot;NS_DefaultStatus__c&quot;:&quot;OSS&quot;}</value>
+    </labels>
+    <labels>
+        <fullName>NS_CaseWithOpenTaskError</fullName>
+        <categories>NS_CaseTriggerHelper</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Case with Open task Error</shortDescription>
+        <value>Please close all associated Tasks before closing the Case</value>
+    </labels>
+    <labels>
+        <fullName>NS_DuplicatePartnershipErrorMessage1</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate Partnership Error Message1</shortDescription>
+        <value>This partnership already exists:</value>
+    </labels>
+    <labels>
+        <fullName>NS_DuplicatePartnershipErrorMessage2</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Duplicate Partnership Error Message2</shortDescription>
+        <value>Duplicate record found for Customer Account:</value>
+    </labels>
+    <labels>
+        <fullName>NS_IntegrationCertName</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NS_IntegrationCertName</shortDescription>
+        <value>crmprod</value>
+    </labels>
+    <labels>
+        <fullName>NS_LibraryEmail</fullName>
+        <categories>NS_EmailtoCaseHandler</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Library Email</shortDescription>
+        <value>TNCSOAUTOMOTIVEREPORTS@nscorp.com</value>
+    </labels>
+    <labels>
+        <fullName>NS_LibraryName</fullName>
+        <categories>NS_EmailtoCaseHandler</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Library Name</shortDescription>
+        <value>Automotive Library</value>
+    </labels>
+    <labels>
+        <fullName>NS_NoReplyOrgWideAddress</fullName>
+        <categories>Bounce Back Mail</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>No Reply Organization Wide Address</shortDescription>
+        <value>noreply@nscorp.com</value>
+    </labels>
+    <labels>
+        <fullName>NS_OfflinePrimaryVDN</fullName>
+        <categories>Hard Coded ID</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>It stores the ID of Primary VDN for Offline Customers</shortDescription>
+        <value>a181I000001861ZQAQ</value>
+    </labels>
+    <labels>
+        <fullName>NS_OnsiteInventory</fullName>
+        <categories>Integration AccessNS endpoints</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>To annex the second part of the url</shortDescription>
+        <value>/onsiteInventoryTabs</value>
+    </labels>
+    <labels>
+        <fullName>NS_Receivingtabs</fullName>
+        <categories>Integration AccessNS endpoints</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>To annex the second part of the url</shortDescription>
+        <value>/receivingtabs</value>
+    </labels>
+    <labels>
+        <fullName>NS_Shipping</fullName>
+        <categories>Integration AccessNS endpoints</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>To annex the second part of the url</shortDescription>
+        <value>/shippingTabs</value>
+    </labels>
+    <labels>
+        <fullName>NS_TaskErrorMessage</fullName>
+        <categories>Error Message</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>NS Task Error Message</shortDescription>
+        <value>is an Inactive contact. Please select an Active contact.</value>
+    </labels>
+    <labels>
+        <fullName>Org_URL</fullName>
+        <categories>CSR form requirement</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>Org URL</shortDescription>
+        <value>https://connectns.lightning.force.com/</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Defect_Open</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Defect_Open</shortDescription>
+        <value>Open</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Defect_Subject</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Defect_Subject</shortDescription>
+        <value>Defect Found on Requirement #</value>
+    </labels>
+    <labels>
+        <fullName>PMO_TaskType_Customization</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_TaskType_Customization</shortDescription>
+        <value>Customization</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Task_CodeReview</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Task_CodeReview</shortDescription>
+        <value>Code Review</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Task_Error</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Task_Error</shortDescription>
+        <value>Some error occured while creating a new Task</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Task_Execution</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Task_Execution</shortDescription>
+        <value>Execution</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Task_Review</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Task_Review</shortDescription>
+        <value>Review</value>
+    </labels>
+    <labels>
+        <fullName>Receivingtabs</fullName>
+        <categories>Integration AccessNS endpoints</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>to annex the second part of the url</shortDescription>
+        <value>/receivingtabs</value>
+    </labels>
+    <labels>
+        <fullName>SYS_ADMIN</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SYS ADMIN</shortDescription>
+        <value>System Administrator</value>
+    </labels>
+    <labels>
+        <fullName>SaaS_Client_Value_Delivery_Team_Profile_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SaaS Client Value Delivery Team Profile Name</shortDescription>
+        <value>SaaS Client Value Delivery Team</value>
+    </labels>
+    <labels>
+        <fullName>SaaS_Dashboard_1_Report_API_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SaaS Dashboard 1 Report  API Name</shortDescription>
+        <value>Requests_by_Request_Type_Cov</value>
+    </labels>
+    <labels>
+        <fullName>SaaS_Dashboard_1_Report_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SaaS Dashboard 1 Report Label</shortDescription>
+        <value>Release By Request Type</value>
+    </labels>
+    <labels>
+        <fullName>SaaS_Dashboard_2_Report_API_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SaaS_Dashboard_2_Report_API_Name</shortDescription>
+        <value>Requests_Grouped_by_Status</value>
+    </labels>
+    <labels>
+        <fullName>SaaS_Dashboard_2_Report_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SaaS Dashboard 2 Report Label</shortDescription>
+        <value>Requests Grouped by Status</value>
+    </labels>
+    <labels>
+        <fullName>SaaS_Dashboard_3_Report_API_Name</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SaaS_Dashboard_3_Report_API_Name</shortDescription>
+        <value>Requests_Grouped_by_Status</value>
+    </labels>
+    <labels>
+        <fullName>SaaS_Dashboard_3_Report_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SaaS Dashboard 3 Report Label</shortDescription>
+        <value>Requests Grouped by Status</value>
+    </labels>
+    <labels>
+        <fullName>SendEmail_Body1</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SendEmailBody1</shortDescription>
+        <value>------We have received your email and have assigned case number:</value>
+    </labels>
+    <labels>
+        <fullName>SendEmail_Body2</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SendEmailBody2</shortDescription>
+        <value>.  For further correspondence regarding this issue, please reply above this line and do not alter either the subject or the text below. -------</value>
+    </labels>
+    <labels>
+        <fullName>SendEmail_Body3</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SendEmailBody3</shortDescription>
+        <value>Thank  you for contacting Norfolk Southern.  Resolving your issues and answering your questions are a top priority for us. A member of our Customer Support Team will be in touch with you soon.</value>
+    </labels>
+    <labels>
+        <fullName>SendEmail_Body4</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SendEmailBody4</shortDescription>
+        <value>For information about current shipments or to request local service, please visit us online at https://accessns.nscorp.com/accessNS/#login</value>
+    </labels>
+    <labels>
+        <fullName>SendEmail_Body5</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>SendEmailBody5</shortDescription>
+        <value>For information about current shipments or to request local service, please visit us online at https://accessns.nscorp.com/accessNS/#login</value>
+    </labels>
+    <labels>
+        <fullName>Shipping</fullName>
+        <categories>Integration AccessNS endpoints</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>to annex the second part of the url</shortDescription>
+        <value>/shippingTabs</value>
+    </labels>
+    <labels>
+        <fullName>TES_Child_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TES_Child_Label</shortDescription>
+        <value>Test Execution Steps</value>
+    </labels>
+    <labels>
+        <fullName>TSE_Parent_Label</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE_Parent_Label</shortDescription>
+        <value>Test Script Execution</value>
+    </labels>
+    <labels>
+        <fullName>TSE_Parent_Label_Sub</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TSE_Parent_Label_Sub</shortDescription>
+        <value>My Test Script Execution</value>
+    </labels>
+    <labels>
+        <fullName>TaskDeleteMessage</fullName>
+        <categories>Error Messages</categories>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>TaskDeleteMessage</shortDescription>
+        <value>You have Insufficient privilege to delete Past activity.</value>
+    </labels>
+    <labels>
+        <fullName>VALUE_Delivery_Session_template</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>VALUE Delivery Session template</shortDescription>
+        <value>VALUE Delivery Session Template</value>
+    </labels>
+</CustomLabels>

@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Keywords --></label>
+    <name>Keywords_New__c</name>
+    <picklistValues>
+        <masterLabel>API</masterLabel>
+        <translation><!-- API --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Hierarchy</masterLabel>
+        <translation><!-- Account Hierarchy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Load</masterLabel>
+        <translation><!-- Account Load --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Planning</masterLabel>
+        <translation><!-- Account Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Add to Group</masterLabel>
+        <translation><!-- Add to Group --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Adoption</masterLabel>
+        <translation><!-- Adoption --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Agile</masterLabel>
+        <translation><!-- Agile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Amount</masterLabel>
+        <translation><!-- Amount --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Analyze</masterLabel>
+        <translation><!-- Analyze --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Apex</masterLabel>
+        <translation><!-- Apex --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Application Freeze</masterLabel>
+        <translation><!-- Application Freeze --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Approval Process</masterLabel>
+        <translation><!-- Approval Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Approve All</masterLabel>
+        <translation><!-- Approve All --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Archive</masterLabel>
+        <translation><!-- Archive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Atom Sphere</masterLabel>
+        <translation><!-- Atom Sphere --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Attachment</masterLabel>
+        <translation><!-- Attachment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Audit Trail</masterLabel>
+        <translation><!-- Audit Trail --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Batch Apex Class</masterLabel>
+        <translation><!-- Batch Apex Class --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Beginner</masterLabel>
+        <translation><!-- Beginner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Best Practices</masterLabel>
+        <translation><!-- Best Practices --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Birthday</masterLabel>
+        <translation><!-- Birthday --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Birthday Email</masterLabel>
+        <translation><!-- Birthday Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Birthday Wish</masterLabel>
+        <translation><!-- Birthday Wish --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Boomi</masterLabel>
+        <translation><!-- Boomi --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Build</masterLabel>
+        <translation><!-- Build --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CTI</masterLabel>
+        <translation><!-- CTI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Call Log</masterLabel>
+        <translation><!-- Call Log --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change Management</masterLabel>
+        <translation><!-- Change Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change Request</masterLabel>
+        <translation><!-- Change Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chart</masterLabel>
+        <translation><!-- Chart --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chatter</masterLabel>
+        <translation><!-- Chatter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code</masterLabel>
+        <translation><!-- Code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code Backup</masterLabel>
+        <translation><!-- Code Backup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Completion Time</masterLabel>
+        <translation><!-- Completion Time --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Component Code</masterLabel>
+        <translation><!-- Component Code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Config Only Sandbox</masterLabel>
+        <translation><!-- Config Only Sandbox --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Configure</masterLabel>
+        <translation><!-- Configure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact</masterLabel>
+        <translation><!-- Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Rules</masterLabel>
+        <translation><!-- Contact Rules --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Convert</masterLabel>
+        <translation><!-- Convert --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Convert Lead</masterLabel>
+        <translation><!-- Convert Lead --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Country Field</masterLabel>
+        <translation><!-- Country Field --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Create Partner User</masterLabel>
+        <translation><!-- Create Partner User --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Button</masterLabel>
+        <translation><!-- Custom Button --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customer Service</masterLabel>
+        <translation><!-- Customer Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cycle Plan</masterLabel>
+        <translation><!-- Cycle Plan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DNC</masterLabel>
+        <translation><!-- DNC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dashboard</masterLabel>
+        <translation><!-- Dashboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Archive</masterLabel>
+        <translation><!-- Data Archive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Load</masterLabel>
+        <translation><!-- Data Load --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deactivate</masterLabel>
+        <translation><!-- Deactivate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Debug</masterLabel>
+        <translation><!-- Debug --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dell</masterLabel>
+        <translation><!-- Dell --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deploy</masterLabel>
+        <translation><!-- Deploy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deployment Approach</masterLabel>
+        <translation><!-- Deployment Approach --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deployment Technique</masterLabel>
+        <translation><!-- Deployment Technique --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design</masterLabel>
+        <translation><!-- Design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Develop</masterLabel>
+        <translation><!-- Develop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Development</masterLabel>
+        <translation><!-- Development --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Discussion</masterLabel>
+        <translation><!-- Discussion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Display Records</masterLabel>
+        <translation><!-- Display Records --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dynamic Rollup</masterLabel>
+        <translation><!-- Dynamic Rollup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Eclipse</masterLabel>
+        <translation><!-- Eclipse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Edit From List View</masterLabel>
+        <translation><!-- Edit From List View --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Edit Page</masterLabel>
+        <translation><!-- Edit Page --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email</masterLabel>
+        <translation><!-- Email --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email Template</masterLabel>
+        <translation><!-- Email Template --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Email to Case</masterLabel>
+        <translation><!-- Email to Case --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Expiration</masterLabel>
+        <translation><!-- Expiration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field History</masterLabel>
+        <translation><!-- Field History --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field History Tracking</masterLabel>
+        <translation><!-- Field History Tracking --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field Limit</masterLabel>
+        <translation><!-- Field Limit --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>File</masterLabel>
+        <translation><!-- File --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Filter</masterLabel>
+        <translation><!-- Filter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Follower</masterLabel>
+        <translation><!-- Follower --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Force.com site</masterLabel>
+        <translation><!-- Force.com site --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Format code</masterLabel>
+        <translation><!-- Format code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Freeze</masterLabel>
+        <translation><!-- Freeze --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Full Sandbox</masterLabel>
+        <translation><!-- Full Sandbox --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Graphic</masterLabel>
+        <translation><!-- Graphic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Home Page</masterLabel>
+        <translation><!-- Home Page --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hours</masterLabel>
+        <translation><!-- Hours --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inbound</masterLabel>
+        <translation><!-- Inbound --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integrate</masterLabel>
+        <translation><!-- Integrate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integration</masterLabel>
+        <translation><!-- Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interaction Log</masterLabel>
+        <translation><!-- Interaction Log --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Language</masterLabel>
+        <translation><!-- Language --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiple Dashboards</masterLabel>
+        <translation><!-- Multiple Dashboards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiple Product</masterLabel>
+        <translation><!-- Multiple Product --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Multiple Queues</masterLabel>
+        <translation><!-- Multiple Queues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Note</masterLabel>
+        <translation><!-- Note --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Notification</masterLabel>
+        <translation><!-- Notification --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Novasuite</masterLabel>
+        <translation><!-- Novasuite --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PDF</masterLabel>
+        <translation><!-- PDF --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Package</masterLabel>
+        <translation><!-- Package --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Page</masterLabel>
+        <translation><!-- Page --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Page Layout</masterLabel>
+        <translation><!-- Page Layout --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Parent</masterLabel>
+        <translation><!-- Parent --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner</masterLabel>
+        <translation><!-- Partner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner Portal</masterLabel>
+        <translation><!-- Partner Portal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Partner User</masterLabel>
+        <translation><!-- Partner User --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Password</masterLabel>
+        <translation><!-- Password --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recycle Bin</masterLabel>
+        <translation><!-- Recycle Bin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remedy</masterLabel>
+        <translation><!-- Remedy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reminder</masterLabel>
+        <translation><!-- Reminder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Remove Filter</masterLabel>
+        <translation><!-- Remove Filter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Report</masterLabel>
+        <translation><!-- Report --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Request</masterLabel>
+        <translation><!-- Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Cloud</masterLabel>
+        <translation><!-- Sales Cloud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sales Management</masterLabel>
+        <translation><!-- Sales Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sandbox</masterLabel>
+        <translation><!-- Sandbox --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sandbox Refresh</masterLabel>
+        <translation><!-- Sandbox Refresh --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Search</masterLabel>
+        <translation><!-- Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service</masterLabel>
+        <translation><!-- Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Cloud</masterLabel>
+        <translation><!-- Service Cloud --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Service Request</masterLabel>
+        <translation><!-- Service Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Site</masterLabel>
+        <translation><!-- Site --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Storage</masterLabel>
+        <translation><!-- Storage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Support</masterLabel>
+        <translation><!-- Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Support Request</masterLabel>
+        <translation><!-- Support Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Task</masterLabel>
+        <translation><!-- Task --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Telephony</masterLabel>
+        <translation><!-- Telephony --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Territory</masterLabel>
+        <translation><!-- Territory --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training</masterLabel>
+        <translation><!-- Training --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Translation</masterLabel>
+        <translation><!-- Translation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Translation Workbench</masterLabel>
+        <translation><!-- Translation Workbench --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Trigger</masterLabel>
+        <translation><!-- Trigger --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Validation Rule</masterLabel>
+        <translation><!-- Validation Rule --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Variable</masterLabel>
+        <translation><!-- Variable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veeva</masterLabel>
+        <translation><!-- Veeva --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visual</masterLabel>
+        <translation><!-- Visual --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Visualforce</masterLabel>
+        <translation><!-- Visualforce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Web Service</masterLabel>
+        <translation><!-- Web Service --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workbook</masterLabel>
+        <translation><!-- Workbook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>iRep</masterLabel>
+        <translation><!-- iRep --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

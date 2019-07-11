@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Existing Contact --></label>
+    <lookupFilter>
+        <errorMessage><!-- Contact status should be Active --></errorMessage>
+    </lookupFilter>
+    <name>NS_ExistingContact__c</name>
+    <relationshipLabel><!-- Accounts --></relationshipLabel>
+</CustomFieldTranslation>

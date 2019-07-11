@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date_of_the_Week__c</fullName>
+    <externalId>false</externalId>
+    <formula>DAY(IF 
+(MOD(Weekly_Start_Date__c - DATE(1900,1,8),7)=0, 
+Weekly_Start_Date__c,/*Monday*/ 
+
+IF 
+(MOD(Weekly_Start_Date__c - DATE(1900,1,8),7)=1, 
+Weekly_Start_Date__c-1,/*Tuesday*/ 
+
+IF 
+(MOD(Weekly_Start_Date__c - DATE(1900,1,8),7)=2, 
+Weekly_Start_Date__c-2,/*Wednesday*/ 
+
+IF 
+(MOD(Weekly_Start_Date__c - DATE(1900,1,8),7)=3, 
+Weekly_Start_Date__c-3,/*Thursday*/ 
+
+IF 
+(MOD(Weekly_Start_Date__c - DATE(1900,1,8),7)=4, 
+Weekly_Start_Date__c-4,/*Friday*/ 
+
+IF 
+(MOD(Weekly_Start_Date__c - DATE(1900,1,8),7)=5, 
+Weekly_Start_Date__c-5,/*Saturday*/ 
+
+IF 
+(MOD(Weekly_Start_Date__c - DATE(1900,1,8),7)=6, 
+Weekly_Start_Date__c-6,/*Sunday*/ 
+
+DATE(1878,1,1)))))))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Start Date of the Week</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

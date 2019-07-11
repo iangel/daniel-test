@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_RequireAssignedToRegionForOSS</fullName>
+    <active>true</active>
+    <description>If Role contains “OSS” then Assigned To Region must be complete.</description>
+    <errorConditionFormula>AND(NOT( NS_Account__r.RecordType.DeveloperName =&quot;NS_CustomerOffline&quot;), ISPICKVAL( NS_Role__c , &#39;OSS Region&#39;) ,  ISBLANK( TEXT( NS_AssignedToRegion__c  )) )</errorConditionFormula>
+    <errorMessage>Please enter the region associated with this OSS role</errorMessage>
+</ValidationRule>

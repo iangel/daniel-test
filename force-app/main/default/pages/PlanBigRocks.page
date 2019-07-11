@@ -1,0 +1,61 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Big Rocks </div>
+             <div class="panel-body"> 
+             Big Rocks are critical topics or questions that must be addressed that will impact scope, design &amp; build decisions. Big Rocks should be captured ahead of and during the VALUE Delivery Approach.
+             <br/>
+             <br/>             
+            Strategy &amp; Policy Decisions need to be finalized to exit phase
+         <br/>    
+                <br/>   
+
+              <table class="table table-striped table-bordered" >
+                   <tr>
+                   <td> #</td>
+                   <td>Topic </td>
+                   <td> Question</td>
+                   <td>Implication </td>
+                   <td> Recommendation</td>
+                                                                                      
+                   </tr>
+                   
+                    <tr>
+                   <td> 1</td>
+                   <td></td>
+                   <td> </td>
+                   <td></td>
+                   <td> </td>
+                                                                                      
+                   </tr>
+                   
+                     <tr>
+                   <td> 2</td>
+                   <td></td>
+                   <td> </td>
+                   <td></td>
+                   <td> </td>
+                                                                                      
+                   </tr>
+                     <tr>
+                   <td> 3</td>
+                   <td></td>
+                   <td> </td>
+                   <td></td>
+                   <td> </td>
+                                                                                      
+                   </tr>
+                   
+               </table>
+               </div>
+        </div>
+      <!--    <ul class="pager">
+                  <li class="previous"><a href="/apex/PlanAndAnalyzeCRPTemplatesExamples">&larr; Back</a></li>
+
+              </ul> -->
+              
+              
+    </c:CrpiPageTemplate>
+</apex:page>

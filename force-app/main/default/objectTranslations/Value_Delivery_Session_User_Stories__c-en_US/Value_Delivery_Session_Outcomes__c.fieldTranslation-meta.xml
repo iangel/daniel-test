@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Value Delivery Session Outcomes --></label>
+    <name>Value_Delivery_Session_Outcomes__c</name>
+    <relationshipLabel><!-- Value Delivery Session User Stories --></relationshipLabel>
+</CustomFieldTranslation>

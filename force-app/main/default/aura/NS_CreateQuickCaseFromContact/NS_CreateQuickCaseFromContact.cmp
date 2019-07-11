@@ -1,0 +1,123 @@
+<aura:component controller="NS_CreateQuickCaseController" implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction"   > 
+    <aura:attribute name="class" type="String" description="CSS classname for the SVG element" />
+    <aura:attribute name="cse" type="Case" default="{sobjectType : 'Case' , 'AccountId': ''}" />
+    <aura:attribute name="depnedent_field_map" type="map" description="store controller(key)--> dependent(values) picklist value as a map." />
+    <aura:attribute name="is_dependent_disable" type="boolean" default="true" description="use for, make disbale depandent field." />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>  
+    <aura:attribute name="spinner" type="boolean" default="false"/> 
+    <aura:attribute name="recordId" type="String" />
+    <lightning:workspaceAPI aura:id="workspace" />
+    <aura:attribute name="isOssReploggedin" type="boolean" default="false"/>
+
+    
+    <aura:attribute name="listControllingValues" type="list" default="[]" description="to store controller field values"/>
+    <aura:attribute name="listDependingValues" type="list" default="['--- None ---']" description="to store dependent field values"/>
+    <aura:attribute name="listSubDependingValues" type="list" default="['--- None ---']" description="to store dependent field values"/>
+    
+    <aura:attribute name="depnedentFieldMap" type="map" description="map to store dependent values with controlling value"/>
+    <aura:attribute name="subDepnedentFieldMap" type="map" description="map to store sub dependent values with controlling value"/>
+    <aura:attribute name="bDisabledDependentFld" type="boolean" default="true"/> 
+    <aura:attribute name="bDisabledSubDependentFld" type="boolean" default="true"/> 
+     <aura:attribute name="typeFieldrequired" type="boolean" default="false"/> 
+    
+    <aura:attribute name="objDetail" type="Case" default="{'sobjectType' : 'Case'}"/>
+    <aura:attribute name="controllingFieldAPI" type="string" default="NS_InteractionCategory__c" description="store field API name of Controller field"/>
+    <aura:attribute name="dependingFieldAPI" type="string" default="NS_InteractionReason__c" description="store field API name of dependent field"/>
+    <aura:attribute name="subDependingFieldAPI" type="string" default="NS_Type__c" description="store field API name of sub dependent field"/>
+
+
+    <div class="slds-box slds-theme--default">
+       
+        <table>
+                <tr><td class="FldLabel">Account</td></tr>
+            </table>
+        <force:inputField aura:id="acId" value="{!v.cse.AccountId}" required='true'/>
+<!--/*Brief description :  Changes are being implemented Case Creation Form: Remove “Status” field and add “Origin”	
+*Defect no./wa/request no: WA#744
+*Developer Name : Moumita Sarangi
+*Date :17/01/2019*/ --> 
+        <div class="slds-form-element__control">    
+            <table>
+                <tr><td class="FldLabel">Origin</td></tr>
+            </table>
+            <force:inputField aura:id="Origin" value="{!v.cse.Origin}"/>
+        </div>
+            <!--Controller Field-->
+    <lightning:layoutItem >    
+               <lightning:select  name="controllerFld"
+    					  aura:id="callCategory"                                 
+                          value="{!v.objDetail.NS_InteractionCategory__c}" 
+                          label="Interaction Category"
+                          onchange="{!c.onControllerFieldChange}" 
+                          required="true"
+                          class="FldLabel">
+            <aura:iteration items="{!v.listControllingValues}" var="val">
+                <option value="{!val}">{!val}</option>
+            </aura:iteration>
+        </lightning:select>
+    </lightning:layoutItem>
+    
+    <!--Dependent Field-->
+    <lightning:layoutItem >
+        <lightning:select name="callReason"
+                          aura:id="callReason" 
+                          value="{!v.objDetail.NS_InteractionReason__c}"
+                          label="Interaction Reason"
+                          disabled="{!v.bDisabledDependentFld}"
+                          onchange="{!c.onSubControllerFieldChange}"
+                          required="true" class="FldLabel">
+            <aura:iteration items="{!v.listDependingValues}" var="val">
+                <option value="{!val}">{!val}</option>
+            </aura:iteration>
+        </lightning:select>
+    </lightning:layoutItem>
+    
+    <!--sub Dependent Field-->
+                  
+        <lightning:select name="subDependentFld"
+                            aura:id="caseType" 
+                          	value="{!v.objDetail.unknown_custom_field}"
+                          	label="Type"
+                         	disabled="{!v.bDisabledSubDependentFld}" 
+                             class="FldLabel" >
+            <aura:iteration items="{!v.listSubDependingValues}" var="val">
+                <option value="{!val}">{!val}</option>
+            </aura:iteration>
+        </lightning:select>
+                  
+
+        <div class="slds-form-element__control">  
+            <table>
+                <tr><td class="FldLabel"><span style="color:#ff0000">*</span>Subject</td></tr>
+            </table>
+            <ui:inputText aura:id="Subject" value="{!v.cse.Subject}" required="true" onError="{!c.handleError}" />
+        </div>  
+        
+         
+        <div class="slds-form-element__control">    
+            <table>
+                <tr><td class="FldLabel">Description</td></tr>
+            </table>
+            <force:inputField aura:id="Description" value="{!v.cse.Description}"  /><br/>
+        </div> 
+     
+        <div aura:Id="AfterHours" class="slds-hide">    
+            <table>
+                <tr><td class="FldLabel">After Hours</td></tr>
+            </table>
+            <ui:inputCheckbox aura:id="AfterHrs" value="{!v.cse.NS_Off_Hours_CheckBox__c}"  /><br/>
+        </div>
+        <lightning:button variant="brand" type="Submit" label="Save" iconName="utility:save" onclick="{!c.onSubmit }" />
+    </div> 
+     <!--loading spinner start... style=Brand Medium (blue dots)-->
+ <aura:if isTrue="{!v.spinner}">
+    <div aura:id="spinnerId" class="slds-spinner_container">
+       <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+         <span class="slds-assistive-text">Loading</span>
+         <div class="slds-spinner__dot-a"></div>
+         <div class="slds-spinner__dot-b"></div>
+       </div>
+    </div>
+ </aura:if>
+  <!-- Loading spinner end-->  
+</aura:component>

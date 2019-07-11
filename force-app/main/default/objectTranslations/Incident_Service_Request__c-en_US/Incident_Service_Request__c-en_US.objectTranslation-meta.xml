@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Incident/Service Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Incidents/Service Requests</value>
+    </caseValues>
+    <layouts>
+        <layout>Incident Management Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Service Request Management</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Information --></label>
+            <section>Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Any unplanned interruption or reduction in the quality of a service. --></description>
+        <label><!-- Incident --></label>
+        <name>Incident</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A request from a User for information, or advice, or for a Standard Change or for Access to an IT Service. --></description>
+        <label><!-- Service Request --></label>
+        <name>Service_Request</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

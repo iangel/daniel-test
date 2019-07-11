@@ -1,0 +1,5 @@
+<apex:component controller="SaaSDocumentDownload">
+      <apex:attribute name="developerName"  description="Document Name" type="String" assignTo="{!docDeveloperName}"/>
+      <apex:attribute name="linkName" type="String" description="Document Name"/>
+      <a href = "/servlet/servlet.FileDownload?file={!DocumentID}"><i class="fa fa-cloud-download fa-2x" title="{!linkName}"/>  </a> {!linkName}
+</apex:component>

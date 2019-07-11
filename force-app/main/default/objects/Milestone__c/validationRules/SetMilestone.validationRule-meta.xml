@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>SetMilestone</fullName>
+    <active>false</active>
+    <errorConditionFormula>ISPICKVAL( Asset_Initiative_Milestone__c , &#39;&#39;)</errorConditionFormula>
+    <errorDisplayField>Asset_Initiative_Milestone__c</errorDisplayField>
+    <errorMessage>Select an appropriate Milestone.</errorMessage>
+</ValidationRule>

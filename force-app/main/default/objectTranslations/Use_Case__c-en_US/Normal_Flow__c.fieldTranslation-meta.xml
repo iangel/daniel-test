@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Provide a detailed description of the user actions and system responses that will take place during execution of the use case under normal conditions --></help>
+    <label><!-- Normal Flow --></label>
+    <name>Normal_Flow__c</name>
+</CustomFieldTranslation>

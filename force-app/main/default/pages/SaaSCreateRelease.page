@@ -1,0 +1,385 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" extensions="SaaSCreateReleaseCtrl" standardController="Release__c" docType="html-5.0">
+    <style>
+        .relatedLstCss
+        {
+            overflow: auto; 
+            max-height: 150px;
+            overflow-x: hidden;
+        }
+  
+    #top-panel {
+  line-height: 0px !important;
+        }
+        
+    
+        
+      </style>
+    <c:SaaSToolkitPageTemplate >
+      <apex:variable var="emptyLst" value="'[]'" />
+        <br />
+        <apex:form >
+            <apex:outputPanel id="errorBlock">
+                <c:CustomPageMessages closableErrors="true" />
+            </apex:outputPanel>
+            <div>
+            <h4 style="float: left;margin-top: 15px;">
+                New Release &nbsp;
+            </h4>    
+                <apex:commandLink action="{!saveRelease}"  title="Save">
+                    <!--<i class="fa fa-check-circle fa-2x"></i>-->
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/save.png')}"/>
+                </apex:commandLink>&nbsp;
+                <!--<apex:commandLink action="/apex/SaaSCreateRelease" title="New Release" rendered="{! isDetail }">-->
+                 <apex:commandLink action="{!createNewRelease}" title="New Release" rendered="{! isDetail }">
+                
+                  <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/></apex:commandLink>&nbsp;
+                <apex:commandLink action="/apex/SaaSReleaseListView" title="Cancel" immediate="true"  rendered="{!NOT(isSaved)}" id="cancel">
+                    <!--<i class="fa fa-times-circle fa-2x" />-->
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/cancel.png')}"/>
+                </apex:commandLink>&nbsp;
+                
+                <apex:commandLink action="/apex/SaaSReleaseListView" title="Back" immediate="true" rendered="{!isSaved}" id="back">
+                    <!--<i class="fa fa-times-circle fa-2x" />-->
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/back_1x.png')}"/>
+                </apex:commandLink>&nbsp;
+               
+            </div>
+            
+            <hr style="width: 100%; border-color: black;" />
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 Style="font-weight: bold;">Release Summary</h5>
+                            <hr class="hrBorder" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label class='control-label'>Release Name</label>
+                                <apex:inputField value="{!releaseObj.Name}" style="width:100%;" styleClass="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Status</label>
+                                <apex:inputField value="{!releaseObj.Status__c}" style="width:100%;" styleClass="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label>Release #</label>
+                                <apex:inputField value="{!releaseObj.Release__c}" styleClass="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Parent Release</label>
+                                <!--   <apex:inputField value="{!Release__c.Parent_Release__c}" style="width:100%"  styleClass="form-control" /> -->
+                                <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="Release__c" valueField="Id" targetField="{!releaseObj.Parent_Release__c}" style="width:100%;" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Release Start Date</label>
+                                <apex:input value="{!relStartDate}" style="width:100%" styleClass="form-control" type="date" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Release Planned End Date</label>
+                                <apex:input value="{!relPlanDate}" style="width:100%;" styleClass="form-control" type="date" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Description</label>
+                                <apex:inputField value="{!releaseObj.Description__c}" style="width:100%" styleClass="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>Comments</label>
+                                <apex:inputField value="{!releaseObj.Status_Update__c}" style="width:100%" styleClass="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <apex:outputPanel id="addSec">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <center>
+                                    <!--<apex:commandLink styleClass="btn btn-default btn-primary" action="{!saveRelease}" reRender="errorBlock">
+                                    <i class="fa fa-check-circle"></i> Save</apex:commandLink>-->
+                                </center>
+                            </div>
+                        </div>
+                    </apex:outputPanel>
+                          <apex:outputPanel rendered="{!isDetail }">
+                        <div class="panel-group" id="accordion">
+                            <div class="panel-heading addBorder">
+                                <h4 class="panel-title removePanelAnchorDec">
+   <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#issueRisk"> <p style="float: left;padding-top: 13px;">Issue/Risks &nbsp;</p>
+   <i class="fa fa-chevron-down" style="float: right;padding-top: 13px;" />   </a>
+    <a  href="#" onclick="openPage('/apex/SaaSCreateIssueRiskPage?releaseid={!Release__c.id}');"> <!--<i class="fa fa-plus-circle fa-lg" />-->
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="issueRisk" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <!--<div class="col-sm-12 col-md-12 scroll relatedLstCss" >-->
+                                    <div class="col-lg-12 col-sm-12 col-md-12">
+                                       <apex:variable var="issueRiskSize" value="'{!Release__c.Issues_Risks__r}'"/>                                                                 
+                                        <apex:outputPanel rendered="{!emptyLst == issueRiskSize}">
+                                            No records to display
+                                        </apex:outputPanel>                                        
+                                        <apex:outputPanel rendered="{!emptyLst != issueRiskSize}">
+                                            <table class="table table-fixedheader table-bordered"> 
+                            <thead>
+                                <tr>
+                                    <th class="colWidth20">Risk/Issue ID</th>
+                                    <th class="colWidth20">Record Type</th>
+                                    <th class="colWidth20">Description</th>
+                                    <th class="colWidth20">Target Resolution Date</th>
+                                    <th class="colWidth10">Status</th>
+                                    <th class="colWidth10">Priority</th>
+                                   
+                                </tr>
+                                </thead>
+                                            <!--<table class="table">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Risk/Issue ID</th>
+                                                        <th>Record Type</th>
+                                                        <th>Description</th>
+                                                        <th>Target Resolution Date</th>
+                                                       
+                                                        <th>Status</th>
+                                                        <th>Priority</th>
+                                                    </tr>
+                                                </thead>-->
+                                                <tbody style="max-height: 150px;">
+                                                <apex:repeat var="rel" value="{!Release__c.Issues_Risks__r}">
+                                                    <tr>
+                                                     <!-- <td class="colWidth20">{!rel.name}</td>-->
+                                                         <td class="colWidth20">
+                                                           <a href = '/apex/SaaSCreateIssueRiskPage?detail=1&&id={!rel.id}'>
+                                                                {!rel.name}
+                                                            </a> 
+                           
+                                                        </td>
+                                                        <td class="colWidth20">{!rel.RecordType.name}</td>
+                                                        <td class="colWidth20">{!rel.Description__c}</td>
+                                                        <td class="colWidth20"><apex:outputText value="{0, date,  MM/dd/yyyy}">
+                                                                <apex:param value="{!rel.Target_Resolution_Date__c}" />
+                                                            </apex:outputText></td>
+                                                       
+                                                        <td class="colWidth10">{!rel.Status__c }</td>
+                                                        <td class="colWidth10">{!rel.Priority__c }</td>
+                                                    </tr>
+                                                </apex:repeat>
+                                                </tbody>
+                                            </table>
+                                        </apex:outputPanel>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="panel-heading addBorder">
+                                <h4 class="panel-title removePanelAnchorDec">
+                                   
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#ReleaseRelatedLstSec" href="#plannedRequest"> <p style="float:left;padding-top:13px;">Requests(Planned Release) &nbsp;</p>  <i class="fa fa-chevron-down" style="float: right;padding-top: 13px;"></i>
+                                    </a>&nbsp;
+                                    <a href="#" onclick="openPage('/apex/SaaSCreateRequest?releaseid={!Release__c.ID}');"> 
+                                    <!--<i class="fa fa-plus-circle fa-lg" />-->
+                                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="plannedRequest" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <!--<div class="col-md-12 scroll relatedLstCss" >-->
+                                         <div class="col-lg-12 col-sm-12 col-md-12">
+                                        <apex:variable var="resquestSize" value="'{!Release__c.CRM_Requirements__r}'"/>                                                                 
+                                        <apex:outputPanel rendered="{!emptyLst == resquestSize}">
+                                            No records to display
+                                        </apex:outputPanel>                                        
+                                        <apex:outputPanel rendered="{!emptyLst != resquestSize}">
+                                        <table class="table table-fixedheader table-bordered"> 
+                            <thead>
+                                <tr>
+                                    <th class="colWidth10" style="word-wrap: initial;">Request ID</th>
+                                    <th class="colWidth10" style="word-wrap: initial;">Request Title</th>
+                                    <th class="colWidth20" style="word-wrap: initial;">Request Description</th>
+                                    <th class="colWidth20" style="word-wrap: initial;">Status</th>
+                                    <th class="colWidth20" style="word-wrap: initial;">Total Priority Ranking</th>
+                                    <th class="colWidth10" style="word-wrap: initial;">Total Estimate</th>
+                                    <th class="colWidth10" style="word-wrap: initial;">Committed Release</th>
+                                   
+                                </tr>
+                                </thead>
+                                        <!--<table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Request ID</th>
+                                                    <th>Request Title</th>
+                                                    <th>Request Description</th>-->
+                                                    <!--<th>Request Type</th>-->
+                                                    <!--<th>Status</th>
+                                                    <th>Total Priority Ranking</th>
+                                                    <th>Total Estimate</th>
+                                                    <th>Committed Release</th>
+                                                </tr>
+                                            </thead>-->
+                                            <tbody style="max-height:150px;">
+                                         <apex:repeat var="r" value="{!Release__c.CRM_Requirements__r}">
+                                                <tr>
+                                                    <!--<td class="colWidth10">{!r.name}</td>-->
+                                                    <td class="colWidth10"><a href='/apex/SaaSCreateRequest?detail=1&&id={!r.id}'>
+                                                     {!r.Name} </a></td>
+                                                     <td class="colWidth10">{!r.Request_Title__c}</td>
+                                                     <td class="colWidth20">{!r.Request_Description__c}</td>
+                                                     <td class="colWidth20">{!r.Status__c}</td>                                                
+                                                     <td class="colWidth20">{!r.Total_Priority_Ranking__c}</td>
+                                                     <td class="colWidth10">{!r.TotEst__c}</td>
+                                                     <td class="colWidth10">{!r.Release__r.Name}</td>                                                                                                     
+                                                </tr>
+                                            </apex:repeat> 
+                                        </tbody>
+                                        </table>                                       
+                                       </apex:outputPanel>    
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            
+                            
+                            <div class="panel-heading addBorder">
+                                <h4 class="panel-title removePanelAnchorDec">
+
+<a class="accordion-toggle" data-toggle="collapse" data-parent="#ReleaseRelatedLstSec" href="#keyAction">   <p style="float:left; padding-top: 13px;">Key Actions/Decisions &nbsp;</p>  <i class="fa fa-chevron-down" style="float: right;padding-top: 13px;"></i></a>
+
+<a href="#" onclick="openPage('/apex/SaaSCreateKeyDecisionOrAction?releaseid={!Release__c.id}');"><!--<i class="fa fa-plus-circle fa-lg" />-->
+<img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/></a>&nbsp;&nbsp; 
+                                    
+                                </h4>
+                            </div>
+                            <div id="keyAction" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <!--<div class="col-md-12 scroll relatedLstCss">-->
+                                        <div class="col-lg-12 col-sm-12 col-md-12">
+                                      <apex:variable var="actionSize" value="'{!Release__c.Key_Actions_Decisions__r}'"/>                                                                 
+                                      
+                                        <apex:outputPanel rendered="{!emptyLst == actionSize}">
+                                            No records to display
+                                        </apex:outputPanel>                                        
+                                        <apex:outputPanel rendered="{!emptyLst != actionSize}">
+                                        <table class="table table-fixedheader table-bordered"> 
+                            <thead>
+                                <tr>
+                                    <th class="colWidth20">Key Action/Decision Name</th>
+                                    <th class="colWidth20">Key Action/Decision #</th>
+                                    <th class="colWidth10">Record Type</th>
+                                    <th class="colWidth20">Description</th>
+                                    <th class="colWidth10">Due Date</th>
+                                    <th class="colWidth20">Owner</th>
+                                    
+                                   
+                                </tr>
+                                </thead>
+                                        <tbody style="max-height: 150px;">
+                                            <apex:repeat var="r" value="{!Release__c.Key_Actions_Decisions__r}">
+                                                <tr>
+                                                   <!-- <td class="colWidth20">{!r.name}</td>-->
+                                                   <td class="colWidth20">                   
+                                                    <a href='/apex/SaaSCreateKeyDecisionOrAction?detail=1&&id={!r.id}'> 
+                                                    {!r.Name} </a>
+                                                    </td>
+                                                    <td class="colWidth20">{!r.Key_Action_Decision__c}</td>
+                                                    <td class="colWidth10">{!r.RecordType.name}</td>
+                                                    <td class="colWidth20">{!r.Description__c}</td>
+                                                    <td class="colWidth10"><apex:outputText value="{0, date,  MM/dd/yyyy}">
+                                                            <apex:param value="{!r.Due_Date__c }" />
+                                                        </apex:outputText></td>
+                                                    <td class="colWidth20">{!r.Owner.name}</td>
+                                                  </tr>
+                                            </apex:repeat> 
+                                        </tbody>
+                                        </table>  
+                                                                             
+                                       </apex:outputPanel>    
+                                    </div>
+                                </div>
+                                
+                            
+                            </div>
+                            
+                
+                                   <!-- User Stories -->
+                              <div class="panel-heading addBorder">
+                                <h4 class="panel-title removePanelAnchorDec">
+                                   
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#ReleaseRelatedLstSec" href="#userStoriesRel"> <p style="float:left;padding-top:13px;">User Stories &nbsp;</p>  <i class="fa fa-chevron-down" style="float: right;padding-top: 13px;"></i>
+                                    </a>&nbsp;
+                                    <a href="#" onclick="openPage('/apex/SaaSCreateUserStories?releaseid={!Release__c.ID}');"> 
+                                   
+                                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>
+                                    </a>
+                                </h4>
+                            </div>
+                            <div id="userStoriesRel" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                 
+                                         <div class="col-lg-12 col-sm-12 col-md-12">
+                                        <apex:variable var="userStoriesSize" value="'{!Release__c.User_Stories__r}'"/>                                                                 
+                                        <apex:outputPanel rendered="{!emptyLst == userStoriesSize}">
+                                            No records to display
+                                        </apex:outputPanel>                                        
+                                        <apex:outputPanel rendered="{!emptyLst != userStoriesSize}">
+                                        <table class="table table-fixedheader table-bordered"> 
+                            <thead>
+                                <tr>
+                                    <th class="colWidth20" style="word-wrap: initial;">User Story Name</th>
+                                    <th class="colWidth20" style="word-wrap: initial;">Release</th>
+                                    <th class="colWidth20" style="word-wrap: initial;">Description</th>
+                                    <th class="colWidth20" style="word-wrap: initial;">Priority</th>
+                                    <th class="colWidth20" style="word-wrap: initial;">Capability</th>
+                                    
+                                </tr>
+                                </thead>
+                                      <tbody style="max-height:150px;">
+                                         <apex:repeat var="r" value="{!Release__c.User_Stories__r}">
+                                                <tr>
+                                                    <!--<td class="colWidth10">{!r.name}</td>-->
+                                                    <td class="colWidth10"><a href='/apex/SaaSCreateUserStories?detail=1&&id={!r.id}'>
+                                                     {!r.Name} </a></td>
+                                                     <td class="colWidth20">{!r.Release__r.name}</td>
+                                                     <td class="colWidth20">{!r.User_Story_Description__c}</td>                                                
+                                                     <td class="colWidth20">{!r.Priority__c}</td>
+                                                     <td class="colWidth10">{!r.Capability__r.Name}</td>
+                                                                                                                                                      
+                                                </tr>
+                                            </apex:repeat> 
+                                        </tbody>
+                                        </table>                                       
+                                       </apex:outputPanel>    
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            
+                            <!-- User Stories -->
+                            
+                        </div>                  
+                    </apex:outputPanel>
+                </div>
+            </div>
+        </apex:form>
+    </c:SaaSToolkitPageTemplate>
+ </apex:page>

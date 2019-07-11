@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>NSRevenueProtection</label>
+    <protected>false</protected>
+    <values>
+        <field>Forwarding_Address__c</field>
+        <value xsi:type="xsd:string">revenueprotection@nscorp.com;osssetback@nscorp.com;ossmech@nscorp.com;ossimbalanceadmin@nscorp.com;ossovldwild@nscorp.com;rpmissedswitch@nscorp.com;ossauto@nscorp.com;cahold.demurrage@nscorp.com;ossadjust@nscorp.com;osscoal@nscorp.com;osscoal@nscorp.com;osscoal@exchange.nscorp.com;ossimbalance@nscorp.com;ossimbalance@exchange.nscorp.com;ossovld@nscorp.com;ossovld@exchange.nscorp.com;ossadjust@nscorp.com;ossadjust@exchange.nscorp.com;osslme@nscorp.com;osslme@exchange.nscorp.com;osssetback@exchange.nscorp.com;exceptions@nscorp.com;exceptions@exchange.nscorp.com</value>
+    </values>
+    <values>
+        <field>Queue_Id__c</field>
+        <value xsi:type="xsd:string">00G1I000000aPuB</value>
+    </values>
+    <values>
+        <field>Routing_Email_1__c</field>
+        <value xsi:type="xsd:string">nsrevenueprotection@1-p26dpvec88pl663ag77h2od9l136as26eg9k8pm7unolg6uum.1i-3nwseuaq.na73.apex.salesforce.com</value>
+    </values>
+</CustomMetadata>

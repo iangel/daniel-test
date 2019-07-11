@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_RestrictOfflineRegionAssignment</fullName>
+    <active>true</active>
+    <description>It will restrict Offline Region assignment if Account is not Offline.</description>
+    <errorConditionFormula>AND(NOT(NS_Account__r.RecordType.DeveloperName=&quot;NS_OfflineCustomer&quot;),ISPICKVAL( NS_AssignedToRegion__c , &quot;Offline&quot;) )</errorConditionFormula>
+    <errorMessage>Assigned To Region cannot be Offline for this customer</errorMessage>
+</ValidationRule>

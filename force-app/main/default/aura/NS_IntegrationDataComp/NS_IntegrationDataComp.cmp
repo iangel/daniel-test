@@ -1,0 +1,462 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId,force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:lightningQuickAction,force:hasRecordId" access="global" controller="NS_ShowExternalDataController">
+    <ltng:require styles="/resource/datatable/DataTables-1.10.16/media/css/jquery.dataTables.min.css" 
+                  
+                  scripts="{!join(',', 
+                           $Resource.jqueryDataTablesV2 , 
+                           $Resource.datatable + '/DataTables-1.10.16/media/js/jquery.dataTables.min.js')
+                           }"
+                  afterScriptsLoaded="{!c.init}"/>
+    <aura:attribute name="general_instruction_p1" type="String"/>
+    <aura:attribute name="general_instruction_p2" type="String"/>
+    <aura:attribute name="special_instruction" type="String"/>
+    <aura:attribute name="special_instruction_l2" type="String"/>
+    <aura:attribute name="equipsummary_cols" type="List"/>
+    <aura:attribute name="lopa_datacols" type="List"/>
+    <aura:attribute name="tec_datacols" type="List"/>
+    <aura:attribute name="ted_datacols" type="List"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:attribute name="swcols" type="List"/>
+    <aura:attribute name="equipsummary_data" type="Object"/>
+    <aura:attribute name="route_reportdata" type="Object"/>
+    <aura:attribute name="carRequestServiceCurrentWeek" type="Object"/>
+    <aura:attribute name="showCarRequestCurrentWeek" type="boolean" default="true"/>
+    <aura:attribute name="carRequestServiceNextWeek" type="Object"/>
+    <aura:attribute name="showCarRequestNextWeek" type="boolean" default="true"/>
+    <aura:attribute name="lopadata" type="Object"/>
+    <aura:attribute name="tecdata" type="Object"/>
+    <aura:attribute name="teddata" type="Object"/>
+    <aura:attribute name="swdata" type="Object"/>
+    <aura:attribute name="open_transitexception_dtl" type="boolean" default="false"/>
+    <aura:attribute name="open_equipsummary_modal" type="boolean" default="false"/>
+    <aura:attribute name="receiving" type="String" default="ReceivingPipelineDetails"/>
+    <aura:attribute name="shipping" type="String" default="ShippingPipelineDetails"/>
+    <aura:attribute name="onsite" type="String" default="OnTrackDetails"/>
+    <aura:attribute name="acc" type="Account" />
+    <aura:attribute name="hideSummarypane" type="Boolean" default="true"/>
+    
+    <aura:attribute name="activeSections" type="List" default="[]" />
+    <aura:attribute name="activeSectionsMessage" type="String" default="" />
+    
+    <div>
+        <table>
+            <tr>
+                <td colspan="3" class="hdrbgcolor">
+                    <span class="hdrlabel">Pipeline</span>
+                    
+                    <span class="hdrlabel slds-float--right">
+                        
+                        <!--UAT START(Arjun)-->
+                        <a class="ansbutton"  onclick="{!c.openAEMS}">
+                            <span class="anstxt">&nbsp;&nbsp;AEMS&nbsp;&nbsp;</span>
+                        </a> 
+                        <a class="ansbutton"  onclick="{!c.openCTMSShipmentStatus}">
+                            <span class="anstxt">&nbsp;&nbsp;Shipment Status&nbsp;&nbsp;</span>
+                        </a>
+                        <a class="ansbutton"   onclick="{!c.openCTMSTrainSetInquiry}">
+                            <span class="anstxt">&nbsp;&nbsp;Train Set Inquiry&nbsp;&nbsp;</span>
+                        </a>
+                        <a class="ansbutton"  onclick="{!c.openTeams}">
+                            <span class="anstxt">&nbsp;&nbsp;TEAMS&nbsp;&nbsp;</span>
+                        </a>
+                        <a class="ansbutton" onclick="{!c.openAccessNSPortal}">
+                            <span class="anstxt">&nbsp;&nbsp;AccessNS&nbsp;&nbsp;</span>
+                        </a>  
+                    </span>
+                    <!--UAT End(Arjun)-->
+                </td>
+            </tr>
+        </table>
+    </div>
+    <div>
+        <table>   
+            <tr>
+                <td colspan="3" style="height:14px"></td>
+            </tr>
+            <tr>
+                <td class="shpstts" style="padding-left:5px">RECEIVING</td>
+                <td class="shpstts">ONSITE</td>
+                <td class="shpstts">SHIPPING</td>
+            </tr>
+            <tr>
+                <td class="slds-truncate totalcount" style="padding-left:5px"><a onclick="{!c.openReceiving}">{!v.equipsummary_data[1].TotalCount}</a></td>
+                <td class="slds-truncate totalcount"><a onclick="{!c.openOnsite}">{!v.equipsummary_data[0].TotalCount}</a></td>
+                <td class="slds-truncate totalcount"><a onclick="{!c.openShipping}">{!v.equipsummary_data[2].TotalCount}</a></td>
+            </tr>
+            <tr>
+                <td>
+                    <!--  <aura:if isTrue="{!v.equipsummary_data[1]!=null}"> Arjun :need to review. Don not  -->
+                    <span class="slds-truncate countdtls" style="padding-left:5px">{!v.equipsummary_data[1].LoadCount} Loads / {!v.equipsummary_data[1].EmptyCount} Empties</span> 
+                    <!--  </aura:if> -->
+                </td>
+                <td>
+                    <!--     <aura:if isTrue="{!v.equipsummary_data[0]!=null}"> -->
+                    <span class="slds-truncate countdtls">{!v.equipsummary_data[0].LoadCount} Loads / {!v.equipsummary_data[0].EmptyCount} Empties</span> 
+                    <!--      </aura:if>  -->
+                </td>
+                <td>
+                    <!--     <aura:if isTrue="{!v.equipsummary_data[2]!=null}">-->
+                    <span class="slds-truncate countdtls">{!v.equipsummary_data[2].LoadCount} Loads / {!v.equipsummary_data[2].EmptyCount} Empties</span> 
+                    <!--         </aura:if> -->
+                </td>
+            </tr>
+        </table>
+    </div>
+    <br />
+    
+    
+    
+    
+    <lightning:accordion
+                         allowMultipleSectionsOpen="true"
+                         onsectiontoggle="{! c.handleSectionToggle }"
+                         activeSectionName="{! v.activeSections }">
+        
+        <lightning:accordionSection name="orderFulfillment" label="Order Fulfillment" class="accordionSectionColor" > 
+            <aura:set attribute="body">
+                <div class="dvbcolor slds-scrollable">
+                    <div>
+                        <span class="hdrlabel">Current Week</span>
+                        <table class="slds-table slds-table_bordered  slds-table_cell-buffer scrollable_y" >
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">PATTERN NAME</div></th>
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">MPR</div></th>		
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">TARGET</div></th>			
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">REQUESTED</div></th>	
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">ACCEPTED</div></th>			
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">PROJECTED</div></th>			
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">FULFILLED</div></th>	
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">SURPLUS SHORTAGE</div></th>	
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">REQUEST FILL</div></th>		
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">ORDER FILL</div></th>	
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">LOAD FILL</div></th>		
+                                </tr>
+                            </thead>
+                            <aura:if isTrue="{!v.showCarRequestCurrentWeek}">
+                                <tbody>
+                                    <aura:iteration items="{!v.carRequestServiceCurrentWeek}" var="car" indexVar="indx12">
+                                        <tr>
+                                            <td scope="row" class="cellwidth "><div class="slds-truncate schldta slds-align--absolute-center text-wrap">{!car.customerPattern}</div></td>       	             
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!car.marketingPriorityRank}</div></td>                                    	
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!car.weeklyFillTarget}</div></td>	
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!car.requested}</div></td>   
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!car.accepted}</div></td>		
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!car.projected}</div></td>		
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!car.fulfilled}</div></td>	                                    
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!car.surplusShortage }</div></td>		
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!car.requestFill}</div></td>	
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!car.orderFill}</div></td>
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!car.loadFill}</div></td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                                <aura:set attribute="else">
+                                    <tbody>
+                                        <tr><td colspan="11"><div class="slds-align--absolute-center">  No data available for current week from TEAMS</div></td></tr>
+                                    </tbody> 
+                                </aura:set>
+                            </aura:if> 
+                        </table>
+                    </div>
+                    
+                    <div>               
+                        <span class="hdrlabel">Next Week</span><br />
+                        <table class="slds-table slds-table_bordered  slds-table_cell-buffer scrollable_y" >
+                            <thead>
+                                <tr>
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">PATTERN NAME</div></th>
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">MPR</div></th>		
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">TARGET</div></th>			
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">REQUESTED</div></th>	
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">ACCEPTED</div></th>			
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">PROJECTED</div></th>			
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">FULFILLED</div></th>	
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">SURPLUS SHORTAGE</div></th>	
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">REQUEST FILL</div></th>		
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">ORDER FILL</div></th>	
+                                    <th scope="col" class="tblhdr cellwidth"><div class="slds-align--absolute-center">LOAD FILL</div></th>		
+                                </tr>
+                            </thead>
+                            
+                            <aura:if isTrue="{!v.showCarRequestNextWeek}">
+                                <tbody>
+                                    <aura:iteration items="{!v.carRequestServiceNextWeek}" var="carN" indexVar="indx12">
+                                        <tr>
+                                            <td scope="row" class="cellwidth "><div class="slds-truncate schldta slds-align--absolute-center text-wrap">{!carN.customerPattern}</div></td>       	             
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!carN.marketingPriorityRank}</div></td>                                    	
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!carN.weeklyFillTarget}</div></td>	
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!carN.requested}</div></td>   
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!carN.accepted}</div></td>		
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!carN.projected}</div></td>		
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!carN.fulfilled}</div></td>	                                    
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!carN.surplusShortage }</div></td>		
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!carN.requestFill}</div></td>	
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!carN.orderFill}</div></td>
+                                            <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!carN.loadFill}</div></td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                                
+                                <aura:set attribute="else">
+                                    <tbody>
+                                        <tr><td colspan="11"><div class="slds-align--absolute-center">  No data available for next week from TEAMS</div></td></tr>
+                                    </tbody> 
+                                </aura:set>
+                            </aura:if> 
+                        </table>
+                    </div>
+                </div>
+            </aura:set>
+        </lightning:accordionSection>
+        <br/>
+    </lightning:accordion>
+    <aura:if isTrue="{!v.hideSummarypane}">
+        <lightning:accordion
+                             allowMultipleSectionsOpen="true"
+                             onsectiontoggle="{! c.handleSectionToggleTES }"
+                             activeSectionName="{! v.activeSections }">
+            <lightning:accordionSection name="transitExceptionSummary" label="Transit Exception Summary" class="accordionSectionColor">
+                <aura:set attribute="body">
+                    <div>
+                        <div>
+                            
+                            <div class="slds-modal__content slds-p-around--medium scrollable_y divmaxheight">	
+                                <table class="slds-table slds-table_bordered slds-table_cell-buffer" id="TES" >
+                                    <thead>
+                                        <tr class="slds-text-title_caps">
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Radio"></div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Equip Init"><Strong>Equip Init</Strong></div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Equip Num"><Strong>Equip Num</Strong></div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="TEQ Count"><Strong>TEQ Count</Strong></div>
+                                            </th>
+                                            <th scope="col">
+                                                <div class="slds-truncate" title="Current ETA"><Strong>Current ETA</Strong></div>
+                                            </th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <aura:iteration items="{!v.tecdata}" var="tec">
+                                            <tr>
+                                                <td><input type="radio" name="TECRadio" onclick="{!c.getSelectedRow}"  data-init="{!tec.EquipmentInit}" data-nr="{!tec.EquipmentNr}" data-srnr="{!tec.WaybillSrNr}"/></td>
+                                                <td>{!tec.EquipmentInit}</td>
+                                                <td>{!tec.EquipmentNr}</td>
+                                                <td>{!tec.TEQCount}</td>
+                                                <td>{!tec.EquipmentDTM}</td>                            
+                                            </tr>
+                                        </aura:iteration>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div>        
+                            <aura:if isTrue="{!v.open_transitexception_dtl}">          
+                                <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open slds-modal_medium">
+                                    <div class="slds-modal__container">  
+                                        <div class="alignright">		
+                                            <lightning:buttonIcon iconName="utility:close" size="medium" alternativeText="Close" 
+                                                                  onclick="{!c.closeModalTED}" variant="bare-inverse"/>
+                                        </div>
+                                        <div class="slds-modal__header">
+                                            <h2 id="header99" class="slds-text-heading--medium"><Strong>Transit Exception Detail</Strong></h2>
+                                        </div>
+                                        
+                                        <div class="slds-modal__content slds-p-around--medium slds-scrollable_x divmaxheight">	
+                                            <table class="slds-table slds-table_bordered slds-table_cell-buffer" aura:id="myTable">
+                                                <thead>
+                                                    <tr class="slds-text-title_caps">
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Equip Init"><Strong>Equip Init</Strong></div>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Equip Num"><Strong>Equip Num</Strong></div>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Planned Movement Date"><Strong>Event Time</Strong></div>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Waybill Serial"><Strong>Waybill Serial</Strong></div>   <!-- Confidence -->
+                                                        </th>                    
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Delay Station"><Strong>Delay Station</Strong></div>	  <!-- Control Station -->
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Delay Reason"><Strong>Delay Desc</Strong></div>   <!-- Confidence -->
+                                                        </th>                                    
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Additional Detail"><Strong>Additional Detail</Strong></div>   <!-- Operating Station -->
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Planned Movement Train"><Strong>Planned Train</Strong></div>
+                                                        </th>
+                                                        <th scope="col">
+                                                            <div class="slds-truncate" title="Planned Movement Date"><Strong>Planned Date</Strong></div>
+                                                        </th>                                    
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <aura:iteration items="{!v.teddata}" var="ted">
+                                                        <tr >
+                                                            <td>{!ted.EqInit}</td>
+                                                            <td>{!ted.EqNr}</td>
+                                                            <td>{!ted.QueueInsertDtm}</td>
+                                                            <td>{!ted.WaybillSrNr}</td>
+                                                            <td>{!ted.OperatingStation}</td>
+                                                            <td>{!ted.DelayReason}</td>                                       
+                                                            <td>{!ted.AdditionalDetails}</td>
+                                                            <td>{!ted.PLANNEDMOVEMENTTRAIN}</td>
+                                                            <td>{!ted.PLANNEDMOVEMENTDATE}</td>                                        
+                                                        </tr>
+                                                    </aura:iteration>
+                                                </tbody>
+                                            </table>
+                                        </div>   
+                                    </div>          
+                                </section>
+                                <div class="slds-backdrop slds-backdrop--open"></div>          
+                            </aura:if>
+                        </div>  
+                    </div>
+                    
+                </aura:set>
+            </lightning:accordionSection>
+        </lightning:accordion>
+        <br />
+        <lightning:accordion
+                             allowMultipleSectionsOpen="true"
+                             
+                             activeSectionName="{! v.activeSections }">
+            <lightning:accordionSection name="serviceWindow" label="Service Window" class="accordionSectionColor" >
+                <aura:set attribute="body">
+                    <div class="slds-grid">
+                        <table>
+                            <tr>
+                                <th scope="col" class="tblhdr" style="padding-left:8px">PROJECTED SERVICE SCHEDULE</th>
+                                <th scope="col" class="tblhdr" style="padding-left:25px">CUT-OFF TIME</th>
+                            </tr>
+                            <tr>
+                                <td style="width:50%">
+                                    <table class="slds-table slds-table--bordered">              
+                                        <tbody>
+                                            <aura:iteration items="{!v.swdata}" var="itm1" indexVar="indx1">
+                                                <tr> 
+                                                    <th scope="row"><div class="slds-truncate schldta" >{!itm1.ScheduleDayOfWeek}</div></th>                    
+                                                    <th scope="row"><div class="slds-truncate schldta">{!itm1.ScheduleOpenTime} - {!itm1.ScheduleCloseTime}</div></th>
+                                                </tr>
+                                            </aura:iteration>
+                                        </tbody>
+                                    </table>
+                                </td>
+                                <td style="width:50%">
+                                    <table class="slds-table slds-table--bordered">              
+                                        <tbody>
+                                            <aura:iteration items="{!v.swdata}" var="itm1" indexVar="indx1">
+                                                <tr> 
+                                                    <th scope="row" class="cellpad25">		<!-- style="padding-left:25px" -->
+                                                        <div class="slds-truncate slds-float--left schldta">{!itm1.CutoffTimeDisplay}</div>
+                                                    </th>
+                                                </tr>
+                                            </aura:iteration>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <!--    <hr style="margin-top:15px;margin-bottom:10px"></hr>    -->
+                    <br />
+                </aura:set>
+            </lightning:accordionSection>
+        </lightning:accordion>
+        <br />
+        <div class="slds-grid slds-gutters">
+            <div class="slds-col slds-size_1-of-2">
+                <table>
+                    
+                    <tr><td class="hdrbgcolor" style="padding-left:12px"><span class="hdrlabelsmall" >General Information</span></td></tr>
+                    <tr><td style="height:10px"></td></tr>
+                    <tr><td style="padding-left:12px"><span class="countdtls">{!v.general_instruction_p1}</span></td></tr>
+                    <tr><td style="padding-left:12px"><span class="countdtls">{!v.general_instruction_p2}</span></td></tr>
+                </table>
+                <!--    <p class="countdtls"> {!v.GeneralInstruction_P1}</p>
+            <p class="countdtls"> {!v.GeneralInstruction_P2}</p> 	-->
+            </div>
+            
+            <div class="slds-col slds-size_1-of-2">
+                <table>
+                    <tr><td class="hdrbgcolor"><span class="hdrlabelsmall">Special Instructions</span></td></tr>
+                    <tr><td style="height:10px"></td></tr>
+                    <tr><td style="padding-left:12px"><span class="countdtls">{!v.special_instruction}</span></td></tr>
+               		<tr><td style="padding-left:12px"><span class="countdtls">{!v.special_instruction_l2}</span></td></tr>
+                </table>
+                <!--            <p class="countdtls">{!v.SpecialInstruction}</p> -->
+            </div>
+        </div>
+        <br />
+        
+        <lightning:accordion
+                             allowMultipleSectionsOpen="true"
+                             onsectiontoggle="{! c.handleSectionTogglerouteReport }"
+                             activeSectionName="{! v.activeSections }">
+            <lightning:accordionSection name="routeReport" label="Route Report" class="accordionSectionColor" >
+                <aura:set attribute="body">
+                    <div>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <th scope="row" class="tblhdr cellwidth"><div class="slds-align--absolute-center">ROUTE ID</div></th>		
+                                    <th scope="row" class="tblhdr cellwidth"><div class="slds-align--absolute-center">STATION</div></th>			
+                                    <th scope="row" class="tblhdr cellwidth"><div class="slds-align--absolute-center">STATION NAME</div></th>	
+                                    <th scope="row" class="tblhdr cellwidth"><div class="slds-align--absolute-center">MONDAY</div></th>			
+                                    <th scope="row" class="tblhdr cellwidth"><div class="slds-align--absolute-center">TUESDAY</div></th>			
+                                    <th scope="row" class="tblhdr cellwidth"><div class="slds-align--absolute-center">WEDNESDAY</div></th>	
+                                    <th scope="row" class="tblhdr cellwidth"><div class="slds-align--absolute-center">THURSDAY</div></th>	
+                                    <th scope="row" class="tblhdr cellwidth"><div class="slds-align--absolute-center">FRIDAY</div></th>		
+                                    <th scope="row" class="tblhdr cellwidth"><div class="slds-align--absolute-center">SATURDAY</div></th>	
+                                    <th scope="row" class="tblhdr cellwidth"><div class="slds-align--absolute-center">SUNDAY</div></th>		
+                                </tr>
+                            </tbody>
+                        </table>
+                        <table class="slds-table slds-table--bordered">
+                            <tbody>
+                                <aura:iteration items="{!v.route_reportdata}" var="rrd" indexVar="indx1">
+                                    <tr>
+                                        <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!rrd.RouteID}</div></td>       	             
+                                        <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!rrd.Station}</div></td>			
+                                        <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!rrd.StationName}</div></td>   
+                                        <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!rrd.MondayInd}</div></td>		
+                                        <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!rrd.TuesdayInd}</div></td>		
+                                        <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!rrd.WednesdayInd}</div></td>	
+                                        <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!rrd.ThursdayInd}</div></td>	
+                                        <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!rrd.FridayInd}</div></td>		
+                                        <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center" >{!rrd.SaturdayInd}</div></td>	
+                                        <td scope="row" class="cellwidth"><div class="slds-truncate schldta slds-align--absolute-center">{!rrd.SundayInd}</div></td>		
+                                    </tr>
+                                </aura:iteration>
+                            </tbody>
+                        </table>
+                    </div>
+                </aura:set>
+            </lightning:accordionSection>
+        </lightning:accordion>
+        <br />
+        <lightning:accordion
+                             allowMultipleSectionsOpen="true"
+                             onsectiontoggle="{! c.handleSectionToggleLopa }"
+                             activeSectionName="{! v.activeSections }">
+            <lightning:accordionSection name="lopa" label="LOPA" class="accordionSectionColor" >
+                <aura:set attribute="body">
+                    <div class="slds-modal__content slds-p-around--medium">
+                        <lightning:datatable data="{! v.lopadata }" columns="{! v.lopa_datacols }" keyField="id" hideCheckboxColumn="true"/>
+                    </div>
+                </aura:set>
+            </lightning:accordionSection>
+        </lightning:accordion>       
+    </aura:if>
+</aura:component>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>oss_south@nscorp.com</email>
+    <name>OSS South</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>NS_Southern_Region_West_SRW</publicGroup>
+        </publicGroups>
+        <users>
+            <user>alexander.mcneil@nscorp.com</user>
+            <user>derek.green@nscorp.com</user>
+            <user>ryan.karjala@nscorp.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

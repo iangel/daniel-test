@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- These values will be customizable based on your project needs. --></help>
+    <label><!-- Related Workstream --></label>
+    <name>Related_Workstream__c</name>
+    <picklistValues>
+        <masterLabel>Account Management</masterLabel>
+        <translation><!-- Account Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Management</masterLabel>
+        <translation><!-- Contact Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Integration</masterLabel>
+        <translation><!-- Data Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Migration</masterLabel>
+        <translation><!-- Data Migration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deployment</masterLabel>
+        <translation><!-- Deployment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead Management</masterLabel>
+        <translation><!-- Lead Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opportunity Management</masterLabel>
+        <translation><!-- Opportunity Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Overall Project</masterLabel>
+        <translation><!-- Overall Project --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Management</masterLabel>
+        <translation><!-- Project Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Training</masterLabel>
+        <translation><!-- Training --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

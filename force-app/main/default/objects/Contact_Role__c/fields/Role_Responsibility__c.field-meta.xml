@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role_Responsibility__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Connects a Contact to their assigned Role as it relates to a Release, Capability, or Request</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Connects a Contact to their assigned Role as it relates to a Release, Capability, or Request</inlineHelpText>
+    <label>Role &amp; Responsibility</label>
+    <referenceTo>Glossary_Item__c</referenceTo>
+    <relationshipLabel>Contact Roles</relationshipLabel>
+    <relationshipName>Contact_Roles</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

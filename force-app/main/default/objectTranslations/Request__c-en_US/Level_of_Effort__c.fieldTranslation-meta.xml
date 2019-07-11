@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Low: Requires Less Than 8 Days of Work Effort 
+Medium: Requires 8.01 - 20 Days of Work Effort 
+High: Requires More Than 20.01 Days of Work Effort --></help>
+    <label><!-- Level of Effort --></label>
+    <name>Level_of_Effort__c</name>
+</CustomFieldTranslation>

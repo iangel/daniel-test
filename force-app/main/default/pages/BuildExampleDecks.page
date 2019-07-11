@@ -1,0 +1,50 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+<br/>
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Example Decks</div>
+            <div class="panel-body">
+                <p>Explain brief about the template else we can remove these section.</p>
+            </div>
+            <!-- Table -->
+            <table class="table">
+                <tr>
+                    <th>VALUE Delivery Approach</th>
+                    <th>Deck</th>
+                </tr>               
+                <tr>
+                    <td>Build</td>
+                    <td>
+                     <c:SaaSDocumentDownload developerName="{!$Label.Build_CRP_Deck}"/>  
+                    <!--<a href ="/servlet/servlet.FileDownload?file={!$Label.Build_CRP_Deck}"> <i class="fa fa-cloud-download fa-2x" title="Build"/> </a>  -->
+                    
+                    </td>
+
+                </tr>
+              
+                <tr>
+                    <td>Cross VALUE Delivery Approach</td>
+                    <td><ul>
+                        <li>Each Capability
+                        <ul>
+<li>Main functionality</li>
+<li>Demo of functionality</li>
+<li>Big Rocks/Issues</li>
+</ul>
+</li>
+</ul>
+</td>
+                </tr>
+            </table>
+            
+            
+        </div>
+      <!--    <ul class="pager">
+                  <li class="previous"><a href="/apex/BuildCRPTemplatesExamples">&larr; Back</a></li>
+              </ul>      -->
+        
+        
+    </c:CrpiPageTemplate>
+
+</apex:page>

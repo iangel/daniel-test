@@ -1,0 +1,277 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">    
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="panel panel-primary">
+             <div class="panel-heading">
+               Key Participants: VALUE Delivery Approach Resources
+              </div>                
+             <div class="panel-body">              
+    <p>
+       VALUE Delivery Approach Resources in each Business Unit must be identified and dedicated to the VALUE Delivery Approach process for each capability.
+    </p>    
+<center>
+         <table class="buttons">
+        <tr>
+          <th><center>Project Blended Core Team </center></th>
+            <td> &nbsp;</td>
+        <td rowspan="5"> 
+          
+    <center>    <img src="{!URLFOR($Resource.ValueDeliveryApproachV1 , 'img/WhoCrpResourceImg.png')}"   class="img-responsive" alt="Responsive image" width="200px" height="332px" />  </center>     
+          
+          </td> 
+            <td> &nbsp;</td>
+          <th style="text-align:left;">Accenture Team</th>
+        </tr>
+        <tr>
+          <td style="float:right;" class="iPadtd">
+          
+          <button type="button" class="btn btn-sm btn-warning  popover-dismiss btn-width " data-toggle="popover" title="Global Process Lead" data-html="true" data-placement="right" data-content="<ul>
+                            <li>Owns overall capability/solution vision</li>
+                            <li>Provides input on priorities</li>
+                            <li>Time Dedication: 75%</li>                            
+                        </ul>"
+          
+          >Global Process Lead</button>
+          
+          
+          
+          <!--    <a href="#" class="speechbubble"> Global Process Lead                             
+                  <Span> 
+                      <p>Global Process Leads (1/capability) </p>
+                      <ul>
+                            <li>Provide guidance in walk through of prioritization</li>
+                            <li>Provide tie breaker in decision maker cases</li>
+                        </ul>    
+                  </Span>           
+            </a> -->
+            
+            
+            
+            
+        </td>
+            <td> &nbsp;</td>
+            <td> &nbsp;</td>
+
+          <td style="vertical-align:top;" class="iPadtd">
+          
+             <button type="button" class="btn btn-sm btn-info popover-dismiss  popover-left btn-width" data-toggle="popover" title="Functional / Value Delivery Lead" data-html="true" data-placement="left" data-content="<ul>
+                           <li>Facilitate VALUE Delivery Approaches</li>
+                           <li>Identify issues/risks/big rocks</li>
+                           <li>Time Dedication: 100%</li>                           
+                        </ul>"
+                      > Value Delivery Lead</button>
+          
+          <!-- <a href="#" class="speechbubble"> 
+              Functional / Value Delivery Lead
+               <Span> 
+                      <p>VALUE Delivery Approach Lead (1/capability)</p>
+                      <ul>
+                            <li>Lead Scope VALUE Delivery Approachs</li>
+                            <li>Guide Business Unit Leads through confirmation of in and out of scope reqs</li>
+                        </ul>    
+                  </Span>     
+          </a>  -->
+          
+             
+          </td>
+        </tr>
+        <tr>
+          <td style="float:right;" class="iPadtd">
+
+  <button type="button" class="btn btn-sm btn-warning  popover-dismiss btn-width" data-toggle="popover" title="  Business Unit Leads" data-html="true" data-placement="right" data-content="<ul>
+                            <li>Provide business input for development of content</li>
+                            <li>Time Dedication: 75%</li>
+                        </ul>    "
+          
+          > Business Unit Leads</button>
+          
+          
+<!--              <a href="#" class="speechbubble"> 
+              Business Unit Leads
+               <Span> 
+                      <p>BG Process Leads  (1/BG/capability)</p>
+                      <ul>
+                            <li>Provide clarification on process flows, user stories and requirements in VALUE Delivery Approachs</li>
+                            <li>Provide votes to approve scope recommendations</li>
+                        </ul>    
+                  </Span>   
+              </a>    -->
+              
+              </td>
+<td> &nbsp;</td>
+            <td> &nbsp;</td>
+          <td style="vertical-align:top;" class="iPadtd">
+          
+          
+           <button type="button" class="btn btn-sm btn-info popover-dismiss  popover-left btn-width" data-toggle="popover" title="Process Analyst" data-html="true" data-placement="left" data-content="<ul>
+                            
+                            <li>Identify follow ups and facilitate follow up sessions</li>
+                            <li>Document changes to requirements and user stories</li>
+                            <li>Time Dedication: 100%</li>                            
+                        </ul>      "
+            
+          >    Process Lead</button>
+          
+          
+          
+             <!--  <a href="#" class="speechbubble"> 
+              Process Analyst
+                <Span> 
+                      <p>Process Analyst(1/capability)</p>
+                      <ul>
+                            <li>Document areas of Business Unit homework for follow up</li>
+                            <li>Document changes to process flows, user stories and requirements as they are identified in the VALUE Delivery Approachs</li>
+                        </ul>    
+                  </Span>   
+              </a> -->
+              
+              </td>
+              
+        </tr>
+        <tr>
+          <td style="float:right;" class="iPadtd">
+         <!--      <a href="#" class="speechbubble"> 
+                  Subject Matter Advisors
+                  <Span> 
+                      <p>SME Advisors (as needed)</p>
+                      <ul>
+                            <li>Provide feedback on user stories and requirements</li>
+                        </ul>    
+                  </Span>   
+              </a>     -->
+              
+              
+            <button type="button" class="btn btn-sm btn-warning popover-dismiss btn-width" data-toggle="popover" title="SME Advisors (as needed)" data-html="true" data-placement="right" data-content="<ul>
+                            
+                            <li>Attend VALUE Delivery Approachs as requested</li>
+                            <li>Provide deep knowledge on process and business functionality</li>
+                            <li>Time Dedication: As needed</li>                            
+                        </ul>      "
+          
+          >    Subject Matter Advisors</button>
+          
+              
+              
+              
+              
+              </td>
+            <td> &nbsp;</td>
+            <td> &nbsp;</td>
+          <td style="vertical-align:top;" class="iPadtd">
+          
+          
+          
+            <button type="button" class="btn btn-sm btn-info popover-dismiss btn-width" data-toggle="popover" title="Configuration Lead" data-html="true" data-placement="left" data-content="
+                            
+
+                       <ul>
+                            
+                            <li>Demonstrate SFDC functionality</li>
+                            <li>Identify key changes to current configuration</li>
+                            <li>Facilitate sessions with development team</li>                            
+                            <li>Time Dedication: 100%</li>                                                        
+                        </ul>     
+                        
+" 
+           
+          >    Configuration Lead</button>
+          
+          
+          
+            <!--  <a href="#" class="speechbubble"> 
+                  Configuration Lead
+                   <Span> 
+                      <p>Configuration Lead (1/capability)</p>
+                      <ul>
+                            <li>Understand business process and help Solution Designer and Technical VALUE Delivery Approach Lead to access complexity based on whether they are out of box, configurable or custom solutions.</li>
+                        </ul>    
+                  </Span>   
+              </a> -->
+              </td>
+        </tr>
+              
+        <tr>
+          <td style="float:right;" class="iPadtd">
+          
+          
+             <button type="button" class="btn btn-sm btn-warning popover-dismiss btn-width" data-toggle="popover" title="Technology Team (as needed)" data-html="true" data-placement="right" data-content="
+                           <ul>
+                            <li>Provide technical architecture expertise</li>
+                            <li>Time Dedication: 80%</li>
+                        </ul>    "
+          
+          >  Technology Team </button>
+          
+          
+          
+          
+          <!--    <a href="#" class="speechbubble"> 
+                  Technology Team
+                 <Span> 
+                      <p>Technology Team (as needed)</p>
+                      <ul>
+                            <li>Work with VALUE Delivery Approach Lead in the execution of the Scope VALUE Delivery Approachs</li>
+                            <li>Work with Solution Designer and Development team to create capacity and estimates based upon user stories and requirements</li>
+                        </ul>    
+                  </Span>    
+              </a>    -->
+          </td>
+         <td> &nbsp;</td>
+            <td> &nbsp;</td>
+          <td style="vertical-align:top;" class="iPadtd">
+           <button type="button" class="btn btn-sm btn-info popover-dismiss btn-width" data-toggle="popover" title=" Extended Team" data-html="true" data-placement="left" data-content="
+                       <ul>
+                            <li>Provide additional expertise to Business Unit Leads as needed process flows and functionality.</li>
+                            <li>Time Dedication: As needed</li>
+                        </ul>  
+                        "
+          
+          >   Extended Team</button>
+          
+          <!--    <a href="#" class="speechbubble">   Extended Team
+              <Span> 
+                      <p>Extended Team Owners (as needed)</p>
+                      <ul>
+                            <li>Provide additional expertise to Business Unit Leads as needed process flows and functionality.</li>
+                        </ul>    
+                  </Span>   
+            
+              </a> -->
+           </td>
+        </tr>     
+    <tr>
+        <td> &nbsp;</td>
+    <td colspan="3" align="center">
+    <button  type="button" class="btn btn-sm btn-info popover-dismiss btn-width" data-toggle="popover" title="Change Management (1/capability)" style="margin-top: 10px;" data-html="true" data-placement="top" data-content="
+                          <ul>
+                            <li>Facilitate change enablement.</li>
+                            <li>Time Dedication: 100%</li>
+                        </ul>  
+                        "  
+          
+          >  Change Mgmt  </button></td>
+          </tr>
+        
+        
+    
+</table>
+
+</center>
+  </div>                 
+   
+
+             
+   
+
+             
+   
+  </div>  
+ <!-- <ul class="pager">
+                  <li class="previous"><a href="/apex/AnatomyofPlanAndAnalyzeCRP">&larr; Previous</a></li>
+                  <li class="next"><a href="/apex/PlanAndAnalyzeCRPTemplatesExamples">Next &rarr; </a></li>
+              </ul> -->
+              
+              
+                     
+      </c:CrpiPageTemplate>                  
+</apex:page>

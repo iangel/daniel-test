@@ -1,0 +1,317 @@
+<aura:component implements="force:appHostable,lightning:isUrlAddressable" controller="NS_CTIMultiMatchHandler" access="global">
+   <ltng:require styles="/resource/datatable/DataTables-1.10.16/media/css/jquery.dataTables.min.css" 
+                  scripts='/resource/jqueryDataTablesV2,/resource/Datatable/DataTables-1.10.16/media/js/jquery.dataTables.min.js'/>
+    
+    <lightning:workspaceAPI aura:id="workspace" />
+    
+    <!--ANI parameters-->
+    <aura:attribute name="ANI" type="String"/>
+    <aura:attribute name="PhoneNumber" type="String" default=" "/>
+    <aura:attribute name="PhoneNumberUnformatted" type="String" default=" "/>
+    <aura:attribute name="lastModifiedDate" type="DateTime" />
+    <!--ANI parameters-->    
+    <aura:attribute name="selectedAccount" type="String"/>
+    <aura:attribute name="myCondata" type="Object"/>
+	<aura:attribute name="myAccdata" type="Object"/>
+    <aura:attribute name="myAccSearchData" type="Object"/>
+    <aura:attribute name="myConSearchdata" type="Object"/>
+    <aura:attribute name="storeSelectedAccount" type="String"/>
+    <aura:attribute name="storeSelectedContact" type="String"/> 
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <aura:attribute name="ShowNoRecordModal" type="boolean" default="false"/>
+    <aura:attribute name="ShowMatchedRecords" type="boolean" default="true"/>
+    <aura:attribute name="ShowAccountSearch" type="boolean" default="false"/>
+    <aura:attribute name="ShowContactSearch" type="boolean" default="false"/>
+    <aura:attribute name="ShowContinue" type="boolean" default="false"/>    
+    <aura:attribute name="searchCon" type="String"/>
+    <aura:attribute name="searchAcc" type="String"/>    
+    <aura:attribute name="selectedValue" type="String"/>	
+    <aura:attribute name="page" type="integer" description="Store page number"/>
+    <aura:attribute name="pages" type="integer" description="Store total pages"/>    
+    <!--pagination button variables-->
+    <aura:attribute name="reclimit" type="Integer" default="5"/>    
+    <aura:attribute name="offset" type="Integer" default="0"/>
+    <aura:attribute name="conoffset" type="Integer" default="0"/>    
+    <!--pagination button variables-->    
+    <!--Inline Edit-->
+    <aura:attribute name="showSaveCancelBtn" type="boolean" default="false" description="flag for rendered save and cancel buttons in aura:if "/>
+    <aura:attribute name="workphoneEditMode" type="boolean" default="false" />
+    <aura:attribute name="showErrorClass" type="boolean" default="false"/>
+    <aura:attribute name="objInfo" type="Account" default="{sobjectType : 'Account'}" />  
+    
+    <aura:handler name="init" value="{! this }" action="{! c.init }"/>
+    <aura:handler name="change" value="{!v.pageReference}" action="{!c.handlePageChange}" />
+    
+    <aura:renderIf isTrue="{!v.ShowMatchedRecords}">        
+    	<div class="slds-page-header">
+            <div class="slds-p-bottom_small">
+                Phone # <Strong>{!v.PhoneNumber}&nbsp;</Strong>has returned the following matches:
+            </div>
+            <!--div class="slds-float_right">
+                Time Left:{!v.lastModifiedDate}
+            </div-->
+     
+            <div class="slds-grid slds-gutters slds-p-bottom_x-small">
+                <div class="slds-col slds-size--1-of-4 slds-p-right_none">
+                    <span  class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <ui:inputText class="field" value="{!v.searchAcc}" placeholder=" All Accounts " keyup="{! c.onEnterKeyAC }"/>
+                        <lightning:buttonIcon  onclick="{! c.ShowAccountSearches }" iconName="utility:search" size="medium" alternativeText="Search" 
+                                              class="front slds-input__icon slds-input__icon_right" variant="bare"/>
+                    </span>
+                </div>
+                <lightning:helptext content="Search based on Account Name or Phone" />
+            	<div class="slds-col slds-size--2-of-4 slds-align--absolute-center">
+                	<h2  class="slds-page-header__title">All Accounts&nbsp;&nbsp;	</h2>  <!-- title="Case Routing Setup Page" -->
+            	</div>
+     			<div class="slds-col slds-size--1-of-4">
+                    <span></span>
+                </div>              
+			</div>		
+            
+            <div>
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer" id="MatchedAccountsTbl">
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Radio"></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Account Name"><Strong>Account Name</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Operating Station"><Strong>Operating Station</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Controlling Station"><Strong>Controlling Station</Strong></div>
+                            </th>                    
+                            <th scope="col">
+                                <div class="slds-truncate" title="Phone"><Strong>Phone</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Account Record Type"><Strong>Account Record Type</Strong></div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.myAccdata}" var="acc">
+                            <tr>
+                                <td><input type="radio" name="TECRadio" onclick="{!c.getContactsByAccId}"  data-aid="{!acc.Id}" data-istrue="{!acc.isExactMatch}"/></td>
+                            	<td scope="col">{!acc.Name}</td>
+                                <td scope="col">{!acc.OperatingStation}</td>
+                                <td scope="col">{!acc.ControllingStation}</td>
+                                <td scope="col">{!acc.Phone}</td>
+                                <td scope="col">{!acc.AccountRecordType}</td> 
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                </table>
+            </div> 
+        </div>  
+        
+        <aura:renderIf isTrue="{!v.ShowAccountSearch}">            
+            <div class="slds-page-header slds-p-top_small">
+                <div class="slds-grid slds-gutters slds-p-bottom_x-small">
+                    <div class="slds-col slds-size--1-of-4 slds-p-right_none">
+                        <span><button class="slds-button slds-button--brand" onclick="{!c.createAccountRecord}">New Manual Account</button></span>
+                    </div>
+                    <div class="slds-col slds-size--2-of-4 slds-align--absolute-center">
+                		<h2  class="slds-page-header__title">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Searched Accounts</h2>  <!-- title="Case Routing Setup Page" -->
+            		</div>
+     				<div class="slds-col slds-size--1-of-4">
+                        <span></span>
+                    </div>
+                 </div>
+                 <div >
+                    <table class="slds-table slds-table_bordered slds-table_cell-buffer" id="AccountSearchTbl">
+                        <thead>
+                            <tr class="slds-text-title_caps">
+                                <th scope="col">
+                                        <div class="slds-truncate" title="Radio"></div>
+                                    </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Account Name"><Strong>Account Name</Strong></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Operating Station"><Strong>Operating Station</Strong></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Controlling Station"><Strong>Controlling Station</Strong></div>
+                                </th>                    
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Phone"><Strong>Phone</Strong></div>
+                                </th>
+                                <th scope="col">
+                                    <div class="slds-truncate" title="Account Record Type"><Strong>Account Record Type</Strong></div>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <aura:iteration items="{!v.myAccSearchData}" var="acc">
+                                <tr>
+                                    <td><input type="radio" name="TECRadio" onclick="{!c.getContactsByAccId}"  data-aid="{!acc.Id}" data-istrue="{!acc.isExactMatch}"/></td>
+                                    <td scope="col">{!acc.Name}</td>
+                                    <td scope="col">{!acc.OperatingStation}</td>
+                                    <td scope="col">{!acc.ControllingStation}</td>
+                                    <td scope="col">{!acc.Phone}</td>
+                                    <td scope="col">{!acc.AccountRecordType}</td> 
+                                </tr>
+                            </aura:iteration>
+                        </tbody>
+                    </table>
+                </div>
+            </div>        
+        </aura:renderIf>  
+        
+    	<div  class="slds-page-header">
+            <div class="slds-grid slds-gutters slds-p-bottom_x-small">
+                <div class="slds-col slds-size--1-of-4 slds-p-right_none">
+                    <span  class="slds-form-element__control slds-input-has-icon slds-input-has-icon_right">
+                        <ui:inputText class="field" value="{!v.searchCon}" placeholder=" All Contacts" keyup="{! c.onEnterKeyContact }"/>
+                     	<lightning:buttonIcon onclick="{! c.ShowContactSearches }" iconName="utility:search" size="medium" 
+                                              alternativeText="Search" class="front slds-input__icon slds-input__icon_right" variant="bare"/>
+                  	</span> 
+                </div>
+                <lightning:helptext content="Search based on Contact Name or Phone" />    	
+                <div class="slds-col slds-size--2-of-4 slds-align--absolute-center">
+                	<h2  class="slds-page-header__title">Matched Contacts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h2>
+            	</div>
+     			<div class="slds-col slds-size--1-of-4">
+                    <span></span>
+                </div>
+            </div>
+            
+            <div >
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer" id="MatchedContactsTbl">
+                    <aura:renderIf isTrue="{!v.myCondata.length > 0}">
+                        <br/>
+                    </aura:renderIf>
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Action"></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Contact Name"><Strong>Contact Name</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Account Name"><Strong>Account Name</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Work Phone"><Strong>Work Phone</Strong></div>
+                            </th>                    
+                            <th scope="col">
+                                <div class="slds-truncate" title="Cell Phone"><Strong>Mobile Phone</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Other Phone"><Strong>Other Phone #1</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Other Phone"><Strong>Other Phone #2</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Email"><Strong>Email</Strong></div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <aura:iteration items="{!v.myCondata}" var="con">
+                            <tr>
+                                <td>
+                                    <input type="radio" name="TECConRadio" onclick="{!c.StoreSelectedAccountContact}"  data-aid="{!con.AccountId}" data-cid="{!con.Id}"/>
+                                </td>
+                                <td scope="col">{!con.ContactName}</td>
+                                <td scope="col">{!con.AccountName}</td>
+                                <c:Ns_MutiMatchInlineEditComp Sn="1" contact="{!con}" Data="{!con.WorkPhone}" default="{!v.PhoneNumber}" showSaveCancelBtn="{!v.showSaveCancelBtn}"/>
+                                <c:Ns_MutiMatchInlineEditComp Sn="2" contact="{!con}" Data="{!con.Mobile_Phone}" default="{!v.PhoneNumber}" isExactMatch="{!con.isExactMatch}" showSaveCancelBtn="{!v.showSaveCancelBtn}"/>
+                                <c:Ns_MutiMatchInlineEditComp Sn="3" contact="{!con}" Data="{!con.Other_Phone}" default="{!v.PhoneNumber}" showSaveCancelBtn="{!v.showSaveCancelBtn}"/>
+                                <c:Ns_MutiMatchInlineEditComp Sn="4" contact="{!con}" Data="{!con.Other_Phone2}" default="{!v.PhoneNumber}" showSaveCancelBtn="{!v.showSaveCancelBtn}"/>
+                                <c:Ns_MutiMatchInlineEditComp Sn="5" contact="{!con}" Data="{!con.Email}" default="" showSaveCancelBtn="{!v.showSaveCancelBtn}"/>
+                                
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                    <aura:renderIf isTrue="{!v.myCondata.length > 0}">
+                        <br/><br/><br/>
+                    </aura:renderIf>
+                </table>
+            </div>
+        </div>  
+        
+        <aura:renderIf isTrue="{!v.ShowContactSearch}">
+            <div class="slds-page-header" style="width:100%">
+                <div class="slds-grid slds-gutters slds-p-bottom_x-small">
+                    <div class="slds-col slds-size--2-of-6 slds-p-right_none">                                                   
+                            <lightning:button  variant="brand" label="New Contact" onclick="{! c.createContactRecord}"/>                             
+                        	<lightning:button  variant="brand" label="New Associated Account" onclick="{! c.createAssocContactRecord}"/>                                                            
+                    </div>                   
+            		<div class="slds-col slds-size--2-of-6 slds-align--absolute-center">
+                		<h2  class="slds-page-header__title">&nbsp;&nbsp;   Searched Contacts</h2>  <!-- title="Case Routing Setup Page" -->
+		            </div>
+     				<div class="slds-col slds-size--2-of-6">
+                    	<span></span>
+                	</div>
+                </div>
+                
+                <div>
+                <table class="slds-table slds-table_bordered slds-table_cell-buffer" id="ContactSearchTbl">
+                    <aura:renderIf isTrue="{!v.myConSearchdata.length > 0}">
+                        <br/>
+                    </aura:renderIf>
+                    <thead>
+                        <tr class="slds-text-title_caps">
+                            <th scope="col">
+                                <div class="slds-truncate" title="Radio"></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Contact Name"><Strong>Contact Name</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Account Name"><Strong>Account Name</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Work Phone"><Strong>Work Phone</Strong></div>
+                            </th>                    
+                            <th scope="col">
+                                <div class="slds-truncate" title="Cell Phone"><Strong>Mobile Phone</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Other Phone"><Strong>Other Phone #1</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Other Phone"><Strong>Other Phone #2</Strong></div>
+                            </th>
+                            <th scope="col">
+                                <div class="slds-truncate" title="Email"><Strong>Email</Strong></div>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody >
+                        <aura:iteration items="{!v.myConSearchdata}" var="con">
+                            <tr>
+                                <td><input type="radio" name="TECConRadio" onclick="{!c.StoreSelectedAccountContact}"  data-aid="{!con.AccountId}" data-cid="{!con.Id}"/></td>
+                                <td scope="col" >{!con.ContactName}</td>
+                                <td scope="col">{!con.AccountName}</td>
+                                <c:Ns_MutiMatchInlineEditComp Sn="1" contact="{!con}" Data="{!con.WorkPhone}" default="{!v.PhoneNumber}" showSaveCancelBtn="{!v.showSaveCancelBtn}"/>
+                                <c:Ns_MutiMatchInlineEditComp Sn="2" contact="{!con}" Data="{!con.Mobile_Phone}" default="{!v.PhoneNumber}" isExactMatch="{!con.isExactMatch}" showSaveCancelBtn="{!v.showSaveCancelBtn}"/>
+                                <c:Ns_MutiMatchInlineEditComp Sn="3" contact="{!con}" Data="{!con.Other_Phone}" default="{!v.PhoneNumber}" showSaveCancelBtn="{!v.showSaveCancelBtn}"/>
+                                <c:Ns_MutiMatchInlineEditComp Sn="4" contact="{!con}" Data="{!con.Other_Phone2}" default="{!v.PhoneNumber}" showSaveCancelBtn="{!v.showSaveCancelBtn}"/>
+                                <c:Ns_MutiMatchInlineEditComp Sn="5" contact="{!con}" Data="{!con.Email}" default="" showSaveCancelBtn="{!v.showSaveCancelBtn}"/>
+                            </tr>
+                        </aura:iteration>
+                    </tbody>
+                    <aura:renderIf isTrue="{!v.myConSearchdata.length > 0}">
+                        <br/><br/><br/>
+                    </aura:renderIf>
+                </table>
+            </div>            
+		</div> 
+        </aura:renderIf>   
+        <aura:renderIf isTrue="{!v.ShowContinue}">
+                <div class="slds-page-header slds-align--absolute-center">
+                    <span >
+                        <button class="slds-button slds-button--brand" onclick="{!c.OpenSelectedAccount}">Continue</button>
+                    </span> 
+                </div>
+        </aura:renderIf>
+    </aura:renderIf>
+</aura:component>

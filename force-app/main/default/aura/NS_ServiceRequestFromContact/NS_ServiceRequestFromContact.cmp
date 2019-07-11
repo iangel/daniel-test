@@ -1,0 +1,143 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" controller="NS_ServiceRequestsController" access="global" >
+	<lightning:workspaceAPI aura:id="workspace" />
+    <aura:attribute name="class" type="String" description="CSS classname for the SVG element" />
+    <aura:attribute name="caseSr" type="Case" default="{sobjectType : 'Case' , 'ContactId': ''}" />    
+    <aura:attribute name="spinner" type="boolean" default="false"/>
+    <aura:attribute name="noOfrailcar" type="integer" />
+    <aura:attribute name="myRecordId" type="String" description="Record to which the files should be attached" />
+    <aura:attribute name="caseNumber" type="String" description="Record to which the files should be attached" />
+    <aura:attribute name="SelectedQ" type="String" description="Record to which the files should be attached" />
+    <aura:attribute name="SelectedBU" type="String" description="Record to which the files should be attached" />
+    
+    <aura:attribute name="objInfo" type="string" default="Case" description="store object Info." />
+    
+    <aura:attribute name="BusinessUnitFieldMap" type="map" description="store controller(key)--> dependent(values) picklist value as a map." />
+    <aura:attribute name="QueueFieldMap" type="map" description="store controller(key)--> dependent(values) picklist value as a map." />
+    
+    <aura:attribute name="isBUDisabled" type="boolean" default="true" description="use for, make disbale depandent field." />
+    
+    <!-- POC Start  -->
+    <aura:attribute name="isOpen" type="boolean" default="false"/>
+    <!-- POC END -->
+   <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <div class="slds-box slds-theme--default">
+        <div class="slds-notify slds-notify--alert slds-theme--default slds-theme--alert-texture" role="alert">
+                <span class="slds-assistive-text">Info</span>
+                <h2>
+                    <lightning:icon iconName="utility:warning" alternativeText="Warning!" variant="warning" size="small"/>
+                	<ui:outputText value=" Search for an Existing Case Prior to Creating a New Service Request"/>
+                </h2>
+        </div><br/><br/>
+        <div class="slds-form-element">
+            <!--<label class="slds-form-element__label" for="contactid"><span style="color:#ff0000">*</span>Contact</label>-->
+            <table>
+                <tr><td class="FldLabel"><span style="color:#ff0000">*</span>Account</td></tr>
+            </table>
+            <force:inputField aura:id="srAccounttid" value="{!v.caseSr.AccountId}" required='true'/>
+        </div><br/>
+        <div class="slds-form-element__control">    
+            <table>
+                <tr><td class="FldLabel"><span style="color:#ff0000">*</span>Business Unit</td></tr>
+                <aura:iteration items="{!v.BusinessUnitFieldMap}" var="val">
+                <option value="{!val}">{!val}</option>
+            </aura:iteration>
+            </table>
+            <ui:inputSelect aura:id="BU" class="slds-select" change="{!c.onBUChange}" />
+        </div> <br/>
+        <div class="slds-form-element__control">    
+            <table>
+                <tr><td class="FldLabel"><span style="color:#ff0000">*</span>Queue</td></tr>
+            </table>
+            <ui:inputSelect aura:id="Queue" disabled="{!v.isBUDisabled}" class="slds-select" change="{!c.SelectedQueue}"/>
+        </div> <br/>
+        <div class="slds-form-element__control">  
+            <table>
+                <tr><td class="FldLabel"><span style="color:#ff0000">*</span>Subject</td></tr>
+            </table>
+            <ui:inputText aura:id="srSubject" value="{!v.caseSr.Subject}" required="true" onError="{!c.handleError}" />
+        </div><br/>  
+        <div class="slds-form-element__control">  
+            <table>
+                <tr><td class="FldLabel">Train ID/Permit Number</td></tr>
+            </table>
+            <ui:inputText aura:id="trainId" value="{!v.caseSr.NS_TrainID__c}" required="true" onError="{!c.handleError}" />
+        </div> <br/> 
+        
+        <div class="slds-form-element__control">  
+            <table>
+                <tr><td class="FldLabel">Equipment Number(s)</td></tr>
+            </table>
+            <ui:inputText aura:id="equipment" value="{!v.caseSr.NS_Equipment__c}" required="true" onError="{!c.handleError}" />
+        </div><br/>
+        <!--<ui:inputCheckbox aura:id="srShutdown" label= " Shutdown?"  /><br/>-->
+        
+        
+        <div class="slds-form-element__control">    
+            <table>
+                <tr><td class="FldLabel">Description</td></tr>
+            </table>
+            <force:inputField aura:id="srDescription" value="{!v.caseSr.Description}"  /><br/>
+        </div> <br/> 
+        <lightning:button variant="brand" type="Submit" label="Save" iconName="utility:save"  onclick="{!c.onSubmit}"/> 
+    </div> 
+    
+    <!-- [isOpen boolean attribute] -->   
+    <aura:if isTrue="{!v.isOpen}">
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-modal="true" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                
+                <header class="slds-modal__header">
+                    <lightning:buttonIcon iconName="utility:close"
+                                          onclick="{! c.closeModel }"
+                                          alternativeText="close"
+                                          variant="bare-inverse"
+                                          class="slds-modal__close"/>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Upload documents</h2>
+                </header>
+                <!--###### MODAL BOX BODY Part Start######-->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    
+                    <!--<p><b>
+                        Service request {!v.caseNumber} has been successfully raised. Do you want to upload any documents? If no, then please
+                        click on the close button to continue.
+                        </b>
+                    </p> -->   
+                    <p><b>
+                        Service request <a href="javascript:void(0)" onclick="{!c.redirect}">
+            {!v.caseNumber} 
+</a> has been successfully created. </b></p>
+                       <p><b> Please use the options below to upload a document. 
+                        If you do not need to upload a document, please click on the "Close" button to continue.
+                        </b></p>
+                    <lightning:fileUpload 
+                                          name="fileUploader"
+                                          multiple="true"
+                                          accept=".pdf, .png, .xlsx, .jpg"
+                                          recordId="{!v.myRecordId}"
+                                          onuploadfinished="{!c.handleUploadFinished}" />
+                    
+                </div>
+                <footer class="slds-modal__footer">
+                    <lightning:button variant="neutral" 
+                                      label="Close"
+                                      title="Close"
+                                      onclick="{!c.closeModel}"/>
+                    
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </aura:if>
+    <!--loading spinner start... style=Brand Medium (blue dots)-->
+    <aura:if isTrue="{!v.spinner}">
+        <div aura:id="spinnerId" class="slds-spinner_container">
+            <div class="slds-spinner--brand  slds-spinner slds-spinner--large slds-is-relative" role="alert">
+                <span class="slds-assistive-text">Loading</span>
+                <div class="slds-spinner__dot-a"></div>
+                <div class="slds-spinner__dot-b"></div>
+            </div>
+        </div>
+    </aura:if>
+    <!-- Loading spinner end--> 
+</aura:component>

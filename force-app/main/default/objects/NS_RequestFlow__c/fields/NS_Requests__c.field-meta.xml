@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_Requests__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Lookup shows all the flows that can be mapped with related requests</description>
+    <externalId>false</externalId>
+    <label>Request</label>
+    <referenceTo>Request__c</referenceTo>
+    <relationshipName>Related_Flows</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

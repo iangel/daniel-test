@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Positive_Effort</fullName>
+    <active>true</active>
+    <description>All numbers entered under level of effort should be positive.</description>
+    <errorConditionFormula>OR( Adapt__c &lt; 0,  BUT__c &lt; 0, Des__c &lt; 0, SIT__c &lt; 0, TrnDep__c &lt; 0, UAT__c &lt;0, Req__c &lt;0)</errorConditionFormula>
+    <errorMessage>Please enter a value greater than 0 for fields under Total Level of Effort.</errorMessage>
+</ValidationRule>

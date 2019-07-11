@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Include information about the impacts the functionality will have to the end user. Specifically, what they will see on the interface, how often the data will be updated, etc. --></help>
+    <label><!-- Functional Description --></label>
+    <name>Functional_Description__c</name>
+</CustomFieldTranslation>

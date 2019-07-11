@@ -1,0 +1,604 @@
+<apex:component controller="SaaSPageTemplateCtrl">
+<apex:attribute type="boolean" default="true" name="displayMenu" description="Display Side bar menu"/>
+<script>
+
+(function() {
+            var elm, head;
+            if (navigator.userAgent.indexOf("iPad") != -1) {
+                head = document.getElementsByTagName('head')[0] || document.body || document.documentElement;
+                elm = document.createElement('link');
+                elm.rel = "stylesheet";
+                elm.href = "{!URLFOR($Resource.ValueDeliveryApproachV1, 'css/iPad.css')}";
+                head.appendChild(elm);
+            }
+})();
+
+function openPage(pgUrl) 
+    {     
+         var s = pgUrl;
+         
+         if( (typeof sforce != 'undefined') && (sforce != null) )
+         {
+          //   alert(s);
+//             sforce.one.navigateToURL(s,true);
+              window.top.location.href = s;       
+         }
+         else
+         {
+             window.top.location.href = s;       
+         }    
+    }
+$( window ).load(function() {
+
+ $( '.toggleIcon' ).bind( "click", function() {
+       
+        $('#click-more, #click-less').toggle();
+           
+           });
+    
+
+    $(function(){
+    // this will get the full URL at the address bar
+    var url = window.location.href; 
+    var url1= url.substr(0, url.indexOf('?')); 
+    // passes on every "a" tag 
+    $("#header a").each(function() {
+            // checks if its the same on the address bar
+        if((url1 == (this.href)) || (url == (this.href))) { 
+            $(this).parents("li").addClass("active");
+        }
+    });
+});
+
+  $('.collapse').on('shown.bs.collapse', function (e) 
+        {
+            $(e.target).prev('.panel-heading').find(".fa-chevron-down").removeClass("fa-chevron-down").addClass("fa-chevron-up");
+        })
+        
+        $('.collapse').on('hide.bs.collapse', function (e) 
+        {
+            $(e.target).prev('.panel-heading').find(".fa-chevron-up").removeClass("fa-chevron-up").addClass("fa-chevron-down");
+        })
+        
+       
+
+
+});
+    
+    
+
+</script>
+<style>
+    
+    .active { 
+    background-color: #0197D4; 
+    font-weight: bold;
+    color:#f0f0f0 !important;
+    }
+#legend  div {
+    display:inline-block;
+    vertical-align:middle;
+    text-align:left;
+   }
+.unorder {
+    list-style-type: none;
+    position: relative;
+    margin-left: 1em;
+    padding-left: 0;
+}
+.unorder >li:before {
+
+    content: "\2022";
+    position: absolute;
+    left: -1em;
+    color: #0198d5;
+    margin-right: -5px;
+}
+
+.textAlign {
+    padding-top: 13px;
+    width: 81%;
+    text-align: left;
+}
+**stylesheet code**
+#aCollection
+{
+    background-image: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/plan_analyze_unselected.png')}');
+}
+#aCollection:hover
+{
+    background-image: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/plan_analyze_selected.png')}');
+}
+
+#aCollection:active
+{
+    background-image: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/plan_analyze_unselected.png')}');
+}
+
+#overview {
+    background: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/overview_unselected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#58595b;
+}
+
+#overview:hover {
+    background: #0197d5 url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/overview_selected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#f0f0f0 !important;
+}
+    
+    #overview:active {
+    background-color:#f0f0f0 !important;
+    }
+
+#initiate {
+    background: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/plan_analyze_unselected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#58595b !important;
+}
+
+#initiate:hover {
+    background: #0197d5 url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/plan_analyze_selected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#f0f0f0 !important;
+}
+
+#scope {
+    background: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/scope_unselected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#58595b !important;
+}
+
+#scope:hover {
+    background: #0197d5 url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/scope_selected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#f0f0f0 !important;
+}
+
+#design {
+    background: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/design_unselected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#58595b !important;
+}
+
+#design:hover {
+    background: #0197d5 url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/design_selected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#f0f0f0 !important;
+}
+
+#build {
+    background: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/build_unselected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#58595b !important;
+}
+
+#build:hover {
+    background: #0197d5 url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/build_selected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#f0f0f0 !important;
+}
+
+#templates {
+    background: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/templates_unselected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#58595b !important;
+}
+
+#templates:hover {
+    background: #0197d5 url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/templates_selected.png')}') no-repeat right;
+    background-size: 45px;
+    color:#f0f0f0 !important;
+}
+
+#createSession{
+    background: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/Create-Session.png')}') no-repeat right;
+    background-size: 45px;
+    color:#58595b !important;
+}
+
+#createSession:hover {
+    background: #0197d5 url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/Create-Session-hover.png')}') no-repeat right;
+    background-size: 45px;
+    color:#f0f0f0 !important;
+}
+
+#setup {
+    background: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/setup2.png')}') no-repeat right;
+    background-size: 45px;
+    color:#58595b !important;
+}
+
+#setup:hover {
+    background: #0197d5 url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/setup.png')}') no-repeat right;
+    background-size: 45px;
+    color:#f0f0f0 !important;
+}
+
+
+#changeProject{
+    background: url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/Change-Project.png')}') no-repeat right;
+    background-size: 45px;
+    color:#58595b !important;
+}
+
+#changeProject:hover {
+    background: #0197d5 url('{!URLFOR($Resource.ValueDelivery_Icon, 'Icon/Change-Project-hover.png')}') no-repeat right;
+    background-size: 45px;
+    color:#f0f0f0 !important;
+}
+
+
+
+@media (max-width: 767px) {
+    #overview, #initiate, #scope, #design, #build, #templates,#setup, #overview:hover, #initiate:hover, #scope:hover, #design:hover, #build:hover, #templates:hover,#setup:hover,#changeProject,
+  #changeProject:hover, #setup:hover, #setup, #createSession:hover, #createSession {
+        background-position: center;
+        height: 63px;
+        background-size: auto;
+    }
+    .xsValueDelivery {
+        width: 49%;
+    }
+    .xsVerticalDivider {
+        height: 20px;
+        border-right:1px solid #ffffff;
+        float: left;
+        padding-left: 2px;
+    }
+    .menuBar {
+        padding-left: 15px;
+    }
+    .xsHeaderText{
+        text-align: center;
+        font-size: 18px;
+        line-height: 18px;
+        color: #ffffff;
+        padding-top: 10px;
+        padding-bottom: 15px;
+    }
+}
+
+.horizantalLine {
+    margin-bottom: 0px;
+    margin-top: 0px;
+    border-top: 1px solid #cccccc;
+}
+
+@media (min-width: 768px) {
+    .smBlueBar {
+        width: 82.333333%;
+    }
+    .verticalDivider {
+        border-right:1px solid #ffffff;
+        height: 35px;
+        float: left;
+        padding-left: 6px;
+    }
+    .menuBar {
+        padding-left: 6px;
+    }
+    .headerText {
+        text-align: center;
+        font-size: 18px;
+        line-height: 18px;
+        color: #ffffff;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    #sidebar-left.col-sm-2 {
+      opacity: 1;
+      width: 20.666667%;
+      padding: 0 15px;
+    }
+    #content.col-sm-10 {
+      width: 79.333333%;
+    }
+}
+
+a.show-sidebar, a.show-sidebar:hover {
+    color: #ffffff;
+    padding-top: 13px;
+    padding-left: 10px;
+}
+
+.main-menu .dropdown-menu {
+    background-color: #f2f2f3;
+}
+
+.main-menu .dropdown-menu > li > a {
+    color:#58595b !important;
+}
+
+.main-menu .dropdown-menu > li > a:hover {
+    color:#f0f0f0 !important;
+}
+    
+</style>
+
+       <head>
+        <meta charset="utf-8"/>
+        <title>Value Delivery Approach</title>
+        <meta name="description" content="description"/>
+        <meta name="author" content="DevOOPS"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+ 
+ 
+           
+<apex:stylesheet value="{!URLFOR($Resource.SaaS_Delivery_App, 'css/bootstrap.css')}"/>            
+           
+     <apex:includeScript value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'plugins/jquery/jquery-2.1.0.min.js')}"/>      
+           
+
+
+           <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.css" rel="stylesheet"/>
+           <apex:stylesheet value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'css/style.css')}"/>
+           <apex:stylesheet value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'css/ValueDelivery.css')}"/>  
+
+    </head>
+<body style="background-color: #FFFFFF;background-image: none;">
+<!--Start Header-->
+<div id="screensaver">
+    <canvas id="canvas"></canvas>
+    <i class="fa fa-lock" id="screen_unlock"></i>
+</div>
+<div id="modalbox">
+    <div class="devoops-modal">
+        <div class="devoops-modal-header">
+            <div class="modal-header-name">
+                <span>Basic table</span>
+            </div>
+            <div class="box-icons">
+                <a class="close-link">
+                    <i class="fa fa-times"></i>
+                </a>
+            </div>
+        </div>
+        <div class="devoops-modal-inner">
+        </div>
+        <div class="devoops-modal-bottom">
+        </div>
+    </div>
+</div>
+
+
+
+<header class="navbar navbar-fixed-top">
+    <div class="container-fluid expanded-panel">
+        <div class="row">
+            <div class="col-xs-6 col-sm-1 navbar-brand xsValueDelivery" id="logo" style="margin-left: 0;padding: 8px 10px 10px;">
+                <a href="/apex/SaaSTabRediect" style="line-height: 13px;font-size: 12px;">
+                    <p style="text-align: center;">VALUE Delivery Approach </p>
+                </a>
+            </div>
+            <div style="height: 50px;float: left;background: #0197D5;width: 1%;padding-top: 8px;">
+                <div class="verticalDivider xsVerticalDivider"></div>
+            </div>
+
+            <div class="col-xs-6 col-sm-1 navbar-brand" id="logo" style="margin-left: 0px;padding: 8px 10px 10px 3px;">
+                <a href="/apex/SaaSDashboard" style="line-height: 13px;color:#BDBDBD;font-size: 12px;">
+                    <p style="text-align: center;">Toolkit Mobile App</p>
+                </a>
+            </div>
+            <div class="col-xs-12 col-sm-10 smBlueBar" id="top-panel">
+                <div class="row"> 
+                    <div class="col-xs-3 col-sm-3 menuBar">
+                        <a class="show-sidebar" href="#">
+                         <!-- <i class="fa fa-bars" style="font-size: 2em;"></i>-->
+                             <img src ="{!$Resource.open_icon}" id="click-more"  class="toggleIcon" style="display:none; "  />
+                                <img src ="{!$Resource.close_icon}" id="click-less"  class="toggleIcon"/>
+                        </a>
+                        
+                    </div>
+                    <div class="col-xs-5 col-sm-5 headerText xsHeaderText">VALUE Delivery Approach</div>
+                    <div class="col-xs-4 col-sm-4 top-panel-right">
+                        <ul class="nav navbar-nav pull-right panel-menu">
+                                                    
+                            <li class="dropdown">
+                               <a href="#" class="dropdown-toggle account" data-toggle="dropdown">
+                                    <div class="avatar">
+                                        <img src="{!UserPhotoUrl}" class="img-circle" alt="avatar" />
+                                    </div>
+                                    <div class="user-mini pull-right">
+                                        <span class="welcome">Welcome,</span>
+                                        <span>{!$user.firstname}</span>
+                                    </div>
+                                </a>
+                                
+                                
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+
+
+<!--End Header-->
+<!--Start Container-->
+<!--<apex:outputPanel rendered="{!displayMenu}"> -->
+<div id="main" class="container-fluid">
+
+    <div class="row">
+    
+        <div id="sidebar-left" class="col-xs-2 col-sm-2" style="margin-bottom: -2450px !important;">
+            <ul class="nav main-menu" id="header">
+                <li>
+              
+                    <a href="/apex/CrpiHomePage" id="overview" >
+                 
+                    <p class="hidden-xs textAlign">Approach</p>
+
+                </a>
+                    
+                </li>
+                <hr class="horizantalLine"/>
+                <li class="dropdown initiate">
+                    <a href="#" class="dropdown-toggle" id="initiate">
+                        <p class="hidden-xs textAlign">Initiate &amp; Confirm</p>
+                        </a>
+                        
+                       <ul class="dropdown-menu">
+                            <li><a href="/apex/AnatomyofPlanAndAnalyzeCRP">Session Overview</a></li>
+                        
+                            <li>
+                            
+                            
+                            
+<!--                             <a href="#" class="dropdown-toggle" id="Sessions"> -->
+
+
+<apex:outputLink styleClass="dropdown-toggle" value="#" rendered="{!InitiateSessionOutcomes.size > 0}">
+                               Sessions
+</apex:outputLink>                               
+<!--                              </a> -->
+                            
+                               <ul class="dropdown-menu">
+                                   <apex:repeat value="{!InitiateSessionOutcomes}" var="outcome" >
+                                       <li > <a href="/apex/SaaSSessionOutcomeDetail?id={!outcome.id}"> {!outcome.name}</a> </li>
+                                   </apex:repeat>
+                               </ul>
+                          <!--  <a href="/apex/PlanAndAnalyzeWhoCRPResources">Key Participants</a> -->
+                            
+                            
+                            </li>
+                          
+                        
+                       </ul>
+                    
+                    
+                </li>
+
+                <hr class="horizantalLine"/>
+               
+                 
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" id="design">
+                         <p class="hidden-xs textAlign">Design</p>
+                    </a>
+                   <ul class="dropdown-menu">
+                <li><a href="/apex/AnatomyofDesginCRP">Session Overview</a></li>
+                 <li>
+                            
+                            
+                            
+<!--                             <a href="#" class="dropdown-toggle" id="Sessions"> -->
+
+
+<apex:outputLink styleClass="dropdown-toggle" value="#" rendered="{!DesginSessionOutcomes.size > 0}">
+                               Sessions
+</apex:outputLink>                               
+<!--                              </a> -->
+                            
+                               <ul class="dropdown-menu">
+                                   <apex:repeat value="{!DesginSessionOutcomes}" var="outcome" >
+                                       <li > <a href="/apex/SaaSSessionOutcomeDetail?id={!outcome.id}"> {!outcome.name}</a> </li>
+                                   </apex:repeat>
+                               </ul>
+                         
+                            
+                            
+                            </li>
+                            
+    
+       
+              </ul>
+                </li>
+                <hr class="horizantalLine"/>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" id="build">
+                     <p class="hidden-xs textAlign">Build</p>
+                    </a>
+                   <ul class="dropdown-menu">
+                <li><a href="/apex/AnatomyofBuildCRP">Session Overview</a></li>
+                <li>
+                            
+                            
+                            
+<!--                             <a href="#" class="dropdown-toggle" id="Sessions"> -->
+
+
+<apex:outputLink styleClass="dropdown-toggle" value="#" rendered="{!BuildSessionOutcomes.size > 0}">
+                               Sessions
+</apex:outputLink>                               
+
+                            
+                               <ul class="dropdown-menu">
+                                   <apex:repeat value="{!BuildSessionOutcomes}" var="outcome" >
+                                       <li > <a href="/apex/SaaSSessionOutcomeDetail?id={!outcome.id}"> {!outcome.name}</a> </li>
+                                   </apex:repeat>
+                               </ul>
+                       
+                            
+                            </li>
+
+              </ul>
+                </li>
+              
+                <hr class="horizantalLine"/>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" id="templates">
+                    <p class="hidden-xs textAlign">Templates</p>
+                    </a>
+
+                 <ul class="dropdown-menu">
+                <li><a href="/apex/PlanAndAnalyzeCRPTemplatesExamples">Initiate &amp; Confirm</a></li>                     
+                <!--<li><a href="/apex/ScopeCRPTemplatesExamples">Scope Phase</a></li>   -->
+                <li><a href="/apex/DesignCRPTemplatesExamples">Design Phase</a></li> 
+                <li><a href="/apex/BuildCRPTemplatesExamples">Build Phase</a></li>         
+              </ul>
+                </li>
+                  <hr class="horizantalLine"/>
+                <li class="dropdown">
+                    <a href="/apex/SaaSValueDeliveryHome" class="dropdown-toggle" id="changeProject">
+                    <p class="hidden-xs textAlign">Change Project</p>
+                    </a>
+                    </li>
+                    <hr class="horizantalLine"/>
+              
+                 <li class="dropdown {!if($ObjectType.Value_Delivery_Session__c.createable,'','hidden')}">
+                    <a href="/apex/SaaSCreateSessionOutcome" class="dropdown-toggle {!if($ObjectType.Value_Delivery_Session_Outcomes__c.createable,'','hidden')}" id="createSession">
+                    <p class="hidden-xs textAlign">Create Session</p>
+                    </a>
+                    </li>
+                    <hr class="horizantalLine"/>
+                     
+    <!-- <li class="dropdown {!if($ObjectType.Value_Delivery_Session__c.createable,'','hidden')}">
+        <a href="/apex/SaaSCreateSession " class="dropdown-toggle" id="setup">
+          <p class="hidden-xs textAlign">           Setup Overview</p>
+        
+           </a>
+
+
+                   <hr class="horizantalLine"/>
+                    
+                </li> -->
+    
+    
+             
+            </ul>
+        </div>
+        
+        <!--Start Content-->
+        
+
+        <div id="content" class="col-xs-12 col-sm-10">
+            <apex:componentBody >
+            
+            </apex:componentBody>
+        </div>
+
+        <!--End Content-->
+    </div>
+   
+    
+</div>
+
+<apex:includeScript value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'plugins/bootstrap/bootstrap.min.js')}"/>
+
+<apex:includeScript value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'js/devoops.js')}"/>
+</body>
+</apex:component>

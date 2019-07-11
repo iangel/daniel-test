@@ -1,0 +1,157 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false" controller="SaaSKeyActionOrDecisionListViewCtrl">
+    <c:SaaSToolkitPageTemplate >
+        <style>
+       
+        </style>
+        <apex:form >
+            <br />
+            <c:CustomPageMessages closableErrors="true"></c:CustomPageMessages>
+            <h4>Key Action/Decision Home <a href="/apex/SaaSCreateKeyDecisionOrAction" title="Create Key Action/Decision">
+                                 <!--<i class="fa fa-plus-circle fa-2x" />-->
+                                 <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>
+                    </a>&nbsp;&nbsp;</h4>
+            <hr style="width: 100%; border-color: black;" />
+            <div class="row">
+               
+                <div class="col-lg-8 col-sm-8 col-md-8 smKeyActionInput sm8">
+                    <apex:inputText styleClass="form-control" value="{!searchtxt}" style="height: 35px;" html-placeholder="Search by Name, Record Type or Status">
+                        <apex:actionSupport event="onkeyup" action="{!Search}" reRender="listView,navPanel" />
+                    </apex:inputText>
+                </div>
+                <div class="col-lg-4 col-sm-3 col-md-4 col-xs-4 smKeyActionIcons sm3">
+                  <!--  <apex:commandLink action="{!updateKeyAction}" title="Edit">
+                       
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/edit.png')}"/>
+                    </apex:commandLink>-->
+                    &nbsp;
+                   <!-- <apex:commandLink action="{!deleteKeyAction}" reRender="listView" title="Delete" rendered="{!$ObjectType.Release__c.deletable}"> -->
+                    <apex:commandLink title="Delete" rendered="{!$ObjectType.Key_Action_Decision__c.deletable}"  html-data-toggle="modal" html-data-target="#deleteModel" reRender="a"> 
+                        <!--<i class="fa fa-times-circle fa-2x" />-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/delete.png')}"/>
+                    </apex:commandLink>
+                    &nbsp;
+                    <apex:commandLink action="{!cloneKeyAction}" title="Clone">
+                        <!--<i class="fa fa-files-o fa-2x" />-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/clone.png')}"/>
+                    </apex:commandLink>
+                    &nbsp;
+                </div>
+            </div>
+            <br />
+        <!--       <apex:outputPanel id="listView"> 
+           <apex:outputPanel id="noRecordsPanel"  rendered="{!keyDecisionWrapLst.size ==0}">
+                No records to display.
+            </apex:outputPanel>
+            <apex:outputPanel rendered="{!keyDecisionWrapLst.size  >0}">  -->
+
+            
+            <div class="row">
+                 <div class="col-lg-12 col-sm-12 col-md-12" style="width:97%;">
+                 <apex:outputPanel id="listView"> 
+                        <table class="table table-fixedheader table-bordered"> 
+                            <thead class="customTableHeader">
+                                <tr>
+                                    <th class="colWidth10" style="word-wrap: initial;">Select</th>
+                                    
+                                    <th class="colWidth10">
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Action/ Decision Name {!IF(sortField=='Name',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Name" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    </th>
+                                    
+                                    <th class="colWidth10">
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Record Type {!IF(sortField=='RecordType.Name',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="RecordType.Name" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    </th>
+                                    
+                                    <th class="colWidth20" style="word-wrap: initial;">Description</th>
+                                    
+                                    <th class="colWidth10">
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Due Date {!IF(sortField=='Due_Date__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Due_Date__c" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    </th>
+                                    
+                                    <th class="colWidth10">
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Status {!IF(sortField=='Status__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Status__c" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    </th>
+                                    
+                                    <th class="colWidth10">
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Priority {!IF(sortField=='Priority__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Priority__c" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    </th>
+                                    
+                                    <th class="colWidth20" style="word-wrap: initial;">Decision/Outcome</th>
+                                </tr>
+                            </thead>
+                            <apex:repeat VALue="{!keyDecisionWrapLst}" VAr="decisionWrap">
+                                <tr>
+                                    <td class="colWidth10">
+                                        <center>
+                                            <apex:inputCheckbox value="{!decisionWrap.checked}" />
+                                        </center>
+                                    </td>
+                                    <td class="colWidth10">
+                                    <!--<a href='/apex/KeyActionDetailPage?id={!decisionWrap.keyDecisionObj.id}'> {!decisionWrap.keyDecisionObj.Name} </a>-->
+                                    <a href='/apex/SaaSCreateKeyDecisionOrAction?detail=1&&id={!decisionWrap.keyDecisionObj.id}'> {!decisionWrap.keyDecisionObj.Name} </a>
+                                    </td>
+                                    <td class="colWidth10">{!decisionWrap.keyDecisionObj.RecordType.Name}</td>
+                                    <td class="colWidth20">{!decisionWrap.keyDecisionObj.Description__c}</td>
+                                    <td class="colWidth10"><apex:outputText value="{0, date,  MM/dd/yyyy}">
+                                            <apex:param value="{!decisionWrap.keyDecisionObj.Due_Date__c}" />
+                                        </apex:outputText></td>
+                                    <!--      <td>Owner Last Name</td> -->
+                                    <td class="colWidth10">{!decisionWrap.keyDecisionObj.Status__c}</td>
+                                    <td class="colWidth10">{!decisionWrap.keyDecisionObj.Priority__c}</td>
+                                    <td class="colWidth20">{!decisionWrap.keyDecisionObj.Decision_Outcome__c}</td>
+                                </tr>
+                            </apex:repeat>
+                        </table>
+                        </apex:outputPanel> 
+               
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12">
+                        <center>                        
+                                <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOt(hasPrevious)}" />&nbsp;&nbsp;
+            <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!hasPrevious}" />&nbsp;&nbsp; 
+            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!not(hasPrevious)}">Previous</apex:outputPanel>
+                                <apex:commandLink value="Previous" action="{!Previous}" rendered="{!hasPrevious}" reRender="listView,navPanel" />&nbsp;&nbsp;&nbsp;&nbsp;
+            <apex:commandLink value="Next" action="{!Next}" rendered="{!hasNext}" reRender="listView,navPanel" />&nbsp;&nbsp;
+            
+            <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOt(hasNext)}">Next</apex:outputPanel>&nbsp;&nbsp; 
+            <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!hasNext}" />
+                                <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOt(hasNext)}" />
+                                <br />
+                                <br />
+                        
+                        </center>
+                    </div>
+                </div>
+            </div>
+           </div>
+           <!-- Modal -->
+<div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Toolkit Mobile App</h4>
+      </div>
+      <div class="modal-body">
+          Are you sure you want to delete records?
+      </div>
+      <div class="modal-footer">
+        <apex:commandLink action="{!deleteKeyAction}" title="Ok" value="Ok" rendered="{!$ObjectType.Key_Action_Decision__c.deletable}" styleclass="btn btn-primary" />
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>        
+      </div>
+    </div>
+  </div>
+</div>
+   
+        </apex:form>
+    </c:SaaSToolkitPageTemplate>
+</apex:page>

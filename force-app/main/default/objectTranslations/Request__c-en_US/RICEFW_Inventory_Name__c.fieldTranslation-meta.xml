@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Choose a RICEFW Inventory record to fill the gap. You may need to create a RICEFW Inventory record if the applicable one does not yet exist. --></help>
+    <label><!-- RICEFW Inventory Name --></label>
+    <name>RICEFW_Inventory_Name__c</name>
+    <relationshipLabel><!-- Requirements --></relationshipLabel>
+</CustomFieldTranslation>

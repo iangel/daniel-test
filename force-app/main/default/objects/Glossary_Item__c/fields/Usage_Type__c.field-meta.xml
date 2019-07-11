@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Usage_Type__c</fullName>
+    <description>Used to differentiate between different term types. Facilitates searching and cross reference.
+
+Be aware that creating a Field Dependency on this field negates the ability to edit in a List View. This may limit Term management.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used to differentiate between different term types. Facilitates searching and cross reference.</inlineHelpText>
+    <label>Usage Type</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Full Name</fullName>
+                <default>false</default>
+                <label>Full Name</label>
+            </value>
+            <value>
+                <fullName>Common Usage</fullName>
+                <default>false</default>
+                <label>Common Usage</label>
+            </value>
+            <value>
+                <fullName>Technical Name</fullName>
+                <default>false</default>
+                <label>Technical Name</label>
+            </value>
+            <value>
+                <fullName>Abbreviation</fullName>
+                <default>false</default>
+                <label>Abbreviation</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

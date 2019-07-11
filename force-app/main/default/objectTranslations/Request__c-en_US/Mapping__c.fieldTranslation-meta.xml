@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sub Capability --></label>
+    <name>Mapping__c</name>
+    <picklistValues>
+        <masterLabel>Account Hierarchy</masterLabel>
+        <translation><!-- Account Hierarchy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Processes</masterLabel>
+        <translation><!-- Account Processes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Reports &amp; Dashboards</masterLabel>
+        <translation><!-- Account Reports &amp; Dashboards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Search</masterLabel>
+        <translation><!-- Account Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Types</masterLabel>
+        <translation><!-- Account Types --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Account Visibility</masterLabel>
+        <translation><!-- Account Visibility --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activities Visibility &amp; Security</masterLabel>
+        <translation><!-- Activities Visibility &amp; Security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activity</masterLabel>
+        <translation><!-- Activity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activity - Event Key Attributes</masterLabel>
+        <translation><!-- Activity - Event Key Attributes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activity - Task Key Attributes</masterLabel>
+        <translation><!-- Activity - Task Key Attributes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activity Creation</masterLabel>
+        <translation><!-- Activity Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activity Reports &amp; Dashboards</masterLabel>
+        <translation><!-- Activity Reports &amp; Dashboards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activity Visibility</masterLabel>
+        <translation><!-- Activity Visibility --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CTI Screenpop</masterLabel>
+        <translation><!-- CTI Screenpop --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Apex Automation &amp; Workflow Rules</masterLabel>
+        <translation><!-- Case Apex Automation &amp; Workflow Rules --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Close</masterLabel>
+        <translation><!-- Case Close --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Core Functionalities</masterLabel>
+        <translation><!-- Case Core Functionalities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Creation</masterLabel>
+        <translation><!-- Case Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Email Collaboration</masterLabel>
+        <translation><!-- Case Email Collaboration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Fields</masterLabel>
+        <translation><!-- Case Fields --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Home Page</masterLabel>
+        <translation><!-- Case Home Page --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Mobile Push Notifications</masterLabel>
+        <translation><!-- Case Mobile Push Notifications --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case My Page</masterLabel>
+        <translation><!-- Case My Page --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Queues</masterLabel>
+        <translation><!-- Case Queues --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Record Types &amp; Page Layouts</masterLabel>
+        <translation><!-- Case Record Types &amp; Page Layouts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Search Results &amp; Related Lists/Buttons</masterLabel>
+        <translation><!-- Case Search Results &amp; Related Lists/Buttons --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Validation Rules</masterLabel>
+        <translation><!-- Case Validation Rules --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Configuring Aux Codes</masterLabel>
+        <translation><!-- Configuring Aux Codes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Configuring Wrap-up</masterLabel>
+        <translation><!-- Configuring Wrap-up --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Deactivation</masterLabel>
+        <translation><!-- Contact Deactivation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Key Attributes</masterLabel>
+        <translation><!-- Contact Key Attributes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Processes</masterLabel>
+        <translation><!-- Contact Processes --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Reports &amp; Dashboards</masterLabel>
+        <translation><!-- Contact Reports &amp; Dashboards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Search</masterLabel>
+        <translation><!-- Contact Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Visibility</masterLabel>
+        <translation><!-- Contact Visibility --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Field Level Security</masterLabel>
+        <translation><!-- Field Level Security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interaction Reasons</masterLabel>
+        <translation><!-- Interaction Reasons --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NS Account Teams</masterLabel>
+        <translation><!-- NS Account Teams --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Match Process</masterLabel>
+        <translation><!-- No Match Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One Number, Multiple Accounts Match Process</masterLabel>
+        <translation><!-- One Number, Multiple Accounts Match Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>One Number, Multiple Contacts Match Process</masterLabel>
+        <translation><!-- One Number, Multiple Contacts Match Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Profiles &amp; Objects</masterLabel>
+        <translation><!-- Profiles &amp; Objects --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports &amp; Dashboards Dashboards</masterLabel>
+        <translation><!-- Reports &amp; Dashboards Dashboards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports &amp; Dashboards Report Creation</masterLabel>
+        <translation><!-- Reports &amp; Dashboards Report Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports &amp; Dashboards Report Folders</masterLabel>
+        <translation><!-- Reports &amp; Dashboards Report Folders --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports &amp; Dashboards Reports</masterLabel>
+        <translation><!-- Reports &amp; Dashboards Reports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports &amp; Dashboards Security</masterLabel>
+        <translation><!-- Reports &amp; Dashboards Security --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Single Match Process</masterLabel>
+        <translation><!-- Single Match Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Creation</masterLabel>
+        <translation><!-- User Creation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Deactivation</masterLabel>
+        <translation><!-- User Deactivation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Login</masterLabel>
+        <translation><!-- User Login --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Maintenance</masterLabel>
+        <translation><!-- User Maintenance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Overview</masterLabel>
+        <translation><!-- User Overview --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Role Hierarchy</masterLabel>
+        <translation><!-- User Role Hierarchy --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

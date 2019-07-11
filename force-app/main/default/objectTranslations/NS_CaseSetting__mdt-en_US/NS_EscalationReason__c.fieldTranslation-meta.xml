@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If Default status is Escalated provide Reason of escalation --></help>
+    <label><!-- Escalation Reason --></label>
+    <name>NS_EscalationReason__c</name>
+</CustomFieldTranslation>

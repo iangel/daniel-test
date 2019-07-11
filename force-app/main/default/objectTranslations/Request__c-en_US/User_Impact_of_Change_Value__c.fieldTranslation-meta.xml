@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Value is calculated by the User Impact of Change field: 
+High = 1 
+Medium = 2 
+Low = 3 --></help>
+    <label><!-- User Impact of Change Value --></label>
+    <name>User_Impact_of_Change_Value__c</name>
+</CustomFieldTranslation>

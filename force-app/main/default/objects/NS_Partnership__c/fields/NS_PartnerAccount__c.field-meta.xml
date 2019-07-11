@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_PartnerAccount__c</fullName>
+    <description>It indicates who is the partner that this customer account is related to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who is the Partner (3PL, Contractor, Vendor, etc) that this Customer is related to?</inlineHelpText>
+    <label>Authorized Company</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Partner Account can only be of Type 3PL,Other Companies or Other Railroad</errorMessage>
+        <filterItems>
+            <field>Account.RecordTypeId</field>
+            <operation>equals</operation>
+            <value>3PL, Other Railroad, Other Company</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>Authorized Customers</relationshipLabel>
+    <relationshipName>NS_Partnerships1</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

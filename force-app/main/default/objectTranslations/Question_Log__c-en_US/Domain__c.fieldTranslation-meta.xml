@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Domain --></label>
+    <name>Domain__c</name>
+    <picklistValues>
+        <masterLabel>Account Management</masterLabel>
+        <translation><!-- Account Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Assets/Install Base</masterLabel>
+        <translation><!-- Assets/Install Base --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campaign Management</masterLabel>
+        <translation><!-- Campaign Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Case Management</masterLabel>
+        <translation><!-- Case Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chatter</masterLabel>
+        <translation><!-- Chatter --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Communications Media and Technologies</masterLabel>
+        <translation><!-- Communications Media and Technologies --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact</masterLabel>
+        <translation><!-- Contact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Currency Management</masterLabel>
+        <translation><!-- Currency Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Services</masterLabel>
+        <translation><!-- Financial Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Forecasting</masterLabel>
+        <translation><!-- Forecasting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead Management</masterLabel>
+        <translation><!-- Lead Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Life Sciences</masterLabel>
+        <translation><!-- Life Sciences --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mobile</masterLabel>
+        <translation><!-- Mobile --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opportunity Management</masterLabel>
+        <translation><!-- Opportunity Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Outlook</masterLabel>
+        <translation><!-- Outlook --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Management</masterLabel>
+        <translation><!-- Product Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Products</masterLabel>
+        <translation><!-- Products --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports and Dashboards</masterLabel>
+        <translation><!-- Reports and Dashboards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Retail Marketing</masterLabel>
+        <translation><!-- Retail Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Search Marketing</masterLabel>
+        <translation><!-- Search Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tasks and Activities</masterLabel>
+        <translation><!-- Tasks and Activities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Management</masterLabel>
+        <translation><!-- User Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Website Integration</masterLabel>
+        <translation><!-- Website Integration --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

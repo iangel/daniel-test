@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Business Unit --></label>
+    <name>NS_BusinessUnit__c</name>
+    <picklistValues>
+        <masterLabel>Automotive</masterLabel>
+        <translation><!-- Automotive --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Equipment Planning</masterLabel>
+        <translation><!-- Equipment Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intermodal Non-Premium</masterLabel>
+        <translation><!-- Intermodal Non-Premium --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intermodal Premium</masterLabel>
+        <translation><!-- Intermodal Premium --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Marketing</masterLabel>
+        <translation><!-- Marketing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OSS</masterLabel>
+        <translation><!-- OSS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revenue Accounting Demurrage</masterLabel>
+        <translation><!-- Revenue Accounting Demurrage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Revenue Accounting Traffic</masterLabel>
+        <translation><!-- Revenue Accounting Traffic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unit Train</masterLabel>
+        <translation><!-- Unit Train --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

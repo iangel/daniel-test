@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Account Name for which Contact should be associated to when the Account becomes available in Salesforce. --></help>
+    <label><!-- Customer Account --></label>
+    <name>NS_CustomerAccnt__c</name>
+</CustomFieldTranslation>

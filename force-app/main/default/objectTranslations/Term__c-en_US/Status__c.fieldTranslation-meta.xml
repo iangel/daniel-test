@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Used by the Project Management to indicate which terms are adopted for official use on the project, over their related counterparts. --></help>
+    <label><!-- Project Usage Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Discouraged</masterLabel>
+        <translation><!-- Discouraged --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Official</masterLabel>
+        <translation><!-- Official --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unofficial</masterLabel>
+        <translation><!-- Unofficial --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Preconditions__c</fullName>
+    <description>List any activities that must take place, or any conditions that must be true, before the use case can be started. Number each pre-condition</description>
+    <externalId>false</externalId>
+    <inlineHelpText>List any activities that must take place, or any conditions that must be true, before the use case can be started. Number each pre-condition</inlineHelpText>
+    <label>Preconditions</label>
+    <length>32768</length>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>8</visibleLines>
+</CustomField>

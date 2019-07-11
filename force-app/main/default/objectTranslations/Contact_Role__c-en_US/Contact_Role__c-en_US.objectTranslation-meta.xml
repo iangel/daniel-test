@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Contact Role</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Contact Roles</value>
+    </caseValues>
+    <layouts>
+        <layout>Capability Contact Role Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Release Contact Role Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Request Contact Role Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Details --></label>
+            <section>Details</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Assigns a Contact a Role on a Capability --></description>
+        <label><!-- Capability Role --></label>
+        <name>Capability_Role</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Assigns a Contact a Role on a Request --></description>
+        <label><!-- Release Role --></label>
+        <name>Release_Role</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Assigns a Contact a Role on a Request --></description>
+        <label><!-- Request Role --></label>
+        <name>Request_Role</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

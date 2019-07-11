@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request__c</fullName>
+    <description>Request for which application inventory has been created</description>
+    <externalId>false</externalId>
+    <label>Request</label>
+    <referenceTo>Request__c</referenceTo>
+    <relationshipLabel>Application Inventory</relationshipLabel>
+    <relationshipName>Application_Inventory</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

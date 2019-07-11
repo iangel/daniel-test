@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Business_Objectives__c</fullName>
+    <externalId>false</externalId>
+    <label>Business Objectives</label>
+    <referenceTo>Business_Objectives__c</referenceTo>
+    <relationshipLabel>Value Drivers</relationshipLabel>
+    <relationshipName>Value_Drivers</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

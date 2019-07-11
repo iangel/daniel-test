@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk__c</fullName>
+    <description>Level of severity of issue/risk</description>
+    <externalId>false</externalId>
+    <label>Risk / Issue Level</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Executive Steering Committee</fullName>
+                <default>false</default>
+                <label>Executive Steering Committee</label>
+            </value>
+            <value>
+                <fullName>Leadership Team</fullName>
+                <default>false</default>
+                <label>Leadership Team</label>
+            </value>
+            <value>
+                <fullName>Project Team</fullName>
+                <default>false</default>
+                <label>Project Team</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Component Detail --></label>
+    <name>Component_Detail__c</name>
+    <picklistValues>
+        <masterLabel>Custom Buttons or Links</masterLabel>
+        <translation><!-- Custom Buttons or Links --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Functionality / Code</masterLabel>
+        <translation><!-- Custom Functionality / Code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data</masterLabel>
+        <translation><!-- Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ETL</masterLabel>
+        <translation><!-- ETL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fields</masterLabel>
+        <translation><!-- Fields --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>List Views</masterLabel>
+        <translation><!-- List Views --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Page Layouts</masterLabel>
+        <translation><!-- Page Layouts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports</masterLabel>
+        <translation><!-- Reports --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Security / Permissions</masterLabel>
+        <translation><!-- Security / Permissions --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Validation Rules</masterLabel>
+        <translation><!-- Validation Rules --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workflow &amp; Approvals</masterLabel>
+        <translation><!-- Workflow &amp; Approvals --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

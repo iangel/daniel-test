@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Who is the Primary Contact from the Partner Account for this Customer? --></help>
+    <label><!-- Primary Contact (Authorized Company) --></label>
+    <lookupFilter>
+        <errorMessage><!-- Contact must be an Active Contact --></errorMessage>
+    </lookupFilter>
+    <name>NS_PrimaryPartnerContact__c</name>
+    <relationshipLabel><!-- Authorized Companies --></relationshipLabel>
+</CustomFieldTranslation>

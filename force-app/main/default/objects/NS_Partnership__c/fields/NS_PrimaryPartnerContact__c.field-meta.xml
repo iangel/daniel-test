@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_PrimaryPartnerContact__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <description>It indicates the PrimaryContact from the Partner Account for this Customer</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who is the Primary Contact from the Partner Account for this Customer?</inlineHelpText>
+    <label>Primary Contact (Authorized Company)</label>
+    <lookupFilter>
+        <active>true</active>
+        <errorMessage>Contact must be an Active Contact</errorMessage>
+        <filterItems>
+            <field>Contact.NS_ContactStatus__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Contact</referenceTo>
+    <relationshipLabel>Authorized Companies</relationshipLabel>
+    <relationshipName>NS_Partnerships</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

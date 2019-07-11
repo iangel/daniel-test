@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- 10% - Highly unlikely to occur
+25% - Somewhat likely to occur
+50% - Strong chance to occur
+75% - Likely to occur
+90% - Most likely to occur --></help>
+    <label><!-- Likelihood --></label>
+    <name>Likelihood__c</name>
+    <picklistValues>
+        <masterLabel>10%</masterLabel>
+        <translation><!-- 10% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>25%</masterLabel>
+        <translation><!-- 25% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>50%</masterLabel>
+        <translation><!-- 50% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>75%</masterLabel>
+        <translation><!-- 75% --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>90%</masterLabel>
+        <translation><!-- 90% --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

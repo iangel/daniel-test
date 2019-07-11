@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Workstream__c</fullName>
+    <description>Department related to issue/risk</description>
+    <externalId>false</externalId>
+    <inlineHelpText>These values will be customizable based on your project needs.</inlineHelpText>
+    <label>Related Workstream</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+                <label>Account Management</label>
+            </value>
+            <value>
+                <fullName>Contact Management</fullName>
+                <default>false</default>
+                <label>Contact Management</label>
+            </value>
+            <value>
+                <fullName>Data Integration</fullName>
+                <default>false</default>
+                <label>Data Integration</label>
+            </value>
+            <value>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+                <label>Data Migration</label>
+            </value>
+            <value>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+                <label>Deployment</label>
+            </value>
+            <value>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+                <label>Lead Management</label>
+            </value>
+            <value>
+                <fullName>Opportunity Management</fullName>
+                <default>false</default>
+                <label>Opportunity Management</label>
+            </value>
+            <value>
+                <fullName>Overall Project</fullName>
+                <default>false</default>
+                <label>Overall Project</label>
+            </value>
+            <value>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+                <label>Project Management</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

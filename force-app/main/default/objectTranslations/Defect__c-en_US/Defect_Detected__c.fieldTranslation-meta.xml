@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Defect Detected --></label>
+    <name>Defect_Detected__c</name>
+    <picklistValues>
+        <masterLabel>Build Review</masterLabel>
+        <translation><!-- Build Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Build Stage</masterLabel>
+        <translation><!-- Build Stage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code Review</masterLabel>
+        <translation><!-- Code Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design Review</masterLabel>
+        <translation><!-- Design Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design Stage</masterLabel>
+        <translation><!-- Design Stage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Post Go-Live</masterLabel>
+        <translation><!-- Post Go-Live --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Regression Testing</masterLabel>
+        <translation><!-- Regression Testing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Requirement Stage</masterLabel>
+        <translation><!-- Requirement Stage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>System Testing</masterLabel>
+        <translation><!-- System Testing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test Script Review</masterLabel>
+        <translation><!-- Test Script Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UAT</masterLabel>
+        <translation><!-- UAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unit Testing</masterLabel>
+        <translation><!-- Unit Testing --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

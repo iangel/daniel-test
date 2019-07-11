@@ -1,0 +1,128 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">D&amp;I Requirements </div>
+                 
+        
+
+              <table class="table table-striped table-bordered" >
+                   <tr>
+                   <td> Requirement</td>
+                   <td>Details</td>
+                   <td> Owner</td>
+                                                                                      
+                   </tr>
+                   
+                    <tr>
+                   <td> 1</td>
+                   <td></td>
+                   <td> </td>
+              
+                                                                                      
+                   </tr>
+                   
+                     <tr>
+                   <td> 2</td>
+                   <td></td>
+                   <td> </td>
+                                                                 
+                   </tr>
+                     <tr>
+                   <td> 3</td>
+                   <td></td>
+                   <td> </td>
+     
+                                                                                      
+                   </tr>
+                   
+               </table>
+</div>
+  <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Cross-CRP Dependencies</div>
+                 
+        
+
+              <table class="table table-striped table-bordered" >
+                   <tr>
+                   <td> Dependent CRP</td>
+                   <td>Description</td>
+                   <td> Owner</td>
+                     <td>       Target Res Date</td>
+                                                           
+                   </tr>
+                   
+                    <tr>
+                   <td> 1</td>
+                   <td></td>
+                   <td> </td>
+              
+                      <td> </td>                                                                   
+                   </tr>
+                   
+                     <tr>
+                   <td> 2</td>
+                   <td></td>
+                   <td> </td>
+                     <td> </td>                                              
+                   </tr>
+                     <tr>
+                   <td> 3</td>
+                   <td></td>
+                   <td> </td>
+        <td> </td>
+                                                                                      
+                   </tr>
+                   
+               </table>
+</div>
+  <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Operational Impacts </div>
+                 
+        
+
+              <table class="table table-striped table-bordered" >
+                   <tr>
+                   <td> Impact</td>
+                   <td>Description</td>
+                   <td> Owner</td>
+                      <td>       Target Res Date</td>                                                                  
+                   </tr>
+                   
+                    <tr>
+                   <td> 1</td>
+                   <td></td>
+                   <td> </td>
+                 <td> </td>
+                                                                                      
+                   </tr>
+                   
+                     <tr>
+                   <td> 2</td>
+                   <td></td>
+                   <td> </td>
+                  <td> </td>                                                 
+                   </tr>
+                     <tr>
+                   <td> 3</td>
+                   <td></td>
+                   <td> </td>
+     
+                       <td> </td>                                                                  
+                   </tr>
+                   
+               </table>
+</div>
+        
+   <!--     <ul class="pager">
+                  <li class="previous"><a href="/apex/PlanAndAnalyzeCRPTemplatesExamples">&larr; Back</a></li>
+
+              </ul> -->
+              
+              
+              
+    </c:CrpiPageTemplate>
+</apex:page>

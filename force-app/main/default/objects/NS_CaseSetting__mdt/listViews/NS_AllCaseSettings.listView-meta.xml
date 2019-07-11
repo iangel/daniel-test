@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_AllCaseSettings</fullName>
+    <columns>NS_InteractionCategory__c</columns>
+    <columns>MasterLabel</columns>
+    <columns>Interaction_Type__c</columns>
+    <columns>Focus_On__c</columns>
+    <columns>NS_Priority__c</columns>
+    <columns>NS_MktgNotification__c</columns>
+    <columns>NS_CreateTask__c</columns>
+    <columns>NS_AutoEscalateOnUpdate__c</columns>
+    <columns>NS_DefaultStatus__c</columns>
+    <columns>NS_AutomotiveStatus__c</columns>
+    <columns>NS_EPStatus__c</columns>
+    <columns>NS_UTSStatus__c</columns>
+    <columns>NS_TaskOwnerGroup__c</columns>
+    <filterScope>Everything</filterScope>
+    <label>All Case Settings</label>
+</ListView>

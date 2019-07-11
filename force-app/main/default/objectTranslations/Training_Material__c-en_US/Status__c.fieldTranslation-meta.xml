@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>At Risk</masterLabel>
+        <translation><!-- At Risk --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Behind</masterLabel>
+        <translation><!-- Behind --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Complete</masterLabel>
+        <translation><!-- Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Started</masterLabel>
+        <translation><!-- Not Started --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On Track</masterLabel>
+        <translation><!-- On Track --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

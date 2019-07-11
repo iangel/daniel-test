@@ -1,0 +1,132 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" extensions="SaasSessionUserStoriesResultCtrl" standardController="Value_Delivery_Session_User_Stories__c" >
+    <c:CrpiPageTemplate >
+        <apex:includeScript value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'plugins/morris/morris.min.js')}"/>
+        <apex:includeScript value="{!URLFOR($Resource.ValueDeliveryApproachV1, 'plugins/raphael/raphael-min.js')}"/>
+        
+        <!-- while page loading bar graph will appear-->
+        <script>
+            window.onload = function() {
+                $(document).ready(function(){
+                    var graphData  =   new Array();
+                    <apex:repeat var="da1" value="{!ChartLst}"> 
+                          graphData.push({
+                               y:"{!da1.optionNo}",
+                               a:"{!da1.noOfYes}", 
+                               b:"{!da1.noOfNo}"
+                               
+                           });
+                    </apex:repeat> 
+                    Morris.Bar({
+                        element: 'morris-bar-chart',
+                        data: graphData ,
+                        xkey: 'y',
+                        xLabelAngle :60,
+                        ykeys :['a','b'],
+                        labels: ['Yes','No'],
+                        hideHover: 'auto',
+                        yLabelFormat: function(y){return y != Math.round(y)?'':y;},
+                        barColors: ['#0197D5','#acacac']
+                    });
+                 });  
+            };
+        </script>
+        <br/>
+        <apex:form >
+            <apex:outputPanel id="errorBlock">
+                <c:CustomPageMessages closableErrors="true" />
+            </apex:outputPanel>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <p>
+                        <b>{!valueSessionPrjName}&nbsp;&#9830;&nbsp; {!Phase} &nbsp;&#9830;&nbsp;{!SessionOutcome } </b>
+                    </p>
+                </div>
+            </div>
+            <apex:commandLink action="/apex/SaaSSessionOutcomeDetail?id={!sessionUserstory.Value_Delivery_Session_Outcomes__c}" immediate="true" title="Back">
+                <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/back_1x.png')}" />
+            </apex:commandLink>
+            <br/>
+            <h4>Result of User Story Name</h4>
+            <hr style="width: 100%; border-color: black;" />
+            <div class="row">
+                <div class="col-lg-8 col-sm-12 col-md-8">
+                    <b> {!Value_Delivery_Session_User_Stories__c.User_Story__r.name} </b><br/><br/>
+                    <table class="table">
+                        <apex:variable var="i" value="{!1}"/>
+                         <apex:repeat value="{!optionLst}" var="options">
+                             <tr>
+                                 <td class="text-primary"><B>OPTION {!i} </b></td>
+                                 <td> {!options.User_Story_Option__c} </td>   
+                              </tr>
+                              <apex:variable var="i" value="{!i+1}"/>
+                         </apex:repeat>                                                                            
+                     </table>                    
+                 </div>
+                 <div class="col-lg-4 col-sm-12 col-md-12">
+                     <apex:outputPanel rendered="{!chartLst.size >  0}"> 
+                         <div class="flot-chart">
+                             <div id="morris-bar-chart" Style="height:200px;"></div>
+                         </div>
+                     </apex:outputPanel>
+                     <apex:outputPanel rendered="{!chartLst.size == 0}"> No Data</apex:outputPanel>
+                 </div>
+             </div>
+             <br/><br/>
+             <div class="row">
+                 <div class="col-lg-12 col-sm-12 col-md-12">
+                     <table class="table">
+                         <tr class="customTableHeader">
+                            <td class="text-primary" style="text-decoration:none;color:white;"> <b>Participant Name</b></td>
+                            <td></td>
+                            <apex:variable var="i" value="{!1}"/>
+                            <apex:repeat value="{!optionLst}" var="options">
+                                 <td class="text-primary" style="text-decoration:none;color:white;"><B>OPTION {!i} </b></td>
+                                 <apex:variable var="i" value="{!i+1}"/>
+                            </apex:repeat>                                                         
+                        </tr>
+                        <apex:repeat value="{!userVoteLst}" var="userResponse">
+                            <tr>
+                                <td> {!userResponse.userName }</td>
+                                <td> </td>
+                                <apex:repeat value="{!userResponse.userVote}" var="obj">
+                                    <td>{!obj}
+                                    </td>
+                                </apex:repeat>
+                             </tr>
+                         </apex:repeat>                                                      
+                        <tr>
+                            <td rowspan="2"><b>Total</b></td>
+                            <td><b>Yes</b></td>
+                            <apex:repeat value="{!chartLst}" var="total">
+                                <td> {!total.noOfYes} </td>
+                            </apex:repeat>
+                        </tr>
+                        <tr> 
+                            <td><b>No</b></td>
+                            <apex:repeat value="{!chartLst}" var="total">
+                                <td> {!total.noOfNo} </td>
+                            </apex:repeat>
+                        </tr>
+                    </table>
+                 </div>
+            </div> 
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12">
+                    <center>                        
+                        <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOt(hasPrevious)}" />&nbsp;&nbsp;
+                        <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!hasPrevious}" />&nbsp;&nbsp; 
+                        <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!not(hasPrevious)}">Previous</apex:outputPanel>
+                                            <apex:commandLink value="Previous" action="{!Previous}" rendered="{!hasPrevious}" reRender="listView,navPanel" />&nbsp;&nbsp;&nbsp;&nbsp;
+                        <apex:commandLink value="Next" action="{!Next}" rendered="{!hasNext}" reRender="listView,navPanel" />&nbsp;&nbsp;
+                        
+                        <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOt(hasNext)}">Next</apex:outputPanel>&nbsp;&nbsp; 
+                        <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!hasNext}" />
+                                            <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOt(hasNext)}" />
+                                            <br />
+                                            <br />
+                     </center>
+                 </div>
+             </div>
+         </apex:form>
+     </c:CrpiPageTemplate>   
+</apex:page>

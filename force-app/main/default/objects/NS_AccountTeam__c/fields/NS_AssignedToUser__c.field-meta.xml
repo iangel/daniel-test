@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_AssignedToUser__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>For role other than OSS, it is a must have field.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Search for an user when Role is not &#39;OSS Region&#39;</inlineHelpText>
+    <label>Assigned To User</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Norfolk_Southern_Account_Team</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

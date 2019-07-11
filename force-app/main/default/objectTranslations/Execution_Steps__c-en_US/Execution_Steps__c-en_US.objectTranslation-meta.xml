@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Script Steps</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Script Steps</value>
+    </caseValues>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Export_Script_Steps --></label>
+        <name>Export_Script_Steps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Import_Script_Steps --></label>
+        <name>Import_Script_Steps</name>
+    </webLinks>
+</CustomObjectTranslation>

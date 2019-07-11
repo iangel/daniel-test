@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_CheckContactFromSameAccount</fullName>
+    <active>false</active>
+    <description>It checks if the contact selected by the user is associated to the selected account .</description>
+    <errorConditionFormula>AND( NOT(ISBLANK(NS_ContactName__c)),  NS_ContactName__r.AccountId &lt;&gt; NS_AccountName__r.Id )</errorConditionFormula>
+    <errorMessage>Please select a contact who is associated with the selected Account</errorMessage>
+</ValidationRule>

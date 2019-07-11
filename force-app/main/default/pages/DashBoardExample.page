@@ -1,0 +1,33 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false" cache="true">
+   <c:CrpiPageTemplate >
+   <br/>
+    <div class="row">
+            <div class="col-xs-12">
+            
+            <div class="panel panel-primary">
+  <div class="panel-heading">
+   
+  
+  
+   
+            
+            
+            
+            
+            Example Dashboards
+              </div>  
+              
+             <div class="panel-body"> 
+                <center> 
+                        <img src="{!URLFOR($Resource.ValueDeliveryApproachV1 , 'img/DashboardExample.png')}"  class="img-responsive"  alt="Responsive image" />
+                  <!--      <img src="{!URLFOR($Resource.DashboardExample)}" class="img-responsive" alt="Responsive image"/>                       -->
+               </center>
+               </div>  
+              </div>  
+           </div>           </div>     
+       <!--  <ul class="pager">
+                  <li class="previous"><a href = "javascript:history.back()">&larr; Back</a></li>
+              </ul>      -->
+       <!--  <apex:iframe width="50%" height="50%" src="http://www.youtube.com/embed/Qd8OtvSgal8"/> -->
+   </c:CrpiPageTemplate>
+</apex:page>

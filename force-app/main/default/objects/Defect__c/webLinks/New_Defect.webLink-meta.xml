@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>New_Defect</fullName>
+    <availability>online</availability>
+    <description>This is a Custom Button created to pre-populate the value of related Test Script, Related Request and Release fields. To populate these values, please make sure you update the field ids in the button URL accordingly</description>
+    <displayType>massActionButton</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>New Defect</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <requireRowSelection>false</requireRowSelection>
+    <url>/{!$ObjectType.Defect__c}/e?CF00NG000000EMomZ={!Test_Script__c.Name}&amp;CF00NG000000EMomZ_lkid={!Test_Script__c.Id}
+&amp;CF00NG000000DDKJh={!Test_Script__c.Request__c}&amp;CF00NG000000DDKJh_lkid={!Request__c.Id}&amp;CF00NG000000EMomY={!Test_Script__c.Release__c}&amp;CF00NG000000EMomY_lkid={!Release__c.Id}&amp;retURL=%2F{!Test_Script__c.Id}</url>
+</WebLink>

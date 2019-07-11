@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Unless the user manually populates a Status value on the screen, the following Interaction Reason would create a Case record with status selected here. --></help>
+    <label><!-- Default Status --></label>
+    <name>NS_DefaultStatus__c</name>
+    <picklistValues>
+        <masterLabel>NS_AwaitingResponse</masterLabel>
+        <translation><!-- NS_AwaitingResponse --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NS_Cancelled</masterLabel>
+        <translation><!-- NS_Cancelled --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NS_Closed</masterLabel>
+        <translation><!-- NS_Closed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NS_Escalated</masterLabel>
+        <translation><!-- NS_Escalated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NS_New</masterLabel>
+        <translation><!-- NS_New --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>NS_Working</masterLabel>
+        <translation><!-- NS_Working --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

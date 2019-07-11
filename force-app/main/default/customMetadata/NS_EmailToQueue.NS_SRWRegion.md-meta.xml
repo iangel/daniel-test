@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OSS South</label>
+    <protected>false</protected>
+    <values>
+        <field>Forwarding_Address__c</field>
+        <value xsi:type="xsd:string">ossky@exchange.nscorp.com;cyoky@exchange.nscorp.com;cyoky@nscorp.com;ossal@nscorp.com;tnossal@nscorp.com;tnossal@exchange.nscorp.com;tncyoga@nscorp.com;tncyoga@exchange.nscorp.com;tncyoct@nscorp.com;tncyoct@exchange.nscorp.com;tncyoal@nscorp.com;tn_oss_ga@exchange.nscorp.com;tn_oss_ct@nscorp.com;tn_oss_ct@exchange.nscorp.com;tn_cyo_ga@exchange.nscorp.com;tn_cyo_ct@exchange.nscorp.com;tn_cyo_al@exchange.nscorp.com;ossga@nscorp.com;ossga@exchange.nscorp.com;ossal@exchange.nscorp.com;tnossga@exchange.nscorp.com;cyotn@exchange.nscorp.com;cyoga@nscorp.com;cyoga@exchange.nscorp.com;cyoal@nscorp.com;cyoal@exchange.nscorp.com;tnossga@nscorp.com;tnossct@exchange.nscorp.com;tnossct@nscorp.com;oss_srw@exchange.nscorp.com;oss_srw@nscorp.com;tnossal1@exchange.nscorp.com;tnossal1@nscorp.com;ssab@nscorp.com;ssab@exchange.nscorp.com;ipsco@exchange.nscorp.com;ipsco@nscorp.com;tnossga1@nscorp.com;tnossga1@exchange.nscorp.com;tnossgatennillelineup@exchange.nscorp.com;tnossgatennillelineup@nscorp.com;tncyogatennillelineup@exchange.nscorp.com;oss_south@nscorp.com;oss_south@exchange.nscorp.com</value>
+    </values>
+    <values>
+        <field>Queue_Id__c</field>
+        <value xsi:type="xsd:string">00G1I000000aPuQ</value>
+    </values>
+    <values>
+        <field>Routing_Email_1__c</field>
+        <value xsi:type="xsd:string">nsregionsrw@lt6vluhdshyyx8t2rjopqi1i8v4kmia4omtw26yg2olrq8u82.1i-3nwseuaq.na73.apex.salesforce.com</value>
+    </values>
+</CustomMetadata>

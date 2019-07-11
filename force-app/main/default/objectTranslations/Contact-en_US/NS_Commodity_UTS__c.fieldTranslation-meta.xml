@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Unit Train Commodity --></label>
+    <name>NS_Commodity_UTS__c</name>
+    <picklistValues>
+        <masterLabel>Aggregate</masterLabel>
+        <translation><!-- Aggregate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chemicals</masterLabel>
+        <translation><!-- Chemicals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Coal</masterLabel>
+        <translation><!-- Coal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Crude Oil</masterLabel>
+        <translation><!-- Crude Oil --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Environment</masterLabel>
+        <translation><!-- Environment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Envirostone</masterLabel>
+        <translation><!-- Envirostone --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ethanol</masterLabel>
+        <translation><!-- Ethanol --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Frac Sand</masterLabel>
+        <translation><!-- Frac Sand --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Grain</masterLabel>
+        <translation><!-- Grain --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Metals</masterLabel>
+        <translation><!-- Metals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Misc</masterLabel>
+        <translation><!-- Misc --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

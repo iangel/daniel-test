@@ -1,0 +1,195 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false" controller="SaaSClientQuestionSearchCtrl">
+    <c:SaaSToolkitPageTemplate >
+        <apex:form >
+            <br />
+            <h4>Question Log Home</h4>
+            <hr style="width: 100%; border-color: black;" />
+            <apex:outputPanel id="errorBlock">
+                <c:CustomPageMessages closableErrors="true" />
+            </apex:outputPanel>
+            <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12">
+                    <p style="font-size: 16px; float: left; margin: 15px 0px 0px;">VALUE Delivery Approach</p>
+                    &nbsp;
+                    <apex:commandLink action="/apex/SaaSCreateQuestionLog" rendered="{!isAccRep}" title="New Question Log">
+                        <!--<i class="fa fa-plus-circle fa-2x"></i>-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}" />
+                    </apex:commandLink>
+                    &nbsp;
+                  <!--  <apex:commandLink action="{!commentQuestion}" title="Answers">
+                
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/answer.png')}" />
+                    </apex:commandLink> -->
+                 
+                    <apex:commandLink action="{!editQuestion}" rendered="{!isAccRep}" title="Edit">
+                        <!--<i class="fa fa-pencil fa-2x" />-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/edit.png')}" />
+                    </apex:commandLink>
+                    &nbsp;
+                    <!-- <apex:commandLink action="{!deleteQuestion}" rendered="{!AND(isAccRep, $ObjectType.Question_Log__c.deletable)}" title="Delete"> -->
+                    <apex:commandLink title="Delete" rendered="{!$ObjectType.Question_Log__c.deletable}" html-data-toggle="modal" html-data-target="#deleteModel" reRender="a">
+                        <!--<i class="fa fa-times-circle fa-2x" />-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/delete.png')}" />
+                    </apex:commandLink>
+                    &nbsp;
+                    <apex:commandLink action="{!cloneQuestion}" rendered="{!isAccRep}" title="Clone">
+                        <!--<i class="fa fa-files-o fa-2x" />-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/clone.png')}" />
+                    </apex:commandLink>
+                    &nbsp;
+                    <apex:commandLink action="{!linkToRequest}" rendered="{!isAccRep}" title="Link to Request">
+                        <!--<i class="fa fa-empire fa-2x"></i>-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/link_to_request.png')}" />
+                    </apex:commandLink>
+                    &nbsp;
+                    <apex:commandLink action="{!convertToRequest}" rendered="{!isAccRep}" title="Convert to Request">
+                        <!--<i class="fa fa-cogs fa-2x"></i>-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/convert_to_request.png')}" />
+                    </apex:commandLink>
+                    &nbsp; &nbsp;
+                </div>
+                <div class="col-lg-4 col-sm-4 col-md-4">
+                    <!-- <apex:inputText styleClass="form-control" value="{!searchtxt}">
+                        <apex:actionSupport event="onblur" action="{!Search}"
+                            reRender="listView,navPanel" />
+                    </apex:inputText> -->
+                </div>
+            </div>
+            <br />
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h6 style="font-weight: bold;">Filters</h6>
+                            <hr class="hrBorder" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <div class="form-group">
+                                <label>Phase</label>
+                                <!--    <apex:inputField value="{!questionLogObj.Scope__c}" styleClass="form-control" />  -->
+                                <apex:selectList value="{!questionLogObj.Scope__c}" styleClass="form-control" multiselect="false" size="1">
+                                    <apex:selectOption itemValue="" itemLabel="-- None --" />
+                                    <apex:selectOption itemValue="Initiate and Confirm" itemLabel="Initiate and Confirm" />
+                                    <apex:selectOption itemValue="Design" itemLabel="Design" />
+                                    <apex:selectOption itemValue="Build" itemLabel="Build" />
+                                </apex:selectList>
+                            </div>
+                        </div>
+                        
+                         <div class="col-md-3">
+                         <apex:outputPanel rendered="{!isAccRep}">
+                            <div class="form-group">
+                                <label>Is VALUE Delivery?</label>
+                                 <apex:inputField value="{!questionLogObj.Is_Value_Delivery_Question__c}" styleClass="form-control" /> 
+                                
+                            </div>
+                        </apex:outputPanel>                            
+                        </div>
+
+                    </div>
+            <div class="row">              
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Domain</label>
+                                <apex:inputField value="{!questionLogObj.Domain__c}" style="width:100%" styleClass="listDropdown" />
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-8">
+                            <div class="form-group">
+                                <apex:commandLink action="{!search}" styleClass="btn btn-primary">
+                                    <i class="fa fa-search"></i> Search </apex:commandLink>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <apex:outputPanel rendered="{!searchDisplay}">
+                <apex:outputPanel rendered="{!QuesLogWrapLst.size == 0}">
+                No records to display.
+              </apex:outputPanel>
+                <apex:outputPanel rendered="{!QuesLogWrapLst.size > 0}">
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-md-12" style="width: 97%;">
+                            <apex:outputPanel id="listView">
+                                <table class="table table-fixedheader table-bordered">
+                                    <thead class="customTableHeader">
+                                        <tr>
+                                            <th class="colWidth10">Select</th>
+                                            <th class="colWidth10" style="word-wrap:normal;"><apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" reRender="navPanel,listView">    Question ID {!IF(sortField=='Name',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Name" assignTo="{!sortField}" />
+                                                </apex:commandLink></th>
+                                            <th class="colWidth20"><apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" reRender="navPanel,listView">    Scope {!IF(sortField=='Scope__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Scope__c" assignTo="{!sortField}" />
+                                                </apex:commandLink></th>
+                                            <th class="colWidth30">Domain</th>
+                                            <th class="colWidth20">Question</th>
+                                       <!--     <th class="colWidth10">Number Of Response</th> -->
+                                        </tr>
+                                    </thead>
+                                    <tbody style="max-height: 200px;">
+                                        <apex:repeat VALue="{!QuesLogWrapLst}" VAr="QuesWrap">
+                                            <tr>
+                                                <td class="colWidth10"><apex:inputCheckbox value="{!QuesWrap.checked}" /></td>
+                                              
+                                                 <td class="colWidth10"><a href='/apex/SaaSCreateQuestionLog?detail=1&&id={!QuesWrap.questionLogObj.id}'> {!QuesWrap.questionLogObj.Name} </a></td>
+                                              
+                                            <!--    <td class="colWidth10">{!QuesWrap.questionLogObj.Name}</td> -->
+                                                <td class="colWidth20">{!QuesWrap.questionLogObj.Scope__c}</td>
+                                                <td class="colWidth30">{!QuesWrap.questionLogObj.Domain__c}</td>
+                                                <td class="colWidth20">{!QuesWrap.questionLogObj.Question__c}</td>
+                                            <!--    <td class="colWidth10">
+                                                    <center>{!QuesWrap.questionLogObj.Responses__r.size}</center>
+                                                </td> -->
+                                            </tr>
+                                        </apex:repeat>
+                                    </tbody>
+                                </table>
+                            </apex:outputPanel>
+                            <div class="row">
+                                <div class="col-lg-12 col-sm-12 col-md-12">
+                                    <center>
+                                        <apex:outputPanel id="navPanel">
+                                            <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOt(hasPrevious)}" />&nbsp;&nbsp;
+                                <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!hasPrevious}" />&nbsp;&nbsp; 
+                                <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!not(hasPrevious)}">Previous</apex:outputPanel>
+                                            <apex:commandLink value="Previous" action="{!Previous}" rendered="{!hasPrevious}" reRender="listView,navPanel" />&nbsp;&nbsp;&nbsp;&nbsp;
+                                <apex:commandLink value="Next" action="{!Next}" rendered="{!hasNext}" reRender="listView,navPanel" />&nbsp;&nbsp;            
+                                <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOt(hasNext)}">Next</apex:outputPanel>&nbsp;&nbsp; 
+                                <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!hasNext}" />
+                                            <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOt(hasNext)}" />
+                                            <br />
+                                            <br />
+                                        </apex:outputPanel>
+                                    </center>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </apex:outputPanel>
+            </apex:outputPanel>
+            <!-- Modal -->
+            <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">Toolkit Mobile App</h4>
+                        </div>
+                        <div class="modal-body">Are you sure you want to delete records?</div>
+                        <div class="modal-footer">
+                            <apex:commandLink action="{!deleteQuestion}" title="Ok" value="Ok" rendered="{!$ObjectType.Question_Log__c.deletable}" styleclass="btn btn-primary" />
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </apex:form>
+    </c:SaaSToolkitPageTemplate>
+</apex:page>

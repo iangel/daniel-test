@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_InternalContact__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Created as part of Phase 2 development.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Please select this checkbox if this Contact is an employee of Norfolk Southern.</inlineHelpText>
+    <label>Internal Contact</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

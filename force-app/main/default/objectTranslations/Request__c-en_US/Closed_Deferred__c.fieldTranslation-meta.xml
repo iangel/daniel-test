@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Reason Closed/Deferred --></label>
+    <name>Closed_Deferred__c</name>
+    <picklistValues>
+        <masterLabel>Closed: Architecturally Not Recommended</masterLabel>
+        <translation><!-- Closed: Architecturally Not Recommended --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed: Canceled by Business</masterLabel>
+        <translation><!-- Closed: Canceled by Business --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed: Consolidated</masterLabel>
+        <translation><!-- Closed: Consolidated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed: Duplicate</masterLabel>
+        <translation><!-- Closed: Duplicate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed: Existing Functionality</masterLabel>
+        <translation><!-- Closed: Existing Functionality --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed: Satisfied Through Business Process Change</masterLabel>
+        <translation><!-- Closed: Satisfied Through Business Process Change --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed: Technically Not Feasible</masterLabel>
+        <translation><!-- Closed: Technically Not Feasible --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deferred: Aligned to Future State Capabilities</masterLabel>
+        <translation><!-- Deferred: Aligned to Future State Capabilities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deferred: Product Enhancement Request</masterLabel>
+        <translation><!-- Deferred: Product Enhancement Request --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deferred: Waiting Approval</masterLabel>
+        <translation><!-- Deferred: Waiting Approval --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deferred: Waiting Architecture Availabiity</masterLabel>
+        <translation><!-- Deferred: Waiting Architecture Availabiity --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

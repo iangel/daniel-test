@@ -1,0 +1,64 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">One-Page Scope Overview</div>
+        <div class="panel-body">
+                <p>Include process, tool and deployment direction.</p>
+            </div> 
+            
+            <!-- Table -->
+            <table class="table">
+              <tr>
+                   <th>In Scope</th>
+                  <th>Out of Scope</th> 
+                </tr>
+                <tr>
+                    <td>Business Unit: </td>
+                    <td>Business Unit: </td>                    
+                </tr>
+                 <tr>
+                    <td>Geography: </td>
+                    <td>Geography: </td>                    
+                </tr>
+ <tr>
+                    <td>RTM: </td>
+                    <td>RTM: </td>                    
+                </tr>
+ <tr>
+                    <td>Process: </td>
+                    <td>Process: </td>                    
+                </tr>
+
+
+<tr>
+                    <td>Tool: </td>
+                    <td>Tool: </td>                   
+                     
+                </tr>
+                
+<tr>
+                    <td>Integrations: </td>
+                    <td>Integrations: </td>                    
+                </tr>
+
+<tr>
+                    <td>Skill &amp; Methodology Impact: </td>
+                    <td>Skill &amp; Methodology Impact: </td>                    
+                </tr>
+                
+                
+                
+                
+            </table>
+        </div>
+        
+      <!--   <ul class="pager">
+                  <li class="previous"><a href="/apex/PlanAndAnalyzeCRPTemplatesExamples">&larr; Back</a></li>
+
+              </ul> -->
+              
+              
+    </c:CrpiPageTemplate>
+</apex:page>

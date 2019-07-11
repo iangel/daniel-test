@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Overall_Priority__c</fullName>
+    <description>Shows the priority of the request</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Value is calculated based on the value in the Total Priority Ranking field: 
+High = Any value greater than or equal to 2.50 
+Medium = Any value between 1.50 and 2.49 
+Low = Any value less than 1.50</inlineHelpText>
+    <label>Overall Priority</label>
+    <length>6</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

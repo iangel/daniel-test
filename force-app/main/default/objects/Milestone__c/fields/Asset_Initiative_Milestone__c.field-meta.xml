@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Asset_Initiative_Milestone__c</fullName>
+    <description>Milestone for an Asset or a Initiative.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Milestone for an Asset or a Initiative.</inlineHelpText>
+    <label>Asset/Initiative Milestone</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Gain Stakeholder Buy-in</fullName>
+                <default>false</default>
+                <label>Gain Stakeholder Buy-in</label>
+            </value>
+            <value>
+                <fullName>Gather Requirements/ Define Scope</fullName>
+                <default>false</default>
+                <label>Gather Requirements/ Define Scope</label>
+            </value>
+            <value>
+                <fullName>Design/Draft</fullName>
+                <default>false</default>
+                <label>Design/Draft</label>
+            </value>
+            <value>
+                <fullName>Build/Develop Final Content</fullName>
+                <default>false</default>
+                <label>Build/Develop Final Content</label>
+            </value>
+            <value>
+                <fullName>Test/Validate</fullName>
+                <default>false</default>
+                <label>Test/Validate</label>
+            </value>
+            <value>
+                <fullName>Deploy/Publish</fullName>
+                <default>false</default>
+                <label>Deploy/Publish</label>
+            </value>
+            <value>
+                <fullName>Optimize/Maintain</fullName>
+                <default>false</default>
+                <label>Optimize/Maintain</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

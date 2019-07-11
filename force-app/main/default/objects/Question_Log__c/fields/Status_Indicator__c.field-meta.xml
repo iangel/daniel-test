@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Indicator__c</fullName>
+    <description>Displays a status as red, green or yellow ball</description>
+    <externalId>false</externalId>
+    <formula>IMAGE(if(ISPICKVAL(Status__c ,&quot;Clarification Requested&quot;) &amp;&amp; today() - datevalue(CreatedDate) &lt; 2, &quot;/img/samples/light_green.gif&quot;,
+if(ISPICKVAL(Status__c ,&quot;Clarification Requested&quot;) &amp;&amp; today() - datevalue(CreatedDate) &lt; 5, &quot;/img/samples/light_yellow.gif&quot;,&quot;/img/samples/light_red.gif&quot;)),&quot;/img/samples/light_green.gif&quot;)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Status Indicator</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

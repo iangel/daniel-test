@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Development Stage --></label>
+    <name>Development_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Analyze</masterLabel>
+        <translation><!-- Analyze --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Build Materials</masterLabel>
+        <translation><!-- Build Materials --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deploy/Final</masterLabel>
+        <translation><!-- Deploy/Final --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design Outline</masterLabel>
+        <translation><!-- Design Outline --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Recording WBT</masterLabel>
+        <translation><!-- Recording WBT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Review Materials</masterLabel>
+        <translation><!-- Review Materials --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

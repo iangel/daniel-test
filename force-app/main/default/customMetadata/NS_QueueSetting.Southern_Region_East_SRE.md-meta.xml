@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OSS East</label>
+    <protected>false</protected>
+    <values>
+        <field>NS_BusinessUnit__c</field>
+        <value xsi:type="xsd:string">OSS</value>
+    </values>
+    <values>
+        <field>NS_ManagerQueue__c</field>
+        <value xsi:type="xsd:string">OSS East Manager</value>
+    </values>
+    <values>
+        <field>NS_RoutingEmail__c</field>
+        <value xsi:type="xsd:string">nsregionsre@l-360bkrk5jfu6evonij8xcar61swttp26vgch21d1iamom3l4j8.1i-3nwseuaq.na73.apex.salesforce.com</value>
+    </values>
+</CustomMetadata>

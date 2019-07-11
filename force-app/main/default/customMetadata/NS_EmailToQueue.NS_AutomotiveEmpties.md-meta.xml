@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Automotive - Empties</label>
+    <protected>false</protected>
+    <values>
+        <field>Forwarding_Address__c</field>
+        <value xsi:type="xsd:string">tnncscautoturnover@exchange.nscorp.com;tnncscautoturnover@nscorp.com;tncsoautomotiveemptyml@nscorp.com;tncsoautomotiveemptyml@exchange.nscorp.com;tncsoautoemptymultilevels@nscorp.com;tncsoautoemptymultilevels@exchange.nscorp.com;tncdumultilevels@nscorp.com;tncdumultilevels@exchange.nscorp.com;tn_cdu_multi_levels@nscorp.com;tn_cdu_multi_levels@exchange.nscorp.com;tn_cdu_multi_levels@exchange.nscorp.com</value>
+    </values>
+    <values>
+        <field>Queue_Id__c</field>
+        <value xsi:type="xsd:string">00G1I000002Hpx2</value>
+    </values>
+    <values>
+        <field>Routing_Email_1__c</field>
+        <value xsi:type="xsd:string">nsautomotive.empties@3-1yscmspfntpr8zi39t9as32xf3lwxzxsvh3ptrp43oybyyc120.1i-3nwseuaq.na73.apex.salesforce.com</value>
+    </values>
+</CustomMetadata>

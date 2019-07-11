@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Mapping__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub Capability</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Assignment &amp; Teams</fullName>
+                <default>false</default>
+                <label>NS Account Teams</label>
+            </value>
+            <value>
+                <fullName>Account Hierarchy</fullName>
+                <default>false</default>
+                <label>Account Hierarchy</label>
+            </value>
+            <value>
+                <fullName>Account Processes</fullName>
+                <default>false</default>
+                <label>Account Processes</label>
+            </value>
+            <value>
+                <fullName>Account Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Account Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>Account Search</fullName>
+                <default>false</default>
+                <label>Account Search</label>
+            </value>
+            <value>
+                <fullName>Account Types</fullName>
+                <default>false</default>
+                <label>Account Types</label>
+            </value>
+            <value>
+                <fullName>Account Visibility</fullName>
+                <default>false</default>
+                <label>Account Visibility</label>
+            </value>
+            <value>
+                <fullName>Activities Visibility &amp; Security</fullName>
+                <default>false</default>
+                <label>Activities Visibility &amp; Security</label>
+            </value>
+            <value>
+                <fullName>Activity</fullName>
+                <default>false</default>
+                <label>Activity</label>
+            </value>
+            <value>
+                <fullName>Activity Creation</fullName>
+                <default>false</default>
+                <label>Activity Creation</label>
+            </value>
+            <value>
+                <fullName>Event Key Attributes</fullName>
+                <default>false</default>
+                <label>Activity - Event Key Attributes</label>
+            </value>
+            <value>
+                <fullName>Activity Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Activity Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>Task Key Attributes</fullName>
+                <default>false</default>
+                <label>Activity - Task Key Attributes</label>
+            </value>
+            <value>
+                <fullName>Activity Visibility</fullName>
+                <default>false</default>
+                <label>Activity Visibility</label>
+            </value>
+            <value>
+                <fullName>Case Apex Automation &amp; Workflow Rules</fullName>
+                <default>false</default>
+                <label>Case Apex Automation &amp; Workflow Rules</label>
+            </value>
+            <value>
+                <fullName>Case Close</fullName>
+                <default>false</default>
+                <label>Case Close</label>
+            </value>
+            <value>
+                <fullName>Case Core Functionalities</fullName>
+                <default>false</default>
+                <label>Case Core Functionalities</label>
+            </value>
+            <value>
+                <fullName>Case Creation</fullName>
+                <default>false</default>
+                <label>Case Creation</label>
+            </value>
+            <value>
+                <fullName>Case Email Collaboration</fullName>
+                <default>false</default>
+                <label>Case Email Collaboration</label>
+            </value>
+            <value>
+                <fullName>Case Fields</fullName>
+                <default>false</default>
+                <label>Case Fields</label>
+            </value>
+            <value>
+                <fullName>Case Home Page</fullName>
+                <default>false</default>
+                <label>Case Home Page</label>
+            </value>
+            <value>
+                <fullName>Case Mobile Push Notifications</fullName>
+                <default>false</default>
+                <label>Case Mobile Push Notifications</label>
+            </value>
+            <value>
+                <fullName>Case My Page</fullName>
+                <default>false</default>
+                <label>Case My Page</label>
+            </value>
+            <value>
+                <fullName>Case Queues</fullName>
+                <default>false</default>
+                <label>Case Queues</label>
+            </value>
+            <value>
+                <fullName>Case Record Types &amp; Page Layouts</fullName>
+                <default>false</default>
+                <label>Case Record Types &amp; Page Layouts</label>
+            </value>
+            <value>
+                <fullName>Case Search Results &amp; Related Lists/Buttons</fullName>
+                <default>false</default>
+                <label>Case Search Results &amp; Related Lists/Buttons</label>
+            </value>
+            <value>
+                <fullName>Case Validation Rules</fullName>
+                <default>false</default>
+                <label>Case Validation Rules</label>
+            </value>
+            <value>
+                <fullName>Configuring Aux Codes</fullName>
+                <default>false</default>
+                <label>Configuring Aux Codes</label>
+            </value>
+            <value>
+                <fullName>Configuring Wrap-up</fullName>
+                <default>false</default>
+                <label>Configuring Wrap-up</label>
+            </value>
+            <value>
+                <fullName>Contact Deactivation</fullName>
+                <default>false</default>
+                <label>Contact Deactivation</label>
+            </value>
+            <value>
+                <fullName>Contact Key Attributes</fullName>
+                <default>false</default>
+                <label>Contact Key Attributes</label>
+            </value>
+            <value>
+                <fullName>Contact Processes</fullName>
+                <default>false</default>
+                <label>Contact Processes</label>
+            </value>
+            <value>
+                <fullName>Contact Reports &amp; Dashboards</fullName>
+                <default>false</default>
+                <label>Contact Reports &amp; Dashboards</label>
+            </value>
+            <value>
+                <fullName>Contact Search</fullName>
+                <default>false</default>
+                <label>Contact Search</label>
+            </value>
+            <value>
+                <fullName>Contact Visibility</fullName>
+                <default>false</default>
+                <label>Contact Visibility</label>
+            </value>
+            <value>
+                <fullName>CTI Screenpop</fullName>
+                <default>false</default>
+                <label>CTI Screenpop</label>
+            </value>
+            <value>
+                <fullName>Field Level Security</fullName>
+                <default>false</default>
+                <label>Field Level Security</label>
+            </value>
+            <value>
+                <fullName>Disposition Types</fullName>
+                <default>false</default>
+                <label>Interaction Reasons</label>
+            </value>
+            <value>
+                <fullName>No Match Process</fullName>
+                <default>false</default>
+                <label>No Match Process</label>
+            </value>
+            <value>
+                <fullName>One Number, Multiple Accounts Match Process</fullName>
+                <default>false</default>
+                <label>One Number, Multiple Accounts Match Process</label>
+            </value>
+            <value>
+                <fullName>One Number, Multiple Contacts Match Process</fullName>
+                <default>false</default>
+                <label>One Number, Multiple Contacts Match Process</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Profiles &amp; Objects</fullName>
+                <default>false</default>
+                <label>Profiles &amp; Objects</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards Dashboards</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards Dashboards</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards Report Creation</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards Report Creation</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards Report Folders</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards Report Folders</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards Reports</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards Reports</label>
+            </value>
+            <value>
+                <fullName>Reports &amp; Dashboards Security</fullName>
+                <default>false</default>
+                <label>Reports &amp; Dashboards Security</label>
+            </value>
+            <value>
+                <fullName>Single Match Process</fullName>
+                <default>false</default>
+                <label>Single Match Process</label>
+            </value>
+            <value>
+                <fullName>User Creation</fullName>
+                <default>false</default>
+                <label>User Creation</label>
+            </value>
+            <value>
+                <fullName>User Deactivation</fullName>
+                <default>false</default>
+                <label>User Deactivation</label>
+            </value>
+            <value>
+                <fullName>User Login</fullName>
+                <default>false</default>
+                <label>User Login</label>
+            </value>
+            <value>
+                <fullName>User Maintenance</fullName>
+                <default>false</default>
+                <label>User Maintenance</label>
+            </value>
+            <value>
+                <fullName>User Overview</fullName>
+                <default>false</default>
+                <label>User Overview</label>
+            </value>
+            <value>
+                <fullName>User Role Hierarchy</fullName>
+                <default>false</default>
+                <label>User Role Hierarchy</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

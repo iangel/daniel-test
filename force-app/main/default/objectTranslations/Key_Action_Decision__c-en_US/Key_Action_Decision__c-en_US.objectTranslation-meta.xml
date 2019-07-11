@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Key Action/Decision</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Key Actions/Decisions</value>
+    </caseValues>
+    <layouts>
+        <layout>Action Item Layout</layout>
+        <sections>
+            <label><!-- Action Item Details --></label>
+            <section>Action Item Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Related Information --></label>
+            <section>Related Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Key Decision Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Decision Details --></label>
+            <section>Decision Details</section>
+        </sections>
+        <sections>
+            <label><!-- Related Information --></label>
+            <section>Related Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Used to document Action Items that need to be completed by resources on the Program/Project. --></description>
+        <label><!-- Action Item --></label>
+        <name>Action_Item</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Used to track Key Decisions that impact the Program/Project. --></description>
+        <label><!-- Key Decision --></label>
+        <name>Key_Decision</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Decision/Outcome is required when Status is Completed. --></errorMessage>
+        <name>Decision_Outcome_Required_when_Completed</name>
+    </validationRules>
+</CustomObjectTranslation>

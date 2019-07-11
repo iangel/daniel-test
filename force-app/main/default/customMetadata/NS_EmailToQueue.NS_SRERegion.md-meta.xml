@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OSS East</label>
+    <protected>false</protected>
+    <values>
+        <field>Forwarding_Address__c</field>
+        <value xsi:type="xsd:string">cyopo@exchange.nscorp.com;cyopd@exchange.nscorp.com;osspd@exchange.nscorp.com;cyova@exchange.nscorp.com;tnossph@exchange.nscorp.com;tnosspc@exchange.nscorp.com;tncyoph@exchange.nscorp.com;tn_oss_pc@exchange.nscorp.com;tncyopc@exchange.nscorp.com;tnossva@nscorp.com;tnosspc@nscorp.com;tncyopc@nscorp.com;tnossva@exchange.nscorp.com;tn_cyo_pc@exchange.nscorp.com;tn_cyo_pd@exchange.nscorp.com;tnosspd@exchange.nscorp.com;tnosspd@nscorp.com;tncyopd@exchange.nscorp.com;tncyopd@nscorp.com;oss_sre@exchange.nscorp.com;oss_sre@nscorp.com;tn_oss_pd@exchange.nscorp.com;tn_oss_pd@nscorp.com;bmw_distribution_list@nscorp.com;bmw_distribution_list@exchange.nscorp.com;bmwdistributionlist@exchange.nscorp.com;bmwdistributionlist@nscorp.com;tnosspdbmw@nscorp.com;tnosspdbmw@exchange.nscorp.com;tn_cyo_pd_bmw@exchange.nscorp.com;tncyopdbmw@exchange.nscorp.com;tncyopdbmw@nscorp.com;tn_oss_po@exchange.nscorp.com;tn_oss_po@nscorp.com;oss_sre@nscorp.com;tn_oss_po@nscorp.com;ossva@nscorp.com;;tn_oss_pd@nscorp.com;tnosspdbmw@nscorp.com;bmw_distribution_list@nscorp.com;osspd@nscorp.com;oss_sre@nscorp.com;tn_oss_pd@nscorp.com;bmw_distribution_list@nscorp.com;tnosspdbmw@nscorp.com;tn_oss_po@nscorp.com;ossva@nscorp.com;tn_oss_pd@nscorp.com;osspo@nscorp.com;osspo@exchange.nscorp.com;oss_east@nscorp.com;oss_east@exchange.nscorp.com</value>
+    </values>
+    <values>
+        <field>Queue_Id__c</field>
+        <value xsi:type="xsd:string">00G1I000000aPuG</value>
+    </values>
+    <values>
+        <field>Routing_Email_1__c</field>
+        <value xsi:type="xsd:string">nsregionsre@l-360bkrk5jfu6evonij8xcar61swttp26vgch21d1iamom3l4j8.1i-3nwseuaq.na73.apex.salesforce.com</value>
+    </values>
+</CustomMetadata>

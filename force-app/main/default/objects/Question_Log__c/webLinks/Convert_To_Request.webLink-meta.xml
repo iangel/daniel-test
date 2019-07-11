@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Convert_To_Request</fullName>
+    <availability>online</availability>
+    <description>Converting the question to request record</description>
+    <displayType>button</displayType>
+    <linkType>javascript</linkType>
+    <masterLabel>Convert To Request</masterLabel>
+    <openType>onClickJavaScript</openType>
+    <protected>false</protected>
+    <url>if(&#39;{!Question_Log__c.Answer__c }&#39; == &#39;&#39;){
+alert(&#39;Please provide the Answer before converting the Question into Request.&#39;);
+}else if(&#39;{!Question_Log__c.Request__c}&#39; != &#39;&#39;){
+alert(&#39;This Question is already convered to Request&#39;);
+}else {
+window.location.href=&#39;/apex/VFP_QuestionToRequestConvserion?id={!Question_Log__c.Id}&#39;;
+}</url>
+</WebLink>

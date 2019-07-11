@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Closed - In Production</masterLabel>
+        <translation><!-- Closed - In Production --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Closed - Test Result Passed</masterLabel>
+        <translation><!-- Closed - Test Result Passed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deferred - Future Enhancement Consideration</masterLabel>
+        <translation><!-- Deferred - Future Enhancement Consideration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fixed -  Awaiting Deployment</masterLabel>
+        <translation><!-- Fixed -  Awaiting Deployment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fixed - Awaiting Deployment to UAT</masterLabel>
+        <translation><!-- Fixed - Awaiting Deployment to UAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fixed - Onshore to Verify</masterLabel>
+        <translation><!-- Fixed - Onshore to Verify --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fixed - Ready for Retest</masterLabel>
+        <translation><!-- Fixed - Ready for Retest --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Fixed - Update FDD/Requirement before Closing</masterLabel>
+        <translation><!-- Fixed - Update FDD/Requirement before Closing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation><!-- New --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open - Assigned to Business Analyst</masterLabel>
+        <translation><!-- Open - Assigned to Business Analyst --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open - Business Input Needed</masterLabel>
+        <translation><!-- Open - Business Input Needed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open - Developer Assigned</masterLabel>
+        <translation><!-- Open - Developer Assigned --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open - Fix in Process</masterLabel>
+        <translation><!-- Open - Fix in Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open - ON HOLD - Need to update FDD</masterLabel>
+        <translation><!-- Open - ON HOLD - Need to update FDD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open - Possible Enhancement</masterLabel>
+        <translation><!-- Open - Possible Enhancement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Open - Salesforce.com Request Submitted</masterLabel>
+        <translation><!-- Open - Salesforce.com Request Submitted --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Passed - Awaiting Deployment to Prod</masterLabel>
+        <translation><!-- Passed - Awaiting Deployment to Prod --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ready for Retest - UAT</masterLabel>
+        <translation><!-- Ready for Retest - UAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected - Can Not Reproduce</masterLabel>
+        <translation><!-- Rejected - Can Not Reproduce --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected - Duplicate</masterLabel>
+        <translation><!-- Rejected - Duplicate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected - Expected Behavior</masterLabel>
+        <translation><!-- Rejected - Expected Behavior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected - Training Issue</masterLabel>
+        <translation><!-- Rejected - Training Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Withdrawn</masterLabel>
+        <translation><!-- Withdrawn --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

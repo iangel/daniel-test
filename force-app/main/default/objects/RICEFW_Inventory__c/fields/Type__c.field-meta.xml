@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Type</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Report</fullName>
+                <default>false</default>
+                <label>Report</label>
+            </value>
+            <value>
+                <fullName>Dashboard</fullName>
+                <default>false</default>
+                <label>Dashboard</label>
+            </value>
+            <value>
+                <fullName>Interface - Inbound</fullName>
+                <default>false</default>
+                <label>Interface - Inbound</label>
+            </value>
+            <value>
+                <fullName>Interface - Outbound</fullName>
+                <default>false</default>
+                <label>Interface - Outbound</label>
+            </value>
+            <value>
+                <fullName>Automatic Conversion</fullName>
+                <default>false</default>
+                <label>Automatic Conversion</label>
+            </value>
+            <value>
+                <fullName>Manual Conversion</fullName>
+                <default>false</default>
+                <label>Manual Conversion</label>
+            </value>
+            <value>
+                <fullName>Enhancements</fullName>
+                <default>false</default>
+                <label>Enhancements</label>
+            </value>
+            <value>
+                <fullName>Application Pages</fullName>
+                <default>false</default>
+                <label>Application Pages</label>
+            </value>
+            <value>
+                <fullName>Views</fullName>
+                <default>false</default>
+                <label>Views</label>
+            </value>
+            <value>
+                <fullName>Workflows</fullName>
+                <default>false</default>
+                <label>Workflows</label>
+            </value>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

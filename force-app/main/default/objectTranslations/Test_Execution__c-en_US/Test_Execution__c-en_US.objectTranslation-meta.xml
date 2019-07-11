@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Script Execution</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Script Executions</value>
+    </caseValues>
+    <layouts>
+        <layout>Test Execution Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Start_Execution --></label>
+        <name>Start_Execution</name>
+    </webLinks>
+</CustomObjectTranslation>

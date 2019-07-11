@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Focus_On__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Focus Management of cases</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Check if you want the focus to shift to the Case Tab if Created with the corresponding Interaction Reason</inlineHelpText>
+    <label>Focus On</label>
+    <type>Checkbox</type>
+</CustomField>

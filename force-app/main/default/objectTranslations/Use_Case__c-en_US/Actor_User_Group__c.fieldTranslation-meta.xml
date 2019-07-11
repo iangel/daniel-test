@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Name the actor that will be initiating this use case (primary) and any other actors who will participate in completing the use case (secondary). --></help>
+    <label><!-- Actor (User Group) --></label>
+    <name>Actor_User_Group__c</name>
+</CustomFieldTranslation>

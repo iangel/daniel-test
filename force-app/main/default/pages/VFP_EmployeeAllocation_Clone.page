@@ -1,0 +1,170 @@
+<apex:page standardController="Employee__c" extensions="VFC_EmployeeAllocation_Clone" sidebar="false" standardStylesheets="false" docType="html-5.0">
+   <apex:form >
+   <apex:pagemessages />
+      <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+      <link href="//getbootstrap.com/examples/signin/signin.css" rel="stylesheet" media="screen"/>
+      <style>
+                     .form-control1 {
+                        display:;
+                        
+                            width: 50%;
+                        height: 34px;
+                        font-size: 14px;
+                        line-height: 1.42857;
+                        color: rgb(85, 85, 85);
+                        background-color: rgb(255, 255, 255);
+                        background-image: none;
+                        box-shadow: rgba(0, 0, 0, 0.0745098) 0px 1px 1px inset;
+                        padding: 6px 12px;
+                        border: 1px solid rgb(204, 204, 204);
+                        border-radius: 4px;
+                        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+           }
+           
+           h2, .h2 {
+                    font-size: 12px;
+            }         
+         </style>
+         
+         <div class="container" style="Width:100%;">
+                <br/>
+             <h3 style="margin-bottom: 50px; text-align: center;">Employee Allocation Details</h3><br/><br/>
+             Month: <apex:selectList Value="{!selectedmonth}" size="1" title="release" multiselect="false" styleClass="form-control1" id="monthId" style="width:10%;">
+                        <apex:selectOptions value="{!months}"></apex:selectOptions>
+                        <apex:actionSupport event="onchange"  action="{!searchvalues}" reRender="" />
+                    </apex:selectList>
+                    
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:commandButton action="{!searchvalues}" value="Search" styleClass="form-control1" style="width:12%;"/>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    
+                    Enter value in hours :&nbsp;&nbsp;&nbsp;&nbsp;
+                    <apex:input value="{!enteredhours}"  styleClass="form-control1" style="width:50px;"/>
+          
+                    &nbsp;&nbsp; 
+                    
+                    <apex:commandButton action="{!Applyvalues}" value="Apply" styleClass="form-control1" reRender="" style="width:12%;"/>   &nbsp;&nbsp; 
+                      
+                    <apex:commandButton action="{!Updatevalues}" Value="Update" styleClass="form-control1" reRender="" style="width:12%;"/> &nbsp;&nbsp;
+                
+                    <apex:commandButton action="{!goback}" value="Reset"  styleClass="form-control1" reRender="" style="width:12%;"/><br/><br/>
+                    
+                    <table  width="100%" class="table table-striped table-bordered">
+                     
+                        <td  style="border-left-color: green; border-left-width: medium; border-left-style: none;" colspan="6">
+                            <div align="left">
+                                <h2></h2>
+                            </div>
+                        </td> 
+                        <td style="border-left-color: green; border-left-width: medium; border-left-style: none;" colspan="{!weeksize}"> 
+                            <div align="left">
+                                <h2 style="font-size:large;"><strong> Out of Office </strong></h2>
+                            </div>
+                        </td> 
+                        
+                        <td  style="border-left-color: green; border-left-width: medium; border-left-style: none;" colspan="{!weeksize}">
+                            <div align="left" >
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <h2 style="font-size:large;"><strong>{!YEAR(TODAY())}</strong></h2>
+                            </div>
+                        </td>
+                        
+                                        
+                        <tr>
+                            <th ><font color='white'><apex:inputCheckbox onclick="checkAll(this,'selected')" /></font></th>
+                            
+                            <th>Release Name</th>                           
+                            <th>Employee Name</th>
+                            <th> Type of Project </th>
+                            <th>Project Start Date</th>
+                            <th>Project End Date</th>
+                            
+                            <apex:repeat value="{!WeeksLst}" var="ss">     
+                                <!--  <apex:outputPanel rendered="{!if(CONTAINS(ss,selectedmonth)|| selectedmonth == '- None -',true,false)}" style="overflow: scroll;">
+                                        <th style="background-color:#35b4e9;"><font color='white'><apex:outputText value="{!ss}"/></font></th> 
+                                 </apex:outputPanel>                             -->
+                                 <th style="background-color:#35b4e9;"><font color='white'><apex:outputText value="{!ss}"/></font></th> 
+                             </apex:repeat>
+                             <apex:repeat value="{!WeeksLst}" var="ss">     
+                                <!--  <apex:outputPanel rendered="{!if(CONTAINS(ss,selectedmonth)|| selectedmonth == '- None -',true,false)}" style="overflow: scroll;">
+                                        <th style="background-color:#35b4e9;"><font color='white'><apex:outputText value="{!ss}"/></font></th> 
+                                 </apex:outputPanel>                             -->
+                                 <th style="background-color:#35b4e9;"><font color='white'><apex:outputText value="{!ss}"/></font></th> 
+                                
+                             </apex:repeat>
+                             
+                            <apex:repeat value="{!emplWrapLst}" var="wl">
+                                <tr>
+                                    <td><apex:inputCheckbox value="{!wl.selected}" id="selected"/></td>
+                                    
+                                    <td ><apex:outputLink target="_blank" Value="/{!wl.eal.Release_Name__r.Id}">
+                                            <apex:outputText value="{!wl.eal.Release_Name__r.Name}" />
+                                         </apex:outputLink>
+                                    </td>
+                                    <td ><apex:outputLink target="_blank" Value="/{!wl.eal.Employee_Name__r.Id}">
+                                            <apex:outputText value="{!wl.eal.Employee_Name__r.Name}" />
+                                        </apex:outputLink>
+                                    </td>                                   
+                                    <td ><apex:outputText value="{!wl.eal.Employee_Name__r.Project__c}" /> </td>
+                                    <td >
+                                        <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                            <apex:param value="{!wl.eal.Release_Name__r.Release_Start_Date__c}" />
+                                        </apex:outputText>
+                                    </td>
+                                    <td >
+                                        <apex:outputText value="{0,date,MM'/'dd'/'yyyy}">
+                                            <apex:param value="{!wl.eal.Release_Name__r.Release_Planned_End_Date__c}" />
+                                        </apex:outputText>
+                                    </td>
+                                    <apex:repeat value="{!allDtlLst}" var="vc">                                          
+                                              
+                                                <apex:outputPanel rendered="{!if(wl.eal.id==vc.Employee_Allocation_Details__c,true,false)}">  
+                                                <td><apex:outputField value="{!vc.Vacation_Hours__c}" style="width:40px;height:30px;"/></td>
+                                                </apex:outputPanel>                                               
+                                                
+                                        </apex:repeat>
+                                    
+                                   <apex:repeat value="{!allDtlLst}" var="a">          
+                                       <apex:outputPanel rendered="{!if(wl.eal.id==a.Employee_Allocation_Details__c,true,false)}">
+                                           <td><apex:inputField value="{!a.Allocation_Hours__c}" style="width:40px;height:30px;" onchange="MyJavascript('{!$Component.selected}')"/></td>
+                                      </apex:outputPanel>  
+                                  </apex:repeat>  
+                                
+                                </tr>
+                            
+                            
+                            </apex:repeat>
+                            
+                        </tr>
+                        
+                        </table>
+             
+         </div>
+  
+  </apex:form>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    function setFocusOnLoad() {}
+     
+                function checkAll(cb,cbid)
+                {
+                    var inputElem = document.getElementsByTagName("input");                                   
+                    for(var i=0; i<inputElem.length; i++)
+                    {           
+                         if(inputElem[i].id.indexOf(cbid)!=-1){                                      
+                            inputElem[i].checked = cb.checked;                       
+                        }
+                    }
+                }
+     
+    </script>
+    <script type="text/javascript">
+        function MyJavascript(chxbxss){
+            //alert('Changed the field');
+            var e = document.getElementById(chxbxss);
+            e.checked=true;
+        }
+    </script>
+</apex:page>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Status of the work asignment</description>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+                <label>Not Started</label>
+            </value>
+            <value>
+                <fullName>Development in Progress</fullName>
+                <default>false</default>
+                <label>Development in Progress</label>
+            </value>
+            <value>
+                <fullName>Ready for Review</fullName>
+                <default>false</default>
+                <label>Ready for Review</label>
+            </value>
+            <value>
+                <fullName>Onshore Unit Testing Complete</fullName>
+                <default>false</default>
+                <label>Onshore Unit Testing Complete</label>
+            </value>
+            <value>
+                <fullName>Ready for Final Review</fullName>
+                <default>false</default>
+                <label>Ready for Final Review</label>
+            </value>
+            <value>
+                <fullName>Client Reviewed and/or Ready for Next Environment</fullName>
+                <default>false</default>
+                <label>Client Reviewed and/or Ready for Next Environment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

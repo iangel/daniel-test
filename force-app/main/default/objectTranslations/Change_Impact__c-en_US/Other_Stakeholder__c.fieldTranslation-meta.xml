@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please use this field (if applicable) to describe any specific change impacts for the other identified stakeholders --></help>
+    <label><!-- Other Stakeholder Impact Description --></label>
+    <name>Other_Stakeholder__c</name>
+</CustomFieldTranslation>

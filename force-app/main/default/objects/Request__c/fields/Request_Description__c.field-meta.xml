@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Request_Description__c</fullName>
+    <description>Gathers further details for requirements.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Detailed Summary* 
+Screen(s) Impacted* 
+Field Name(s) &amp; Type(s)* 
+Picklist Values 
+Calculation 
+Dependency 
+Workflow/Approval Rules 
+Interfacing System Updates 
+Interface Frequency 
+Data Volumes 
+*Indicates information required for all requests!</inlineHelpText>
+    <label>Initial Request</label>
+    <length>32000</length>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

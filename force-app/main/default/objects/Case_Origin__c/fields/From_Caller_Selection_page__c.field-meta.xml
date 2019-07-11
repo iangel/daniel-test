@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>From_Caller_Selection_page__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>From_Caller_Selection_page__c</description>
+    <externalId>false</externalId>
+    <label>From Caller Selection page</label>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

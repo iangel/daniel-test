@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CWB_Updated_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( IF(CWB_Updated__c , True, False),
+ISBLANK( Components_Updated_in_CWB__c ) )</errorConditionFormula>
+    <errorDisplayField>Components_Updated_in_CWB__c</errorDisplayField>
+    <errorMessage>Please enter components updated in CWB.</errorMessage>
+</ValidationRule>

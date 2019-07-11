@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>Sprint__c</columns>
+    <columns>NAME</columns>
+    <columns>Requirement_Number__c</columns>
+    <columns>Capability__c</columns>
+    <columns>Status__c</columns>
+    <columns>Build_Unit_Test_Percentage__c</columns>
+    <columns>NS_DeveloperComment__c</columns>
+    <columns>LAST_UPDATE</columns>
+    <columns>UPDATEDBY_USER</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Release_Plan__c</field>
+        <operation>equals</operation>
+        <value>Phase 2</value>
+    </filters>
+    <filters>
+        <field>Capability__c</field>
+        <operation>equals</operation>
+        <value>Cases</value>
+    </filters>
+    <label>All</label>
+</ListView>

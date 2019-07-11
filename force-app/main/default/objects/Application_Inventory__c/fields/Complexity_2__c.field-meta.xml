@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Complexity_2__c</fullName>
+    <description>Storing estimated complexity for particular type of work(stage2)</description>
+    <externalId>false</externalId>
+    <label>Complexity_2</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>Type_2__c</controllingField>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Simple</fullName>
+                <default>false</default>
+                <label>Simple</label>
+            </value>
+            <value>
+                <fullName>Medium</fullName>
+                <default>false</default>
+                <label>Medium</label>
+            </value>
+            <value>
+                <fullName>Complex</fullName>
+                <default>false</default>
+                <label>Complex</label>
+            </value>
+            <value>
+                <fullName>Very Complex</fullName>
+                <default>false</default>
+                <label>Very Complex</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Configuration</controllingFieldValue>
+            <controllingFieldValue>Workflow or Approval</controllingFieldValue>
+            <controllingFieldValue>User Administration</controllingFieldValue>
+            <controllingFieldValue>Reports &amp; Dashboards</controllingFieldValue>
+            <controllingFieldValue>Customization</controllingFieldValue>
+            <controllingFieldValue>Data Migration</controllingFieldValue>
+            <controllingFieldValue>Integration (Real-Time)</controllingFieldValue>
+            <controllingFieldValue>Integration (Batch)</controllingFieldValue>
+            <valueName>Simple</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration</controllingFieldValue>
+            <controllingFieldValue>Workflow or Approval</controllingFieldValue>
+            <controllingFieldValue>User Administration</controllingFieldValue>
+            <controllingFieldValue>Reports &amp; Dashboards</controllingFieldValue>
+            <controllingFieldValue>Customization</controllingFieldValue>
+            <controllingFieldValue>Data Migration</controllingFieldValue>
+            <controllingFieldValue>Integration (Real-Time)</controllingFieldValue>
+            <controllingFieldValue>Integration (Batch)</controllingFieldValue>
+            <valueName>Medium</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration</controllingFieldValue>
+            <controllingFieldValue>Workflow or Approval</controllingFieldValue>
+            <controllingFieldValue>User Administration</controllingFieldValue>
+            <controllingFieldValue>Reports &amp; Dashboards</controllingFieldValue>
+            <controllingFieldValue>Customization</controllingFieldValue>
+            <controllingFieldValue>Data Migration</controllingFieldValue>
+            <controllingFieldValue>Integration (Real-Time)</controllingFieldValue>
+            <controllingFieldValue>Integration (Batch)</controllingFieldValue>
+            <valueName>Complex</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Configuration</controllingFieldValue>
+            <controllingFieldValue>Workflow or Approval</controllingFieldValue>
+            <valueName>Very Complex</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

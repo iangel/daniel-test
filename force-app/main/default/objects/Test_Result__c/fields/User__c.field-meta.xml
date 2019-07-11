@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>User__c</fullName>
+    <externalId>false</externalId>
+    <label>User</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OSS Rep</fullName>
+                <default>false</default>
+                <label>OSS Rep</label>
+            </value>
+            <value>
+                <fullName>OSS Manager</fullName>
+                <default>false</default>
+                <label>OSS Manager</label>
+            </value>
+            <value>
+                <fullName>OSS Support</fullName>
+                <default>false</default>
+                <label>OSS Support</label>
+            </value>
+            <value>
+                <fullName>System Administrator</fullName>
+                <default>false</default>
+                <label>System Administrator</label>
+            </value>
+            <value>
+                <fullName>Marketing User</fullName>
+                <default>false</default>
+                <label>Marketing Leadership</label>
+            </value>
+            <value>
+                <fullName>Integration User</fullName>
+                <default>false</default>
+                <label>Integration User</label>
+            </value>
+            <value>
+                <fullName>EP Leadership</fullName>
+                <default>false</default>
+                <label>EP Leadership</label>
+            </value>
+            <value>
+                <fullName>EP Manager</fullName>
+                <default>false</default>
+                <label>EP Manager</label>
+            </value>
+            <value>
+                <fullName>UT Leadership</fullName>
+                <default>false</default>
+                <label>UT Leadership</label>
+            </value>
+            <value>
+                <fullName>UT Manager</fullName>
+                <default>false</default>
+                <label>UT Manager</label>
+            </value>
+            <value>
+                <fullName>Automotive Leadership</fullName>
+                <default>false</default>
+                <label>Automotive Leadership</label>
+            </value>
+            <value>
+                <fullName>Automotive Manager</fullName>
+                <default>false</default>
+                <label>Automotive Manager</label>
+            </value>
+            <value>
+                <fullName>Marketing Manager</fullName>
+                <default>false</default>
+                <label>Marketing Manager</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

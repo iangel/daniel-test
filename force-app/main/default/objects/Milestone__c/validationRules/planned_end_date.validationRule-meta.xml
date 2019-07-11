@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>planned_end_date</fullName>
+    <active>true</active>
+    <description>planned end date should be greater than start date</description>
+    <errorConditionFormula>OR(Planned_End_Date__c  &lt;  Planned_Start_Date__c , Actual_End_Date__c  &lt;  Planned_Start_Date__c )</errorConditionFormula>
+    <errorMessage>Planned/Actual End Date must be greater than the Start Date.</errorMessage>
+</ValidationRule>

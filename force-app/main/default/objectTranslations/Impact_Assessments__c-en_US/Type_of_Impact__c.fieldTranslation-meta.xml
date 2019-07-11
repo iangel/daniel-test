@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type of Impact --></label>
+    <name>Type_of_Impact__c</name>
+    <picklistValues>
+        <masterLabel>Code/Configuration Merge Required</masterLabel>
+        <translation><!-- Code/Configuration Merge Required --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Conflicting Solution</masterLabel>
+        <translation><!-- Conflicting Solution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cost</masterLabel>
+        <translation><!-- Cost --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>No Impact</masterLabel>
+        <translation><!-- No Impact --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Schedule</masterLabel>
+        <translation><!-- Schedule --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

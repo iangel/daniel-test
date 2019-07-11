@@ -1,0 +1,73 @@
+<!--
+    @Author: Accenture
+    @Description: Uploading the script steps into  Test Script
+    @CreatedDate: 03/02/2017
+    @Version: <V.1.0>
+-->
+<apex:page StandardController="Test_Script__c" extensions="VFC_ExecutionSteps_Upload"  showHeader="false" sidebar="false">
+     <apex:stylesheet value="{!URLFOR($Resource.DEL_SLDS214, 'assets/styles/salesforce-lightning-design-system-vf.css')}" /> 
+    
+    <style>
+        .formId {
+        
+        }
+    </style>        
+        <br/><br/>
+        <div class="slds" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <apex:form Style="margin-top: 3em;" id="formId" enctype="multipart/form-data" styleClass="slds-form-element" rendered="{!Showform}">
+            <apex:outputPanel > 
+            <div class="slds-grid" style="background-color: royalblue; height:110px;">
+            
+                <!-- <div class="slds-col" style="background-color:green;">
+                    <!--<div class="slds-media"> 
+                        <div class="slds-media__body" style="background-color: blue;color:white;" >
+                            <h class="slds-text-heading--small" style="padding-left:30%;">Please Select the Valid .CSV File</h>
+                        </div>
+                    </div> 
+                </div>                   
+             </div><br/>-->     
+             
+            <div class="slds-col--padded slds-size--1-of-1 slds-medium-size--1-of-1 slds-large-size--1-of-1" style="padding-right: 20%;"><br/><br/>
+                <div class="slds-form-element" >
+                    <div class="slds-form-element__control">
+                    <h style="color:white;">{!$Label.Delivery_Valid_CSV_file}</h>
+                        
+                        <apex:inputFile value="{!csvFileBody}"  filename="{!csvAsString}" style="color:white;"/>
+                        <apex:commandButton value="Import Steps" action="{!importCSVFile}"  styleClass="slds-button slds-button--brand btn" id="butnId" style="background-color:White;color:blue;"/>
+                            
+                            
+                            <!-- 
+                            <apex:commandButton action="{!save}" onclick="javascript &colon; CloseAndRefresh()" value="Save"/>
+                            
+                        <apex:actionfunction name="callcancelJS" action="{!importCSVFile}"  />
+                        <button class="slds-button slds-button--neutral" type="button" onClick="callcancelJS();" onComplete="refershParent();">
+                            Import Steps 
+                        </button> -->
+                    </div>           
+                
+                </div>
+                </div>
+            </div>
+            </apex:outputPanel>
+            </apex:form> 
+            <apex:form >
+                <apex:outputPanel rendered="{!msgBlock}">
+                            <div>
+                                <h style="color:black;">Records are Successfully Uploaded ....</h>                
+                            
+                            
+                            <apex:commandButton value="Close" styleClass="slds-button slds-button--brand btn" action="{!cancelRec}"/>   
+                        </div>
+                </apex:outputPanel>
+
+            </apex:form>            
+        </div>
+    <script  type="text/javascript">   
+        function closeWindow(){
+            //alert('child');
+            self.close();
+            window.opener.location.href="/{!Test_Script__c.id}";
+           
+        }
+    </script>
+</apex:page>

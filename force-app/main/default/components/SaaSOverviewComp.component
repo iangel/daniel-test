@@ -1,0 +1,392 @@
+<apex:component controller="SaaSOverviewCompCtrl" allowDML="true" > 
+
+<style>
+  
+.form-group.required .control-label:after 
+{ 
+   content:" *";
+   color:red;font-size: 130%;
+}
+</style>
+    <apex:attribute name="Name" assignTo="{!pageName}"  type="String" description="Enter the page Name"/>    
+    <apex:attribute name="Phase" assignTo="{!projectPhase}" type="String" description="Enter the Project Phase"/>       
+    <apex:attribute name="title"  type="String" description="Enter the Project Phase"/>   
+    <apex:attribute name="Description"  type="String" description="Enter the Project Phase"/>    
+
+
+<apex:actionFunction action="{!getValueDeliveryOption}" name="deleteValueDeliveryOption" reRender="confirmDialog,accContent">
+        <apex:param name="valueDeliveryOptionsID"  value="" />
+</apex:actionFunction>
+   
+<apex:actionFunction action="{!getValueDeliveryOption}" name="updateValueDeliveryOption" reRender="BussinessOptionContent">
+        <apex:param name="valueDeliveryOptionsID"  value="" />
+</apex:actionFunction>
+
+<apex:actionFunction action="{!getValueDeliveryObjective}" name="updateValueDeliveryObjective" reRender="updateObjectiveContent,accContent">
+        <apex:param name="valueDeliveryObjID"  value="" />
+</apex:actionFunction>
+
+
+<apex:actionFunction action="{!getValueDeliveryObjective}" name="deleteValueDeliveryObjective" reRender="deleteObjectiveconfirmDialog,accContent">
+        <apex:param name="valueDeliveryObjID"  value="" />
+</apex:actionFunction>
+
+<apex:actionFunction action="{!assignBusinessObjectiveID}" name="NewBussinessOptionContent" reRender="NewBussinessOptionContent">
+        <apex:param name="valueDeliveryObjID"  value="" />
+</apex:actionFunction>
+
+    <div class="row">
+        <div class="col-xs-8 col-sm-8 col-md-8">
+        <p><b>&nbsp;{!valueSessionPrjName}&nbsp;&#9830;&nbsp;{!Phase}&nbsp;&#9830;&nbsp;Overview</b> </p>         
+          
+          
+         <!-- &nbsp;  {!valueSessionPrjName} &nbsp; <i class="fa fa-diamond"></i> &nbsp;{!Phase} &nbsp;<i class="fa fa-diamond"></i>&nbsp;Overview       -->
+          
+        </div>                    
+        <div class="col-xs-4 col-sm-4 col-md-4">
+            <a href="/apex/SaaSClientQuestionSearch?scope={!Phase}" Class="btn btn-primary" style="float:right;">Conduct VALUE Delivery Session</a>             
+        </div>
+    </div>    
+    
+&nbsp;
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="h4 text-primary">{!title}  
+                    
+                    
+                     <apex:outputLink html-data-toggle="modal" value="#" html-data-target="#NewBusinessObjectivePopUp"  rendered="{!$ObjectType.Value_Delivery_Setup__c.createable}"> 
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>
+                     </apex:outputLink> 
+                    
+                    
+                    
+                    
+                    
+                    </p>    
+                    <br />
+                         <div class="panel-group" id="AnatomyofPlanAndAnalyzeCRP">
+                             {!Description}
+  
+                        <apex:outputPanel id="accContents">
+                             <apex:repeat value="{!overViewDetail}" var="record">
+                             <div class="panel-heading addBorder">
+                                <h4 class="panel-title removePanelAnchorDec">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofPlanAndAnalyzeCRP" href="#{!record.id}">{!record.Component_Title__c}<i class="fa fa-chevron-down" style="float: right;"></i>
+                                    </a>
+                                     <apex:outputLink value="#" html-data-toggle="modal"  html-data-target="#deleteObjectiveconfirmDialog"   rendered="{!$ObjectType.Value_Delivery_Setup__c.deletable}" onclick="deleteValueDeliveryObjective('{!record.id}');"><i class="fa fa-trash" style="float: right;padding-right: 10px;"></i> </apex:outputLink>
+                                    
+                                    
+                                     <apex:outputLink value="#" html-data-toggle="modal"  html-data-target="#updateObjectivePopUp"  onclick="updateValueDeliveryObjective('{!record.id}');" rendered="{!$ObjectType.Value_Delivery_Setup__c.updateable}" ><i class="fa fa-pencil" style="float: right;padding-right: 10px;"></i> </apex:outputLink>                                     
+                                    
+                                    
+                                    
+                                     <apex:outputLink value="#" html-data-toggle="modal"  html-data-target="#NewBussinessOption" onclick="NewBussinessOptionContent('{!record.id}');" rendered="{!$ObjectType.Value_Delivery_Setup__c.updateable}" ><i class="fa fa-plus" style="float: right;padding-right: 10px;"></i> </apex:outputLink>         
+                                </h4>
+                            </div>                            
+                             <div id="{!record.id}" class="panel-collapse collapse">
+                                 <div class="panel-body">
+                                    <Ul class="removeListStyle">
+                                        <apex:repeat value="{!record.Value_Delivery_Objectives_Options__R}" var="item">
+                                            <li>
+                                                  <i class="fa fa-check   {!IF(item.Completed__c, 'greenColor','greyColor')} " style=""></i>                                                                                                                        
+                                                  <apex:outputLink value="#" html-data-toggle="modal"  html-data-target="#confirmDialog"   rendered="{!$ObjectType.Value_Delivery_Objectives_Options__c.deletable}" onclick="deleteValueDeliveryOption('{!item.id}');"><i class="fa fa-trash" style="padding-left: 10px;"></i> </apex:outputLink>                                                                                                                                 
+                                                  <apex:outputLink value="#" html-data-toggle="modal"  html-data-target="#editBussinessOption"  rendered="{!$ObjectType.Value_Delivery_Objectives_Options__c.updateable}" onclick="updateValueDeliveryOption('{!item.id}');"><i class="fa fa-pencil" style="padding-left: 10px;"></i> </apex:outputLink>                                                     
+                                                  {!item.Option_Description__c} 
+                                            </li>                                                                          
+                                        </apex:repeat>
+                                    </ul>
+                                </div>
+                            </div>
+                             </apex:repeat>
+                        </apex:outputPanel>           
+                </div>                    
+           </div>
+        </div>
+    </div>                   
+    </div> 
+   <!-- Delete Popups   -->
+  <div class="modal fade" id="deleteObjectiveconfirmDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel1">ToolKit Mobile App</h4>
+      </div>
+      <div class="modal-body">
+      
+      <apex:outputPanel id="DeletepanelBody">
+         <apex:outputText >Are you sure you want to delete the record?</apex:outputText>
+      </apex:outputPanel>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <apex:commandButton styleClass="btn btn-primary" action="{!deleteValueDeliveryObjective}" value="Delete"/>
+      </div>
+    </div>
+  </div>
+</div>
+    
+
+<div class="modal fade" id="confirmDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel1">ToolKit Mobile App</h4>
+      </div>
+      <div class="modal-body">
+      
+      <apex:outputPanel id="panelBody">
+         <apex:outputText >Are you sure you want to delete the record?</apex:outputText>
+      </apex:outputPanel>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <apex:commandButton styleClass="btn btn-primary" action="{!deleteValueDeliveryOption}" value="Delete"/>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End of Delete popup --->
+
+<!-- Start of Edit Popup -->
+
+
+<div class="modal fade" id="updateObjectivePopUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">ToolKit Mobile App</h4>
+      </div>
+      <div class="modal-body">
+      
+      <apex:outputPanel id="updateObjectiveContent">
+    <c:CustomPageMessages closableErrors="true" />
+    
+    <div class="row">
+               <div class="col-md-12">
+                            <div class="form-group required">
+                                <label class='control-label'>
+                                
+            Title</label>
+             
+        <apex:inputText value="{!valueDeliveryObjectiveObj.Component_Title__c}" label="Name" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control"/>
+       
+       </div></div></div>
+       <div class="row">
+               <div class="col-md-12">
+                            <div class="form-group">
+                                <label class='control-label'>
+         
+Sequence Order</label>
+  <!--       <apex:input type="number" value="{!objectiveSequenceNo}" label="Sequence Order" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control" id="theTextInput" />  -->
+        
+       <apex:inputField value="{!valueDeliveryObjectiveObj.Sequence_Order__c}" label="Sequence Order" style="margin: 0px; width: 100%; height: 25px;"  styleClass="form-control"/>
+        
+        
+           </div></div></div>  
+          <apex:outputPanel rendered="{!success}">
+                       <script>
+                            $('#updateObjectivePopUp').modal('hide');
+                        </script> 
+          </apex:outputPanel>
+         
+      </apex:outputPanel>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <apex:commandButton styleClass="btn btn-primary" action="{!updateValueDeliveryObjective}" value="Save"  reRender="updateObjectiveContent,accContents"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="modal fade" id="editBussinessOption" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">ToolKit Mobile App</h4>
+      </div>
+      <div class="modal-body">
+      
+      <apex:outputPanel id="BussinessOptionContent">
+      <c:CustomPageMessages ></c:CustomPageMessages>
+      <div class="row">
+               <div class="col-md-12">
+                            <div class="form-group required">
+                                <label class='control-label'>Title</label>
+                                <apex:inputText value="{!valueDelOptionObj.Option_Description__c}" label="Content" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control"/>
+                            </div>
+                        </div>
+</div>                        
+               <div class="row">               
+                        
+   <div class="col-md-12">
+                            <div class="form-group">
+                                <label class='control-label'>Completed ?</label>  &nbsp;
+                          <apex:inputCheckbox value="{!valueDelOptionObj.Completed__c}" label="Content" style="margin: 0px; width: 15px; height: 15px;" styleClass="form-control"/>
+                            </div>
+                                           </div>     </div>
+                        
+         
+         
+      <div class="row">               
+                        
+   <div class="col-md-12">
+                            <div class="form-group">
+        
+        
+ <label class='control-label'>Sequence Order</label>
+<!-- <apex:input type="number" value="{!optionSequenceNo}" label="Sequence Order" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control" />  -->
+         <apex:inputField value="{!valueDelOptionObj.Sequence_No__c}" label="Sequence Order" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control" />
+        </div>
+                                           </div>     </div>      
+          <apex:outputPanel rendered="{!success}">
+                       <script>
+                            $('#editBussinessOption').modal('hide');
+                        </script> 
+          </apex:outputPanel>
+         
+      </apex:outputPanel>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <apex:commandButton styleClass="btn btn-primary" action="{!updateValueDeliveryOption}" value="Save"  reRender="accContents,BussinessOptionContent"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- End of Edit Popup --->
+
+
+ <!-- Start of add Popup  -->    
+
+ 
+
+  
+    
+<div class="modal fade" id="NewBusinessObjectivePopUp" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">ToolKit Mobile App</h4>
+      </div>
+      <div class="modal-body">
+      
+      <apex:outputPanel id="addNewBusinessObjectiveContent">
+      <c:CustomPageMessages closableErrors="true"></c:CustomPageMessages>
+      <div class="form-group required">
+          <label class='control-label'>Title</label>
+          <apex:inputText value="{!valueDeliveryObj.Component_Title__c}" label="Content" styleClass="form-control" style="margin: 0px; width:100%; height: 25px;" />
+      </div>   
+      <div class="form-group required">
+          <label class='control-label'>Content</label>
+           <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-html="true" data-content="Each line is represented as a point under a section"><i class="fa fa-question-circle" style="color:orange"></i></a>                                
+          <apex:inputTextarea value="{!bussinesOnjectiveOption}" label="Content" styleClass="form-control" style="margin: 0px; width:100%;  height: 150px;"/>
+      </div>
+      
+      <div class="form-group">    
+          <label>Sequence Order</label>
+         <apex:inputField value="{!valueDeliveryObj.Sequence_Order__c}" label="Sequence Order"  style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control"/> 
+         
+         <!--<apex:input type="number" value="{!objectiveSequenceNo}" label="Sequence Order" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control" />  -->
+      </div>      
+          <apex:outputPanel rendered="{!isInsert}">
+                       <script>
+                            $('#NewBusinessObjectivePopUp').modal('hide');
+                        </script> 
+          </apex:outputPanel>
+         
+      </apex:outputPanel>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <apex:commandButton styleClass="btn btn-primary" action="{!addValueDelivery}" value="Save"  reRender="accContents,addNewBusinessObjectiveContent"/>
+      </div>
+    </div>
+  </div>
+</div> 
+
+
+
+
+
+
+<div class="modal fade" id="NewBussinessOption" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">ToolKit Mobile App</h4>
+      </div>
+      <div class="modal-body">
+      
+      <apex:outputPanel id="NewBussinessOptionContent">
+      <c:CustomPageMessages ></c:CustomPageMessages>
+      <div class="row">
+               <div class="col-md-12">
+                            <div class="form-group required">
+                                <label class='control-label'>Title</label>
+                                <apex:inputText value="{!newObjectivesOptions.Option_Description__c}" label="Title" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control" /> 
+                            </div>
+                        </div>
+</div>                        
+               <div class="row">               
+                        
+   <div class="col-md-12">
+                            <div class="form-group">
+                                <label class='control-label'>Completed ?</label>  &nbsp;
+                          <apex:inputCheckbox value="{!newObjectivesOptions.Completed__c}" label="Completed" style="margin: 0px; width: 15px; height: 15px;"/>
+                            </div>
+                                           </div>     </div>
+                        
+         
+         
+      <div class="row">               
+                        
+   <div class="col-md-12">
+                            <div class="form-group">
+        
+        
+ <label>Sequence Order</label>
+ 
+         <apex:inputField value="{!newObjectivesOptions.Sequence_No__c}"   style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control"/>  
+         
+ <!--        <apex:input type="number" value="{!optionSequenceNo}" label="Sequence Order" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control" />  --->
+        </div>
+                                           </div>     </div>      
+          <apex:outputPanel rendered="{!success}">
+                       <script>
+                            $('#NewBussinessOption').modal('hide');
+                        </script> 
+          </apex:outputPanel>
+         
+      </apex:outputPanel>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+        <apex:commandButton styleClass="btn btn-primary" action="{!insertBusinessOption}" value="Save"  reRender="accContents,NewBussinessOptionContent"/>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- End of Add popup -->
+
+</apex:component>

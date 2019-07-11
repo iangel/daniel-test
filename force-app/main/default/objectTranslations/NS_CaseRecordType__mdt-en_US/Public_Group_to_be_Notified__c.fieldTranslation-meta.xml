@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please enter developer name only --></help>
+    <label><!-- Public Group to be Notified --></label>
+    <name>Public_Group_to_be_Notified__c</name>
+    <picklistValues>
+        <masterLabel>Task Owner</masterLabel>
+        <translation><!-- Task Owner --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

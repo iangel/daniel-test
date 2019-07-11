@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Milestone related to this Issue/Risk. --></help>
+    <label><!-- Milestone --></label>
+    <name>Milestone__c</name>
+    <relationshipLabel><!-- Issues/Risks --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,183 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" extensions="SaaSCreateUserStoriesCtrl" standardController="User_Story__c" docType="html-5.0">
+     <style>
+    #top-panel {
+  line-height: 0px !important;
+        }
+    </style>
+    <c:SaaSToolkitPageTemplate >
+        <br />
+        <apex:form >
+            <apex:outputPanel id="errorBlock">
+                <c:CustomPageMessages closableErrors="true"></c:CustomPageMessages>
+            </apex:outputPanel>
+            <div>
+            <h4 style="float: left;  margin-top: 15px;">
+                New User Story Home &nbsp;
+            </h4>
+                <apex:commandLink action="{!saveUserStory}"  title="Save">
+                    <!--<i class="fa fa-check-circle fa-2x"></i>-->
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/save.png')}" />
+                </apex:commandLink>
+               
+                <apex:commandLink action="{!createNewUserStory}" immediate="true" title="New User Story" rendered="{!isDetail}">
+                   <!-- <i class="fa fa-plus-circle fa-2x"></i> &nbsp;-->
+                   <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}" />
+                </apex:commandLink>
+                <!--<apex:commandLink action="{!saveRequest}" reRender="errorBlock">
+                    <i class="fa fa-times-circle fa-2x"></i>
+                </apex:commandLink>-->
+                <apex:commandLink action="/apex/SaaSUserStoriesListView" immediate="true" title="Cancel" rendered="{!NOT(isSaved)}" id="cancel">
+                        <!--<i class="fa fa-times-circle fa-2x" />-->
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/cancel.png')}"/>
+                 </apex:commandLink>
+                 <apex:commandLink action="/apex/SaaSUserStoriesListView" immediate="true" title="Back" rendered="{!isSaved}" id="back">
+                        <!--<i class="fa fa-times-circle fa-2x" />-->
+                          <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/back_1x.png')}"/>
+                 </apex:commandLink>
+                 
+            </div>
+            <hr style="width: 100%; border-color: black;" />
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 Style="font-weight: bold;">User Story Summary</h5>
+                            <hr class="hrBorder" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label class='control-label'>User Story Name</label>
+                                <apex:inputField value="{!userStoryObj.Name}" style="width:100%;" styleClass="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label class='control-label'>Release</label>
+                                <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="Release__c" valueField="Id" targetField="{!userStoryObj.Release__c}" style="width:100%;" />
+                            <!--<c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="Release__c" valueField="Id" targetField="{!valueSessionPrjName }" style="width:100%;" />-->
+                            </div>
+                            
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class='control-label'>Capability</label>
+
+                                 <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="Capability__c" valueField="Id" targetField="{!userStoryObj.Capability__c}" style="width:100%;" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label class='control-label'>Business Driver</label>
+                            <!--    <apex:inputField value="{!userStoryObj.Business_Driver__c}" style="width:100%;" styleClass="form-control" /> -->
+                                 <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="Business_Driver__c" valueField="Id" targetField="{!userStoryObj.Business_Driver__c}" style="width:100%;" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Priority</label><br />
+                                <apex:inputField value="{!userStoryObj.Priority__c}" style="width:100%;" html-Class="form-control" html-data-cssclass="abc" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Level 3 Process</label><br />
+                                <apex:inputField value="{!userStoryObj.Level_3_Process__c}" style="width:100%;" html-Class="form-control" html-data-cssclass="abc" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group required">
+                                <label class='control-label'>User Story Description</label>
+                                <apex:inputField value="{!userStoryObj.User_Story_Description__c}" style="width:100%"  styleClass="form-control" />
+                            </div>
+                        </div>
+                      
+                    </div>
+                  
+                  
+                  <!-- User Story Options. -->
+                  
+                  
+                  <div class="row">
+                    
+                        <div class="col-md-12">       
+                    
+                  <h4>  Add Options
+                    
+                    <apex:commandLink action="{!addUserStoryOptions}"  title="Back" immediate="false" id="addParticipants" reRender="optionsec" rendered="{!$ObjectType.User_Story_Options__c.deletable}"> 
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>
+                    </apex:commandLink>
+                    </h4>
+                            </div>
+            </div>
+                    <div class="row">
+                     <div class="col-md-12">       
+                  <apex:outputPanel id="optionsec">
+                      <apex:outputPanel rendered="{!userStoryOptionLst.size > 0}">
+                            <table class = "table">
+                                <tr>
+                                  <th> </th>
+                               
+                                  <th> User Story Option</th>
+                                  <th> User story Session</th>                                                               
+                                </tr>      
+                                <apex:repeat var="opt" value="{!userStoryOptionLst}">
+                                    <tr>
+                                        <td>
+                                         <apex:commandLink action="{!Remove}"  reRender="optionsec" immediate="true"><i class="fa fa-trash" style="padding-right: 10px;"></i> 
+                                                  <apex:param name="clientHash" value="{!opt.hash}" assignTo="{!clientHash}" id="hashParm"/>
+                                             </apex:commandLink>  
+                                        
+                                        </td>
+                                        <td>
+                                        <apex:inputText value="{!opt.obj.User_Story_Option__c}" styleClass="form-control"/>
+                                        
+                                        </td>                                        
+                                        <td>
+                                        <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="Value_Delivery_Session_Outcomes__c" valueField="Id" targetField="{!opt.valueDeliverySession}" style="width:100%;" disableLookup="{!opt.disableLookup}" />
+                                        <!--<c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="Value_Delivery_Session_Outcomes__c" valueField="Id" targetField="{!currentSessionName }" style="width:100%;" disableLookup="{!opt.disableLookup}" />-->
+                                          
+                                        
+                                        </td>                                        
+                                        <td></td>                                        
+                                    </tr>
+                                </apex:repeat>
+                            </table>
+                            
+                            </apex:outputPanel>
+                  
+                  </apex:outputPanel>
+                  
+                  
+                                  </div>
+            </div>
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                  
+                </div>
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+        </apex:form>
+    </c:SaaSToolkitPageTemplate>
+</apex:page>

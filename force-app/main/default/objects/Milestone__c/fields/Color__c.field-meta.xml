@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Color__c</fullName>
+    <externalId>false</externalId>
+    <formula>if((Planned_End_Date__c &lt; TODAY()) &amp;&amp; ( VALUE ( TEXT (Complete2__c ) ) &lt;&gt; 100), &quot;Red&quot;,
+ 
+
+if((Planned_End_Date__c &lt;= TODAY()+5) &amp;&amp; ( VALUE ( TEXT (Complete2__c ) ) &lt;&gt; 100), &quot;Yellow&quot;,
+ 
+
+&quot;Green&quot;))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Color</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

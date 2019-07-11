@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Defect Type --></label>
+    <name>Defect_Type__c</name>
+    <picklistValues>
+        <masterLabel>API Code Defect</masterLabel>
+        <translation><!-- API Code Defect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Validation</masterLabel>
+        <translation><!-- Data Validation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design Defect</masterLabel>
+        <translation><!-- Design Defect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Access</masterLabel>
+        <translation><!-- General Access --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>General Support</masterLabel>
+        <translation><!-- General Support --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test Script Defect</masterLabel>
+        <translation><!-- Test Script Defect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Error</masterLabel>
+        <translation><!-- User Error --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

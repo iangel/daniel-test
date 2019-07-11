@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Pick the region(s) impacted by the change --></help>
+    <label><!-- Region --></label>
+    <name>Region__c</name>
+    <picklistValues>
+        <masterLabel>AMERICAS</masterLabel>
+        <translation><!-- AMERICAS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ASIA</masterLabel>
+        <translation><!-- ASIA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EMEA</masterLabel>
+        <translation><!-- EMEA --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

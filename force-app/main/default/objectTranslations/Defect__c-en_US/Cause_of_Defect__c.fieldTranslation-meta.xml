@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Cause of Defect --></label>
+    <name>Cause_of_Defect__c</name>
+    <picklistValues>
+        <masterLabel>Access Issue</masterLabel>
+        <translation><!-- Access Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Change in Requirement</masterLabel>
+        <translation><!-- Change in Requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Deployment Issue</masterLabel>
+        <translation><!-- Deployment Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>FLS Issue</masterLabel>
+        <translation><!-- FLS Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incomplete Input</masterLabel>
+        <translation><!-- Incomplete Input --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incomplete Unit Testing</masterLabel>
+        <translation><!-- Incomplete Unit Testing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Inconsistency</masterLabel>
+        <translation><!-- Inconsistency --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Incorrect/Invalid Input</masterLabel>
+        <translation><!-- Incorrect/Invalid Input --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interface</masterLabel>
+        <translation><!-- Interface --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lack of Clarity</masterLabel>
+        <translation><!-- Lack of Clarity --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logic</masterLabel>
+        <translation><!-- Logic --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Memory management</masterLabel>
+        <translation><!-- Memory management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Misunderstood Requirement</masterLabel>
+        <translation><!-- Misunderstood Requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Naming Convention</masterLabel>
+        <translation><!-- Naming Convention --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Testable</masterLabel>
+        <translation><!-- Not Testable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Not Verfiable</masterLabel>
+        <translation><!-- Not Verfiable --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Oversight</masterLabel>
+        <translation><!-- Oversight --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Performance</masterLabel>
+        <translation><!-- Performance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Planning</masterLabel>
+        <translation><!-- Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Portability</masterLabel>
+        <translation><!-- Portability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Profile Issue</masterLabel>
+        <translation><!-- Profile Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Redundant Code</masterLabel>
+        <translation><!-- Redundant Code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Rejected - Not a defect</masterLabel>
+        <translation><!-- Rejected - Not a defect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Requirements Missed</masterLabel>
+        <translation><!-- Requirements Missed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reusability</masterLabel>
+        <translation><!-- Reusability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Standards</masterLabel>
+        <translation><!-- Standards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Storage structure</masterLabel>
+        <translation><!-- Storage structure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test Data</masterLabel>
+        <translation><!-- Test Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test Setup</masterLabel>
+        <translation><!-- Test Setup --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Traceability</masterLabel>
+        <translation><!-- Traceability --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Interface</masterLabel>
+        <translation><!-- User Interface --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Version Control</masterLabel>
+        <translation><!-- Version Control --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

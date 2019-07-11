@@ -1,0 +1,2 @@
+<apex:page showHeader="false" sidebar="false" controller="SaaSTabRediectCtrl" action="{!redirectPage}" >
+</apex:page>

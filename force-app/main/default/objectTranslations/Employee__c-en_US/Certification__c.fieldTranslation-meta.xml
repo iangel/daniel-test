@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Certification --></label>
+    <name>Certification__c</name>
+    <picklistValues>
+        <masterLabel>Conga</masterLabel>
+        <translation><!-- Conga --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DocuSign</masterLabel>
+        <translation><!-- DocuSign --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EchoSign</masterLabel>
+        <translation><!-- EchoSign --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Intelligent Patient Platform</masterLabel>
+        <translation><!-- Intelligent Patient Platform --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ModelN</masterLabel>
+        <translation><!-- ModelN --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MuleSoft</masterLabel>
+        <translation><!-- MuleSoft --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SaaS Methodology Practitioner</masterLabel>
+        <translation><!-- SaaS Methodology Practitioner --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Administrator</masterLabel>
+        <translation><!-- Salesforce Administrator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Advanced Administrator</masterLabel>
+        <translation><!-- Salesforce Advanced Administrator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Developer</masterLabel>
+        <translation><!-- Salesforce Developer --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Domain Architect</masterLabel>
+        <translation><!-- Salesforce Domain Architect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Domain Specialist</masterLabel>
+        <translation><!-- Salesforce Domain Specialist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Marketing Cloud Consultant</masterLabel>
+        <translation><!-- Salesforce Marketing Cloud Consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Marketing Cloud Email Specialist</masterLabel>
+        <translation><!-- Salesforce Marketing Cloud Email Specialist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Marketing Cloud Social Specialist</masterLabel>
+        <translation><!-- Salesforce Marketing Cloud Social Specialist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Pardot Consultant</masterLabel>
+        <translation><!-- Salesforce Pardot Consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Pardot Specialist</masterLabel>
+        <translation><!-- Salesforce Pardot Specialist --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Platform App Builder</masterLabel>
+        <translation><!-- Salesforce Platform App Builder --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Platform Developer I</masterLabel>
+        <translation><!-- Salesforce Platform Developer I --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Platform Developer II</masterLabel>
+        <translation><!-- Salesforce Platform Developer II --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Sales Cloud Consultant</masterLabel>
+        <translation><!-- Salesforce Sales Cloud Consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Service Cloud Consultant</masterLabel>
+        <translation><!-- Salesforce Service Cloud Consultant --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Salesforce Technical Architect</masterLabel>
+        <translation><!-- Salesforce Technical Architect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SteelBrick</masterLabel>
+        <translation><!-- SteelBrick --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veeva Administrator</masterLabel>
+        <translation><!-- Veeva Administrator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veeva Events Management Administrator</masterLabel>
+        <translation><!-- Veeva Events Management Administrator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veeva Network Administrator</masterLabel>
+        <translation><!-- Veeva Network Administrator --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Veeva Vault Administrator</masterLabel>
+        <translation><!-- Veeva Vault Administrator --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

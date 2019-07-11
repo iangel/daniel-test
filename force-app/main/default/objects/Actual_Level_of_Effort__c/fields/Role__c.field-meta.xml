@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Role__c</fullName>
+    <description>Reflects the role of the user that is entering the actual level of effort</description>
+    <externalId>false</externalId>
+    <label>Role</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Architect</fullName>
+                <default>false</default>
+                <label>Business Architect</label>
+            </value>
+            <value>
+                <fullName>Configuration Resource</fullName>
+                <default>false</default>
+                <label>Configuration Resource</label>
+            </value>
+            <value>
+                <fullName>Data Architect</fullName>
+                <default>false</default>
+                <label>Data Architect</label>
+            </value>
+            <value>
+                <fullName>Data Migration Resource</fullName>
+                <default>false</default>
+                <label>Data Migration Resource</label>
+            </value>
+            <value>
+                <fullName>Development Resource</fullName>
+                <default>false</default>
+                <label>Development Resource</label>
+            </value>
+            <value>
+                <fullName>Integration Resource</fullName>
+                <default>false</default>
+                <label>Integration Resource</label>
+            </value>
+            <value>
+                <fullName>Program Manager</fullName>
+                <default>false</default>
+                <label>Program Manager</label>
+            </value>
+            <value>
+                <fullName>Project Manager</fullName>
+                <default>false</default>
+                <label>Project Manager</label>
+            </value>
+            <value>
+                <fullName>Solution Architect</fullName>
+                <default>false</default>
+                <label>Solution Architect</label>
+            </value>
+            <value>
+                <fullName>System Admin</fullName>
+                <default>false</default>
+                <label>System Admin</label>
+            </value>
+            <value>
+                <fullName>Technical Architect</fullName>
+                <default>false</default>
+                <label>Technical Architect</label>
+            </value>
+            <value>
+                <fullName>Testing Resource</fullName>
+                <default>false</default>
+                <label>Testing Resource</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

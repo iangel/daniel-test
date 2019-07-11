@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Task Type --></label>
+    <name>Task_Type__c</name>
+    <picklistValues>
+        <masterLabel>Analysis</masterLabel>
+        <translation><!-- Analysis --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Build</masterLabel>
+        <translation><!-- Build --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Build Review</masterLabel>
+        <translation><!-- Build Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Code Review</masterLabel>
+        <translation><!-- Code Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Defect Fix - Build</masterLabel>
+        <translation><!-- Defect Fix - Build --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Defect Fix - Code</masterLabel>
+        <translation><!-- Defect Fix - Code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Defect Fix - Test Script</masterLabel>
+        <translation><!-- Defect Fix - Test Script --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Design</masterLabel>
+        <translation><!-- Design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>PM Efforts</masterLabel>
+        <translation><!-- PM Efforts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test Script Execution</masterLabel>
+        <translation><!-- Test Script Execution --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test Script Preparation</masterLabel>
+        <translation><!-- Test Script Preparation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Test Script Review</masterLabel>
+        <translation><!-- Test Script Review --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

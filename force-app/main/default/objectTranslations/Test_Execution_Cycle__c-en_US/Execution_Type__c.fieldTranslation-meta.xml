@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Execution Type --></label>
+    <name>Execution_Type__c</name>
+    <picklistValues>
+        <masterLabel>Regression Test</masterLabel>
+        <translation><!-- Regression Test --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SIT</masterLabel>
+        <translation><!-- SIT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UAT</masterLabel>
+        <translation><!-- UAT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unit Test</masterLabel>
+        <translation><!-- Unit Test --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_AssignedToRegionBlankIfNotOSS</fullName>
+    <active>true</active>
+    <description>If Role does not contain “OSS” then Assigned To Region must be blank.</description>
+    <errorConditionFormula>AND( NOT( NS_Account__r.RecordType.DeveloperName =&quot;NS_CustomerOffline&quot;),NOT(ISPICKVAL( NS_Role__c , &#39;OSS Region&#39;)),NOT( ISBLANK( TEXT(NS_AssignedToRegion__c )) ) )</errorConditionFormula>
+    <errorMessage>Please enter the user and remove your OSS Region selection, associated with this role</errorMessage>
+</ValidationRule>

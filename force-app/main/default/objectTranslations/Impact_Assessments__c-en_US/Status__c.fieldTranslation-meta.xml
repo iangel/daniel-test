@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Assessment Complete</masterLabel>
+        <translation><!-- Assessment Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Assessment In Progress</masterLabel>
+        <translation><!-- Assessment In Progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Assessment Provided</masterLabel>
+        <translation><!-- Assessment Provided --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Submitted to Assessment Owner</masterLabel>
+        <translation><!-- Submitted to Assessment Owner --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

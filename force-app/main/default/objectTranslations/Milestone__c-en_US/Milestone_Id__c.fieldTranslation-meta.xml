@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Milestone Id to distinguish a milestone for an Asset/Initiative. --></help>
+    <label><!-- Milestone Id --></label>
+    <name>Milestone_Id__c</name>
+</CustomFieldTranslation>

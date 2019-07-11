@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Official_Term_Definition_Validation</fullName>
+    <active>true</active>
+    <description>Requires that Terms that have a &quot;Project Usage Status&quot; = &quot;Official&quot; require the &quot;Definition&quot; field to be completed.</description>
+    <errorConditionFormula>ISBLANK( Definition__c ) &amp;&amp;  
+TEXT (Status__c ) = &quot;Official&quot;</errorConditionFormula>
+    <errorDisplayField>Definition__c</errorDisplayField>
+    <errorMessage>If the &quot;Project Usage Status&quot; = &quot;Official&quot;, then the &quot;Definition&quot; field must be completed.</errorMessage>
+</ValidationRule>

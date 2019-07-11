@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Industry__c</fullName>
+    <externalId>false</externalId>
+    <label>Industry</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Communications, Media and Technology</fullName>
+                <default>false</default>
+                <label>Communications, Media and Technology</label>
+            </value>
+            <value>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+                <label>Financial Services</label>
+            </value>
+            <value>
+                <fullName>Health &amp; Public Services</fullName>
+                <default>false</default>
+                <label>Health &amp; Public Services</label>
+            </value>
+            <value>
+                <fullName>Products</fullName>
+                <default>false</default>
+                <label>Products</label>
+            </value>
+            <value>
+                <fullName>Resources</fullName>
+                <default>false</default>
+                <label>Resources</label>
+            </value>
+            <value>
+                <fullName>Cross-Industry</fullName>
+                <default>false</default>
+                <label>Cross-Industry</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

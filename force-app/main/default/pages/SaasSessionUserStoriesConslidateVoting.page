@@ -1,0 +1,120 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" extensions="SaasSessionUserStoriesConslidateVoting" standardController="Value_Delivery_Session_User_Stories__c" >
+    <style>
+    input[type="radio"]{ 
+      margin-top: -1px;
+      vertical-align: middle;
+      
+}
+</style>
+    <c:CrpiPageTemplate >
+       <br/>
+        <apex:form >
+            <apex:inputHidden value="{!Value_Delivery_Session_User_Stories__c.Value_Delivery_Session_Outcomes__r.Name}"/>
+            <apex:inputHidden value="{!Value_Delivery_Session_User_Stories__c.Value_Delivery_Session_Outcomes__r.Phase__c}"/>       
+            <apex:inputHidden value="{!Value_Delivery_Session_User_Stories__c.Value_Delivery_Session_Outcomes__c}"/>            
+            <apex:outputPanel id="errorBlock">
+                <c:CustomPageMessages closableErrors="true"/>
+            </apex:outputPanel>            
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <p>
+                        <b>{!valueSessionPrjName}&nbsp;&#9830;&nbsp; {!Phase} &nbsp;&#9830;&nbsp;{!SessionOutcome } </b>
+                    </p>
+                </div>
+            </div>
+            <apex:commandLink title="Save" action="{!save}">
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/save.png')}" />&nbsp;
+                </apex:commandLink>
+                
+            <apex:commandLink action="/apex/SaasSessionUserStoriesResult?id={!Value_Delivery_Session_User_Stories__c.id}" immediate="true" title="vote">
+                <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/voteResult.png')}" height="38px"  width="38px"/>
+            </apex:commandLink> &nbsp;
+            <apex:commandLink action="/apex/SaaSSessionOutcomeDetail?id={!sessionuserStoryObj.Value_Delivery_Session_Outcomes__c}" immediate="true" title="Back">
+                <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/back_1x.png')}" />
+            </apex:commandLink>   <br/>
+           
+            <hr style="width: 100%; border-color: black;" />
+             <div class="row">
+                <div class="col-lg-12 col-sm-12 col-md-12">
+                    <b> {!Value_Delivery_Session_User_Stories__c.User_Story__r.name} </b>
+                 </div>   
+             </div>     
+                 
+             <div class="row">
+              <div class="col-lg-12 col-sm-12 col-md-12"> 
+             <table class="table">
+                        <apex:variable var="i" value="{!1}"/>
+                         <apex:repeat value="{!optionLst}" var="options">
+                             <tr>
+                                 <td class="text-primary"><B>OPTION {!i} </b></td>
+                                 <td> {!options.User_Story_Option__c} </td>   
+                              </tr>
+                              <apex:variable var="i" value="{!i+1}"/>
+                         </apex:repeat>                                                                            
+                </table> 
+                  </div>   
+             </div>       
+                 <div class="row">
+                <div class="col-md-12">       
+                    <h4>  Add Voting
+                    <apex:commandLink action="{!add}"  title="Back" immediate="false" id="addParticipants" > 
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>
+                    </apex:commandLink>
+                    
+                    </h4>
+               </div>
+            </div>
+                    
+                
+                    <div class="row">
+              <div class="col-lg-12 col-sm-12 col-md-12">        
+              <apex:outputPanel id="optionTable">
+               <table class="table">
+                 <tr  class="customTableHeader">
+                 <td></td>
+                 <td class="text-primary" style="text-decoration:none;color:white;"><B>Participant Name</B></td>
+                 <apex:variable var="i" value="{!1}"/>
+                         <apex:repeat value="{!optionLst}" var="options">
+
+                                 <td style="text-decoration:none;color:white;" class="text-primary"><B>OPTION {!i} </b></td>
+
+
+                              <apex:variable var="i" value="{!i+1}"/>
+                         </apex:repeat>       
+                 </tr>          
+               <apex:repeat value="{!usersResponseLst}" var="userVote">
+                   <tr>
+                  
+                           <td>
+                                         <apex:commandLink action="{!Remove}"  reRender="optionTable" immediate="true">
+                                                     <i class="fa fa-trash" style="padding-right: 10px;"></i> 
+                                                  <apex:param name="clientHash" value="{!userVote.hash}" assignTo="{!clientHash}" id="hashParm"/>
+                                             </apex:commandLink>  
+                                        
+                                        </td>
+                           
+                   
+                          <td>
+                                   <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false"  labelField="Name" SObject="User" valueField="Id" targetField="{!userVote.userID}" style="width:100%;" />
+                                   </td>
+                                   <apex:repeat value="{!userVote.userOptionsLst}" var="userResponse">
+                                       <td>
+                                            <apex:selectRadio value="{!userResponse.userRespone}" >
+                                            <apex:selectOption itemValue="Yes" itemLabel="Yes" />
+                                            <apex:selectOption itemValue="No" itemLabel="No"/>
+                                            </apex:selectRadio> 
+                                         </td>
+                                   </apex:repeat>
+                                   </tr>
+                </apex:repeat>
+               
+               
+               
+               </table>  
+               </apex:outputPanel>         
+                     </div>   
+             </div>       
+         
+         </apex:form>
+     </c:CrpiPageTemplate>   
+</apex:page>

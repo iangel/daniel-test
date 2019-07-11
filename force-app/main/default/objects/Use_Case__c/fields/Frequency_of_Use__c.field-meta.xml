@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Frequency_of_Use__c</fullName>
+    <description>How often will this Use Case be executed?</description>
+    <externalId>false</externalId>
+    <inlineHelpText>How often will this Use Case be executed?</inlineHelpText>
+    <label>Frequency of Use</label>
+    <length>255</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

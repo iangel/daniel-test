@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Toolkit_R2_Release_Requirements</fullName>
+    <columns>NAME</columns>
+    <columns>Request_Title__c</columns>
+    <columns>Total_Priority_Ranking__c</columns>
+    <columns>Status__c</columns>
+    <columns>Capability__c</columns>
+    <columns>Release__c</columns>
+    <columns>Parent_Request__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Capability__c</field>
+        <operation>contains</operation>
+        <value>SDT</value>
+    </filters>
+    <filters>
+        <field>Capability__c</field>
+        <operation>notEqual</operation>
+    </filters>
+    <filters>
+        <field>Release__c</field>
+        <operation>equals</operation>
+        <value>r2</value>
+    </filters>
+    <label>Toolkit R2 Release Requirements</label>
+</ListView>

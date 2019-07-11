@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Preferred Phone Number for Contact based on Preferred Contact Method --></help>
+    <label><!-- Preferred Phone --></label>
+    <name>NS_Preferred_Phone__c</name>
+</CustomFieldTranslation>

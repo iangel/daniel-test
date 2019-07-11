@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Define how the impact will be received among those it affects --></help>
+    <label><!-- Expected Audience Response --></label>
+    <name>Expected_Audience_Response__c</name>
+    <picklistValues>
+        <masterLabel>Negative</masterLabel>
+        <translation><!-- Negative --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Neutral</masterLabel>
+        <translation><!-- Neutral --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Positive</masterLabel>
+        <translation><!-- Positive --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

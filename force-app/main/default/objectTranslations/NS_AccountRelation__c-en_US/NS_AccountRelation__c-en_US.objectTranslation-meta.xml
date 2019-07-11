@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Account Relation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Account Relations</value>
+    </caseValues>
+    <layouts>
+        <layout>Account Relation Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select two different account for To Account and From Account field --></errorMessage>
+        <name>NS_To_From_Account_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

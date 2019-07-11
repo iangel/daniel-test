@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Removed_Release__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Identify requests removed from a scheduled release.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Indicate that a Request was removed from a Release only if it is removed after Design is complete.</inlineHelpText>
+    <label>Removed from Release</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

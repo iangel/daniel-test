@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Requirement Type --></label>
+    <name>Requirement_Type__c</name>
+    <picklistValues>
+        <masterLabel>Additional Requirement</masterLabel>
+        <translation><!-- Additional Requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Evolved Requirement -  Build</masterLabel>
+        <translation><!-- Evolved Requirement -  Build --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Evolved Requirement - Design</masterLabel>
+        <translation><!-- Evolved Requirement - Design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Original Requirement</masterLabel>
+        <translation><!-- Original Requirement --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

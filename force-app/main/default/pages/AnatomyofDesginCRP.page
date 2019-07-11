@@ -1,0 +1,179 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0">
+    
+    <style type="text/css">
+        .addBorder {
+        border-bottom: 1px solid #0197D5 !important;
+        }
+        .panel-body {
+        padding-bottom: 0px;
+        }
+    </style>
+    <c:CrpiPageTemplate >
+        <apex:form >
+         <br/>
+        <!--    <br/>
+            <center> 
+                <a href="/apex/SaaSClientQuestionSearch?scope=Design" Class="btn btn-primary">Conduct VALUE Delivery Session</a> </center>
+            <br/> -->
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    
+                      <c:SaaSOverviewComp Name="Anatomy" Phase="Design"  title="Anatomy of Design VALUE Delivery Approach"  Description="Design VALUE Delivery Approach sessions demonstrate Design recommendations with options when necessary." />
+
+
+
+
+                        
+               <!--     <div class="panel panel-default">
+                        <div class="panel-heading">
+                            
+                            <p class="h4 text-primary">    Anatomy of Design VALUE Delivery Approach </p><br/>
+                            
+                            <p>Design VALUE Delivery Approach sessions demonstrate design recommendations with options when necessary.</p>
+                            
+                            <div class="panel-group" id="AnatomyofDesginCRP">
+                                
+                                <div class="panel-heading addBorder">
+                                    <h4 class="panel-title removePanelAnchorDec">
+                                        <a class="accordion-toggle"  data-toggle="collapse" data-parent="#AnatomyofDesginCRP" href="#Objectives">
+                                            Objectives <i class="fa fa-chevron-down" style="float:right;"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="Objectives" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <apex:outputPanel rendered="{!showDEoverviewresults}">
+                                            <ul  class="unorder">
+                                                <li >Demonstrate build of user stories and requirements</li>
+                                                <li >Confirm design where options are available</li>
+                                                <li >Validate estimates and performance tradeoffs are necessary</li>
+                                                <li >Create initial designs in development sandbox where possible</li>
+                                                <li >Confirm data model for integrations</li>
+                                       
+                                            </ul> 
+                                        </apex:outputPanel>
+                                        
+                                        <apex:outputPanel rendered="{!!showDEoverviewresults}">
+                                       
+                                            <ul  class="unorder">
+                                            
+                                                <apex:repeat value="{!loverviewd}" var="p">
+                                                 
+                                                    <li><apex:outputText value="{!p.Objective__c}"/></li>
+                                                </apex:repeat>
+                                            </ul> 
+                                        </apex:outputPanel>     
+                                    </div>
+                                    
+                                </div>
+                                
+                                <div class="panel-heading addBorder">
+                                    <h4 class="panel-title removePanelAnchorDec ">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofDesginCRP" href="#who">
+                                            Key Participants<i class="fa fa-chevron-down" style="float:right;"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="who" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <apex:outputPanel rendered="{!showDEparticipantresults}">
+                                            <ul  class="unorder">
+                                                <li >Global Capability Lead</li>
+                                                <li>Business Unit Leads</li>   
+                                                <li >VALUE Delivery Approach Lead</li>
+                                                <li >Process Analyst</li>
+                                                <li >Business Analyst</li>
+                                                <li >SME Advisors</li>
+                                                <li >Technology/Development Team</li>
+                                                <li >Data &amp; Integration SMEs</li>
+                                            </ul>
+                                         </apex:outputPanel>
+                                         <apex:outputPanel rendered="{!!showDEparticipantresults}">
+                                            <ul  class="unorder">
+                                                <apex:repeat value="{!lparticipantd}" var="p"> 
+                                                    <li><apex:outputText value="{!p.Participant_Name__r.Name} ({!p.Participant_Role__c})"/></li>
+                                                </apex:repeat>
+                                            </ul> 
+                                        </apex:outputPanel> 
+                                    </div>
+                                </div>
+                                
+                                <div class="panel-heading addBorder">
+                                    <h4 class="panel-title removePanelAnchorDec ">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofDesginCRP" href="#Inputs">
+                                            Inputs <i class="fa fa-chevron-down" style="float:right;"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="Inputs" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <Ul  class="unorder">
+                                            <li >Value proposition and impacted value drivers</li>
+                                            <li >Development sandbox with prototype or existing build</li>
+                                            <li >End to End Business Requirements and User Stories in scope</li>
+                                            <li >Estimates and assumptions of in scope user stories and requirements</li>
+                                        </Ul>
+                                        
+                                    </div>
+                                </div>
+                                
+                                
+                                <div class="panel-heading addBorder">
+                                    <h4 class="panel-title removePanelAnchorDec ">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofDesginCRP" href="#Outputs">
+                                            Outputs <i class="fa fa-chevron-down" style="float:right;"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="Outputs" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <Ul  class="unorder">
+                                            <li >Confirmation of designs for all in scope user stories</li>
+                                            <li >Tradeoffs confirmed where estimates have increased or decreased due to design decisions</li>
+                                        </Ul>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <div class="panel-heading addBorder">
+                                    <h4 class="panel-title removePanelAnchorDec ">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofDesginCRP" href="#SessionOutcomes">
+                                            Session Outcomes <i class="fa fa-chevron-down" style="float:right;"></i>
+                                        </a>
+                                    </h4>
+                                </div>
+                                <div id="SessionOutcomes" class="panel-collapse collapse">
+                                    <div class="panel-body">
+                                        <Ul  class="unorder">
+                                            <li><b>Iteration 1</b></li>
+                                            <ul>
+                                                <li>Review and lock requirements and scope</li>
+                                                <li>Review configured application design against business process enhancements. Take feedback and make real-time design changes.</li>
+                                            </ul>
+                                            <li><b>Iteration 2</b></li>
+                                            <ul>
+                                                <li>Review full capability design in the application. Take feedback and make real-time design changes.</li>
+                                            </ul>
+                                            <li><b>Iteration 3</b></li>
+                                            <ul>
+                                                <li>End-to-end walkthrough</li>
+                                                <li>Sign off on Design</li>
+                                            </ul>
+                                        </Ul>
+                                        
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            
+                        </div>
+                    </div>   -->
+                </div>              
+                
+            </div>
+            
+            
+        </apex:form>     
+    </c:CrpiPageTemplate>
+</apex:page>

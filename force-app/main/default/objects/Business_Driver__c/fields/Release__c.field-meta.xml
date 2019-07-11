@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Release__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Related release to the business driver</description>
+    <externalId>false</externalId>
+    <label>Release</label>
+    <referenceTo>Release__c</referenceTo>
+    <relationshipLabel>Business Driver</relationshipLabel>
+    <relationshipName>Business_Driver</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

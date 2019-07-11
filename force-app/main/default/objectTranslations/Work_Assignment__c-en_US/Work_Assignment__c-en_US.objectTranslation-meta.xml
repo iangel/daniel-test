@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Work Assignment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Work Assignments</value>
+    </caseValues>
+    <layouts>
+        <layout>Work Assignment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Work Assignment --></label>
+            <section>Work Assignment</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Creation Date must be greater than Today. --></errorMessage>
+        <name>WA_Create_Date</name>
+    </validationRules>
+</CustomObjectTranslation>

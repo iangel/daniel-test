@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Link to the official or a primary term definition reference. Allows a reference to an official source for greater clarity or drilling into greater details. --></help>
+    <label><!-- Definition Link --></label>
+    <name>Definition_Link__c</name>
+</CustomFieldTranslation>

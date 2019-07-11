@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Test_Execution_Name__c</fullName>
+    <externalId>false</externalId>
+    <label>Test Execution Name</label>
+    <referenceTo>Test_Execution__c</referenceTo>
+    <relationshipLabel>Test Execution Steps</relationshipLabel>
+    <relationshipName>Test_Execution_Steps</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

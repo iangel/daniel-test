@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Delivery_Question_Log</fullName>
+    <active>true</active>
+    <label>Value Delivery Question</label>
+    <picklistValues>
+        <picklist>Domain__c</picklist>
+        <values>
+            <fullName>Account Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Assets%2FInstall Base</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Campaign Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Chatter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Communications Media and Technologies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Currency Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Forecasting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Life Sciences</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Mobile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Opportunity Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outlook</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports and Dashboards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Retail Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Search Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tasks and Activities</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>User Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website Integration</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Industry__c</picklist>
+        <values>
+            <fullName>Communications%2C Media and Technology</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cross-Industry</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Health %26 Public Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Products</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resources</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority__c</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Medium</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Scope__c</picklist>
+        <values>
+            <fullName>Build</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Deploy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Design</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initiate and Confirm</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Plan and Analyze</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Scope</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Test</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status__c</picklist>
+        <values>
+            <fullName>Clarification Provided</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Clarification Requested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Capability__c</picklist>
+        <values>
+            <fullName>Access</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account Hierarchy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account Maintenance</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Account Ownership and Assignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Case Solutions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Collaboration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Custom Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dashboards</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Data Management</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Definition</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Email Marketing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Fields</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Files and Attachments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>General</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Integration</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Knowledge Articles</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Assignment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Conversion</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Creation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Qualification</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Source</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lead Workflow Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Legal</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Managing Multiple Currencies</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Ownership</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Page Layouts</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Permissions</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pricing Book</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Catalog</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quotas</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reports</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Validations</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Track__c</picklist>
+        <values>
+            <fullName>Track 1</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Track 2</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

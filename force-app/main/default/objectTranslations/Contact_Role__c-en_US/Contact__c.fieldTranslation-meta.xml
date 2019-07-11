@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Associates a Contact to a Role for either a Release, a Capability, or a Request --></help>
+    <label><!-- Contact --></label>
+    <name>Contact__c</name>
+    <relationshipLabel><!-- Contact Roles --></relationshipLabel>
+</CustomFieldTranslation>

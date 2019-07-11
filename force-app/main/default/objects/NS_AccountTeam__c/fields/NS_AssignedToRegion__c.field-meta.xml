@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_AssignedToRegion__c</fullName>
+    <description>For Role of type &#39;OSS&#39;, it is a must have field.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select a Region when Role is &#39;OSS Region&#39;</inlineHelpText>
+    <label>Assigned To Region</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Northern Region East  </fullName>
+                <default>false</default>
+                <label>Northern Region East  </label>
+            </value>
+            <value>
+                <fullName>Northern Region West  </fullName>
+                <default>false</default>
+                <label>Northern Region West  </label>
+            </value>
+            <value>
+                <fullName>Southern Region East  </fullName>
+                <default>false</default>
+                <label>Southern Region East  </label>
+            </value>
+            <value>
+                <fullName>Southern Region West</fullName>
+                <default>false</default>
+                <label>Southern Region West</label>
+            </value>
+            <value>
+                <fullName>Offline</fullName>
+                <default>false</default>
+                <label>Offline</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

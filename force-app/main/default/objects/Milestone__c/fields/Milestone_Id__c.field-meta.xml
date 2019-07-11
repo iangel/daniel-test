@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Milestone_Id__c</fullName>
+    <description>Milestone Id to distinguish a milestone for an Asset/Initiative.</description>
+    <displayFormat>{000}</displayFormat>
+    <externalId>false</externalId>
+    <inlineHelpText>Milestone Id to distinguish a milestone for an Asset/Initiative.</inlineHelpText>
+    <label>Milestone Id</label>
+    <trackTrending>false</trackTrending>
+    <type>AutoNumber</type>
+</CustomField>

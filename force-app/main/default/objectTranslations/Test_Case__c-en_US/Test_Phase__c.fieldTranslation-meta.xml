@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Testing Stage --></label>
+    <name>Test_Phase__c</name>
+    <picklistValues>
+        <masterLabel>BUILD</masterLabel>
+        <translation><!-- BUILD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>End-to-End</masterLabel>
+        <translation><!-- End-to-End --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>QA</masterLabel>
+        <translation><!-- QA --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SIT</masterLabel>
+        <translation><!-- SIT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>UAT</masterLabel>
+        <translation><!-- UAT --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

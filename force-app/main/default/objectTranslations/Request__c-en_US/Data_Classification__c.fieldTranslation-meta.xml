@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Data Classification --></label>
+    <name>Data_Classification__c</name>
+    <picklistValues>
+        <masterLabel>Customer Data</masterLabel>
+        <translation><!-- Customer Data --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Transactional Data</masterLabel>
+        <translation><!-- Transactional Data --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

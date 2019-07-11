@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select the Capability or Capabilities that will help enable the Business Driver. --></help>
+    <label><!-- Capability --></label>
+    <name>Capability__c</name>
+    <picklistValues>
+        <masterLabel>Account Management</masterLabel>
+        <translation><!-- Account Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campaign Management</masterLabel>
+        <translation><!-- Campaign Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contact Management</masterLabel>
+        <translation><!-- Contact Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contract Management</masterLabel>
+        <translation><!-- Contract Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Lead Management</masterLabel>
+        <translation><!-- Lead Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opportunity Management</masterLabel>
+        <translation><!-- Opportunity Management --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Product Management</masterLabel>
+        <translation><!-- Product Management --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

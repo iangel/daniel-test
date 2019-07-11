@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Project_Role__c</fullName>
+    <description>Awaiting requirement specification for the field.</description>
+    <externalId>false</externalId>
+    <label>Project Role</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Business Analyst</fullName>
+                <default>false</default>
+                <label>Business Analyst</label>
+            </value>
+            <value>
+                <fullName>Configuration Resource</fullName>
+                <default>false</default>
+                <label>Configuration Resource</label>
+            </value>
+            <value>
+                <fullName>Data Architect</fullName>
+                <default>false</default>
+                <label>Data Architect</label>
+            </value>
+            <value>
+                <fullName>Data Migration Resource</fullName>
+                <default>false</default>
+                <label>Data Migration Resource</label>
+            </value>
+            <value>
+                <fullName>Development Lead</fullName>
+                <default>false</default>
+                <label>Development Lead</label>
+            </value>
+            <value>
+                <fullName>Development Resource</fullName>
+                <default>false</default>
+                <label>Development Resource</label>
+            </value>
+            <value>
+                <fullName>Integration Resource</fullName>
+                <default>false</default>
+                <label>Integration Resource</label>
+            </value>
+            <value>
+                <fullName>Program Manager</fullName>
+                <default>false</default>
+                <label>Program Manager</label>
+            </value>
+            <value>
+                <fullName>Project Manager</fullName>
+                <default>false</default>
+                <label>Project Manager</label>
+            </value>
+            <value>
+                <fullName>QA/Testing Lead</fullName>
+                <default>false</default>
+                <label>QA/Testing Lead</label>
+            </value>
+            <value>
+                <fullName>QA/Testing Resource</fullName>
+                <default>false</default>
+                <label>QA/Testing Resource</label>
+            </value>
+            <value>
+                <fullName>Release Analyst</fullName>
+                <default>false</default>
+                <label>Release Analyst</label>
+            </value>
+            <value>
+                <fullName>Release Manager</fullName>
+                <default>false</default>
+                <label>Release Manager</label>
+            </value>
+            <value>
+                <fullName>Solution Architect</fullName>
+                <default>false</default>
+                <label>Solution Architect</label>
+            </value>
+            <value>
+                <fullName>Solution Lead</fullName>
+                <default>false</default>
+                <label>Solution Lead</label>
+            </value>
+            <value>
+                <fullName>Technical Architect</fullName>
+                <default>false</default>
+                <label>Technical Architect</label>
+            </value>
+            <value>
+                <fullName>Technical Lead</fullName>
+                <default>false</default>
+                <label>Technical Lead</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

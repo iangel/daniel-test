@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>IR_Res_Date_Val</fullName>
+    <active>false</active>
+    <description>Resolution Date should be greater than logged date.</description>
+    <errorConditionFormula>OR(Target_Resolution_Date__c  &lt; Logged_Date__c,  Actual_Resolution_Date__c &lt;  Logged_Date__c )</errorConditionFormula>
+    <errorMessage>Resolution Date should be greater than issue/risk logged date.</errorMessage>
+</ValidationRule>

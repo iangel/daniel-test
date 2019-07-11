@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- 1.0 - 0.9 = Disables customer support if not executed
+0.8 - 0.7 = Could result in customer not being able to receive quality support 
+0.6 - 0.5 = Impact on HP &amp; Partners, but not customers
+0.4 - 0.3 = No customer impact &amp; minimal impact on HP &amp; Par --></help>
+    <label><!-- Strategic Impact --></label>
+    <name>Strategic_Impact__c</name>
+    <picklistValues>
+        <masterLabel>0.1</masterLabel>
+        <translation><!-- 0.1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.2</masterLabel>
+        <translation><!-- 0.2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.3</masterLabel>
+        <translation><!-- 0.3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.4</masterLabel>
+        <translation><!-- 0.4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.5</masterLabel>
+        <translation><!-- 0.5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.6</masterLabel>
+        <translation><!-- 0.6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.7</masterLabel>
+        <translation><!-- 0.7 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.8</masterLabel>
+        <translation><!-- 0.8 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>0.9</masterLabel>
+        <translation><!-- 0.9 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>1.0</masterLabel>
+        <translation><!-- 1.0 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

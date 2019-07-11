@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Is this defect critical to begin UAT? --></help>
+    <label><!-- UAT Critical --></label>
+    <name>UAT_Critical__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Release__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Related release of test scenario</description>
+    <externalId>false</externalId>
+    <label>Release</label>
+    <referenceTo>Release__c</referenceTo>
+    <relationshipName>Test_Scenarios</relationshipName>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Used to differentiate between different term types. Facilitates searching and cross reference. --></help>
+    <label><!-- Type --></label>
+    <name>Type__c</name>
+    <picklistValues>
+        <masterLabel>Abbreviation</masterLabel>
+        <translation><!-- Abbreviation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Common Usage</masterLabel>
+        <translation><!-- Common Usage --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Full Name</masterLabel>
+        <translation><!-- Full Name --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical Name</masterLabel>
+        <translation><!-- Technical Name --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

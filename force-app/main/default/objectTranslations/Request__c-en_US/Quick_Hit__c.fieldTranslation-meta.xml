@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- A request can only be a quick hit if the IT level of effort is “low”, Business priority is “high”, the urgency of having the request is immediate, and the request can be implemented without impacting integration. --></help>
+    <label><!-- Quick Hit --></label>
+    <name>Quick_Hit__c</name>
+</CustomFieldTranslation>

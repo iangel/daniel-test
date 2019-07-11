@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Hours Of Vacation month 1 --></label>
+    <name>Hours_Of_Vacation_month_1__c</name>
+</CustomFieldTranslation>

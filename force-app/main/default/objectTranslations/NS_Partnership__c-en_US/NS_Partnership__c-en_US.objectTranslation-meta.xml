@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Authorized Company</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Authorized Companies</value>
+    </caseValues>
+    <layouts>
+        <layout>NS Partnership Layout</layout>
+        <sections>
+            <label><!-- 3PL Authorization Information --></label>
+            <section>3PL Authorization Information</section>
+        </sections>
+        <sections>
+            <label><!-- Core Information --></label>
+            <section>Core Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select a Primary Contact who is associated to the selected Authorized Company --></errorMessage>
+        <name>NS_CheckContactFromSameAccount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive Account cannot be Linked. Please contact &quot;OSS Support&quot; or &quot;System Admin&quot; --></errorMessage>
+        <name>NS_RestrictInactiveAccountLookup</name>
+    </validationRules>
+</CustomObjectTranslation>

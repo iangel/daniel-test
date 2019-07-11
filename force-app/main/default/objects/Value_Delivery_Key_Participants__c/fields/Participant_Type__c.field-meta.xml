@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Participant_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Participant Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Project Blended Core Team</fullName>
+                <default>false</default>
+                <label>Project Blended Core Team</label>
+            </value>
+            <value>
+                <fullName>Accenture Team</fullName>
+                <default>false</default>
+                <label>Accenture Team</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

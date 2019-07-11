@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_AccountRelation_Compact</fullName>
+    <fields>Name</fields>
+    <fields>NS_RelationType__c</fields>
+    <fields>NS_RelationParty2__c</fields>
+    <label>Account Relation Compact</label>
+</CompactLayout>

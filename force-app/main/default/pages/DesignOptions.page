@@ -1,0 +1,27 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">                      
+                       Design Options
+                    </div>  
+                <div class="panel-body"> 
+                   <p>Design options must be provided and validated by the Business Unit Leads.</p>              
+                       <ul>
+                           <li>Create designs based upon the assumptions that were originally used to estimate the requirements.</li>
+                           <li>Simple Designs: For straightforward, the designs can be mocked in a sandbox environment for demonstration to the  Team.</li>
+                           <li>Complex Designs: Designs are mocked up in wireframes.</li>
+                           <li>Design Options: In some cases, multiple designs can be recommended, however the tradeoffs for the build must be considered (see example deck) </li>
+                       </ul>
+                </div>
+                
+            </div> 
+       </div>
+    </div>
+   <!--   <ul class="pager">
+                  <li class="previous"><a href="/apex/DesignCRPTemplatesExamples">&larr; Back</a></li>
+              </ul>    -->
+  </c:CrpiPageTemplate>
+</apex:page>

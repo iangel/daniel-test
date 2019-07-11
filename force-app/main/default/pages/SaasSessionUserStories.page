@@ -1,0 +1,112 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" extensions="SaasSessionUserStories" standardController="Value_Delivery_Session_Outcomes__c" docType="html-5.0">
+    <c:CrpiPageTemplate >
+    <apex:form >
+     <br/>
+            <c:CustomPageMessages closableErrors="true"></c:CustomPageMessages>
+            <apex:inputHidden value="{!Value_Delivery_Session_Outcomes__c.Phase__c}"/>
+            <apex:inputHidden value="{!Value_Delivery_Session_Outcomes__c.Name}"/>   
+            <apex:inputHidden value="{!Value_Delivery_Session_Outcomes__c.Value_Delivery_Session__r.Releases__c}"/>               
+            
+            
+           <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <p>
+                        <b>&nbsp;{!valueSessionPrjName}&nbsp;&#9830;&nbsp;{!sessOutcomeObj.Phase__c}&nbsp;&#9830;&nbsp;{!sessOutcomeObj.Name}</b>
+                    </p>
+                </div>
+            </div>
+           
+            <h4>User Stories</h4>
+            <hr style="width: 100%; border-color: black;" />
+            <div class="row">
+                 <div class="col-lg-12 col-sm-12 col-md-12">
+                     <center>
+                     <apex:commandButton value="Import" action="{!importUserStories}"   styleClass="btn btn-primary"/> &nbsp;
+                     <apex:commandLink value="Cancel" styleClass="btn btn-primary" action="/apex/SaaSSessionOutcomeDetail?id={!Value_Delivery_Session_Outcomes__c.id}"/>
+                 </center>
+                 </div>
+            </div>           
+           <br/>
+           
+
+            
+            <div class="row">
+                 <div class="col-lg-12 col-sm-12 col-md-12" style="width:97%;">
+                 <apex:outputPanel id="listView"> 
+                        <table class="table table-fixedheader table-bordered"> 
+                            <thead class="customTableHeader">
+                                <tr>
+                                    <th class="colWidth10" style="word-wrap: initial;">Select</th>
+                                    
+                                    <th class="colWidth20">
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> User Story Name {!IF(sortField=='Name',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Name" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    </th>
+                                    
+                                    <th class="colWidth20">
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Release {!IF(sortField=='Release__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Release__c" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    </th>
+                                    
+                                    <th class="colWidth20" style="word-wrap: initial;">Description</th>
+                                    
+                                    <th class="colWidth10">
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Priority {!IF(sortField=='Priority__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Priority__c" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    </th>
+                                    
+                                    <th class="colWidth20">
+                                    <apex:commandLink style="text-decoration:none;color:white;" action="{!sortByColumn}" rerender="navPanel,listView"> Capability {!IF(sortField=='Capability__c',IF(sortDir ='ASC','▼','▲'),'')}            
+                                        <apex:param name="sortField" value="Capability__c" assignTo="{!sortField}"/>
+                                    </apex:commandLink>
+                                    </th>
+                                    
+                                   
+                                   </tr>
+                            </thead>
+                            <apex:repeat VALue="{!UserStoriesWrapLst}" VAr="StoriesWrap">
+                                <tr>
+                                    <td class="colWidth10">
+                                        <center>
+                                            <apex:inputCheckbox value="{!StoriesWrap.checked}" />
+                                            </center>
+                                    </td>
+                                    <td class="colWidth20">
+                                    <!--<a href='/apex/KeyActionDetailPage?id={!decisionWrap.keyDecisionObj.id}'> {!decisionWrap.keyDecisionObj.Name} </a>-->
+                                    <a href='/apex/SaaSCreateUserStories?detail=1&&id={!StoriesWrap.UserStoryObj.id}'> {!StoriesWrap.UserStoryObj.Name} </a>
+                                    </td>
+                                    <td class="colWidth20">{!StoriesWrap.UserStoryObj.Release__r.Name}</td>
+                                    <td class="colWidth20">{!StoriesWrap.UserStoryObj.User_Story_Description__c}</td>
+                                    <td class="colWidth10">{!StoriesWrap.UserStoryObj.Priority__c}</td>
+                                    <td class="colWidth20">{!StoriesWrap.UserStoryObj.Capability__r.Name}</td>
+                                    
+                                </tr>
+                            </apex:repeat>
+                        </table>
+                        </apex:outputPanel> 
+               
+                <div class="row">
+                    <div class="col-lg-12 col-sm-12 col-md-12">
+                        <center>                        
+                                <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOt(hasPrevious)}" />&nbsp;&nbsp;
+                                <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!hasPrevious}" />&nbsp;&nbsp; 
+                                <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!not(hasPrevious)}">Previous</apex:outputPanel>
+                                <apex:commandLink value="Previous" action="{!Previous}" rendered="{!hasPrevious}" reRender="listView,navPanel" />&nbsp;&nbsp;&nbsp;&nbsp;
+                                <apex:commandLink value="Next" action="{!Next}" rendered="{!hasNext}" reRender="listView,navPanel" />&nbsp;&nbsp;
+                                <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOt(hasNext)}">Next</apex:outputPanel>&nbsp;&nbsp; 
+                                <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!hasNext}" />
+                                                    <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOt(hasNext)}" />
+                                                    <br />
+                                                    <br />
+                                            
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </apex:form>            
+    </c:CrpiPageTemplate>
+</apex:page>

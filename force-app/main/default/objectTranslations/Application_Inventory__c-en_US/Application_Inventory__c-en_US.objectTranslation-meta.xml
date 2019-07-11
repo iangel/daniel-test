@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Application Inventory</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Application Inventory</value>
+    </caseValues>
+    <layouts>
+        <layout>Application Inventory Layout</layout>
+        <sections>
+            <label><!-- Application Inventory Detail --></label>
+            <section>Application Inventory Detail</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Development Status --></label>
+            <section>Development Status</section>
+        </sections>
+        <sections>
+            <label><!-- Estimate Components --></label>
+            <section>Estimate Components</section>
+        </sections>
+        <sections>
+            <label><!-- Estimated Level of Effort (Hours) --></label>
+            <section>Estimated Level of Effort (Hours)</section>
+        </sections>
+        <sections>
+            <label><!-- Request --></label>
+            <section>Request</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

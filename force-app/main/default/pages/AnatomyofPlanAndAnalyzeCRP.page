@@ -1,0 +1,13 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0">  
+    <c:CrpiPageTemplate >
+        <br />
+        <apex:form >         
+            <br/>
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">       
+                    <c:SaaSOverviewComp Name="Anatomy" Phase="Initiate and Confirm" title="Anatomy of a VALUE Delivery Approach" Description="VALUE Delivery Approach sessions enable the team to align on key business and process areas before entering Scope."/>               
+                </div>        
+            </div>
+        </apex:form>    
+    </c:CrpiPageTemplate>
+</apex:page>

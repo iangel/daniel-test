@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Decision_Outcome__c</fullName>
+    <description>Description of outcome of Key Action/Decision</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter details of the outcome of the action item (what was determined) or the decision reached (what was agreed to, which option was selected). This field is required when Status is Completed.</inlineHelpText>
+    <label>Decision/Outcome</label>
+    <length>2000</length>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>5</visibleLines>
+</CustomField>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Delivery_Method_s__c</fullName>
+    <externalId>false</externalId>
+    <label>Delivery Method(s)</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Instructor Led/Virtual</fullName>
+                <default>false</default>
+                <label>Instructor Led/Virtual</label>
+            </value>
+            <value>
+                <fullName>Web Based Training</fullName>
+                <default>false</default>
+                <label>Web Based Training</label>
+            </value>
+            <value>
+                <fullName>Demo Video</fullName>
+                <default>false</default>
+                <label>Demo Video</label>
+            </value>
+            <value>
+                <fullName>Job Aid</fullName>
+                <default>false</default>
+                <label>Job Aid</label>
+            </value>
+            <value>
+                <fullName>Participant Guide</fullName>
+                <default>false</default>
+                <label>Participant Guide</label>
+            </value>
+            <value>
+                <fullName>FAQs</fullName>
+                <default>false</default>
+                <label>FAQs</label>
+            </value>
+            <value>
+                <fullName>N/A</fullName>
+                <default>false</default>
+                <label>N/A</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

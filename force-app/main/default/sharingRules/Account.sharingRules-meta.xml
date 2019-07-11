@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>NS_AccountVisibilityAccessToAll</fullName>
+        <accessLevel>Edit</accessLevel>
+        <accountSettings>
+            <caseAccessLevel>Read</caseAccessLevel>
+            <contactAccessLevel>None</contactAccessLevel>
+            <opportunityAccessLevel>None</opportunityAccessLevel>
+        </accountSettings>
+        <description>All User will have view and edit access but with different page layout controlling that access separately.</description>
+        <label>NS_AccountVisibilityAccessToAll</label>
+        <sharedTo>
+            <roleAndSubordinates>NS_Executive</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>NS Field Location,Dray Carrier,Other Company,Port,Corporate,Service,Manual Customer,Other Railroad,3PL,Business</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

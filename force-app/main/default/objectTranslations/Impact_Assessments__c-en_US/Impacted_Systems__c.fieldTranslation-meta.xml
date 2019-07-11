@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Impacted Systems --></label>
+    <name>Impacted_Systems__c</name>
+    <picklistValues>
+        <masterLabel>Alliance</masterLabel>
+        <translation><!-- Alliance --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Apttus</masterLabel>
+        <translation><!-- Apttus --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CC</masterLabel>
+        <translation><!-- CC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>CD</masterLabel>
+        <translation><!-- CD --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Hub</masterLabel>
+        <translation><!-- Data Hub --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EAI</masterLabel>
+        <translation><!-- EAI --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pricetool</masterLabel>
+        <translation><!-- Pricetool --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SFDC</masterLabel>
+        <translation><!-- SFDC --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SP</masterLabel>
+        <translation><!-- SP --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>STARS</masterLabel>
+        <translation><!-- STARS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Surround</masterLabel>
+        <translation><!-- Surround --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

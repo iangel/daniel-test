@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_To_From_Account_Validation</fullName>
+    <active>true</active>
+    <description>It will prevent the record to be created with same account as To and From Account field</description>
+    <errorConditionFormula>NS_RelationParty1__c = NS_RelationParty2__c</errorConditionFormula>
+    <errorDisplayField>NS_RelationParty2__c</errorDisplayField>
+    <errorMessage>Please select two different account for To Account and From Account field</errorMessage>
+</ValidationRule>

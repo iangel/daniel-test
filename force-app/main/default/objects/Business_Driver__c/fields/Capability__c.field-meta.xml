@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Capability__c</fullName>
+    <description>Capabilities which will help enable the Business Driver</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select the Capability or Capabilities that will help enable the Business Driver.</inlineHelpText>
+    <label>Capability</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+                <label>Account Management</label>
+            </value>
+            <value>
+                <fullName>Campaign Management</fullName>
+                <default>false</default>
+                <label>Campaign Management</label>
+            </value>
+            <value>
+                <fullName>Contact Management</fullName>
+                <default>false</default>
+                <label>Contact Management</label>
+            </value>
+            <value>
+                <fullName>Contract Management</fullName>
+                <default>false</default>
+                <label>Contract Management</label>
+            </value>
+            <value>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+                <label>Lead Management</label>
+            </value>
+            <value>
+                <fullName>Opportunity Management</fullName>
+                <default>false</default>
+                <label>Opportunity Management</label>
+            </value>
+            <value>
+                <fullName>Product Management</fullName>
+                <default>false</default>
+                <label>Product Management</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

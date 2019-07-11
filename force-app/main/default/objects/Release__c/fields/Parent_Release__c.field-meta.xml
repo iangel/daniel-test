@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Release__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Select a release to which this release is related to.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Select an existing release to which the current release is related to.</inlineHelpText>
+    <label>Parent Release</label>
+    <referenceTo>Release__c</referenceTo>
+    <relationshipLabel>Releases</relationshipLabel>
+    <relationshipName>Releases</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

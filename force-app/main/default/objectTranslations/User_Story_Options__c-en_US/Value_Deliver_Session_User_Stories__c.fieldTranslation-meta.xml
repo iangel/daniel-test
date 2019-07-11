@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Value Deliver Session User Stories --></label>
+    <name>Value_Deliver_Session_User_Stories__c</name>
+    <relationshipLabel><!-- User Story Options --></relationshipLabel>
+</CustomFieldTranslation>

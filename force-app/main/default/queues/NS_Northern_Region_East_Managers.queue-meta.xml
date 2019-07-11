@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <name>OSS North Manager</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>NS_Northern_Region_East_NRE_Managers</publicGroup>
+        </publicGroups>
+        <users>
+            <user>alexander.mcneil@nscorp.com</user>
+            <user>brian.hill2@nscorp.com</user>
+            <user>daniel.holzman@nscorp.com</user>
+            <user>derek.green@nscorp.com</user>
+            <user>duane.shiflett@nscorp.com</user>
+            <user>elton.rutledge@nscorp.com</user>
+            <user>horace.anderson@nscorp.com</user>
+            <user>janea.parr@nscorp.com</user>
+            <user>john.rutland@nscorp.com</user>
+            <user>kathleen.mulligan@nscorp.com</user>
+            <user>keegan.lucas@nscorp.com</user>
+            <user>ryan.karjala@nscorp.com</user>
+            <user>shaine.hector@nscorp.com</user>
+            <user>tommy.williamson@nscorp.com</user>
+            <user>travis.powell@nscorp.com</user>
+            <user>vernon.bates@nscorp.com</user>
+            <user>william.wesley@nscorp.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

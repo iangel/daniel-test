@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Training Material</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Training Materials</value>
+    </caseValues>
+    <layouts>
+        <layout>Training Material Object Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Training Material Details --></label>
+            <section>Training Material Details</section>
+        </sections>
+        <sections>
+            <label><!-- Training Material Status --></label>
+            <section>Training Material Status</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

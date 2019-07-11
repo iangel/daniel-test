@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Inspection/Bad Order/Empty Rejects</label>
+    <protected>false</protected>
+    <values>
+        <field>Focus_On__c</field>
+        <value xsi:type="xsd:boolean">true</value>
+    </values>
+    <values>
+        <field>Interaction_Type__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>NS_AutoEscalateOnUpdate__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>NS_AutomotiveStatus__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>NS_CreateTask__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>NS_DefaultStatus__c</field>
+        <value xsi:type="xsd:string">NS_Working</value>
+    </values>
+    <values>
+        <field>NS_EPStatus__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>NS_EscalationReason__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>NS_InteractionCategory__c</field>
+        <value xsi:type="xsd:string">Transit Exceptions</value>
+    </values>
+    <values>
+        <field>NS_MktgNotification__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>NS_Priority__c</field>
+        <value xsi:type="xsd:string">Low</value>
+    </values>
+    <values>
+        <field>NS_TaskOwnerGroup__c</field>
+        <value xsi:nil="true"/>
+    </values>
+    <values>
+        <field>NS_UTSStatus__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

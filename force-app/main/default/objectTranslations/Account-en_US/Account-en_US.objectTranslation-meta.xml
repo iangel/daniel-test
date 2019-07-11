@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>3PL Account Layout</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>3PL Account Layout for Rep and Manager</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Admin Business Account Layout</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Admin Corporate Account Layout</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Admin Service Account Layout</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- NS Business Unit Information --></label>
+            <section>NS Business Unit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Business Account Layout for Other Users</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Business Account Layout for Support Users</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Corporate Account Layout for Other Users</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Corporate Account Layout for Support Users</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Dray Carrier Account Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NS Field Location Account Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- NS Business Unit Information --></label>
+            <section>NS Business Unit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NS Field Location Account Layout for Rep and Manager</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- NS Business Unit Information --></label>
+            <section>NS Business Unit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Offline Customer Account Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- Contact Information --></label>
+            <section>Contact Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Other Company Account Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Other Railroad Account Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Port Account Layout</layout>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Service Account Layout for Other Users</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- NS Business Unit Information --></label>
+            <section>NS Business Unit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Service Account Layout for Support Users</layout>
+        <sections>
+            <label><!-- Additional Account Information --></label>
+            <section>Additional Account Information</section>
+        </sections>
+        <sections>
+            <label><!-- Address Information --></label>
+            <section>Address Information</section>
+        </sections>
+        <sections>
+            <label><!-- NS Business Unit Information --></label>
+            <section>NS Business Unit Information</section>
+        </sections>
+    </layouts>
+    <quickActions>
+        <label><!-- New Contact --></label>
+        <name>NS_NewContact</name>
+    </quickActions>
+    <recordTypes>
+        <description><!-- A 3PL Account is used for a Third Party Logistics company that contacts Norfolk Southern on behalf of a customer --></description>
+        <label><!-- 3PL --></label>
+        <name>NS_3PL</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Dray Carriers trucking service who contacts NS regarding a shipment --></description>
+        <label><!-- Dray Carrier --></label>
+        <name>NS_DrayCarrier</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- An NS Field Location Account is used for a Norfolk Southern facility --></description>
+        <label><!-- NS Field Location --></label>
+        <name>NS_FieldLocation</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A Manual Customer Account is used for a customer that is not physically serviced by Norfolk Southern --></description>
+        <label><!-- Manual Customer --></label>
+        <name>NS_OfflineCustomer</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A Business Account is used for a customer entity that Norfolk Southern contacts for billing purposes --></description>
+        <label><!-- Business --></label>
+        <name>NS_OnlineCustomerBusiness</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A Corporate Account is used for a customer’s Corporate headquarters --></description>
+        <label><!-- Corporate --></label>
+        <name>NS_OnlineCustomerCorporate</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- A Service Account is used for a customer located on and serviced by Norfolk Southern --></description>
+        <label><!-- Service --></label>
+        <name>NS_OnlineCustomerService</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Other Companies with whom Norfolk Southern does business --></description>
+        <label><!-- Other Company --></label>
+        <name>NS_OtherCompany</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Other Railroad Companies --></description>
+        <label><!-- Other Railroad --></label>
+        <name>NS_OtherRailRoad</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Ports locations that Norfolk Southern services --></description>
+        <label><!-- Port --></label>
+        <name>NS_Port</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Account Name cannot be changed --></errorMessage>
+        <name>NS_AccountNameCantBeChanged</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure that Company Phone is 7 digits or 10 digits with no dashes - or parenthesis () --></errorMessage>
+        <name>NS_AccountPhoneNumberCheck</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Account record type cannot be changed --></errorMessage>
+        <name>NS_AccountRecordTypeCannotBeEdited</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Deactivation Reason AND check the Deactivate checkbox to request that this Account be deactivated. --></errorMessage>
+        <name>NS_DeactivationReason</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure that Contact Work Phone (and Contact Mobile if entered) are 7 digits or 10 digits with no dashes - or parenthesis () --></errorMessage>
+        <name>NS_OfflineContactPhoneNumberCheck</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select an &quot;Existing Contact&quot; or fill in ALL of the following fields to create a new contact: &quot;First Name&quot;, &quot;Last Name&quot;, &quot;Contact Work Phone&quot;. --></errorMessage>
+        <name>NS_OfflineCustomerRequiredFields</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please select the Operating Station. --></errorMessage>
+        <name>NS_OperatingStMandatoryForOnlineAccounts</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive Account cannot be Edited. Please contact &quot;OSS Support&quot; or &quot;System Admin&quot; --></errorMessage>
+        <name>NS_RestrictInactiveAccountEdit</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure &apos;Service Account Type&apos; has a value --></errorMessage>
+        <name>NS_ServiceAccountTypeRequired</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- AltavistaNews --></label>
+        <name>AltavistaNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleNews --></label>
+        <name>GoogleNews</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- HooversProfile --></label>
+        <name>HooversProfile</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+</CustomObjectTranslation>

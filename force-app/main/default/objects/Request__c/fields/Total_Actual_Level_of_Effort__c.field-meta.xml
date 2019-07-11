@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Actual_Level_of_Effort__c</fullName>
+    <description>Total actual level of effort (in Hours) taken in completing the request (i.e. time taken in plan, design, build, test, UAT, deploy &amp; support)</description>
+    <externalId>false</externalId>
+    <label>Total Actual Level of Effort</label>
+    <summarizedField>Actual_Level_of_Effort__c.Total_Actual_Level_of_Effort__c</summarizedField>
+    <summaryForeignKey>Actual_Level_of_Effort__c.Requirement__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

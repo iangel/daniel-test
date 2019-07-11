@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Execution Cycle</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Execution Cycles</value>
+    </caseValues>
+    <layouts>
+        <layout>Test Execution Cycle Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Add_Test_Script_Execution --></label>
+        <name>Add_Test_Script_Execution</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Update_Script_Execution_Status --></label>
+        <name>Update_Script_Execution_Status</name>
+    </webLinks>
+</CustomObjectTranslation>

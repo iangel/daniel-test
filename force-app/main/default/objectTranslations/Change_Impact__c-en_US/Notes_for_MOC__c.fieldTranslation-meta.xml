@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Please document relevant notes impacting change management solutions --></help>
+    <label><!-- Notes for Change Management --></label>
+    <name>Notes_for_MOC__c</name>
+</CustomFieldTranslation>

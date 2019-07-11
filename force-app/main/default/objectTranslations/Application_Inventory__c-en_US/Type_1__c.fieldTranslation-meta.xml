@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Type --></label>
+    <name>Type_1__c</name>
+    <picklistValues>
+        <masterLabel>Configuration</masterLabel>
+        <translation><!-- Configuration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Customization</masterLabel>
+        <translation><!-- Customization --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Migration</masterLabel>
+        <translation><!-- Data Migration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integration (Batch)</masterLabel>
+        <translation><!-- Integration (Batch) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integration (Real-Time)</masterLabel>
+        <translation><!-- Integration (Real-Time) --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reports &amp; Dashboards</masterLabel>
+        <translation><!-- Reports &amp; Dashboards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Administration</masterLabel>
+        <translation><!-- User Administration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workflow or Approval</masterLabel>
+        <translation><!-- Workflow or Approval --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

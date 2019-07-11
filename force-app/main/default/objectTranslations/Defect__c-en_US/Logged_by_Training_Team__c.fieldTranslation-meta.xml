@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Has a member of the Training Team logged this defect? --></help>
+    <label><!-- Logged by Training Team --></label>
+    <name>Logged_by_Training_Team__c</name>
+</CustomFieldTranslation>

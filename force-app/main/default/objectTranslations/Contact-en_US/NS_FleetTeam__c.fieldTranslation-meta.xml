@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Fleet Team --></label>
+    <name>NS_FleetTeam__c</name>
+    <picklistValues>
+        <masterLabel>Auto Parts</masterLabel>
+        <translation><!-- Auto Parts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Boxcars</masterLabel>
+        <translation><!-- Boxcars --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hoppers</masterLabel>
+        <translation><!-- Hoppers --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Metals</masterLabel>
+        <translation><!-- Metals --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Private Cars</masterLabel>
+        <translation><!-- Private Cars --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

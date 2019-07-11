@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RICEFW_Type_Acronym__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(RecordType.DeveloperName = &quot;Reports&quot;, &quot;R&quot;, 
+ IF(RecordType.DeveloperName = &quot;Interfaces&quot;, &quot;I&quot;,
+  IF(RecordType.DeveloperName = &quot;Conversions&quot;, &quot;C&quot;,
+   IF(RecordType.DeveloperName = &quot;Enhancements&quot;, &quot;E&quot;,
+    IF(RecordType.DeveloperName = &quot;Application_Pages_Views&quot;, &quot;F&quot;,
+     IF(RecordType.DeveloperName = &quot;Workflows&quot;, &quot;W&quot;, null))))))</formula>
+    <label>RICEFW Type Acronym</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

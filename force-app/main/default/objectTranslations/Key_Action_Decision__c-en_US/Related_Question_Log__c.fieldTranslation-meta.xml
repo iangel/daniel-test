@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Related Question Log --></label>
+    <name>Related_Question_Log__c</name>
+    <relationshipLabel><!-- Key Actions/Decisions --></relationshipLabel>
+</CustomFieldTranslation>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Gap Area? --></label>
+    <name>Gap_Object__c</name>
+    <picklistValues>
+        <masterLabel>Conversion</masterLabel>
+        <translation><!-- Conversion --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Current System Configuration</masterLabel>
+        <translation><!-- Current System Configuration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Enhancement</masterLabel>
+        <translation><!-- Enhancement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Form</masterLabel>
+        <translation><!-- Form --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integration</masterLabel>
+        <translation><!-- Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interface</masterLabel>
+        <translation><!-- Interface --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other</masterLabel>
+        <translation><!-- Other --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Process</masterLabel>
+        <translation><!-- Process --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Reporting</masterLabel>
+        <translation><!-- Reporting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SFDC Configuration</masterLabel>
+        <translation><!-- SFDC Configuration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workflows</masterLabel>
+        <translation><!-- Workflows --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

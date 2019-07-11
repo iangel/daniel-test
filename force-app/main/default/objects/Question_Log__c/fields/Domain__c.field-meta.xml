@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Domain__c</fullName>
+    <externalId>false</externalId>
+    <label>Domain</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+                <label>Account Management</label>
+            </value>
+            <value>
+                <fullName>Assets/Install Base</fullName>
+                <default>false</default>
+                <label>Assets/Install Base</label>
+            </value>
+            <value>
+                <fullName>Campaign Management</fullName>
+                <default>false</default>
+                <label>Campaign Management</label>
+            </value>
+            <value>
+                <fullName>Case Management</fullName>
+                <default>false</default>
+                <label>Case Management</label>
+            </value>
+            <value>
+                <fullName>Chatter</fullName>
+                <default>false</default>
+                <label>Chatter</label>
+            </value>
+            <value>
+                <fullName>Communications Media and Technologies</fullName>
+                <default>false</default>
+                <label>Communications Media and Technologies</label>
+            </value>
+            <value>
+                <fullName>Contact</fullName>
+                <default>false</default>
+                <label>Contact</label>
+            </value>
+            <value>
+                <fullName>Currency Management</fullName>
+                <default>false</default>
+                <label>Currency Management</label>
+            </value>
+            <value>
+                <fullName>Financial Services</fullName>
+                <default>false</default>
+                <label>Financial Services</label>
+            </value>
+            <value>
+                <fullName>Forecasting</fullName>
+                <default>false</default>
+                <label>Forecasting</label>
+            </value>
+            <value>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+                <label>Lead Management</label>
+            </value>
+            <value>
+                <fullName>Life Sciences</fullName>
+                <default>false</default>
+                <label>Life Sciences</label>
+            </value>
+            <value>
+                <fullName>Mobile</fullName>
+                <default>false</default>
+                <label>Mobile</label>
+            </value>
+            <value>
+                <fullName>Opportunity Management</fullName>
+                <default>false</default>
+                <label>Opportunity Management</label>
+            </value>
+            <value>
+                <fullName>Outlook</fullName>
+                <default>false</default>
+                <label>Outlook</label>
+            </value>
+            <value>
+                <fullName>Product Management</fullName>
+                <default>false</default>
+                <label>Product Management</label>
+            </value>
+            <value>
+                <fullName>Products</fullName>
+                <default>false</default>
+                <label>Products</label>
+            </value>
+            <value>
+                <fullName>Reports and Dashboards</fullName>
+                <default>false</default>
+                <label>Reports and Dashboards</label>
+            </value>
+            <value>
+                <fullName>Retail Marketing</fullName>
+                <default>false</default>
+                <label>Retail Marketing</label>
+            </value>
+            <value>
+                <fullName>Search Marketing</fullName>
+                <default>false</default>
+                <label>Search Marketing</label>
+            </value>
+            <value>
+                <fullName>Tasks and Activities</fullName>
+                <default>false</default>
+                <label>Tasks and Activities</label>
+            </value>
+            <value>
+                <fullName>User Management</fullName>
+                <default>false</default>
+                <label>User Management</label>
+            </value>
+            <value>
+                <fullName>Website Integration</fullName>
+                <default>false</default>
+                <label>Website Integration</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

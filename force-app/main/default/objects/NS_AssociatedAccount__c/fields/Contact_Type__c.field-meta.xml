@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Contact_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Contact Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Secondary</fullName>
+                <default>false</default>
+                <label>Secondary</label>
+            </value>
+            <value>
+                <fullName>1st</fullName>
+                <default>false</default>
+                <label>1st Shift</label>
+            </value>
+            <value>
+                <fullName>2nd</fullName>
+                <default>false</default>
+                <label>2nd Shift</label>
+            </value>
+            <value>
+                <fullName>3rd</fullName>
+                <default>false</default>
+                <label>3rd Shift</label>
+            </value>
+            <value>
+                <fullName>Weekend</fullName>
+                <default>false</default>
+                <label>Weekend</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

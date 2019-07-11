@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>IDC Task</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>IDC Tasks</value>
+    </caseValues>
+    <layouts>
+        <layout>IDC Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Review --></label>
+            <section>Review</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter Comments, Start Date, End Date, Actual LOE and Planned LOE. --></errorMessage>
+        <name>Attributes_Covered</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter components updated in CWB. --></errorMessage>
+        <name>CWB_Updated_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

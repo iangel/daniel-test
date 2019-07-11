@@ -1,0 +1,11 @@
+<apex:page StandardController="Test_Script__c" extensions="VFC_ExecutionSteps_Upload" >
+   <apex:form >
+        <apex:pagemessages />
+        <apex:pageBlock >
+            <apex:pageBlockSection columns="4"> 
+                  <apex:inputFile value="{!csvFileBody}"  filename="{!csvAsString}"/>
+                  <apex:commandButton value="Import Steps" action="{!importCSVFile}"/>
+            </apex:pageBlockSection>
+        </apex:pageBlock>
+           </apex:form>
+</apex:page>

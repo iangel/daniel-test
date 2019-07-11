@@ -1,0 +1,248 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" extensions="SaaSCreateSessionOutcomeCtrl" standardController="Value_Delivery_Session_Outcomes__c" docType="html-5.0">
+    <c:CrpiPageTemplate >
+        <br />
+        <apex:form >
+            <apex:outputPanel id="errorBlock">
+                <c:CustomPageMessages closableErrors="true" />
+            </apex:outputPanel>
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    <p><b>&nbsp;{!valueSessionPrjName}&nbsp;&#9830;&nbsp;</b></p> 
+                </div>
+            </div>
+            <div>
+            <h4 style="float: left;margin-top: 15px;">
+                &nbsp;New Session&nbsp;
+            </h4>    
+            
+            <apex:commandLink action="{!saveSessionOutcome}"  title="Save" rendered="{!$ObjectType.Value_Delivery_Session_Outcomes__c.createable}">
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/save.png')}"/>&nbsp;
+            </apex:commandLink>                       
+            <apex:commandLink action="/apex/CrpiHomePage" title="Cancel" immediate="true" id="cancel">
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/cancel.png')}"/>
+            </apex:commandLink>&nbsp;
+            </div>            
+            &nbsp;
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 Style="font-weight: bold;">Session Summary</h5>
+                            <hr class="hrBorder" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label class='control-label'>Session Name</label>
+                                <apex:inputField value="{!sessOutcomeObj.Name}" style="width:100%;" styleClass="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label class='control-label'>Phase</label>
+                                <apex:inputField value="{!sessOutcomeObj.Phase__c}" style="width:100%;" styleClass="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label>Owner</label>
+                                
+                                 <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="User" valueField="Id" targetField="{!sessOutcomeObj.SessionOwner__c}" style="width:100%;" />
+                                
+                                
+                              <!--  <apex:inputField value="{!sessOutcomeObj.Session_Owner__c}" styleClass="form-control" style="width:100%;"/> -->
+                            </div>
+                        </div>
+                    </div>
+                      <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Start Date</label>
+                                <apex:input type="datetime-local"  value="{!sessonStartDate}"   styleClass="form-control" style="width:100%;"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>End Date</label>
+                                <apex:input type="datetime-local" value="{!sessonEndDate }" styleClass="form-control" style="width:100%;"/>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label></label>                               
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group">
+                                <label>Session Outcomes <!-- &nbsp;<apex:commandLink rendered="{!renderimporticon}"  action="{!importPreviousSessionOutome}"><i class="fa fa-dot-circle-o fa-lg"></i> </apex:commandLink> -->  </label>
+                                <apex:inputField value="{!sessOutcomeObj.Session_Outcome__c}" style="width:100%" styleClass="form-control" />
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">                    
+                     <H4>Import Key Participants
+                <apex:commandLink title="Back" immediate="true" id="Import" rerender="importKeyParticipants1" action="{!displayImport}" rendered="{!$ObjectType.Value_Delivery_Session_Outcomes__c.createable}">
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/import.png')}"/>
+                </apex:commandLink>&nbsp;</h4>
+          </div>
+        </div>
+          <apex:outputpanel id="importKeyParticipants1">             
+          <apex:outputpanel id="importKeyParticipants"  rendered="{!displayImportSec}" >           
+              <div class="row">                    
+                        <div class="col-md-1">                          
+                           <label>Session</label>
+                       </div>
+                        <div class="col-md-4">   
+                         <apex:selectList value="{!sessOutcomeID}" size="1" styleClass="form-control" style="width:100%;" >
+                             <apex:selectOptions value="{!ImportParticipants}"></apex:selectOptions>
+                             <apex:actionSupport event="onchange" action="{!getAllKeyParticipants}" reRender="participants" />
+                         </apex:selectList>
+                         </div>   
+                    </div>
+              </apex:outputpanel>                         
+               </apex:outputpanel>    
+
+
+                  
+                     <apex:outputpanel id="participants">    
+                  <apex:outputPanel rendered="{!importParticipantLst.size > 0}">     
+                                   <br/>     
+                  <div class="row">                    
+                        <div class="col-md-12">              
+                     <table class="table">
+                                         <tr>
+                                             <th style="width:70px;"> </th>
+                                             <th> Name </th>
+                                             <th> Role </th>
+                                             <th> Comments </th>
+                                         </tr>
+                                        <apex:repeat var="part" value="{!importParticipantLst}">
+                                             <tr>
+                                                 <td>
+                                                 <apex:inputCheckbox value="{!part.checked}"/>
+                                 
+                                                 
+                                                 </td>
+                                                 <td>{!part.obj.name}</td> 
+                                                 <td>{!part.obj.Role__c}</td> 
+                                                 <td>{!part.obj.Comments__c}</td> 
+                                              </tr>
+                                         </apex:repeat>
+                                         
+                                         
+                                  </table>
+                  
+                   </div>                    
+          </div>
+                  </apex:outputPanel>  
+                     </apex:outputPanel>  
+                   
+                      <div class="row">
+                    
+                        <div class="col-md-12">       
+                    
+                  <h4>  Add Key Participants
+                    
+                    <apex:commandLink action="{!add}"  title="Back" immediate="true" id="addParticipants" reRender="newParticipants" rendered="{!$ObjectType.Value_Delivery_Session_Outcomes__c.createable}">
+                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>
+                    </apex:commandLink>
+                    </h4>
+                            </div>
+            </div>
+            
+                    
+                    
+                    
+                    <div class="row">
+                    
+                        <div class="col-md-12">     
+                    
+                     <apex:outputPanel id="newParticipants">
+                     <apex:outputPanel rendered="{!newParticipantsLst.size > 0}"> 
+                  
+                     <table class="table">
+                                         <tr>
+                                             <th style="width:30px;"> </th>
+                                             <th> Name </th>
+                                             <th> Role </th>
+                                             <th> Comments </th>
+                                         </tr>
+                                        <apex:repeat var="part" value="{!newParticipantsLst}">
+                                             <tr>
+                                                 <td>
+                                               <apex:commandLink action="{!Remove}" reRender="newParticipants"  immediate="true"><i class="fa fa-trash" style="padding-right: 10px;"></i> 
+                                                  <apex:param name="clientHash" value="{!part.hash}" assignTo="{!clientHash}" id="hashParm"/>
+                                             </apex:commandLink>                                                 
+                                                 
+                                                 </td>
+                                                 <td>
+                                                 <apex:inputField value="{!part.obj.name}"/>
+                                                         
+                                                 
+                                                 </td> 
+                                                 <td>
+                                                 
+                                            <apex:inputField value="{!part.obj.Role__c}"/>
+                                                 </td> 
+                                                 <td>
+                                                 <apex:inputText value="{!part.obj.Comments__c}"/>
+                                                 </td> 
+                                              </tr>
+                                         </apex:repeat>
+                                         
+                                         
+                                  </table>
+                  
+                  
+                  </apex:outputPanel>  
+                    
+                    </apex:outputPanel>  
+                    
+                    
+                    
+                           </div>
+            </div>
+            
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                </div>
+            </div>
+            
+           
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+        </apex:form>
+</c:CrpiPageTemplate>
+ </apex:page>

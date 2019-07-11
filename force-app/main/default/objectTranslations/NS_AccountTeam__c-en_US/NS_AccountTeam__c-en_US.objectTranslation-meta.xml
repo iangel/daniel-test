@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>NS Account Team</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>NS Account Teams</value>
+    </caseValues>
+    <layouts>
+        <layout>Norfolk Southern Account Team Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter the user and remove your OSS Region selection, associated with this role --></errorMessage>
+        <name>NS_AssignedToRegionBlankIfNotOSS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the region, not the user, associated with this OSS role --></errorMessage>
+        <name>NS_AssignedToUserBlankIfOSS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the region associated with this OSS role --></errorMessage>
+        <name>NS_RequireAssignedToRegionForOSS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the user associated with this role --></errorMessage>
+        <name>NS_RequireAssignedToUserExceptOSS</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive Account cannot be Linked. Please contact &quot;OSS Support&quot; or &quot;System Admin&quot; --></errorMessage>
+        <name>NS_RestrictInactiveAccountLookup</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Assigned To Region cannot be Offline for this customer --></errorMessage>
+        <name>NS_RestrictOfflineRegionAssignment</name>
+    </validationRules>
+</CustomObjectTranslation>

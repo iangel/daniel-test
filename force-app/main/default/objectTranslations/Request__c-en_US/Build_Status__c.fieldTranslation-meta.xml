@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Updated By Developer - 10%, 20%, 35%, 50%, 60%, 75%, 90% ||
+Updated By Functional Team - 70%,95%, 100% ||
+Updated by Onshore Lead - 80% --></help>
+    <label><!-- Build Status --></label>
+    <name>Build_Status__c</name>
+    <picklistValues>
+        <masterLabel>Client Reviewed and/or Ready for Next Environment</masterLabel>
+        <translation><!-- Client Reviewed and/or Ready for Next Environment --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Development in Progress</masterLabel>
+        <translation><!-- Development in Progress --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Feedback Incorporated</masterLabel>
+        <translation><!-- Feedback Incorporated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Offshore Unit Testing Complete</masterLabel>
+        <translation><!-- Offshore Unit Testing Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onshore Team Feedback Incorporated</masterLabel>
+        <translation><!-- Onshore Team Feedback Incorporated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onshore Team Feedback Unit Testing Complete</masterLabel>
+        <translation><!-- Onshore Team Feedback Unit Testing Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onshore Team Review</masterLabel>
+        <translation><!-- Onshore Team Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onshore Unit Testing Complete</masterLabel>
+        <translation><!-- Onshore Unit Testing Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onshore Unit Testing Feedback Incorporated</masterLabel>
+        <translation><!-- Onshore Unit Testing Feedback Incorporated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Review Ready</masterLabel>
+        <translation><!-- Review Ready --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Started Component</masterLabel>
+        <translation><!-- Started Component --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

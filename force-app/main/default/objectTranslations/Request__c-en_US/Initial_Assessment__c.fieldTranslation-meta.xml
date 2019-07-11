@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Outcome from Initial Assessment. --></help>
+    <label><!-- Initial Assessment --></label>
+    <name>Initial_Assessment__c</name>
+    <picklistValues>
+        <masterLabel>No current solution or workaround available.</masterLabel>
+        <translation><!-- No current solution or workaround available. --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Solution available</masterLabel>
+        <translation><!-- Solution available --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Workaround available</masterLabel>
+        <translation><!-- Workaround available --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

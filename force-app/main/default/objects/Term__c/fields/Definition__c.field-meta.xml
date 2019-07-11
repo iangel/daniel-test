@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Definition__c</fullName>
+    <description>Short Definition of term (255 limit). 
+
+Be aware that changing this to a LONG text field negates the ability to edit in a List View. This may limit Term management.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Short Definition of term (255 limit) 
+
+Required for OFFICIAL Terms</inlineHelpText>
+    <label>Definition</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

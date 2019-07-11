@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_Of_Change__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Select one or more areas impacted by this change</inlineHelpText>
+    <label>Type Of Change</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Organization Structure</fullName>
+                <default>false</default>
+                <label>Organization Structure</label>
+            </value>
+            <value>
+                <fullName>Policies &amp; Standards</fullName>
+                <default>false</default>
+                <label>Policies &amp; Standards</label>
+            </value>
+            <value>
+                <fullName>Process &amp; Behavior</fullName>
+                <default>false</default>
+                <label>Process &amp; Behavior</label>
+            </value>
+            <value>
+                <fullName>Roles &amp; Responsibilities</fullName>
+                <default>false</default>
+                <label>Roles &amp; Responsibilities</label>
+            </value>
+            <value>
+                <fullName>Technology</fullName>
+                <default>false</default>
+                <label>Technology</label>
+            </value>
+            <value>
+                <fullName>Tools &amp; Templates</fullName>
+                <default>false</default>
+                <label>Tools &amp; Templates</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

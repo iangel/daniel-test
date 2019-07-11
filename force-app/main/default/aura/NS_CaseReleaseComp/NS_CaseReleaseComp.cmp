@@ -1,0 +1,127 @@
+<aura:component controller="NS_CaseReleaseController" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,force:lightningQuickAction" access="global" >               
+    <aura:attribute name="NsAssignedCaseList" type="Case[]" description="Store list of assigned cases to logged in user"/>
+    <aura:attribute name="isopen" type="boolean" default="false" description="check if modal box is open"/>
+    <aura:attribute name="selectedcount" type="integer" default="0"/>
+    <aura:attribute name="page" type="integer" description="Store page number of assigned cases"/>
+    <aura:attribute name="pages" type="integer" description="Store total pages of assigned cases"/>
+    
+    <div align="center" draggable="false">        
+        <lightning:button variant="brand" label="Case Release" aura:id="ReleaseId"  onclick="{! c.openModal }"/>
+        <aura:if isTrue="{!v.isopen}">          
+            <div role="dialog" tabindex="-1" aria-labelledby="header99" class="slds-modal slds-fade-in-open divOverflow"> 			                
+                <div class="slds-modal__container divOverflow">  
+                    <div class="txtAlignR"> 
+                        <lightning:buttonIcon iconName="utility:close" size="medium" alternativeText="Close" 
+                                              onclick="{!c.closeModal}" variant="bare-inverse"/>
+                    </div>
+                    <div class = "slds-modal__header" >
+                        <div class="slds-modal__content divOverflow"> 
+                            <h2 id="header99" class="slds-text-heading--medium MdlHdr">My Cases</h2>
+                            <table>
+                                <tr>                                   
+                                    <td width="20%;" class="PageCnt">
+                                        <ui:inputSelect aura:id="recordSize" label="Records per page: " change="{!c.onSelect}">
+                                            <ui:inputSelectOption text="5" label="5" value="true"/>
+                                            <ui:inputSelectOption text="10" label="10"/>
+                                            <ui:inputSelectOption text="25" label="25"/>
+                                            <ui:inputSelectOption text="50" label="50"/>
+                                        </ui:inputSelect>
+                                    </td>
+                                    <td style="text-align:right">
+                                        <lightning:button disabled="{!v.page == 1||v.page == 0}" variant="brand" label="Previous" onclick="{! c.navigateRecord }" />            
+                                        <lightning:button disabled="{!v.page == v.pages}" aura:id="previousPage" variant="brand" label="Next" onclick="{! c.navigateRecord }" />
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                        <br/>
+                        <div class="slds-modal__content divOverflowHt"> 
+                            <table class="slds-table slds-table--bordered " style="overflow-x:auto">
+                                <thead>
+                                    <tr class= "slds-text-title--caps">
+                                        
+                                        <th scope="col" class="TblHdr">
+	                                            <div class="slds-truncate" title="Case Number">Case Number</div>
+                                        </th>
+                                        <th scope="col" class="TblHdr">
+                                            <div class="slds-truncate" title="Subject">Subject</div>
+                                        </th>
+                                        <th scope="col" class="TblHdr">
+                                            <div class="slds-truncate" title="Subject">Interaction Reason</div>
+                                        </th>
+                                        <th scope="col" class="TblHdr">
+                                            <div class="slds-truncate" title="Subject">Account Name</div>
+                                        </th>
+                                        <th scope="col" class="TblHdr">
+                                            <div class="slds-truncate" title="Subject">contact Name</div>
+                                        </th>
+                                        <th scope="col" class="TblHdr">
+                                            <div class="slds-truncate" title="Status">Status</div>
+                                        </th>
+                                        <th scope="col" class="TblHdr">
+                                            <div class="slds-truncate" title="Priority">Priority</div>
+                                        </th>
+                                        
+                                        
+                                        <th scope="col" class="TblHdr" style="text-align:center">
+                                            <div class="slds-truncate" title="Activity">Open Activities</div>
+                                        </th>
+                                        <th scope="col" class="TblHdr" style="text-align:center">
+                                            <div class="slds-truncate" title="Release">Release</div>
+                                        </th> 
+                                    </tr>
+                                </thead>
+                                
+                                <tbody>
+                                    <aura:iteration items="{!v.NsAssignedCaseList}" var="cs" indexVar="index">
+                                        <tr>
+                                            
+                                            <td scope="row" class="TblData" data-label="Case Number">
+                                                <div class="slds-truncate" title="Case Number"><a href="{!'/one/one.app?#/sObject/'+ cs.Id + '/view'}" target="_blank">{!cs.CaseNumber}</a></div>                                   
+                                            </td>
+                                            <td scope="row" class="TblData" data-label="Subject">
+                                                <div class="slds-truncate" title="Subject">{!cs.Subject}</div>
+                                            </td> 
+                                            <td scope="row" class="TblData" data-label="Interaction Reason">
+                                                <div class="slds-truncate" title="Status">{!cs.NS_InteractionReason__c}</div>
+                                            </td>
+                                            <td scope="row" class="TblData" data-label="Account Name">
+                                                <div class="slds-truncate" title="Status">{!cs.Account.Name}</div>
+                                            </td>
+                                            <td scope="row" class="TblData" data-label="Contact Name">
+                                                <div class="slds-truncate" title="Status">{!cs.Contact.Name}</div>
+                                            </td>
+                                            <td scope="row" class="TblData" data-label="Status">
+                                                <div class="slds-truncate" title="Status">{!cs.Status}</div>
+                                            </td>
+                                            <td scope="row" class="TblData" data-label="Priority">
+                                                <div class="slds-truncate" title="Priority">{!cs.Priority}</div>
+                                            </td> 
+                                            
+                                            <td scope="row" class="TblData" data-label="Activity">
+                                                <div align = "center">
+                                                    <ui:outputCheckbox value="{!cs.Tasks != null ? True : False}"/>
+                                                </div>
+                                            </td> 
+                                            <td scope="row" class="TblData">
+                                                <div align = "center">                                                
+                                                    <ui:inputCheckbox text="{!cs.Id}" aura:id="checked" value="{!cs.NS_RetainCaseOwnership__c != True ? True : False}" change="{!c.chkboxSlct}" />                                                
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </aura:iteration>
+                                </tbody>
+                            </table> 
+                        </div>
+                        <br/>
+                        <div class="slds-modal__footer divOverflow"> 
+                            <lightning:button disabled="{!(empty(v.NsAssignedCaseList))}" variant="brand" label="Release" aura:id="CsRelease" onclick="{! c.releaseCs }" />       
+                            <lightning:button variant="brand" label="Cancel"  onclick="{! c.closeModal }"/>  
+                        </div>
+                    </div>
+                </div>
+            </div>            
+            <div class="slds-backdrop slds-backdrop--open"></div>          
+        </aura:if>
+    </div>
+</aura:component>

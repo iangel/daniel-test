@@ -1,0 +1,12 @@
+<apex:component controller="SasSCustomPageMessages">
+    <apex:attribute name="closableErrors" description="Whether a clickable x will render on the error allowing you to close it. Defaults to false. Will not work wherever scripts are disallowed. Also will not work without bootstrap js" type="Boolean" required="false"/>
+    <apex:repeat value="{!PageMessages}" var="message" id="pageMessageRepeat">
+        <div class="alert {!IF(message.SeverityStr=='confirm','alert-success',IF(message.SeverityStr=='info','alert-info',IF(message.SeverityStr=='warn','alert-danger','alert-error')))}">
+            <apex:variable var="CustomPageMessages_ClosableErrorsRenderPlaceHolder" value="{!CustomPageMessages_ClosableErrorsRenderPlaceHolder}" rendered="{!IF(closableErrors==TRUE,TRUE,FALSE)}" >
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </apex:variable>            
+            {!message.Message}
+        </div>
+    </apex:repeat>
+    <apex:pageMessages ></apex:pageMessages>
+</apex:component>

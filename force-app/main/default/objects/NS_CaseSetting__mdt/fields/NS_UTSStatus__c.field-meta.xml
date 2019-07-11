@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_UTSStatus__c</fullName>
+    <description>Status on Case Creation for Unit Train</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>If NS_Escalated, then Task Owner Group is required for push notification</inlineHelpText>
+    <label>UTS On Create</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NS_Escalated</fullName>
+                <default>true</default>
+                <label>NS_Escalated</label>
+            </value>
+            <value>
+                <fullName>NS_Closed</fullName>
+                <default>false</default>
+                <label>NS_Closed</label>
+            </value>
+            <value>
+                <fullName>NS_Working</fullName>
+                <default>false</default>
+                <label>NS_Working</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

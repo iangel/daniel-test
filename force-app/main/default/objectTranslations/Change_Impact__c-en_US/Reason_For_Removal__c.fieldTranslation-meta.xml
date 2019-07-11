@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Identify the reason for removal (i.e. duplicate, irrelevant, out of scope). If duplicate, please reference the live Change Impact. --></help>
+    <label><!-- Reason For Removal --></label>
+    <name>Reason_For_Removal__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>NS_AllReadAccess</fullName>
+        <accessLevel>Read</accessLevel>
+        <description>Read access of all Cases to CEO and subordinates</description>
+        <label>All Read Access</label>
+        <sharedTo>
+            <roleAndSubordinates>NS_Executive</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>OwnerId</field>
+            <operation>notEqual</operation>
+            <value>NULL</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingOwnerRules>
+        <fullName>OSS_Support_Sharing</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>OSS Support Sharing</label>
+        <sharedTo>
+            <role>OSS_Support</role>
+        </sharedTo>
+        <sharedFrom>
+            <queue>OSS_Leadership</queue>
+        </sharedFrom>
+    </sharingOwnerRules>
+</SharingRules>

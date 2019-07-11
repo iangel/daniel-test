@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sign_Off_Validation</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND( 
+LEN(Agreement__c)&gt;0 , Agreement__c &lt;&gt; Agreement_Statement__c 
+)</errorConditionFormula>
+    <errorDisplayField>Agreement__c</errorDisplayField>
+    <errorMessage>Please type the Agreement Statement exactly as it appears.</errorMessage>
+</ValidationRule>

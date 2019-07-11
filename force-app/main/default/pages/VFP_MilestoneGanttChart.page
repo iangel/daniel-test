@@ -1,0 +1,256 @@
+<!--
+    @Author: Accenture
+    @Description: Full View of GanttChart with Filter Conditions
+    @CreatedDate: 04/20/2017
+    @Version: <V.1.0>
+-->
+<apex:page standardController="Release__c" extensions="Cls_MilestoneGanttChart" showHeader="false" sidebar="false">
+ <body style="font-size:10px;padding=0px;"> 
+    <head>
+    <apex:includeScript value="/support/console/31.0/integration.js"/>
+    <apex:stylesheet value="{!URLFOR($Resource.GanttChart, 'Milestone1_Charts/css/style.css')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.GanttChart, 'Milestone1_Charts/js/jquery.min.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.GanttChart, 'Milestone1_Charts/js/dataDays.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.GanttChart, 'Milestone1_Charts/js/dataDaysEnh.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.GanttChart, 'Milestone1_Charts/js/dataHours.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.GanttChart, 'Milestone1_Charts/js/jquery.cookie.js')}"/>
+    <apex:includeScript value="{!URLFOR($Resource.GanttChart, 'Milestone1_Charts/js/jquery.fn.gantt.js')}"/>
+    <!--apex:includeScript value="{!URLFOR($Resource.GanttChart, 'Milestone1_Charts/js/jquery.fn.gantt.min.js')}"/-->    
+    <apex:includeScript value="{!URLFOR($Resource.GanttChart, 'Milestone1_Charts/tests/moment.min.js')}"/>
+    <apex:includeScript value="/support/console/31.0/integration.js"/>
+    <apex:includeScript value="/soap/ajax/20.0/connection.js"/>
+    <apex:stylesheet value="{!URLFOR($Resource.DEL_SLDS214, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+   
+   
+</head>
+
+<style>
+
+    .slds .slds-button + .slds-button, .slds .slds-button + .slds-button-group {
+        margin-left: 0px;
+    }
+    .slds .slds-input {
+    background-color: white;
+    color: #16325c;
+    border: 1px solid #d8dde6;
+    border-radius: 4px;
+    width: 65%;
+    -webkit-transition: border 0.1s linear, background-color 0.1s linear;
+    transition: border 0.1s linear, background-color 0.1s linear;
+    display: inline-block;
+    padding: 0 16px 0 12px;
+    line-height: 34px;
+    /* min-height: calc(34px + 2px); */
+    height: 25px;
+}
+
+.slds .slds-button--neutral:hover, .slds .slds-button--neutral:focus {
+    background-color: blue;
+    color: white;
+}
+
+</style>
+
+<script type="text/javascript">
+
+       var myWindow;
+        //var jQuery = jQuery.noConflict();
+          
+        jQuery(function () 
+        {
+            var sampleobj ={!ganttJson}; 
+            
+            function sortByKey(array, key){
+                return array.sort(function(a, b) {
+                    var d1 = Date.parse(a[key]);
+                    var d2 = Date.parse(b[key]);
+                    return ((d1 < d2) ? -1 : ((d1 > d2) ? 1 : 0));
+                });
+            }
+            sampleobj = sortByKey(sampleobj,"startDate");
+            
+            jQuery(".gantt").gantt({
+                 
+                source: sampleobj
+            });
+
+        });
+        
+        
+        var popupWindow;
+        function ganttView(){
+            //sforce.console.openPrimaryTab(null, '/apex/VFP_MilestoneGanttChart?ReleaseId={!Release__c.Id}', true);
+        }
+        
+        function ganttBack(){
+            window.top.close();
+        }
+     
+     
+       
+        function hidebaseObject(){
+            //document.getElementById('baseObjectForm').style.display = 'none';
+        }
+                    
+        var closeCurrentTab = function closeCurrentTab(result) {
+            var tabId = result.id;
+            sforce.console.closeTab(tabId);
+        };
+   
+ </script>   
+<apex:form id="formid"> 
+     <!--   <apex:actionFunction name="myFunc" action="{!getTeamTemplate}" rerender="">       
+              <apex:param name="site" value="" /> 
+         </apex:actionFunction> -->
+         
+         
+        <apex:actionFunction name="dosearchresults" reRender="" action="{!searchresults}"/>
+       <apex:outputPanel id="showresultsid" rendered="{!$CurrentPage.parameters.ReleaseId<>null}">
+       
+        <div  style="border-style: solid; border-width: 12px; border-color: aliceblue;">
+        <div class="slds" >
+            <div class="slds-page-header" role="banner" style="background-color: white;">
+                 <div class="slds-grid" style="Color:Blue;text-align:center;"> 
+                    <div class="slds-media">                        
+                        <div class="slds-media__body" style="text-align:center;">
+                            <b >{!$Label.Delivery_Select_Milestones}</b>
+                        </div>
+                    </div>
+               </div>
+            </div>
+        </div><br/>
+        <div class="slds"> 
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:1.5%;"></th>
+                    <th  scope="col" style="width:1%;font-size: 15px;">
+                        <div class="slds-truncate" title="Milestone Type">
+                            {!$Label.Delivery_Milestone_Type} 
+                        </div>                 
+                    </th>
+                    <th   style="width:5%;" scope="col">
+                        <div class="slds-truncate" title="Milestone Type">
+                            <apex:selectList value="{!selectedmilestoneValues}" size="1" multiselect="false" styleClass="slds-input">
+                                <apex:selectOptions value="{!milestoneValues}"/>
+                            </apex:selectList>
+                        </div>   
+                        
+                    </th>
+                    <th  style="width:1%;font-size: 15px;" scope="col">
+                        <div class="slds-truncate" title="Status">
+                            {!$Label.Delivery_Tex_Status}
+                        </div>
+                    </th>
+                    <th  style="width:1%;padding-right: 100px;" scope="col">
+                        <div class="slds-truncate" title="Status">
+                        <apex:selectcheckboxes value="{!selectedcheckboxvalues}" >
+                            <apex:selectOptions value="{!StatusValues}"/>
+                        </apex:selectcheckboxes>
+                        </div>
+                    </th>
+                </tr>
+            
+             </thead>
+        </table>
+        </div><br/><br/><br/>
+        <div class="slds">
+             <center>
+            <apex:actionfunction name="searchFilterJS" action="{!searchresults}"  />
+                <button class="slds-button slds-button--neutral" type="button" onClick="searchFilterJS();" id="searchFilterButton" style="background-color: blue;color: white;">
+                    {!$Label.Delivery_Search}
+                </button> 
+                <button class="slds-button slds-button--neutral" type="button" onClick="window.top.close();" id="backFilterButton" style="background-color: blue;color: white;">
+                    {!$Label.Delivery_Back}
+                </button> 
+                <apex:outputPanel rendered="{!!searchflag}">
+                <button class="slds-button slds-button--neutral" type="button" onclick="hidebaseObject();javascript:window.print('/apex/VFP_PrintViewMilestoneGanttChart?ReleaseId={!Release__c.Id}','_blank','height=1500,width=1200,resizable=yes');" style="background-color: blue;color: white;">
+                    {!$Label.Delivery_Print_View}                
+                </button>
+                </apex:outputPanel>
+        
+            </center>
+        </div><br/>
+        </div>
+        
+        
+        <!--  <apex:pageBlock id="blockid">   
+           
+              <apex:pageBlockSection title="Filter Criteria" collapsible="true">
+              <APEX:PAGEBlockSectionItem >
+                  
+                    
+                   <label style="font-size:150%">Milestones Type :</label>
+                <apex:selectList value="{!selectedmilestoneValues}" size="1" multiselect="false">
+                        <apex:selectOptions value="{!milestoneValues}"/>
+                 </apex:selectList>
+                </APEX:PAGEBlockSectionItem>   
+                 <APEX:PAGEBlockSectionItem >
+                <strong><label style="font-size:150%">Status : </label></strong>
+                <apex:selectcheckboxes value="{!selectedcheckboxvalues}" >
+                        <apex:selectOptions value="{!StatusValues}"/>
+                 </apex:selectcheckboxes>
+                 </APEX:PAGEBlockSectionItem> 
+               
+               </apex:pageBlockSection>
+               
+                 <center>
+                  <div id="baseObjectForm">
+                     <apex:commandButton value="Search" onclick="" action="{!searchresults}" id="searchid"/>
+                     <apex:commandButton id="backid" value="Back"  onclick="window.top.close();"/>
+                     <apex:outputPanel rendered="{!!searchflag}">
+                         <input type="submit" value="Print View" class="btn" onclick="hidebaseObject();javascript:window.print('/apex/VFP_PrintViewMilestoneGanttChart?ReleaseId={!Release__c.Id}','_blank','height=1500,width=1200,resizable=yes');" />
+                     </apex:outputPanel>
+                 </div>
+                 </center>
+               
+             </apex:pageBlock> 
+             
+             -->
+             
+              <apex:outputPanel rendered="{!$CurrentPage.parameters.ReleaseId<>null}" >
+              
+                  <apex:outputPanel rendered="{!searchflag}">
+                    <center>
+                    <h1>{!$Label.Delivery_Milestones_and_Keydecisions}</h1>
+                    </center>
+                </apex:outputPanel>
+                
+                 <apex:outputPanel rendered="{!!searchflag}">
+                 
+                  <div class="gantt"></div>    
+           <!-- <br/><apex:outputLink id="backid" value="#"  style="font-size:150%" onclick="ganttBack();" >Back</apex:outputLink> -->
+                </apex:outputPanel>
+              </apex:outputPanel>
+             
+             
+          </apex:outputPanel>
+          
+          
+            <apex:outputPanel rendered="{!$CurrentPage.parameters.ReleaseId == null}" >
+            
+           <apex:outputPanel rendered="{!noflag}">
+                <center>
+                <h1>{!$Label.Delivery_Milestones_and_Releases}</h1>
+                </center>
+            </apex:outputPanel>
+   
+         <apex:outputPanel rendered="{!!noflag}">
+            <center>
+            <!--apex:outputLink value="#"  onclick="ganttView();" rendered="{!$CurrentPage.parameters.CaseId==null}">Full Screen View</apex:outputLink> -->
+            <apex:outputLink value="#"  id="fullscreenid" onclick="javascript:window.open('/apex/VFP_MilestoneGanttChart?ReleaseId={!Release__c.Id}','_blank','height=1500,width=1200,resizable=yes');">Full Screen View</apex:outputLink>
+            </center>
+            
+               <div class="gantt"></div>
+            
+           </apex:outputPanel> 
+
+       
+            
+        
+        </apex:outputPanel>
+        
+         
+</apex:form>
+ </body>
+</apex:page>

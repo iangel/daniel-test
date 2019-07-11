@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Rate Request</label>
+    <protected>false</protected>
+    <values>
+        <field>Auto_Escalation__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>NS_Associate_Task_with_Case__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>NS_Email_Notification_for_Task_del__c</field>
+        <value xsi:type="xsd:boolean">false</value>
+    </values>
+    <values>
+        <field>NS_Record_Type_md__c</field>
+        <value xsi:type="xsd:string">Marketing/Sales</value>
+    </values>
+    <values>
+        <field>Priority__c</field>
+        <value xsi:type="xsd:string">Low</value>
+    </values>
+    <values>
+        <field>Public_Group_to_be_Notified__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

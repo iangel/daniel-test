@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Risk_Mitigation_Plan__c</fullName>
+    <description>Document the mitigation plan for this risk.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Document the mitigation plan for this risk.</inlineHelpText>
+    <label>Risk Mitigation Plan</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>TextArea</type>
+</CustomField>

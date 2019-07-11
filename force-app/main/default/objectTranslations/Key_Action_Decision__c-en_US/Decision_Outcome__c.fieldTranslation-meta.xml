@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Enter details of the outcome of the action item (what was determined) or the decision reached (what was agreed to, which option was selected). This field is required when Status is Completed. --></help>
+    <label><!-- Decision/Outcome --></label>
+    <name>Decision_Outcome__c</name>
+</CustomFieldTranslation>

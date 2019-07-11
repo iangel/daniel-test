@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Primary Contact</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Primary Contacts</value>
+    </caseValues>
+    <layouts>
+        <layout>Primary Contacts Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select a contact who is associated with the selected Account --></errorMessage>
+        <name>NS_CheckContactFromSameAccount</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive Account cannot be Linked. Please contact &quot;OSS Support&quot; or &quot;System Admin&quot; --></errorMessage>
+        <name>NS_RestrictInactiveAccountLookup</name>
+    </validationRules>
+</CustomObjectTranslation>

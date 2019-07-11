@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Retest_Comments</fullName>
+    <active>true</active>
+    <description>Used to enforce the user to enter the retest comment after retest</description>
+    <errorConditionFormula>AND(OR(ISNULL(Retesting_Comments__c),TRIM(Retesting_Comments__c)=&quot;&quot;,TRIM(PRIORVALUE(Retesting_Comments__c)) = TRIM(Retesting_Comments__c)), OR(AND(UPPER(MID(PRIORVALUE(Current_Status__c),1,9)) &lt;&gt; &quot;RE-OPENED&quot;,UPPER(MID(Current_Status__c,1,9)) = &quot;RE-OPENED&quot;), AND(UPPER(PRIORVALUE(Current_Status__c)) &lt;&gt; &quot;CLOSED - RESOLVED&quot;, UPPER(Current_Status__c) = &quot;CLOSED - RESOLVED&quot;)))</errorConditionFormula>
+    <errorMessage>Retest comments must be updated while reopening or closing error location defect</errorMessage>
+</ValidationRule>

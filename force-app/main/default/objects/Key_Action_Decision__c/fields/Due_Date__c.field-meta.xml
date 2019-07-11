@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Due_Date__c</fullName>
+    <description>Days exceeded</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Enter the date when the Action Item must be completed or the Decision must be made. Items not completed by the Due Date pose a risk to deliverables.</inlineHelpText>
+    <label>Due Date</label>
+    <required>false</required>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

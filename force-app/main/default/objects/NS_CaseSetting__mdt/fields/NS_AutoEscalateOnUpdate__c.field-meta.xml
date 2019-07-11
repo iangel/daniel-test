@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_AutoEscalateOnUpdate__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Escalate the Case status and change owner to Manager&#39;s queue on Case Update</description>
+    <externalId>false</externalId>
+    <fieldManageability>SubscriberControlled</fieldManageability>
+    <label>OSS Escalate on Update</label>
+    <type>Checkbox</type>
+</CustomField>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Design_Total__c</fullName>
+    <description>Estimated Level of Effort (Hours) for design of the request</description>
+    <externalId>false</externalId>
+    <label>Design Total</label>
+    <summarizedField>Application_Inventory__c.Total_Design__c</summarizedField>
+    <summaryForeignKey>Application_Inventory__c.Request__c</summaryForeignKey>
+    <summaryOperation>sum</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

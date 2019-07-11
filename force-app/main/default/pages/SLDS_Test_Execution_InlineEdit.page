@@ -1,0 +1,251 @@
+<!--
+    @Author: Accenture
+    @Description: Updating Script steps  from Script Execution level
+    @CreatedDate: 03/02/2017
+    @Version: <V.1.0>
+-->
+<apex:page standardController="Test_Execution__c" showHeader="true" sidebar="false" extensions="VFC_Test_Execution_InlineEdit">
+   <apex:stylesheet value="{!URLFOR($Resource.DEL_SLDS214, 'assets/styles/salesforce-lightning-design-system-vf.css')}" />
+  <!-- <apex:stylesheet value="/resource/DEL_SLDS214/assets/styles/salesforce-lightning-design-system-vf.css"/>-->
+  <!--<apex:includeScript value="https://code.jquery.com/jquery-1.11.3.min.js" />-->
+
+<apex:form >
+  <div class="slds" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <div class="slds-page-header" role="banner">
+          <!-- LAYOUT GRID -->
+          <div class="slds-grid">
+            <!-- GRID COL -->
+            <div class="slds-col">
+        
+                <!-- HEADING AREA -->
+                <!-- MEDIA OBJECT = FIGURE + BODY -->
+                <div class="slds-media">        
+                    <div class="slds-media__figure">
+                        <span class="slds-icon__container slds-icon__container--circle slds-icon-action-description">
+                            <svg aria-hidden="true" class="slds-icon slds-icon--medium ">
+                            <use xlink:href="{!URLFOR($Resource.DEL_SLDS214, '/assets/icons/action-sprite/svg/symbols.svg#new_custom43')}"></use>
+                            </svg>              
+                        </span>
+                    </div>
+                    
+                    <div class="slds-media__body">
+                        <p class="slds-text-heading--label">{!$Label.TSE_Parent_Label}</p>
+                        <h1 class="slds-text-heading--medium">{!$Label.TSE_Parent_Label_Sub}</h1>
+                    </div>
+                
+                </div>
+              <!-- / MEDIA OBJECT -->
+              <!-- /HEADING AREA -->
+        
+            </div>
+            <!-- /GRID COL -->
+            
+            <!-- GRID COL -->
+            <div id="newAct" class="slds-col slds-no-flex slds-align-middle">
+                
+                <apex:actionFunction name="saveData" action="{!saveAndCongrat}" />
+                <button class="slds-button slds-button--neutral" type="button" onClick="saveData();">
+                      
+                  {!$Label.Delivery_Save} 
+                </button>
+            </div>
+            
+             <div id="newAct" class="slds-col slds-no-flex slds-align-middle">
+                
+                <apex:actionfunction name="callcancelJS" action="{!cancelB}"  />
+
+                <button class="slds-button slds-button--neutral" type="button" onClick="callcancelJS();">
+                  {!$Label.Delivery_Cancel}
+                </button>
+        
+            </div>
+            <!-- / GRID COL -->
+        
+          </div>
+          <!-- / LAYOUT GRID -->
+          
+        </div><br/><br/>
+     
+      <!----Below Title---------------->  
+        <div class ="slds-grid">
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                
+                    <div class="slds-form-element__control">
+                       <b>{!$Label.Delivery_TestExecutionId} </b>
+                    </div>
+                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                    <div class="slds-form-element__control">
+                        <apex:outputField id="execId" html-data-rule-required="true" styleClass="slds-input" value="{!Test_Execution__c.Name}" style="width:23%;min-height:0px;padding-left: 70%;height:25px;"/>
+                        
+                    </div>                
+            </div>
+            
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                
+                    <div class="slds-form-element__control">
+                       <b>{!$Label.Delivery_Test_Script_ID} </b>
+                    </div>
+                
+            </div>
+            <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                    <div class="slds-form-element__control">
+                        <apex:outputField id="scrptId" html-data-rule-required="true" styleClass="slds-output" value="{!Test_Execution__c.Test_Script_Description__c}" style="width:23%;min-height:0px;height:25px;"/>
+                        
+                    </div>                
+            </div></div>
+            
+            <br/>
+            <div class="slds-grid">
+            
+                <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                    
+                        <div class="slds-form-element__control">
+                           <b>{!$Label.Delivery_Execution_Cycle_Name} </b>
+                        </div>
+                    
+                </div>
+                <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                        <div class="slds-form-element__control">
+                            <apex:outputField id="exCyclId" html-data-rule-required="true" styleClass="slds-output" value="{!Test_Execution__c.Execution_Cycle_Name__c}" style="width:23%;min-height:0px;height:25px;"/>
+                            
+                        </div>                
+                </div>
+                 <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                    
+                        <div class="slds-form-element__control">
+                           <b>{!$Label.Delivery_Description_of_Script} </b>
+                        </div>
+                    
+                </div>
+                <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                        <div class="slds-form-element__control">
+                            <apex:outputField id="desId"  styleClass="slds-output" value="{!Test_Execution__c.Description_of_Script__c}" style="width:23%;min-height:0px;height:25px;"/>
+                            
+                        </div>                
+                </div>
+                
+               
+        </div><br/>
+        
+        <div class="slds-grid">
+            
+                <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                    
+                        <div class="slds-form-element__control">
+                           <b>{!$Label.Delivery_Tex_Status} </b>
+                        </div>
+                    
+                </div>
+                <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                        <div class="slds-form-element__control">
+                            <apex:inputField id="statId"  styleClass="slds-input" value="{!Test_Execution__c.Status__c}" style="width:40%;min-height:0px;height:25px;"/>
+                            
+                        </div>                
+                </div>
+                
+                 <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">
+                    
+                        <div class="slds-form-element__control">
+                           <b>{!$Label.Delivery_Comments} </b>
+                        </div>
+                    
+                </div>
+                <div class="slds-col--padded slds-size--1-of-2 slds-medium-size--1-of-2 slds-large-size--1-of-2">                
+                        <div class="slds-form-element__control">
+                            <apex:inputTextarea cols="2" id="comId" html-data-rule-required="true" styleClass="slds-input" value="{!Test_Execution__c.Comments__c}" style="width:80%;min-height: 70px;height: 60px;"/>
+                            
+                        </div>                
+                </div>
+                
+                
+                
+               
+        </div><br/>
+        
+        <!-- Test Script Executions Steps ------------>
+        <div class="slds-page-header" role="banner">
+        <div class="slds-grid">
+            <div class="slds-col">
+                <div class="slds-media">        
+                                     
+                    <div class="slds-media__body">
+                        
+                        <h1 class="slds-text-heading--small">{!$Label.TES_Child_Label}</h1>
+                    </div>
+                
+                </div>
+            </div>
+          </div>
+      </div>
+        
+        <div>
+        
+           <table class="slds-table slds-table--bordered slds-table--cell-buffer slds-max-medium-table--stacked">
+                  <thead style="background-Color:#6495ED;color:white;">
+                    <tr class="slds-text-title--caps">
+                     <th scope="col">
+                        <div class="slds-truncate" title="Step Order">{!$Label.Delivery_Step_Order}</div>
+                      </th>
+                      <th scope="col">
+                        <div class="slds-truncate" title="Execution Step Name">{!$Label.Delivery_Execution_Step_Name}</div>
+                      </th>    
+                      <th scope="col">
+                        <div class="slds-truncate" title="Expected Result">{!$Label.Delivery_Expected_Result}</div>
+                      </th>
+                      <th scope="col">
+                        <div class="slds-truncate" title="Input Data">{!$Label.Delivery_Input_Data}</div>
+                      </th>
+                      <th scope="col">
+                        <div class="slds-truncate" title="User Login Details">{!$Label.Delivery_User_Login_Details}</div>
+                      </th>
+                      <th scope="col">
+                        <div class="slds-truncate" title="Status">{!$Label.Delivery_Tex_Status}</div>
+                      </th>
+                      <th scope="col">
+                        <div class="slds-truncate" title="Actual Result">{!$Label.Delivery_Actual_Result}</div>
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                      <apex:repeat value="{!testExstps}" var="tes">
+                          <tr>
+                              <td data-label="Step Order">
+                                <div class="slds-truncate" title="StepOrder">{!tes.Step_Order__c}</div>
+                              </td>
+                              <td data-label="Step Name">
+                                <div class="slds-truncate" title="StepName">{!tes.Name}</div>
+                              </td>
+                              <td data-label="Expected Result">
+                                <div class="slds-truncate" title="ExpectResult">{!tes.Expected_Result__c}</div>
+                              </td>
+                              <td data-label="Input Data">
+                                <div class="slds-truncate" title="InputData">{!tes.Input_Data__c}</div>
+                              </td>
+                              <td data-label="LoginDetails">
+                                <div class="slds-truncate" title="LoginDetails">{!tes.User_Login_Details__c}</div>
+                              </td>
+                              <td data-label="Status">
+                                <div class="slds-truncate" title="Status">
+                                <apex:inputField value="{!tes.Status__c}" styleClass="slds-input" required="false" style="width:70%;"/></div>
+                              </td>
+                              <td data-label="Actual Result" style="height:40px;">
+                                <div class="slds-form-element__control" title="actaulResult">                                
+                                <!-- <apex:inputField value="{!tes.Actual_Result__c}" required="false" styleClass="slds-output" style="width:90%;min-height:0px;height:50px;"/></div> -->
+                               <apex:inputTextarea cols="2" value="{!tes.Actual_Result__c}" styleClass="slds-input" required="false" style="width:100%;min-height:0px;height:63px;"/></div>
+                              </td>
+                              
+                                                  
+                          </tr>
+                      </apex:repeat>
+                  
+                  </tbody>
+                  </table><br/><br/><br/><br/>
+        
+        </div>
+        
+        
+ </div>
+ </apex:form>
+</apex:page>

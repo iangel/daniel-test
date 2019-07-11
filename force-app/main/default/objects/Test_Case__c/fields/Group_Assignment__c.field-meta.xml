@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Group_Assignment__c</fullName>
+    <externalId>false</externalId>
+    <label>Group Assignment</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>OSS Rep - Group 1</fullName>
+                <default>false</default>
+                <label>OSS Rep - Group 1</label>
+            </value>
+            <value>
+                <fullName>OSS Rep - Group 2</fullName>
+                <default>false</default>
+                <label>OSS Rep - Group 2</label>
+            </value>
+            <value>
+                <fullName>OSS Rep - Group 3</fullName>
+                <default>false</default>
+                <label>OSS Rep - Group 3</label>
+            </value>
+            <value>
+                <fullName>OSS Manager - Group 1</fullName>
+                <default>false</default>
+                <label>OSS Manager - Group 1</label>
+            </value>
+            <value>
+                <fullName>OSS Manager - Group 2</fullName>
+                <default>false</default>
+                <label>OSS Manager - Group 2</label>
+            </value>
+            <value>
+                <fullName>OSS Support - Group 1</fullName>
+                <default>false</default>
+                <label>OSS Support - Group 1</label>
+            </value>
+            <value>
+                <fullName>OSS Support - Group 2</fullName>
+                <default>false</default>
+                <label>OSS Support - Group 2</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

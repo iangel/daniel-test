@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>tncsoautomotiveemptyml@nscorp.com</email>
+    <name>Automotive - Empties</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>NS_AutomotiveEmpties</publicGroup>
+        </publicGroups>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

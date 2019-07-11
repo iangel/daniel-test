@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Automotive</fullName>
+        <default>false</default>
+        <label>Automotive</label>
+    </customValue>
+    <customValue>
+        <fullName>Equipment Planning</fullName>
+        <default>false</default>
+        <label>Equipment Planning</label>
+    </customValue>
+    <customValue>
+        <fullName>Unit Train</fullName>
+        <default>false</default>
+        <label>Unit Train</label>
+    </customValue>
+    <customValue>
+        <fullName>Marketing</fullName>
+        <default>false</default>
+        <label>Marketing</label>
+    </customValue>
+    <customValue>
+        <fullName>Coal</fullName>
+        <default>false</default>
+        <label>Coal</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial Development</fullName>
+        <default>false</default>
+        <label>Industrial Development</label>
+    </customValue>
+    <customValue>
+        <fullName>Industrial Products</fullName>
+        <default>false</default>
+        <label>Industrial Products</label>
+    </customValue>
+    <customValue>
+        <fullName>TDIS</fullName>
+        <default>false</default>
+        <label>TDIS</label>
+    </customValue>
+    <customValue>
+        <fullName>Intermodal</fullName>
+        <default>false</default>
+        <label>Intermodal</label>
+    </customValue>
+    <customValue>
+        <fullName>OSS</fullName>
+        <default>false</default>
+        <label>OSS</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue Accounting</fullName>
+        <default>false</default>
+        <label>Revenue Accounting</label>
+    </customValue>
+    <customValue>
+        <fullName>Revenue Waybilling</fullName>
+        <default>false</default>
+        <label>Revenue Waybilling</label>
+    </customValue>
+    <customValue>
+        <fullName>Accenture Recommendation</fullName>
+        <default>false</default>
+        <label>Accenture Recommendation</label>
+    </customValue>
+    <customValue>
+        <fullName>All</fullName>
+        <default>false</default>
+        <label>All</label>
+    </customValue>
+    <masterLabel>Business Unit</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority__c</fullName>
+    <description>Priority of the defect</description>
+    <externalId>false</externalId>
+    <label>Priority</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>1 - Critical</fullName>
+                <default>false</default>
+                <label>1 - Critical</label>
+            </value>
+            <value>
+                <fullName>2 - High</fullName>
+                <default>false</default>
+                <label>2 - High</label>
+            </value>
+            <value>
+                <fullName>3 - Medium</fullName>
+                <default>true</default>
+                <label>3 - Medium</label>
+            </value>
+            <value>
+                <fullName>4 - Low</fullName>
+                <default>false</default>
+                <label>4 - Low</label>
+            </value>
+            <value>
+                <fullName>5 - Change Request</fullName>
+                <default>false</default>
+                <label>5 - Change Request</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

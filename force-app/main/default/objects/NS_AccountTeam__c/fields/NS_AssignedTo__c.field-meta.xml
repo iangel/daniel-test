@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_AssignedTo__c</fullName>
+    <description>If Business Unit = OSS, this field gets populated with “Assigned To Region”.  If all other business units, then  “Assigned To User&quot;&quot;.A validation rule has been created and hence removed from here. Now its Combination of Assigned To Id or Assigned To region.</description>
+    <externalId>false</externalId>
+    <formula>IF(
+NOT(OR(ISNULL(NS_AssignedToUser__c), ISBLANK(NS_AssignedToUser__c))),NS_AssignedToUser__r.FirstName 
++&#39; &#39;+ NS_AssignedToUser__r.LastName ,IF(NOT(OR(ISNULL(TEXT(NS_AssignedToRegion__c)), ISBLANK(TEXT(NS_AssignedToRegion__c)))), TEXT(NS_AssignedToRegion__c), &#39;&#39;))</formula>
+    <label>Assigned To</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

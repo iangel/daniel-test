@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Sprint --></label>
+    <name>Sprint__c</name>
+    <picklistValues>
+        <masterLabel>Sprint 1</masterLabel>
+        <translation><!-- Sprint 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sprint 2</masterLabel>
+        <translation><!-- Sprint 2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sprint 3</masterLabel>
+        <translation><!-- Sprint 3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sprint 4</masterLabel>
+        <translation><!-- Sprint 4 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sprint 5</masterLabel>
+        <translation><!-- Sprint 5 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sprint 6</masterLabel>
+        <translation><!-- Sprint 6 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Sprint 7</masterLabel>
+        <translation><!-- Sprint 7 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

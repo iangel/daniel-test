@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phase_2</fullName>
+    <columns>NAME</columns>
+    <columns>Release__c</columns>
+    <columns>OWNER.FIRST_NAME</columns>
+    <columns>OWNER.LAST_NAME</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Release__c</field>
+        <operation>equals</operation>
+        <value>Phase 2</value>
+    </filters>
+    <label>Phase 2</label>
+</ListView>

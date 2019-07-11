@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If you are unsure of the type of request you are submitting, please select Unknown. --></help>
+    <label><!-- Request Type --></label>
+    <name>Request_Type__c</name>
+    <picklistValues>
+        <masterLabel>Configuration</masterLabel>
+        <translation><!-- Configuration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Custom Code</masterLabel>
+        <translation><!-- Custom Code --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Access</masterLabel>
+        <translation><!-- Data Access --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Migration</masterLabel>
+        <translation><!-- Data Migration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Documentation</masterLabel>
+        <translation><!-- Documentation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integration</masterLabel>
+        <translation><!-- Integration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Unknown</masterLabel>
+        <translation><!-- Unknown --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Administration</masterLabel>
+        <translation><!-- User Administration --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>User Story</masterLabel>
+        <translation><!-- User Story --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

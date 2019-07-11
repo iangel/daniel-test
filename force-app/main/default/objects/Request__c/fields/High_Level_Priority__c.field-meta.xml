@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>High_Level_Priority__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>Must have vs Nice to have is an initial attempt at determining priority for the overall project, not just phase 1.</inlineHelpText>
+    <label>High Level Priority</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>TBD</fullName>
+                <default>false</default>
+                <label>TBD</label>
+            </value>
+            <value>
+                <fullName>Must Have</fullName>
+                <default>false</default>
+                <label>Must Have</label>
+            </value>
+            <value>
+                <fullName>Nice To Have</fullName>
+                <default>false</default>
+                <label>Nice To Have</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

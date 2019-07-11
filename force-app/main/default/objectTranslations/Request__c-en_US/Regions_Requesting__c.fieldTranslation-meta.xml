@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Regions Requesting --></label>
+    <name>Regions_Requesting__c</name>
+    <picklistValues>
+        <masterLabel>Africa</masterLabel>
+        <translation><!-- Africa --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Asia Pacific</masterLabel>
+        <translation><!-- Asia Pacific --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Europe</masterLabel>
+        <translation><!-- Europe --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Global</masterLabel>
+        <translation><!-- Global --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Latin America</masterLabel>
+        <translation><!-- Latin America --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>North America</masterLabel>
+        <translation><!-- North America --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

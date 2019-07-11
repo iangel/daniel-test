@@ -1,0 +1,58 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false" controller="SaaSValueDeliveryCtrl" >
+<body  background="{!URLFOR($Resource.ValueDeliveryApproachV1, 'img/bgimage-new.jpg')}"/> 
+<c:SaaSToolkitPageHeader />
+
+<apex:form >
+<div class="container">
+    <div class="row">
+        <div class="Absolute-Center is-Responsive">
+            <div class="col-sm-12 col-md-12">
+            <c:CustomPageMessages closableErrors="true"></c:CustomPageMessages>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">     
+                        <div class="form-group required">  
+                            <label class='control-label'>Project Name</label><br/>
+                            <apex:selectList value="{!releaseID}" size="1"   label="Project Name" style="width:100%;" styleClass="form-control">
+                            <apex:selectOptions value="{!releases}" />
+                            <apex:actionSupport reRender="sessionLst" event="onchange"/>
+                            </apex:selectList>
+                        </div>
+                   </div>
+              </div>
+             <div class="row">
+                 <div class="col-sm-12 col-md-12">     
+                     <div class="form-group required">  
+                        <label class='control-label'>VALUE Delivery Session</label><br/>
+                        <apex:selectList value="{!sessionID}" size="1"  id="sessionLst"  label="VALUE Delivery Session" style="width:100%;" styleClass="form-control">
+                        <apex:selectOptions value="{!Session}" />
+                        <apex:actionSupport reRender="sessionLst" event="onchange"/>
+                        </apex:selectList>
+                     </div>
+                 </div>
+             </div>
+
+             <div class="row">
+                 <apex:outputPanel styleClass="col-sm-9 col-md-9" rendered="{!$ObjectType.Value_Delivery_Setup__c.createable}">
+            <!-- <label class='control-label'>
+                    Create VALUE Delivery Session ? &nbsp; <apex:outputLink value="/apex/SaaSCreateSession">Click here</apex:outputLink>
+            </label>
+                 </apex:outputPanel>
+                 <apex:outputPanel styleClass="col-sm-9 col-md-9" rendered="{!NOT($ObjectType.Value_Delivery_Setup__c.createable)}">
+
+                       &nbsp;
+  -->
+                 </apex:outputPanel>
+                 <div class="col-sm-3 col-md-3">     
+                      <apex:commandButton value="GO" action="{!updateValueDelSession}" style="float:right;" Styleclass="btn btn-primary"/>
+                 </div>
+             </div>  
+          </div>  
+       </div>    
+    </div>
+</div>
+
+      
+
+</apex:form> 
+
+</apex:page>

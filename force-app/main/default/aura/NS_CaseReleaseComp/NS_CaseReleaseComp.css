@@ -1,0 +1,54 @@
+.THIS .FontSelect{
+    font-family:Lato,"Segoe UI",Arial; 
+}
+
+.THIS .MdlHdr {
+	font-weight:bold;
+	font-size:18px;
+	color:#1d1d1d;
+	text-align:center;
+}
+.THIS .TblHdr {
+    font-weight:bold;
+    font-size:10px;
+    color:#555650;
+    text-align:left;
+    background:#efefef;
+	height:26px;
+}
+.THIS .TblData {
+	font-size:12px;
+	color:#2c2d28;
+	letter-spacing:0;
+	height:18px;
+    text-align:left;
+}
+.THIS .TblVisible {
+    background:#efefef;
+	height:26px;
+    width:0px;
+}
+.THIS .DataVisible {
+	height:18px;
+    width:0px;
+}
+.THIS .PageCnt {
+	font-size:11px;
+	color:#2c2d28;
+	text-align:left;
+}
+.THIS .slds-modal__container{
+       max-width: 90rem !important;
+       width:90% !important;
+
+}
+.THIS .divOverflow{
+	overflow-x:auto;
+}
+.THIS .divOverflowHt{
+	overflow-x:auto;
+    height:240px;
+}
+.THIS .txtAlignR{
+    text-align:right;
+}

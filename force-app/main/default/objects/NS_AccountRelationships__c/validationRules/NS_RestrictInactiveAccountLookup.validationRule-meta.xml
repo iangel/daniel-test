@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_RestrictInactiveAccountLookup</fullName>
+    <active>true</active>
+    <description>Inactive Account cannot be Linked. Please contact &quot;OSS Support&quot; or &quot;System Admin&quot;</description>
+    <errorConditionFormula>AND( 
+OR( 
+ISPICKVAL(  NS_BusinessAccount__r.NS_StatusIndicator__c  , &#39;Inactive&#39;), 
+ISPICKVAL(  NS_CorporateAccount__r.NS_StatusIndicator__c , &#39;Inactive&#39;), 
+ISPICKVAL(  NS_ServiceAccount__r.NS_StatusIndicator__c 
+ , &#39;Inactive&#39;)), 
+NOT(OR($Profile.Name = &#39;System Administrator&#39;, $Profile.Name = &#39;OSS Support&#39;)) 
+)</errorConditionFormula>
+    <errorMessage>Inactive Account cannot be Linked. Please contact &quot;OSS Support&quot; or &quot;System Admin&quot;</errorMessage>
+</ValidationRule>

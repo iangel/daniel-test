@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>NS_Change_External_ID_Field</fullName>
+        <field>NS_External_ID__c</field>
+        <formula>NS_External_ID_Formula__c</formula>
+        <name>NS_Change External ID Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>NS_Update External ID</fullName>
+        <actions>
+            <name>NS_Change_External_ID_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>NS_AccountRelation__c.NS_External_ID_Formula__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <description>Update external ID field from formula</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Available_Capacity__c</fullName>
+    <description>Total available capacity which is sum of total available plan, design, build, test, UAT, deploy &amp; support capacity</description>
+    <externalId>false</externalId>
+    <formula>Total_Plan_Capacity__c  +  Total_Design_Capacity__c  +  Total_Build_Capacity__c  +  Total_Test_Capacity__c  +  Total_Deploy_Capacity__c  +  Total_UAT__c  + Total_Adapt_Ongoing_Support_Capacity__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Available Capacity</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

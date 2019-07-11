@@ -1,0 +1,124 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" standardController="Question_Log__c" extensions="SaaSLinkToQuestionCtrl" >
+    <c:SaaSToolkitPageTemplate >
+        <apex:form >
+      <br />
+             <apex:outputPanel id="errorBlock">
+                <c:CustomPageMessages closableErrors="true" />
+            </apex:outputPanel>
+            
+            <h4>Link to Request
+             
+             
+                   <!-- <apex:commandButton action="{!linkToRequest}" value="Link To Request" styleClass="btn btn-primary"  reRender="errorBlock" /> &nbsp;-->
+                    <!--<apex:commandButton action="/apex/SaaSCreateQuestionLog?detail=1&&id={!Question_Log__c.id}" value="Back" styleClass="btn btn-primary"/> -->
+                   
+                
+                <apex:commandLink action="{!linkToRequest}" reRender="errorBlock" title="Link to Request" >       
+                      &nbsp;      <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/link_to_request.png')}"/>
+                    </apex:commandLink>  
+                <apex:commandLink action="/apex/SaaSCreateQuestionLog?detail=1&&id={!Question_Log__c.id}"  title="Back" >       
+                      &nbsp;      <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/back_1x.png')}"/>
+                    </apex:commandLink> 
+              
+            </h4>
+                
+            <hr style="width: 100%; border-color: black;" />
+
+            <div class="row">
+              <div class="col-lg-12 col-sm-12 col-md-12" style="width:97%;">
+                    <apex:outputPanel id="listView">
+                      <table class="table table-fixedheader table-bordered"> 
+                            <thead class="customTableHeader">
+                                <tr>
+                                    <th class="colWidth20">Select</th>
+                                    <th class="colWidth20">Request Id</th>
+                                    <th class="colWidth60">Request Description</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            <apex:repeat VALue="{!requestWrapLst}" VAr="requestWrap">
+                                 <tr>
+                                    <td class="colWidth20">
+                                    
+                                        <apex:inputCheckbox value="{!requestWrap.checked}" >
+                                        <apex:actionSupport event="onclick" action="{!updateSelectedRequest}" reRender="updateSelectedReq">  
+
+                                       </apex:actionSupport>
+                                       </apex:inputCheckbox>                                        
+                                    </td>
+                                    <td class="colWidth20">
+                                    <a href='/apex/SaaSCreateRequest?detail=1&&id={!requestWrap.requestListObj.id}'> {!requestWrap.requestListObj.Name} </a>
+                                    </td>
+                                    <td class="colWidth60">{!requestWrap.requestListObj.Request_Description__c}</td>
+                                </tr>
+                            </apex:repeat> 
+                            </tbody>
+                        </table>
+                    </apex:outputPanel>
+                    <div class="row">
+                        <div class="col-lg-12 col-sm-12 col-md-12">
+                            <center>
+                                <apex:outputPanel id="navPanel">
+                                    <apex:image url="/img/search_prevarrow_disabled.gif" styleClass="prevArrow" rendered="{!NOt(hasPrevious)}" />&nbsp;&nbsp;
+                                    <apex:image url="/img/search_prevarrow.gif" title="Previous Page" styleClass="prevArrow" rendered="{!hasPrevious}" />&nbsp;&nbsp; 
+                                    <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!not(hasPrevious)}">Previous</apex:outputPanel>
+                                    <apex:commandLink value="Previous" action="{!Previous}" rendered="{!hasPrevious}" reRender="listView,navPanel" />&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <apex:commandLink value="Next" action="{!Next}" rendered="{!hasNext}" reRender="listView,navPanel" />&nbsp;&nbsp;
+                                    <apex:outputPanel styleClass="pShowLess noLink" style="color:grey" rendered="{!NOt(hasNext)}">Next</apex:outputPanel>&nbsp;&nbsp; 
+                                    <apex:image url="/img/search_nextarrow.gif" title="Next Page" styleClass="nextArrow" rendered="{!hasNext}" />
+                                    <apex:image url="/img/search_nextarrow_disabled.gif" rendered="{!NOt(hasNext)}" />
+                                    <br />
+                                    <br />
+                                </apex:outputPanel>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+            <div class="row">
+                
+                    <apex:outputPanel id="updateSelectedReq">
+                    <apex:outputPanel rendered="{!selectedrequestWrapLst.size > 0}">            
+                    
+                        
+                       <div style="margin: 0px 15px;"> <h4>Selected Request</h4>
+                <hr style="width: 100%; border-color: black;" /></div>
+                <div class="col-lg-12 col-sm-12 col-md-12" style="width:97%;">
+                
+                        <table class="table table-fixedheader table-bordered"> 
+                            <thead class="customTableHeader">
+                                <tr>
+                                    <th class="colWidth20">Select</th>
+                                    <th class="colWidth20">Request Id</th>
+                                    <th class="colWidth60">Request Description</th>
+                                </tr>
+                            </thead>
+                            <tbody style="max-height: 300px;">
+                            <apex:repeat value="{!selectedrequestWrapLst}" var="req">  
+                            <tr>
+                                <td class="colWidth20"> <apex:inputCheckbox value="{!req.checked}" /></td>
+                                <td class="colWidth20">{!req.requestListObj.name} </td>
+                                <td class="colWidth60">{!req.requestListObj.Request_Description__c} </td>
+                                
+                            </tr>
+                        </apex:repeat>
+                        </tbody>
+                    </table>
+                    </div>
+                    
+                </apex:outputPanel>
+            
+            </apex:outputPanel>
+            
+            </div>
+            <div class="text-center">
+             <apex:commandLink action="{!linkToRequest}" reRender="errorBlock" title="Link to Request" >       
+                      &nbsp;      <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/link_to_request.png')}"/>
+                    </apex:commandLink>  
+                <apex:commandLink action="/apex/SaaSCreateQuestionLog?detail=1&&id={!Question_Log__c.id}"  title="Back" >       
+                      &nbsp;      <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/back_1x.png')}"/>
+                    </apex:commandLink> 
+            </div>
+        </apex:form>
+    </c:SaaSToolkitPageTemplate>
+</apex:page>

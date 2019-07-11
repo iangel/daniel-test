@@ -1,0 +1,438 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" extensions="SaaSSessionOutcomeDetailCtrl" standardController="Value_Delivery_Session_Outcomes__c" docType="html-5.0">
+    <style>
+.form-group.required .control-label:after {
+    content: " *";
+    color: red;
+    font-size: 130%;
+
+
+}
+label{
+padding-right:10px;
+}
+/*input[type="radio"] {
+  margin-right: 20px;
+}*/
+
+.Column
+{
+    display: table-cell;
+    padding-right: 127px;
+}
+</style>
+    <c:CrpiPageTemplate >
+    <br />
+    <apex:form >
+        <apex:actionFunction action="{!getParticipants}" name="deleteParticipants" reRender="panelDetal">
+            <apex:param name="participantsId" value="" />
+        </apex:actionFunction>
+        <apex:actionFunction action="{!getParticipants}" name="updateParticipants" reRender="updateParPanel">
+            <apex:param name="participantsId" value="" />
+        </apex:actionFunction>
+        
+        <apex:actionFunction action="{!getUserStoryOptions}" name="getVote" reRender="voteModelPanel">
+            <apex:param name="SessionsUserStorys" value="" />
+        </apex:actionFunction>
+        
+         <apex:actionFunction action="{!getSessionsUserStory}" name="deleteSessionUsrStory" reRender="sessionPanel">
+            <apex:param name="SessionsUserStorysID" value="" />
+        </apex:actionFunction>
+        <apex:outputPanel id="errorBlock">
+            <c:CustomPageMessages closableErrors="true" />
+        </apex:outputPanel>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <p>
+                    <b>&nbsp;{!valueSessionPrjName}&nbsp;&#9830;&nbsp;{!sessOutcomeObj.Phase__c}&nbsp;&#9830;&nbsp;{!sessOutcomeObj.Name}</b>
+                </p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                    &nbsp;
+                <apex:commandLink action="{!saveSessionOutcome}" title="Save" rendered="{!$ObjectType.Value_Delivery_Session_Outcomes__c.updateable}">
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/save.png')}" />&nbsp;
+                </apex:commandLink>
+                <apex:commandLink action="/apex/CrpiHomePage" title="Cancel" immediate="true" id="cancel">
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/cancel.png')}" />
+                </apex:commandLink>
+                    &nbsp;
+            </div>
+        </div>
+        <br />
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5 Style="font-weight: bold;">Session Summary</h5>
+                                <hr class="hrBorder" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group required">
+                                    <label class='control-label'>Session Name</label>
+                                    <apex:inputField value="{!sessOutcomeObj.Name}" style="width:100%;" styleClass="form-control" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                            <div class="form-group required">
+                                <label class='control-label'>Phase</label>
+                                <apex:inputField value="{!sessOutcomeObj.Phase__c}" style="width:100%;" styleClass="form-control" />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                        <div class="form-group required">
+                            <label>Owner</label>
+                            <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="User" valueField="Id" targetField="{!sessOutcomeObj.SessionOwner__c}" style="width:100%;" />
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>Start Date</label>
+                            <apex:input type="datetime-local" value="{!sessonStartDate}" style="width:100%;" styleClass="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label>End Date</label>
+                            <apex:input type="datetime-local" value="{!sessonEndDate }" style="width:100%;" styleClass="form-control" />
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="form-group">
+                            <label></label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label>Session Outomes</label>
+                            <apex:inputField value="{!sessOutcomeObj.Session_Outcome__c}" style="width:100%" styleClass="form-control" />
+                        </div>
+                    </div>
+                </div>
+                        <apex:outputPanel id="participantsDetails">
+                            <H4>
+                                Key Participants
+                                <apex:outputLink html-data-toggle="modal" value="#" html-data-target="#insertNewParts" rendered="{!$ObjectType.Value_Delivery_Setup__c.createable}">
+                                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/plus.png')}" />
+                                </apex:outputLink>
+                            </h4>
+                            <apex:outputPanel rendered="{!AllKeyParticipants.size  == 0}">
+                                        No records to display
+                                    </apex:outputPanel>
+                            <apex:outputPanel rendered="{!AllKeyParticipants.size >0}">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <apex:outputpanel id="keypartTable">
+                                            <table class="table">
+                                                <tr>
+                                                    <th style="width: 70px;"></th>
+                                                    <th>Name</th>
+                                                    <th>Role</th>
+                                                    <th>Comments</th>
+                                                </tr>
+                                                <apex:repeat var="part" value="{!AllKeyParticipants}">
+                                                    <tr>
+                                                        <td><apex:outputLink value="#" html-data-toggle="modal" html-data-target="#updatePart" onclick="updateParticipants('{!part.id}');" rendered="{!$ObjectType.Value_Delivery_Key_Participants__c.updateable}">
+                                                                <i class="fa fa-pencil" style="padding-right: 10px;"></i>
+                                                            </apex:outputLink> <apex:outputLink value="#" html-data-toggle="modal" html-data-target="#deleteParticiantsconfirmDialog" rendered="{!$ObjectType.Value_Delivery_Key_Participants__c.deletable}" onclick="deleteParticipants('{!part.id}');">
+                                                                <i class="fa fa-trash" style="padding-right: 10px;"></i>
+                                                            </apex:outputLink></td>
+                                                        <td>{!part.name}</td>
+                                                        <td>{!part.Role__c}</td>
+                                                        <td>{!part.Comments__c}</td>
+                                                    </tr>
+                                                </apex:repeat>
+                                            </table>
+                                        </apex:outputpanel>
+                                    </div>
+                                </div>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                        <apex:outputPanel id="userStory">
+                            <H4>
+                                Import User Stories 
+                                <apex:outputPanel rendered="{!profileFlag}">
+
+                                <a href="/apex/SaasSessionUserStories?id={!sessOutcomeObj.id}"> 
+                                <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/import.png')}" />
+                                </a>
+                                </apex:outputPanel>
+                                <!--<apex:outputLink value="#" html-data-toggle="modal" html-data-target="#UserstoriesPlus">
+                                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/plus.png')}" />
+                                </apex:outputLink>-->
+                                <apex:outputLink value="/apex/SaaSCreateUserStories?isValDel=true&&sessionId={!Value_Delivery_Session_Outcomes__c.id}">
+                                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/plus.png')}" />
+                                </apex:outputLink>
+
+                            </h4>
+                            <apex:outputPanel rendered="{!SessionUserStory.size > 0}" id="participantsDetail">
+                                <table class="table">
+                                    <tr>
+                                        <th></th>                                        
+                                        <th>User Story Name</th>
+                                        <th>Description</th>
+                                        <th>Priority</th>
+                                        <th>Poll</th>
+                                        <th>Result</th>
+                                       
+                                        <th> 
+                                          <apex:outputPanel rendered="{!profileFlag}">
+                                                  Voting Screen
+                                            </apex:outputPanel>
+                                         </th>
+                                        
+                                    </tr>
+                                    <apex:repeat value="{!SessionUserStory}" var="userStory">
+                                        <tr>              
+                                            <td>
+                                             <apex:outputLink value="#" html-data-toggle="modal" html-data-target="#deleteSessionUserStoryconfirmDialog" rendered="{!$ObjectType.Value_Delivery_Session_User_Stories__c.deletable}" onclick="deleteSessionUsrStory('{!userStory.sessionStoryObj.id}');">
+                                                                <i class="fa fa-trash" style="padding-right: 10px;"></i>
+                                                            </apex:outputLink>
+                                            
+                                            </td>                           
+                                            <td>
+                                            <!--<apex:outputLink value="/apex/SaaSCreateUserStories?id={!userStory.sessionStoryObj.User_Story__r.ID}"> {!userStory.sessionStoryObj.User_Story__r.Name}
+                                            </apex:outputLink>-->
+                                            <apex:outputLink value="/apex/SaaSCreateUserStories?id={!userStory.sessionStoryObj.User_Story__r.ID}&&isValDel=true&&sessionId={!Value_Delivery_Session_Outcomes__c.id}"> {!userStory.sessionStoryObj.User_Story__r.Name}
+                                            </apex:outputLink>
+                                            </td>
+                                            <td>{!userStory.sessionStoryObj.User_Story__r.User_Story_Description__c}</td>
+                                            <td>{!userStory.sessionStoryObj.User_Story__r.Priority__c}</td>
+                                            
+                                            
+                                            
+                                            
+                                            <td>
+                                            <apex:outputPanel rendered="{!userStory.flag}">
+                                                <apex:outputLink value="#" html-data-toggle="modal" html-data-target="#voteModelDialog" rendered="{!userStory.isVoted}" onclick="getVote('{!userStory.sessionStoryObj.id}');"> Voted</apex:outputLink> 
+                                                <apex:outputLink value="#" html-data-toggle="modal" html-data-target="#voteModelDialog" rendered="{!NOT(userStory.isVoted) }" onclick="getVote('{!userStory.sessionStoryObj.id}');">Vote</apex:outputLink>
+                                            
+                                               </apex:outputPanel>     
+                                               <apex:outputPanel rendered="{!Not(userStory.flag)}">
+                                                   No options available
+                                               </apex:outputPanel>                                                   
+                                            </td>
+                                            <td>
+                                            <apex:outputPanel rendered="{!Not(userStory.voteFlag)}">
+                                                   No result available
+                                            </apex:outputPanel>
+                                            <!--<apex:outputPanel rendered="{!userStory.isvoted}">-->
+                                            <apex:outputPanel rendered="{!userStory.voteFlag}">
+                                                    <apex:outputLink value="/apex/SaasSessionUserStoriesResult?id={!userStory.sessionStoryObj.Id}"> View Results
+                                                    </apex:outputLink>
+                                             </apex:outputPanel>                                                   
+                                            </td>
+                                            <td>
+                                            <apex:outputPanel rendered="{!Not(userStory.flag) && profileFlag}">
+                                                   No result available
+                                            </apex:outputPanel>
+                                      
+                                            <apex:outputPanel rendered="{!AND(profileFlag,userStory.flag)}">
+                                                <apex:outputLink value="/apex/SaasSessionUserStoriesConslidateVoting?id={!userStory.sessionStoryObj.Id}"> Consolidate Voting</apex:outputLink>
+                                            </apex:outputPanel>                                                   
+                                            </td>       
+                                        </tr>
+                                    </apex:repeat>
+                                </table>
+                            </apex:outputPanel>
+                        </apex:outputPanel>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="deleteParticiantsconfirmDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel1">ToolKit Mobile App</h4>
+                            </div>
+                            <div class="modal-body">
+                                <apex:outputPanel id="panelBody">
+                                    <apex:outputText >Are you sure you want to delete the record?</apex:outputText>
+                                </apex:outputPanel>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                <apex:commandButton styleClass="btn btn-primary" action="{!deleteParticipants}" value="Delete" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="deleteSessionUserStoryconfirmDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel1">ToolKit Mobile App</h4>
+                            </div>
+                            <div class="modal-body">
+                                <apex:outputPanel id="sessionPanel">
+                                    <apex:outputText >Are you sure you want to delete the record?</apex:outputText>
+                                </apex:outputPanel>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                <apex:commandButton styleClass="btn btn-primary" action="{!deleteSessionUserStory}" value="Delete" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="updatePart" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">ToolKit Mobile App</h4>
+                            </div>
+                            <div class="modal-body">
+                                <apex:outputPanel id="updateParPanel">
+                                    <!--<apex:pageMessages ></apex:pageMessages>-->
+                                    <c:CustomPageMessages closableErrors="true" />
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group required">
+                                                <label class='control-label'>Name </label>
+                                                <apex:inputField value="{!participantsObj.name}" label="Team Name " style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group required">
+                                                <label class='control-label'>Role</label>
+                                                <apex:inputField value="{!participantsObj.Role__c}" label="Role" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label class='control-label'>Comments</label>
+                                                <apex:inputField value="{!participantsObj.Comments__c}" label="Comments" style="margin: 0px; width: 100%; height: 50px;" styleClass="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <apex:outputPanel rendered="{!success}">
+                                        <script>
+                        $('#updatePart').modal('hide');
+                    </script>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                <apex:commandButton styleClass="btn btn-primary" action="{!updateParticipants}" value="Save" reRender="updateParPanel,keypartTable" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="insertNewParts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="myModalLabel">ToolKit Mobile App</h4>
+                            </div>
+                            <div class="modal-body">
+                                <apex:outputPanel id="insertNewPart">
+                                    <c:CustomPageMessages closableErrors="true" />
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group required">
+                                                <label class='control-label'>Name</label>
+                                                <apex:inputText value="{!newParticipantsObj.Name}" label="Team Name" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="form-group required">
+                                                <label class='control-label'> Role</label>
+                                                <apex:inputText value="{!newParticipantsObj.Role__c}" label="Role" style="margin: 0px; width: 100%; height: 25px;" styleClass="form-control" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <label>Comments</label>
+                                    <apex:inputTextarea value="{!newParticipantsObj.Comments__c }" label="Comments" style="margin: 0px; width: 100%; height: 50px;" styleClass="form-control" />
+                                    <apex:outputPanel rendered="{!isInsert}">
+                                        <script>
+                        $('#insertNewParts').modal('hide');
+                    </script>
+                                    </apex:outputPanel>
+                                </apex:outputPanel>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                <apex:commandButton styleClass="btn btn-primary" action="{!addPartcipants}" value="Save" reRender="insertNewPart,errMsg,keypartTable,participantsDetails" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Vote Modal -->
+                <div class="modal fade" id="voteModelDialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="myModalLabel">User Story Name</h4>
+                                </div>
+                                <div class="modal-body">
+                                    <apex:outputPanel id="voteModelPanel">
+                                        <apex:variable value="{!1}" var="rowNum"/>
+                                        <c:CustomPageMessages closableErrors="true" />
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group required">                                             
+                                                    {!sessionUserStoryWrappObj.userStoryDesc}                                                      
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <apex:repeat value="{!sessionUserStoryWrappObj.userStoryOptions}" var="options">
+                                            &nbsp;&nbsp;{!rowNum} . {!options.optionDesc}
+                                             &nbsp;&nbsp;&nbsp;  
+                                             <apex:selectRadio value="{!options.userVote}" style="padding:30px;margin-left: 25px;">
+                                                 <apex:selectOption itemValue="Yes" itemLabel="Yes" />
+                                                 <apex:selectOption itemValue="No" itemLabel="No"/>
+                                            </apex:selectRadio>
+                                            <apex:variable var="rowNum" value="{!rowNum + 1}"/>
+                                        </apex:repeat>
+                                        <apex:outputPanel rendered="{!success}">
+                                            <script>
+                                                $('#voteModelDialog').modal('hide');
+                                            </script>
+                                        </apex:outputPanel>
+                                    </apex:outputPanel>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                                    <apex:commandButton styleClass="btn btn-primary" action="{!saveUserVote}" value="Vote" reRender="voteModelPanel,errMsg,userStory" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+            </div>
+        </apex:form>
+    </c:CrpiPageTemplate>
+</apex:page>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- New for Phase 2 or Existing in Phase 1 --></help>
+    <label><!-- New or Existing --></label>
+    <name>New_Existing__c</name>
+    <picklistValues>
+        <masterLabel>Existing</masterLabel>
+        <translation><!-- Existing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation><!-- New --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

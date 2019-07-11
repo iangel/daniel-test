@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Removed_From_Release__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Release from which the request has been removed</description>
+    <externalId>false</externalId>
+    <label>Removed From Release</label>
+    <referenceTo>Release__c</referenceTo>
+    <relationshipLabel>Requests (Removed From Release)</relationshipLabel>
+    <relationshipName>Requirements1</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

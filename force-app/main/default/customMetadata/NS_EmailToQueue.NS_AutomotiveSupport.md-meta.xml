@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Automotive - Support</label>
+    <protected>false</protected>
+    <values>
+        <field>Forwarding_Address__c</field>
+        <value xsi:type="xsd:string">automotivesystems@nscorp.com;automotivesystems@exchange.nscorp.com;automotivesystems@exchange.nscorp.com;badorderml@nscorp.com;badorderml@exchange.nscorp.com;tncsoautomotiveboml@nscorp.com;tncsoautomotiveboml@exchange.nscorp.com;</value>
+    </values>
+    <values>
+        <field>Queue_Id__c</field>
+        <value xsi:type="xsd:string">00G1I000002HpxH</value>
+    </values>
+    <values>
+        <field>Routing_Email_1__c</field>
+        <value xsi:type="xsd:string">nsautomotive.support@0-1wx9mfw6qhbgtjt4yxz5xkhhwr5pn9ewhpj532yhnvrxw1am5g.1i-3nwseuaq.na73.apex.salesforce.com</value>
+    </values>
+</CustomMetadata>

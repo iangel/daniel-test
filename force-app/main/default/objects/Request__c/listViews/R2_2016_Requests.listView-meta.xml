@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>R2_2016_Requests</fullName>
+    <columns>NAME</columns>
+    <columns>Request_Title__c</columns>
+    <columns>Request_Description__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>Total_Priority_Ranking__c</columns>
+    <columns>TotEst__c</columns>
+    <columns>Release__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Planned_Release__c</field>
+        <operation>contains</operation>
+        <value>2016 R2</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>notEqual</operation>
+        <value>Identify: Deferred,Close: Deployed,Close: Rejected,Close: Duplicate</value>
+    </filters>
+    <filters>
+        <field>Removed_Release__c</field>
+        <operation>equals</operation>
+        <value>0</value>
+    </filters>
+    <label>R2 2016 Requests</label>
+</ListView>

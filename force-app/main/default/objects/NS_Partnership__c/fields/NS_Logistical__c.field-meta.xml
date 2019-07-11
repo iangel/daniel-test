@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_Logistical__c</fullName>
+    <description>This field indicates if 3PL is authorized to discuss logistical information with this customer</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Is the 3PL authorized to discuss logistical information with this customer?</inlineHelpText>
+    <label>Logistical</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Authorized</fullName>
+                <default>false</default>
+                <label>Authorized</label>
+            </value>
+            <value>
+                <fullName>Not Authorized</fullName>
+                <default>false</default>
+                <label>Not Authorized</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

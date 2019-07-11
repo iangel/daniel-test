@@ -1,0 +1,76 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false" controller="SaasCreateSessionCtrl" >
+<body  background="{!URLFOR($Resource.ValueDeliveryApproachV1, 'img/bgimage-new.jpg')}"/> 
+<c:SaaSToolkitPageHeader ></c:SaaSToolkitPageHeader> 
+<!--
+
+<style>
+ .container-table {
+    height: 100%;
+}
+.container-table {
+    display:table;
+}
+.vertical-center-row {
+    display:table-cell;
+    vertical-align:middle;
+      
+}
+</style> -->
+<apex:form >
+<br/><br/><br/><br/>
+
+
+       <div class="container">
+       
+     <c:CustomPageMessages closableErrors="true" />
+            
+             <div class="row">
+                   <div class="col-sm-7 col-md-7">
+                       <div class="row">
+                       <div class="col-sm-12 col-md-12">
+                          <h4> Setup VALUE Delivery Project\Session </h4>
+                          <h5> Select Project Name and Session.</h5>
+                       </div> 
+                       </div>
+                       
+                    </div> 
+                   <div class="col-sm-5 col-md-5">
+                       
+                       
+                        <apex:commandButton action="{!cancel}" value="Cancel" immediate="true" styleClass="btn btn-primary" style="float:right;margin-left:10px;"/>
+                           <apex:commandButton action="{!selectPrjAndSessionSetp}" value="Next" styleClass="btn btn-primary" style="float:right;margin-left:10px;"/>
+                      <apex:commandButton action="{!step1}" value="Previous" styleClass="btn btn-primary" style="float:right;margin-left:10px;"/>
+                       
+                    </div>
+                </div>
+
+            </div>
+                              
+<div class="row">
+               
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-md-offset-2" style="z-index:1;background-color:#FFFFFF;padding:30px 50px;width:65%;">
+                <div class="row">
+                <div class="form-group required">
+                <label class='control-label'>Project Name</label><br/>
+                    <apex:selectList value="{!releaseID}" size="1"   label="Project Name" style="width:100%;" styleClass="form-control">
+                        <apex:selectOptions value="{!releaseList1}" />
+                        <apex:actionSupport reRender="sessionLst" event="onchange"/>
+                    </apex:selectList>
+                </div>
+                </div>
+                <div class="row">
+                    <div class="form-group required">
+                    <label class='control-label'> Session </label><br/>
+                    <apex:selectList value="{!sessionID}" size="1"  id="sessionLst"  label="Session" style="width:100%;" styleClass="form-control">
+                        <apex:selectOptions value="{!detailSession}"/>
+                    </apex:selectList>
+                    </div>
+                </div>
+               
+            </div> 
+        </div>
+    </div>
+</apex:form>  
+
+</apex:page>

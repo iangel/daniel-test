@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_BusinessUnit__c</fullName>
+    <description>If owner is a Queue, please select the Business Unit of corresponding Queue</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <label>Business Unit</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Automotive</fullName>
+                <default>true</default>
+                <label>Automotive</label>
+            </value>
+            <value>
+                <fullName>Intermodal Premium</fullName>
+                <default>false</default>
+                <label>Intermodal Premium</label>
+            </value>
+            <value>
+                <fullName>Intermodal Non-Premium</fullName>
+                <default>false</default>
+                <label>Intermodal Non-Premium</label>
+            </value>
+            <value>
+                <fullName>Marketing</fullName>
+                <default>false</default>
+                <label>Marketing</label>
+            </value>
+            <value>
+                <fullName>OSS</fullName>
+                <default>false</default>
+                <label>OSS</label>
+            </value>
+            <value>
+                <fullName>Revenue Accounting Traffic</fullName>
+                <default>false</default>
+                <label>Revenue Accounting Traffic</label>
+            </value>
+            <value>
+                <fullName>Revenue Accounting Demurrage</fullName>
+                <default>false</default>
+                <label>Revenue Accounting Demurrage</label>
+            </value>
+            <value>
+                <fullName>Unit Train</fullName>
+                <default>false</default>
+                <label>Unit Train</label>
+            </value>
+            <value>
+                <fullName>Equipment Planning</fullName>
+                <default>false</default>
+                <label>Equipment Planning</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

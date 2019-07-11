@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Validate_Developer_Comments</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(OR(AND(UPPER(MID( PRIORVALUE(Current_Status__c), 1, 5))&lt;&gt;&quot;FIXED&quot;,UPPER(MID( Current_Status__c , 1, 5))=&quot;FIXED&quot;),AND(UPPER(PRIORVALUE(Current_Status__c))&lt;&gt;&quot;READY TO RETEST&quot;,UPPER(Current_Status__c)=&quot;READY TO RETEST&quot;)),OR(ISNULL(Developer_Comments__c),TRIM(Developer_Comments__c)=&quot;&quot;,TRIM(PRIORVALUE(Developer_Comments__c)) = TRIM(Developer_Comments__c)))</errorConditionFormula>
+    <errorMessage>Developer Comments must be updated when Status is fixed or Ready to restest</errorMessage>
+</ValidationRule>

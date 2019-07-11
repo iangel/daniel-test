@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Phase_2_Requirements1</fullName>
+    <columns>NAME</columns>
+    <columns>Business_Unit_Requesting__c</columns>
+    <columns>Business_Unit_Impacted__c</columns>
+    <columns>Request_Title__c</columns>
+    <columns>Requirement__c</columns>
+    <columns>Capability__c</columns>
+    <columns>Mapping__c</columns>
+    <columns>Status__c</columns>
+    <columns>Closed_Deferred__c</columns>
+    <columns>Related_Request__c</columns>
+    <columns>Planned_Release__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Planned_Release__c</field>
+        <operation>equals</operation>
+        <value>Phase 2</value>
+    </filters>
+    <filters>
+        <field>Business_Unit_Requesting__c</field>
+        <operation>notEqual</operation>
+        <value>Coal,Industrial Development,Industrial Products,TDIS,Intermodal,OSS,Revenue Accounting</value>
+    </filters>
+    <label>Phase 2 Requirements</label>
+</ListView>

@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Floating_Holidays__c</fullName>
+    <externalId>false</externalId>
+    <label>Floating Holidays</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Pongal January 14</fullName>
+                <default>false</default>
+                <label>Pongal January 14</label>
+            </value>
+            <value>
+                <fullName>Guru Gobind Singh&#39;s Birthday January 18</fullName>
+                <default>false</default>
+                <label>Guru Gobind Singh&#39;s Birthday January 18</label>
+            </value>
+            <value>
+                <fullName>Thiruvalluvar Day January 15</fullName>
+                <default>false</default>
+                <label>Thiruvalluvar Day January 15</label>
+            </value>
+            <value>
+                <fullName>Uzhavar Thirunal January 16</fullName>
+                <default>false</default>
+                <label>Uzhavar Thirunal January 16</label>
+            </value>
+            <value>
+                <fullName>ID-E-Milad January 25</fullName>
+                <default>false</default>
+                <label>ID-E-Milad January 25</label>
+            </value>
+            <value>
+                <fullName>Basant Panchami February 15</fullName>
+                <default>false</default>
+                <label>Basant Panchami February 15</label>
+            </value>
+            <value>
+                <fullName>Next day of MahasivarathriMarch 11</fullName>
+                <default>false</default>
+                <label>Next day of MahasivarathriMarch 11</label>
+            </value>
+            <value>
+                <fullName>Holika Dahan March 26</fullName>
+                <default>false</default>
+                <label>Holika Dahan March 26</label>
+            </value>
+            <value>
+                <fullName>Holi March 27</fullName>
+                <default>false</default>
+                <label>Holi March 27</label>
+            </value>
+            <value>
+                <fullName>Good Friday March 29</fullName>
+                <default>false</default>
+                <label>Good Friday March 29</label>
+            </value>
+            <value>
+                <fullName>Chandramana Ugadi April 11</fullName>
+                <default>false</default>
+                <label>Chandramana Ugadi April 11</label>
+            </value>
+            <value>
+                <fullName>Bengali New Year Day April 15</fullName>
+                <default>false</default>
+                <label>Bengali New Year Day April 15</label>
+            </value>
+            <value>
+                <fullName>Ram Navami April 19</fullName>
+                <default>false</default>
+                <label>Ram Navami April 19</label>
+            </value>
+            <value>
+                <fullName>Mahavir Jayanti April 24</fullName>
+                <default>false</default>
+                <label>Mahavir Jayanti April 24</label>
+            </value>
+            <value>
+                <fullName>Shab-E-Meraj June 07</fullName>
+                <default>false</default>
+                <label>Shab-E-Meraj June 07</label>
+            </value>
+            <value>
+                <fullName>Shab-E-Barath June 25</fullName>
+                <default>false</default>
+                <label>Shab-E-Barath June 25</label>
+            </value>
+            <value>
+                <fullName>Jamat -Ul- Vida August 02</fullName>
+                <default>false</default>
+                <label>Jamat -Ul- Vida August 02</label>
+            </value>
+            <value>
+                <fullName>Shab-E-Qadar August 05</fullName>
+                <default>false</default>
+                <label>Shab-E-Qadar August 05</label>
+            </value>
+            <value>
+                <fullName>Varalakshmi Vratham August 16</fullName>
+                <default>false</default>
+                <label>Varalakshmi Vratham August 16</label>
+            </value>
+            <value>
+                <fullName>Raksha Bandan August 20</fullName>
+                <default>false</default>
+                <label>Raksha Bandan August 20</label>
+            </value>
+            <value>
+                <fullName>Janmashtami August 28</fullName>
+                <default>false</default>
+                <label>Janmashtami August 28</label>
+            </value>
+            <value>
+                <fullName>Ganesh Chaturthi September 09</fullName>
+                <default>false</default>
+                <label>Ganesh Chaturthi September 09</label>
+            </value>
+            <value>
+                <fullName>Onam September 16</fullName>
+                <default>false</default>
+                <label>Onam September 16</label>
+            </value>
+            <value>
+                <fullName>Mahalaya Amavasya October 04</fullName>
+                <default>false</default>
+                <label>Mahalaya Amavasya October 04</label>
+            </value>
+            <value>
+                <fullName>Durga Puja: Saptami October 11</fullName>
+                <default>false</default>
+                <label>Durga Puja: Saptami October 11</label>
+            </value>
+            <value>
+                <fullName>Bakrid October 16</fullName>
+                <default>false</default>
+                <label>Bakrid October 16</label>
+            </value>
+            <value>
+                <fullName>Karva Chouth October 22</fullName>
+                <default>false</default>
+                <label>Karva Chouth October 22</label>
+            </value>
+            <value>
+                <fullName>Balipadyami November 04</fullName>
+                <default>false</default>
+                <label>Balipadyami November 04</label>
+            </value>
+            <value>
+                <fullName>Bhai Dhuj November 05</fullName>
+                <default>false</default>
+                <label>Bhai Dhuj November 05</label>
+            </value>
+            <value>
+                <fullName>Chhat Puja November 08</fullName>
+                <default>false</default>
+                <label>Chhat Puja November 08</label>
+            </value>
+            <value>
+                <fullName>Muharram November 14</fullName>
+                <default>false</default>
+                <label>Muharram November 14</label>
+            </value>
+            <value>
+                <fullName>Christmas Eve December 24</fullName>
+                <default>false</default>
+                <label>Christmas Eve December 24</label>
+            </value>
+            <value>
+                <fullName>Next day of Christmas December 26</fullName>
+                <default>false</default>
+                <label>Next day of Christmas December 26</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

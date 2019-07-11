@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Risk / Issue Level --></label>
+    <name>Risk__c</name>
+    <picklistValues>
+        <masterLabel>Executive Steering Committee</masterLabel>
+        <translation><!-- Executive Steering Committee --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leadership Team</masterLabel>
+        <translation><!-- Leadership Team --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Team</masterLabel>
+        <translation><!-- Project Team --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

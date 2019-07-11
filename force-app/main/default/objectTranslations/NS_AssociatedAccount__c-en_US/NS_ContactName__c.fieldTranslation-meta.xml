@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Contact Name --></label>
+    <lookupFilter>
+        <errorMessage><!-- Contact must be an Active Contact. --></errorMessage>
+    </lookupFilter>
+    <name>NS_ContactName__c</name>
+    <relationshipLabel><!-- Associated Accounts --></relationshipLabel>
+</CustomFieldTranslation>

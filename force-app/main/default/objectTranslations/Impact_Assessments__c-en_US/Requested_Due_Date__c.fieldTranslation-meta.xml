@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Due date for the requested impact assessment --></help>
+    <label><!-- Requested Due Date --></label>
+    <name>Requested_Due_Date__c</name>
+</CustomFieldTranslation>

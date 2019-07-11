@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>On_Target__c</fullName>
+    <description>Displays a status as red, green or yellow ball.</description>
+    <externalId>false</externalId>
+    <formula>if((Planned_End_Date__c &lt; TODAY()) &amp;&amp; ( VALUE ( TEXT (Complete2__c ) ) &lt;&gt; 100), IMAGE(&quot;/img/samples/light_red.gif&quot;, &quot;Red&quot;),
+ 
+
+if((Planned_End_Date__c &lt;= TODAY()+5) &amp;&amp; ( VALUE ( TEXT (Complete2__c ) ) &lt;&gt; 100), IMAGE(&quot;/img/samples/light_yellow.gif&quot;, &quot;Yellow&quot;),
+ 
+
+IMAGE(&quot;/img/samples/light_green.gif&quot;, &quot;Green&quot;)))</formula>
+    <label>On Target</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

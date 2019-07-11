@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Cause_of_Defect__c</fullName>
+    <description>Reflects the cause of the defect.</description>
+    <externalId>false</externalId>
+    <label>Cause of Defect</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access Issue</fullName>
+                <default>false</default>
+                <label>Access Issue</label>
+            </value>
+            <value>
+                <fullName>Change in Requirement</fullName>
+                <default>false</default>
+                <label>Change in Requirement</label>
+            </value>
+            <value>
+                <fullName>Deployment Issue</fullName>
+                <default>false</default>
+                <label>Deployment Issue</label>
+            </value>
+            <value>
+                <fullName>FLS Issue</fullName>
+                <default>false</default>
+                <label>FLS Issue</label>
+            </value>
+            <value>
+                <fullName>Incomplete Input</fullName>
+                <default>false</default>
+                <label>Incomplete Input</label>
+            </value>
+            <value>
+                <fullName>Incomplete Unit Testing</fullName>
+                <default>false</default>
+                <label>Incomplete Unit Testing</label>
+            </value>
+            <value>
+                <fullName>Inconsistency</fullName>
+                <default>false</default>
+                <label>Inconsistency</label>
+            </value>
+            <value>
+                <fullName>Incorrect/Invalid Input</fullName>
+                <default>false</default>
+                <label>Incorrect/Invalid Input</label>
+            </value>
+            <value>
+                <fullName>Interface</fullName>
+                <default>false</default>
+                <label>Interface</label>
+            </value>
+            <value>
+                <fullName>Lack of Clarity</fullName>
+                <default>false</default>
+                <label>Lack of Clarity</label>
+            </value>
+            <value>
+                <fullName>Logic</fullName>
+                <default>false</default>
+                <label>Logic</label>
+            </value>
+            <value>
+                <fullName>Memory management</fullName>
+                <default>false</default>
+                <label>Memory management</label>
+            </value>
+            <value>
+                <fullName>Misunderstood Requirement</fullName>
+                <default>false</default>
+                <label>Misunderstood Requirement</label>
+            </value>
+            <value>
+                <fullName>Naming Convention</fullName>
+                <default>false</default>
+                <label>Naming Convention</label>
+            </value>
+            <value>
+                <fullName>Not Testable</fullName>
+                <default>false</default>
+                <label>Not Testable</label>
+            </value>
+            <value>
+                <fullName>Not Verfiable</fullName>
+                <default>false</default>
+                <label>Not Verfiable</label>
+            </value>
+            <value>
+                <fullName>Oversight</fullName>
+                <default>false</default>
+                <label>Oversight</label>
+            </value>
+            <value>
+                <fullName>Performance</fullName>
+                <default>false</default>
+                <label>Performance</label>
+            </value>
+            <value>
+                <fullName>Planning</fullName>
+                <default>false</default>
+                <label>Planning</label>
+            </value>
+            <value>
+                <fullName>Portability</fullName>
+                <default>false</default>
+                <label>Portability</label>
+            </value>
+            <value>
+                <fullName>Profile Issue</fullName>
+                <default>false</default>
+                <label>Profile Issue</label>
+            </value>
+            <value>
+                <fullName>Redundant Code</fullName>
+                <default>false</default>
+                <label>Redundant Code</label>
+            </value>
+            <value>
+                <fullName>Requirements Missed</fullName>
+                <default>false</default>
+                <label>Requirements Missed</label>
+            </value>
+            <value>
+                <fullName>Reusability</fullName>
+                <default>false</default>
+                <label>Reusability</label>
+            </value>
+            <value>
+                <fullName>Standards</fullName>
+                <default>false</default>
+                <label>Standards</label>
+            </value>
+            <value>
+                <fullName>Storage structure</fullName>
+                <default>false</default>
+                <label>Storage structure</label>
+            </value>
+            <value>
+                <fullName>Test Data</fullName>
+                <default>false</default>
+                <label>Test Data</label>
+            </value>
+            <value>
+                <fullName>Test Setup</fullName>
+                <default>false</default>
+                <label>Test Setup</label>
+            </value>
+            <value>
+                <fullName>Traceability</fullName>
+                <default>false</default>
+                <label>Traceability</label>
+            </value>
+            <value>
+                <fullName>User Interface</fullName>
+                <default>false</default>
+                <label>User Interface</label>
+            </value>
+            <value>
+                <fullName>Version Control</fullName>
+                <default>false</default>
+                <label>Version Control</label>
+            </value>
+            <value>
+                <fullName>Rejected - Not a defect</fullName>
+                <default>false</default>
+                <label>Rejected - Not a defect</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

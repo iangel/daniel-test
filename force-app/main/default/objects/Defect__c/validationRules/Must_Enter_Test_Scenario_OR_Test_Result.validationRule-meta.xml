@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Must_Enter_Test_Scenario_OR_Test_Result</fullName>
+    <active>false</active>
+    <description>Requires a user to include the Test Scenario or the Test Result that is associated to the defect.</description>
+    <errorConditionFormula>AND(ISBLANK(Associated_Defect__c) ,ISBLANK( Test_Results__c ))</errorConditionFormula>
+    <errorMessage>Please enter either the associated Test Scenario OR Test Result.</errorMessage>
+</ValidationRule>

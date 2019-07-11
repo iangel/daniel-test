@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Script Updated per Build Change --></label>
+    <name>Script_Updated_per_Build_Change__c</name>
+</CustomFieldTranslation>

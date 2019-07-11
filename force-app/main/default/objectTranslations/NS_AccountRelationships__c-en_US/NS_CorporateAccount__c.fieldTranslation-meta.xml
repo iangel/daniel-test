@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Corporate Account --></label>
+    <name>NS_CorporateAccount__c</name>
+    <relationshipLabel><!-- Business and Service Accounts --></relationshipLabel>
+</CustomFieldTranslation>

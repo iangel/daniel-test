@@ -1,0 +1,17 @@
+.THIS.div {
+    width: 100%;
+}
+.THIS .exactmatch {
+  background-color: #ccffcc;
+}
+.THIS .Backgrd {
+    background-color:#ffffff;
+}
+.THIS .slds-modal__container{
+       max-width: 60rem !important;
+       width:60% !important;
+
+}
+.THIS .txtAlignR{
+    text-align:right;
+}

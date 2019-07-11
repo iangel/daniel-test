@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Role xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseAccessLevel>Edit</caseAccessLevel>
+    <contactAccessLevel>Edit</contactAccessLevel>
+    <description>OSS Southern Region West Rep</description>
+    <mayForecastManagerShare>false</mayForecastManagerShare>
+    <name>OSS South Rep</name>
+    <opportunityAccessLevel>Edit</opportunityAccessLevel>
+    <parentRole>OSS_Southern_Region_West_Manager</parentRole>
+</Role>

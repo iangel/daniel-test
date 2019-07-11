@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Select one or more areas impacted by this change --></help>
+    <label><!-- Type Of Change --></label>
+    <name>Type_Of_Change__c</name>
+    <picklistValues>
+        <masterLabel>Organization Structure</masterLabel>
+        <translation><!-- Organization Structure --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Policies &amp; Standards</masterLabel>
+        <translation><!-- Policies &amp; Standards --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Process &amp; Behavior</masterLabel>
+        <translation><!-- Process &amp; Behavior --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Roles &amp; Responsibilities</masterLabel>
+        <translation><!-- Roles &amp; Responsibilities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technology</masterLabel>
+        <translation><!-- Technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Tools &amp; Templates</masterLabel>
+        <translation><!-- Tools &amp; Templates --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All1</fullName>
+    <columns>NAME</columns>
+    <columns>Capability__c</columns>
+    <columns>Test_Result_Name__c</columns>
+    <columns>Test_Case__c</columns>
+    <columns>Testing_Phase__c</columns>
+    <columns>NS_Release__c</columns>
+    <columns>Environment__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>NS_Release__c</field>
+        <operation>equals</operation>
+        <value>Phase 2</value>
+    </filters>
+    <label>All</label>
+</ListView>

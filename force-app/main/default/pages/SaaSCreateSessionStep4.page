@@ -1,0 +1,89 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false" controller="SaasCreateSessionCtrl"  docType="html-5.0">
+<body  background="{!URLFOR($Resource.ValueDeliveryApproachV1, 'img/bgimage-new.jpg')}"/> 
+<c:SaaSToolkitPageHeader ></c:SaaSToolkitPageHeader> 
+<br/><br/><br/><br/><br/>
+<apex:form >
+   
+     <div class= "container">
+     
+     <div class="row">
+                   <div class="col-sm-6 col-md-6">
+                       <div class="row">
+                       <div class="col-sm-12 col-md-12">
+                          <h4> Setup VALUE Delivery Project\Session  </h4>
+                          <h5>Select items to be cloned. </h5>
+                       </div> 
+                       </div>
+                       
+                    </div> 
+                   <div class="col-sm-6 col-md-6">
+         <apex:commandButton value="Cancel" action="{!Cancel}" Styleclass="btn btn-primary" style="float:right;margin-left:10px;"/>
+         <apex:commandButton value="Finish" action="{!finish}" Styleclass="btn btn-primary" style="float:right;margin-left:10px;"/>
+                  <apex:commandButton value="Previous" action="{!objectiveDetailPrevious}" Styleclass="btn btn-primary" style="float:right;margin-left:10px;"/>
+                       
+                     
+                       
+                    </div>
+                </div>
+
+           
+            
+     
+     
+        <div class="row">            
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <apex:outputPanel rendered="{!projectPhaseLst.size == 0}">
+                    VALUE Delivery Sessions details not found.Please click finish to create a VALUE Delivery Session without Session Overview.
+                </apex:outputPanel>  
+               <apex:outputPanel rendered="{!projectPhaseLst.size > 0}">
+               
+               <div class="panel panel-default">
+                <div class="panel-heading">
+                    <p class="h4 text-primary">{!prjPhase}  </p>  
+                    <center>
+                 <apex:outputPanel >
+                 Total: &nbsp;{!noOfRecords} &nbsp; &nbsp;
+                <apex:commandButton value="<" action="{!previous}"   disabled="{!pagNo == 0}"/>
+                  ({!pagedispalyCount+ 1}  -  {!scectionCount  + pagedispalyCount}  )&nbsp;   
+                    
+                <apex:commandButton value=">" action="{!next}" disabled="{!pagNo == projectPhaseLst.size-1}"/>
+                 </apex:outputPanel>
+           </center>
+           
+                    
+                      <div class="panel-group" id="AnatomyofPlanAndAnalyzeCRP">
+                        <apex:outputPanel id="pb">
+                            <apex:repeat var="bussinessObj" value="{!phaseToObjectiveMap[prjPhase]}">
+                                <div class="panel-heading addBorder">
+                                    <h4 class="panel-title removePanelAnchorDec">
+                                        <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofPlanAndAnalyzeCRP" href="#{!bussinessObj.id}">{!bussinessObj.Component_Title__c}<i class="fa fa-chevron-down" style="float: right;"></i>
+                                        </a>
+                                    </h4>
+                                </div>  
+                                <div id="{!bussinessObj.id}" class="panel-collapse collapse">
+                                     <div class="panel-body">
+                                        <Ul class="removeListStyle">
+                                      <apex:repeat var="bussinessObjOption" value="{!objectiveToOptionsMap[bussinessObj.id]}">         
+                                        <li>
+                                          <apex:inputCheckbox value="{!bussinessObjOption.selected}" />
+                                         {!bussinessObjOption.busOptObj.Option_Description__c} 
+                                           </li>
+                                    </apex:repeat>  
+                                      
+                                         
+                                         </ul>
+                                    </div>
+                                </div>
+                                      
+                                            
+                            </apex:repeat>
+                        </apex:outputPanel>            
+                    </div>   
+                    </div>  
+                      </div>                         
+               </apex:outputPanel> 
+           </div>       
+         </div>
+    </div> 
+    </apex:form>        
+</apex:page>

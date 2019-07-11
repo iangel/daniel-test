@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Issue / Risk --></label>
+    <name>Issue__c</name>
+    <picklistValues>
+        <masterLabel>Issue</masterLabel>
+        <translation><!-- Issue --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Risk</masterLabel>
+        <translation><!-- Risk --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

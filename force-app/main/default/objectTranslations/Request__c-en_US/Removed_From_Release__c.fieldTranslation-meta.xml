@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Removed From Release --></label>
+    <name>Removed_From_Release__c</name>
+    <relationshipLabel><!-- Requests (Removed From Release) --></relationshipLabel>
+</CustomFieldTranslation>

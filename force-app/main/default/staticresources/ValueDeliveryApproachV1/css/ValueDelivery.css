@@ -1,0 +1,65 @@
+.greenColor
+{
+	  color:#088A08;
+}
+	 .greyColor
+{
+	  color:#BDBDBD;
+  }
+  .removeListStyle
+  {
+	list-style-type: none;
+}
+  
+.form-group.required .control-label:after 
+{ 
+   content:" *";
+   color:red;font-size: 130%;
+}
+
+div.well{
+  height: 200px;
+} 
+.relatedLstCss
+{
+            overflow: auto; 
+            max-height: 150px;
+            overflow-x: hidden;
+}
+.hrBorder 
+{
+    border-top: 1px solid #0198d5;
+    width: 100%;
+    margin-top: 0px;
+}
+
+
+.Absolute-Center {
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+}
+
+.Absolute-Center.is-Responsive {
+
+border-radius: 10px;
+ ##   border: 2px solid #fff;
+    
+  width: 50%; 
+  height: 260px;
+  min-width: 50%;
+  max-width: 50%;
+  padding: 10px;
+  background-color:white;
+  z-index:-99999;
+  ##   -moz-opacity:0.5;
+  ##  -khtml-opacity: 0.5;    
+  ##  opacity:0.5; 
+  ##  filter:alpha(opacity=50);
+  ##  zoom:1;
+}
+
+#top-panel 
+{
+	line-height: 0px !important;
+}

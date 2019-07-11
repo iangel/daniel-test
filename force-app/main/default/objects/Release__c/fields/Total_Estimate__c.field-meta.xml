@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Total_Estimate__c</fullName>
+    <description>Total Level of Effort (Days) taken in plan, design, build, test, UAT, deploy &amp; support</description>
+    <externalId>false</externalId>
+    <formula>Requirements_Gathering__c +  Design__c +  Build_Unit_Test__c +  PMT2009_SIT__c +  PMT2009_UAT__c +  PMT2009_Train_Deploy__c +  Adapt_Ongoing_Support__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Total Estimate</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>2</scale>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

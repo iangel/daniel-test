@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Fjord Concept --></label>
+    <name>Fjord_Concept__c</name>
+    <picklistValues>
+        <masterLabel>All Aboard</masterLabel>
+        <translation><!-- All Aboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dispatch</masterLabel>
+        <translation><!-- Dispatch --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Dot Dot Dash</masterLabel>
+        <translation><!-- Dot Dot Dash --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Gatekeeper</masterLabel>
+        <translation><!-- Gatekeeper --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Hot Car Prime</masterLabel>
+        <translation><!-- Hot Car Prime --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Interxchange</masterLabel>
+        <translation><!-- Interxchange --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>On The Spot</masterLabel>
+        <translation><!-- On The Spot --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Signal</masterLabel>
+        <translation><!-- Signal --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Single Track</masterLabel>
+        <translation><!-- Single Track --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Spur</masterLabel>
+        <translation><!-- Spur --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TRAX</masterLabel>
+        <translation><!-- TRAX --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>The Herd</masterLabel>
+        <translation><!-- The Herd --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Traction</masterLabel>
+        <translation><!-- Traction --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Wilbur</masterLabel>
+        <translation><!-- Wilbur --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

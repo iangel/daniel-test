@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- If this Key Action/Decision is directly related to a single Issue or Risk, select that Issue or Risk here. --></help>
+    <label><!-- Related Issue/Risk --></label>
+    <name>Related_Issue_Risk__c</name>
+    <relationshipLabel><!-- Key Actions/Decisions --></relationshipLabel>
+</CustomFieldTranslation>

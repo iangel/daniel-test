@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Group Assignment --></label>
+    <name>Group_Assignment__c</name>
+    <picklistValues>
+        <masterLabel>OSS Manager - Group 1</masterLabel>
+        <translation><!-- OSS Manager - Group 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OSS Manager - Group 2</masterLabel>
+        <translation><!-- OSS Manager - Group 2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OSS Rep - Group 1</masterLabel>
+        <translation><!-- OSS Rep - Group 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OSS Rep - Group 2</masterLabel>
+        <translation><!-- OSS Rep - Group 2 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OSS Rep - Group 3</masterLabel>
+        <translation><!-- OSS Rep - Group 3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OSS Support - Group 1</masterLabel>
+        <translation><!-- OSS Support - Group 1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>OSS Support - Group 2</masterLabel>
+        <translation><!-- OSS Support - Group 2 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

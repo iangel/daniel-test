@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <layouts>
+        <layout>NS Active Contact Layout</layout>
+        <sections>
+            <label><!-- NS Business Unit Information --></label>
+            <section>NS Business Unit Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NS Phone Number Contact</layout>
+        <sections>
+            <label><!-- ANI ONLY Contact Information --></label>
+            <section>ANI ONLY Contact Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>NS Read Only Inactive Contact Layout</layout>
+        <sections>
+            <label><!-- NS Business Unit Information --></label>
+            <section>NS Business Unit Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- &quot;Hidden&quot; ANI ONLY Contacts --></description>
+        <label><!-- ANI ONLY --></label>
+        <name>ANI_ONLY</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Record Type for All Users to view contact --></description>
+        <label><!-- General Contact --></label>
+        <name>NS_GeneralContact</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- This Record Type will be visible for Inactive contacts --></description>
+        <label><!-- Read Only Inactive Contact --></label>
+        <name>NS_ReadOnlyInactiveContact</name>
+    </recordTypes>
+    <validationRules>
+        <errorMessage><!-- Please enter Account Name and Work Phone. --></errorMessage>
+        <name>NS_ANIOnlyAccountPhoneRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid Work Phone entered. --></errorMessage>
+        <name>NS_ANIOnlyValidPhoneCheck</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter either Work Phone, Mobile Phone, Other Phone 1, Other Phone 2 or Email. --></errorMessage>
+        <name>NS_ContactRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter the Account Name that this Contact should be associated to when the Account becomes available in ConnectNS. --></errorMessage>
+        <name>NS_CustomerAccountRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter First Name. --></errorMessage>
+        <name>NS_FirstNameRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You may not inactivate a Contact. Please select “Request Deactivation” for OSS Support Team review. --></errorMessage>
+        <name>NS_InactivateContact</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive Contact name cannot be edited. --></errorMessage>
+        <name>NS_InactiveContactNameNotEditable</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please ensure that all phone numbers  are 7 or 10 digits for work phone or Other phones/10 digits for mobile phone with no dashes - or parenthesis () --></errorMessage>
+        <name>NS_PhoneNumberCheck</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive Contact cannot be activated. --></errorMessage>
+        <name>NS_RestrictContactActivation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive Account cannot be associated. Please contact &quot;OSS Support&quot; or &quot;System Admin&quot; --></errorMessage>
+        <name>NS_RestrictInactiveAccountLookup</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Inactive Contact cannot be created. --></errorMessage>
+        <name>NS_RestrictInactiveContactCreation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Extension cannot contain text. Please enter numeric characters up to 6 digits --></errorMessage>
+        <name>NS_Text_Validation</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- GoogleMaps --></label>
+        <name>GoogleMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- GoogleSearch --></label>
+        <name>GoogleSearch</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- SendGmail --></label>
+        <name>SendGmail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooMaps --></label>
+        <name>YahooMaps</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- YahooWeather --></label>
+        <name>YahooWeather</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Controlling Station of Associated Account --></help>
+    <label><!-- Controlling Station --></label>
+    <name>NS_ControllingStation__c</name>
+</CustomFieldTranslation>

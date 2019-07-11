@@ -1,0 +1,46 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="row">
+            <div class="col-xs-12 col-sm-7 col-md-8">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">                      
+                       Functional Design Documentation
+                    </div>  
+                <div class="panel-body"> 
+                   <p>The purpose of the FDD is to be a living document that is updated throughout each release.</p>              
+                       <ul>
+                           <li>Audience
+                               <ul>
+                                <li>MoC resources building communications and training</li>
+                                <li>Future VALUE Delivery Approach and development teams</li>
+                                <li>New resources to the capability</li>
+                                </ul>
+                           </li>
+                           <li>Intent – Provide functional descriptions of the overall design. One document is maintained for the overall program. Capabilities populate their specific sections.</li>
+                           <li>Versioning – One version documented each release. Running document maintained.</li>
+                       </ul>
+                </div>
+                
+            </div> 
+       </div>
+        <div class="col-xs-12 col-sm-5 col-md-4">
+           <div class="panel panel-primary">
+                    <div class="panel-heading">                      
+                     Functional Design Example
+                    </div>  
+                <div class="panel-body"> 
+                   <c:SaaSDocumentDownload developerName="{!$Label.Build_Functional_Design_Document_Template}" linkName="Functional Design Template" />  
+                
+                <!--    <a href = "/servlet/servlet.FileDownload?file={!$label.Build_Functional_Design_Document_Template}"><i class="fa fa-cloud-download fa-2x" title="B"/>  </a> Functional Design Example -->
+
+                </div>
+           </div>          
+       </div> 
+    </div>
+    
+   <!--   <ul class="pager">
+                  <li class="previous"><a href="/apex/BuildCRPTemplatesExamples">&larr; Back</a></li>
+              </ul>      -->
+  </c:CrpiPageTemplate>
+</apex:page>

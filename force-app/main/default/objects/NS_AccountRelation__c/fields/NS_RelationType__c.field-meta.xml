@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_RelationType__c</fullName>
+    <externalId>false</externalId>
+    <label>Relation Type</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Autoramp</fullName>
+                <default>false</default>
+                <label>Autoramp</label>
+            </value>
+            <value>
+                <fullName>Warehouse</fullName>
+                <default>false</default>
+                <label>Warehouse</label>
+            </value>
+            <value>
+                <fullName>Dock</fullName>
+                <default>false</default>
+                <label>Dock</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

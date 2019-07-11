@@ -1,0 +1,48 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false" controller="SaasCreateSessionCtrl">
+<body  background="{!URLFOR($Resource.ValueDeliveryApproachV1, 'img/bgimage-new.jpg')}"/> 
+    <c:SaaSToolkitPageHeader ></c:SaaSToolkitPageHeader> 
+    <br/>    <br/>    <br/>    <br/>
+    <apex:form >
+        <div class="container">
+         <c:CustomPageMessages closableErrors="true" />
+
+            
+           <div class="row">
+           <div class="col-sm-6 col-md-6">
+                       <div class="row">
+                       <div class="col-sm-12 col-md-12">
+                          <h4> Setup VALUE Delivery Project\Session </h4>
+                          <h5> Clone VALUE Delivery  Project\Session from existing project or from template. </h5>
+                       </div> 
+                       </div>
+                       
+                    </div> 
+                    
+           <div class="col-sm-6 col-md-6">
+                  <apex:commandButton action="{!cancel}" value="Cancel" immediate="true" styleClass="btn btn-primary" style="float:right; margin-left:10px;"/>
+                             <apex:commandButton action="{!selectCreateSessionSetp}" value="Next" styleClass="btn btn-primary" style="float:right;margin-left:10px;"/>
+                      
+            </div>  
+             </div>
+           <div class="row">
+                <div class="col-sm-12 col-md-12">
+                   
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-md-6 col-md-offset-3">
+                   
+                        <div class="row">
+                         
+                            <apex:selectradio value="{!selectedSession}" layout="pageDirection" >
+                                <apex:selectOption itemValue="existingSession" itemLabel=" Existing session"/>
+                                <apex:selectOption itemValue="template" itemLabel=" Template" />
+                            </apex:selectradio>
+                           
+                        </div>    
+                                        
+                    </div>
+                </div>    
+            </div> 
+    </apex:form>
+</apex:page>

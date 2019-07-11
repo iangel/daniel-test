@@ -1,0 +1,73 @@
+@media (min-width: 992px) {
+#pos1{
+  position: absolute;
+  top: 180px;
+  left: 172px;
+  width: 70px;
+  height: 70px;
+  
+}
+#pos2{
+  position: absolute;
+  top: 127px;
+  left: 330px;
+  width: 50px;
+  height: 50px;
+}
+#pos3{
+  position: absolute;
+  top: 195px;
+  left: 295px;
+  width: 50px;
+  height: 61px;
+  
+}
+#pos4{
+  position: absolute;
+  top: 195px;
+  left: 376px;
+  width: 50px;
+  height: 61px;
+  
+}
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+	#pos1{
+  position: absolute;
+  top: 180px;
+  left: 73px;
+  width: 70px;
+  height: 70px;
+  
+}
+#pos2{
+  position: absolute;
+  top: 127px;
+  left: 330px;
+  width: 50px;
+  height: 50px;
+  
+}
+#pos3{
+  position: absolute;
+  top: 195px;
+  left: 194px;
+  width: 50px;
+  height: 61px;
+  
+}
+#pos4{
+  position: absolute;
+  top: 195px;
+  left: 275px;
+  width: 50px;
+  height: 61px;
+  
+}
+}
+
+.iPadtd {
+    padding: 10px 0px;
+}
+

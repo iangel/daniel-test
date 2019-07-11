@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>NS_UpdateAuthorizedCompanyExternalID</fullName>
+        <description>It updates External ID of Authorized Company</description>
+        <field>NS_ExternalID__c</field>
+        <formula>NS_PartnerAccount__r.NS_External_ID__c + &#39;_&#39;+  NS_CustomerAccount__r.NS_External_ID__c</formula>
+        <name>Update External ID</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Authorized Company External ID</fullName>
+        <actions>
+            <name>NS_UpdateAuthorizedCompanyExternalID</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>It populates External ID field of Authorized Company</description>
+        <formula>OR( NOT(ISBLANK(NS_PartnerAccount__r.NS_External_ID__c)), NOT(ISBLANK(NS_CustomerAccount__r.NS_External_ID__c)) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

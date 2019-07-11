@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requirements_to_Estimate</fullName>
+    <columns>NAME</columns>
+    <columns>Request_Title__c</columns>
+    <columns>Request_Description__c</columns>
+    <columns>Request_Type__c</columns>
+    <columns>Status__c</columns>
+    <columns>Release__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Release__c</field>
+        <operation>equals</operation>
+        <value>Wave 1</value>
+    </filters>
+    <filters>
+        <field>Status__c</field>
+        <operation>equals</operation>
+        <value>Consolidate: Approve to Estimate</value>
+    </filters>
+    <label>Requirements to Estimate</label>
+</ListView>

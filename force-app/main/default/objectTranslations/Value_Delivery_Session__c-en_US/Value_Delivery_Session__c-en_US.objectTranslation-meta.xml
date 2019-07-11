@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Value Delivery Session</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Value Delivery Sessions</value>
+    </caseValues>
+    <layouts>
+        <layout>Value Delivery Session Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Session end date should be greater than start date. --></errorMessage>
+        <name>Validate_End_Date</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All</fullName>
+    <columns>NAME</columns>
+    <columns>Request_Title__c</columns>
+    <columns>Parent_Request__c</columns>
+    <columns>Total_Priority_Ranking__c</columns>
+    <columns>Status__c</columns>
+    <columns>Capability__c</columns>
+    <columns>Release__c</columns>
+    <columns>Planned_Release__c</columns>
+    <columns>Mapping__c</columns>
+    <columns>Level_3_Process__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Planned_Release__c</field>
+        <operation>equals</operation>
+        <value>Phase 1</value>
+    </filters>
+    <filters>
+        <field>Capability__c</field>
+        <operation>equals</operation>
+        <value>activities</value>
+    </filters>
+    <label>Requirements</label>
+</ListView>

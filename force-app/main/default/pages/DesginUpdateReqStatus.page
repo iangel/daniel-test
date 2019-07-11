@@ -1,0 +1,56 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="row">
+            <div class="col-xs-12">
+            
+            
+               <!-- <div class="panel panel-primary">
+                    <div class="panel-heading">                      
+                      Updates to Requirement Status
+                    </div>  
+                <div class="panel-body"> 
+                   <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Saas Delivery Toolkit View.</p>              
+                   
+                   
+                   
+                </div>
+                
+            </div>  -->
+            
+            
+            <div class="panel  panel-primary">
+              <!-- Default panel contents -->
+              <div class="panel-heading">Updates to Requirements: Design</div>
+                  <div class="panel-body">
+                   <p>SaaS Delivery Toolkit View.</p>  
+              </div>
+              <!-- Table -->
+              <table class="table">
+                <tr>
+                    <td> Design: Document the time spent on Design. Tracking is done to validate that estimates fit to actual</td>
+                    <td> 
+                                          <img src="{!URLFOR($Resource.ValueDeliveryApproachV1 , 'img/DesginUpdateReqStatus.png')}"  class="img-responsive"  alt="Responsive image" />
+                       
+                       
+                   </td>
+                </tr>
+                <tr>
+                   <td colspan="2">Design Agreement: Documentation of the design confirmed can be documented against the requirement or user story in SaaS Delivery Toolkit. This will make it easier to pull out in the form of a report to be included in the Functionality Design Document.</td>
+
+                </tr>
+             </table>
+</div>
+
+            
+            
+            
+       </div>
+    </div>
+    
+    <!-- <ul class="pager">
+                  <li class="previous"><a href = "javascript:history.back()">&larr; Back</a></li>
+              </ul>      -->
+        
+  </c:CrpiPageTemplate>
+</apex:page>

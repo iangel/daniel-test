@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Used by the Project Management to indicate which terms are adopted for official use on the project, over their related counterparts.
+
+Be aware that creating a Field Dependency on this field negates the ability to edit in a List View. This may limit Term management.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Used by the Project Management to indicate which terms are adopted for official use on the project, over their related counterparts.</inlineHelpText>
+    <label>Project Usage Status</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Official</fullName>
+                <default>false</default>
+                <label>Official</label>
+            </value>
+            <value>
+                <fullName>Unofficial</fullName>
+                <default>true</default>
+                <label>Unofficial</label>
+            </value>
+            <value>
+                <fullName>Discouraged</fullName>
+                <default>false</default>
+                <label>Discouraged</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

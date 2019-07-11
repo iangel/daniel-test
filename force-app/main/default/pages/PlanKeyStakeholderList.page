@@ -1,0 +1,33 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Key Stakeholder List</div>
+        <div class="panel-body"> 
+          The key stakeholder list ensures the appropriate level of engagement and overall success of a given capability within the transformation.
+          <br />          <br />
+
+
+<b>        Descriptions of Responsibility Levels: </b> <br /> <br />
+  <ul>
+
+  <li>Signoff Required: Individuals accountable for validating and verifying outputs of the VALUE Delivery Approach​</li>
+  <li>Consulted:  Those whose opinions are sought and with whom there is two-way communication</li>
+  <li>Informed: Those who are kept up-to-date on progress and with whom there is only one-way communication</li>
+
+</ul>
+
+            </div >
+       
+
+        </div>
+        
+              
+     <!--    <ul class="pager">
+                  <li class="previous"><a href="/apex/PlanAndAnalyzeCRPTemplatesExamples">&larr; Back</a></li>
+
+              </ul> -->
+              
+    </c:CrpiPageTemplate>
+</apex:page>

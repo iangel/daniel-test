@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OSS North</label>
+    <protected>false</protected>
+    <values>
+        <field>Forwarding_Address__c</field>
+        <value xsi:type="xsd:string">osspb@exchange.nscorp.com;osshb@exchange.nscorp.com;cyopb@exchange.nscorp.com;cyola@exchange.nscorp.com;tncyohb@exchange.nscorp.com;tn_cyo_pb@exchange.nscorp.com;tn_cyo_hb@exchange.nscorp.com;tnosspb@exchange.nscorp.com;tnosshb@exchange.nscorp.com;tnosspb@nscorp.com;tncyopb@exchange.nscorp.com;tncyopb@nscorp.com;cyohb@exchange.nscorp.com;oss_nre@exchange.nscorp.com;oss_nre@nscorp.com;mdreedydrepairs@exchange.nscorp.com;mdreedydrepairs@nscorp.com;oakwoodcprs@nscorp.com;oakwoodcprs@exchange.nscorp.com;tn_oss_hb@exchange.nscorp.com;tn_oss_hb@nscorp.com;tn_oss_hb_cprs_billing_problems@exchange.nscorp.com;tn_oss_hb_cprs_billing_problems@nscorp.com;tnosshbcprsbillingproblems@exchange.nscorp.com;tnosshbcprsbillingproblems@nscorp.com;tn_cyo_hb_cprs_billing_problems@exchange.nscorp.com;tncyohbcprsbillingproblems@exchange.nscorp.com;tncyohbcprsbillingproblems@nscorp.com;tn_oss_pb@exchange.nscorp.com;tn_oss_pb@nscorp.com;tnosshbbuffalocustomsrelease@nscorp.com;tnosshbbuffalocustomsrelease@exchange.nscorp.com;tn_cyo_hb_buffalo_customs_release@exchange.nscorp.com;tncyohbbuffalocustomsrelease@exchange.nscorp.com;osshb@nscorp.com;tnosshb@nscorp.com;tnosshb@exchange.nscorp.com;osspbchiefclerks@exchange.nscorp.com;cyodb@exchange.nscorp.com;cyodb@exchange.nscorp.com;tnossdb@nscorp.com;tncyodb@exchange.nscorp.com;tncyodb@nscorp.com;tnossdb@exchange.nscorp.com;tn_cyo_db@exchange.nscorp.com;tn_oss_db@exchange.nscorp.com;tn_oss_db@nscorp.com;ossdb@nscorp.com;oss_north@nscorp.com;oss_north@exchange.nscorp.com</value>
+    </values>
+    <values>
+        <field>Queue_Id__c</field>
+        <value xsi:type="xsd:string">00G1I000000aPth</value>
+    </values>
+    <values>
+        <field>Routing_Email_1__c</field>
+        <value xsi:type="xsd:string">nsregionnre@1olbl7vx36vuk3es4c76bl1hoff77uwqlcisunaa4e6i2wi8gk.1i-3nwseuaq.na73.apex.salesforce.com</value>
+    </values>
+</CustomMetadata>

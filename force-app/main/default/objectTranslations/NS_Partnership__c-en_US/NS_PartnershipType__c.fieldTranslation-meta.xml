@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- What business does this partner do with this customer? --></help>
+    <label><!-- Type --></label>
+    <name>NS_PartnershipType__c</name>
+    <picklistValues>
+        <masterLabel>3PL</masterLabel>
+        <translation><!-- 3PL --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contractor</masterLabel>
+        <translation><!-- Contractor --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Other Railroad</masterLabel>
+        <translation><!-- Other Railroad --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Vendor</masterLabel>
+        <translation><!-- Vendor --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

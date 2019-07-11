@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CTI_Test_Results</fullName>
+    <columns>NAME</columns>
+    <columns>Capability__c</columns>
+    <columns>Test_Result_Name__c</columns>
+    <columns>Test_Case__c</columns>
+    <columns>Tester__c</columns>
+    <columns>Test_Result__c</columns>
+    <columns>Testing_Phase__c</columns>
+    <columns>NS_Release__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Capability__c</field>
+        <operation>equals</operation>
+        <value>CTI</value>
+    </filters>
+    <label>CTI Test Results</label>
+</ListView>

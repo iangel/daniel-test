@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status__c</fullName>
+    <description>Status of the defect</description>
+    <externalId>false</externalId>
+    <label>Status</label>
+    <required>false</required>
+    <trackFeedHistory>true</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>New</fullName>
+                <default>true</default>
+                <label>New</label>
+            </value>
+            <value>
+                <fullName>Open - Developer Assigned</fullName>
+                <default>false</default>
+                <label>Open - Developer Assigned</label>
+            </value>
+            <value>
+                <fullName>Open - Fix in Process</fullName>
+                <default>false</default>
+                <label>Open - Fix in Process</label>
+            </value>
+            <value>
+                <fullName>Open - Assigned to BA</fullName>
+                <default>false</default>
+                <label>Open - Assigned to Business Analyst</label>
+            </value>
+            <value>
+                <fullName>Open - ON HOLD - Need to update FDD</fullName>
+                <default>false</default>
+                <label>Open - ON HOLD - Need to update FDD</label>
+            </value>
+            <value>
+                <fullName>Open - Salesforce.com Request Submitted</fullName>
+                <default>false</default>
+                <label>Open - Salesforce.com Request Submitted</label>
+            </value>
+            <value>
+                <fullName>Open - Business Input Needed</fullName>
+                <default>false</default>
+                <label>Open - Business Input Needed</label>
+            </value>
+            <value>
+                <fullName>Open - Possible Enhancement</fullName>
+                <default>false</default>
+                <label>Open - Possible Enhancement</label>
+            </value>
+            <value>
+                <fullName>Fixed - Update FDD/Requirement</fullName>
+                <default>false</default>
+                <label>Fixed - Update FDD/Requirement before Closing</label>
+            </value>
+            <value>
+                <fullName>Fixed -  Awaiting Deployment</fullName>
+                <default>false</default>
+                <label>Fixed -  Awaiting Deployment</label>
+            </value>
+            <value>
+                <fullName>Fixed - Ready for Retest</fullName>
+                <default>false</default>
+                <label>Fixed - Ready for Retest</label>
+            </value>
+            <value>
+                <fullName>Fixed - Onshore to Verify</fullName>
+                <default>false</default>
+                <label>Fixed - Onshore to Verify</label>
+            </value>
+            <value>
+                <fullName>Fixed - Awaiting Deployment to UAT</fullName>
+                <default>false</default>
+                <label>Fixed - Awaiting Deployment to UAT</label>
+            </value>
+            <value>
+                <fullName>Fixed - UAT</fullName>
+                <default>false</default>
+                <label>Ready for Retest - UAT</label>
+            </value>
+            <value>
+                <fullName>Passed - Awaiting Deployment to Prod</fullName>
+                <default>false</default>
+                <label>Passed - Awaiting Deployment to Prod</label>
+            </value>
+            <value>
+                <fullName>Rejected - Can Not Reproduce</fullName>
+                <default>false</default>
+                <label>Rejected - Can Not Reproduce</label>
+            </value>
+            <value>
+                <fullName>Rejected - Expected Behavior</fullName>
+                <default>false</default>
+                <label>Rejected - Expected Behavior</label>
+            </value>
+            <value>
+                <fullName>Rejected - Training Issue</fullName>
+                <default>false</default>
+                <label>Rejected - Training Issue</label>
+            </value>
+            <value>
+                <fullName>Rejected - Duplicate</fullName>
+                <default>false</default>
+                <label>Rejected - Duplicate</label>
+            </value>
+            <value>
+                <fullName>Deferred - Future Enhancement Consideration</fullName>
+                <default>false</default>
+                <label>Deferred - Future Enhancement Consideration</label>
+            </value>
+            <value>
+                <fullName>Closed - Test Result Passed</fullName>
+                <default>false</default>
+                <label>Closed - Test Result Passed</label>
+            </value>
+            <value>
+                <fullName>Closed - In Production</fullName>
+                <default>false</default>
+                <label>Closed - In Production</label>
+            </value>
+            <value>
+                <fullName>Withdrawn</fullName>
+                <default>false</default>
+                <label>Withdrawn</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

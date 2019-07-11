@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Parent_Request__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>Any related request to the request</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Track Parent / Child Requirement relationships. Also use to relate a Duplicate with the Open Request.</inlineHelpText>
+    <label>Parent Request</label>
+    <referenceTo>Request__c</referenceTo>
+    <relationshipLabel>Requests</relationshipLabel>
+    <relationshipName>CRM_Requirements</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

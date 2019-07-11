@@ -1,0 +1,19 @@
+<aura:component implements="lightning:actionOverride" access="global">
+   
+          <div class="slds-modal__container">
+                <div class="slds-modal__header">
+                    <h2 class="slds-text-heading--medium">Case Creation Redirect</h2>
+            </div>
+            <div class="slds-modal__content slds-p-around--medium slds-grid slds-wrap ">
+                
+                <h1>Please navigate to the customer's Account or Contact page in order to manually create a case. </h1> 
+                
+            </div> 
+              
+               <div class="slds-modal__footer">                
+               <lightning:button variant="brand" label="Cancel" onclick="{!c.cancelRecord}" />
+              
+            </div>
+              
+           </div> 
+</aura:component>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- New / Modified --></label>
+    <name>New_Modified__c</name>
+    <picklistValues>
+        <masterLabel>Modify</masterLabel>
+        <translation><!-- Modify --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>New</masterLabel>
+        <translation><!-- New --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TBD</masterLabel>
+        <translation><!-- TBD --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

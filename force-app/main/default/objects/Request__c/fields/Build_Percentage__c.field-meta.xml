@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Build_Percentage__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( Build_Status__c ,
+  &quot;Started Component&quot;, 10/100,
+  &quot;Development in Progress&quot;, 20/100,
+  &quot;Review Ready&quot;, 35/100,
+  &quot;Feedback Incorporated&quot;, 50/100,
+  &quot;Offshore Unit Testing Complete&quot;, 60/100,
+  &quot;Onshore Unit Testing Complete&quot;, 70/100,
+  &quot;Onshore Unit Testing Feedback Incorporated&quot;, 75/100,
+  &quot;Onshore Team Review&quot;, 80/100,
+  &quot;Onshore Team Feedback Incorporated&quot;, 90/100,
+  &quot;Onshore Team Feedback Unit Testing Complete&quot;, 95/100,
+  &quot;Client Review/Next Environment Ready&quot;,1,
+  NULL)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Build/Unit Test Percentage</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Percent</type>
+</CustomField>

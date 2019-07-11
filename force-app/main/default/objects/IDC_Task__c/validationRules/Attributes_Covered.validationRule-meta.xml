@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Attributes_Covered</fullName>
+    <active>true</active>
+    <errorConditionFormula>TEXT(Status__c) = &#39;Completed&#39; &amp;&amp; ( Actual_LOE__c = 0.00 || TEXT(Actual_LOE__c) = &#39;&#39; || Comments__c = &#39;&#39; || Planned_LOE__c = 0.00 || TEXT(Planned_LOE__c) = &#39;&#39; || TEXT(Start_Date__c) = &#39;&#39; || TEXT(End_Date__c) = &#39;&#39;)</errorConditionFormula>
+    <errorMessage>Please enter Comments, Start Date, End Date, Actual LOE and Planned LOE.</errorMessage>
+</ValidationRule>

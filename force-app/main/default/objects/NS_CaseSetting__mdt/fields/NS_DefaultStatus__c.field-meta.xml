@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_DefaultStatus__c</fullName>
+    <description>Status Management</description>
+    <externalId>false</externalId>
+    <fieldManageability>DeveloperControlled</fieldManageability>
+    <inlineHelpText>Unless the user manually populates a Status value on the screen, the following Interaction Reason would create a Case record with status selected here.</inlineHelpText>
+    <label>Default Status</label>
+    <required>true</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>NS_New</fullName>
+                <default>false</default>
+                <label>NS_New</label>
+            </value>
+            <value>
+                <fullName>NS_Working</fullName>
+                <default>true</default>
+                <label>NS_Working</label>
+            </value>
+            <value>
+                <fullName>NS_Escalated</fullName>
+                <default>false</default>
+                <label>NS_Escalated</label>
+            </value>
+            <value>
+                <fullName>NS_AwaitingResponse</fullName>
+                <default>false</default>
+                <label>NS_AwaitingResponse</label>
+            </value>
+            <value>
+                <fullName>NS_Closed</fullName>
+                <default>false</default>
+                <label>NS_Closed</label>
+            </value>
+            <value>
+                <fullName>NS_Cancelled</fullName>
+                <default>false</default>
+                <label>NS_Cancelled</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

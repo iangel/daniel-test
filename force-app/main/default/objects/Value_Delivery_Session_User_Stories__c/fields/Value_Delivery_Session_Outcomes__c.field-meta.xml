@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Value_Delivery_Session_Outcomes__c</fullName>
+    <deleteConstraint>Restrict</deleteConstraint>
+    <externalId>false</externalId>
+    <label>Value Delivery Session Outcomes</label>
+    <referenceTo>Value_Delivery_Session_Outcomes__c</referenceTo>
+    <relationshipLabel>Value Delivery Session User Stories</relationshipLabel>
+    <relationshipName>Value_Deliver_Session_User_Stories</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

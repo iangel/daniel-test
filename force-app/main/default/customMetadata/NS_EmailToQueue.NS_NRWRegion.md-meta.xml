@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>OSS West</label>
+    <protected>false</protected>
+    <values>
+        <field>Forwarding_Address__c</field>
+        <value xsi:type="xsd:string">cyoil@exchange.nscorp.com;ossil@nscorp.com;ossil@exchange.nscorp.com;tncyoil@exchange.nscorp.com;tncyoil@nscorp.com;oss_nrw@exchange.nscorp.com;oss_nrw@nscorp.com;tnossil@exchange.nscorp.com;tnossil@nscorp.com;tnossiltoyotaautorack@exchange.nscorp.com;tnossiltoyotaautorack@nscorp.com;osslk@exchange.nscorp.com;tncyolk@exchange.nscorp.com;tn_cyo_lk@exchange.nscorp.com;tncyolk@nscorp.com;tn_oss_lk@nscorp.com;tn_oss_lk@exchange.nscorp.com;tnosslk@nscorp.com;tnosslk@exchange.nscorp.com;tnosslkweichr@exchange.nscorp.com;tnosslkweichr@nscorp.com;osslk@nscorp.com;oss_west@nscorp.com;oss_west@exchange.nscorp.com</value>
+    </values>
+    <values>
+        <field>Queue_Id__c</field>
+        <value xsi:type="xsd:string">00G1I000000aPtr</value>
+    </values>
+    <values>
+        <field>Routing_Email_1__c</field>
+        <value xsi:type="xsd:string">nsregionnrw@16syw6wieemem02zcwssn7msh7fotayutde5zjnhutim0jsgoe.1i-3nwseuaq.na73.apex.salesforce.com</value>
+    </values>
+</CustomMetadata>

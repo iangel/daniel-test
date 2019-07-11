@@ -1,0 +1,462 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false"  extensions="SaaSCreateQuestionLogCtrl" standardController="Question_Log__c" docType="html-5.0">  
+
+
+ <style>
+    #top-panel {
+  line-height: 0px !important;
+        }
+        table.table-fixedheader>thead tr th, table.table-fixedheader>tbody tr td{
+        text-align: center ;
+        }
+    </style>
+    <c:SaaSToolkitPageTemplate >
+        <br />
+        <apex:form style="max-width: 94vw;" >
+  <!--   <apex:inputhidden value="{!Question_Log__c.RecordType.DeveloperName}" />  -->
+        
+        
+            <apex:variable var="emptyLst" value="'[]'" />
+            <apex:outputPanel id="errorBlock">
+                <c:CustomPageMessages closableErrors="true"></c:CustomPageMessages>
+            </apex:outputPanel>
+            <div>
+            <h4 style="float: left;font-size: 16px;margin: 15px 0px 0px;">
+                Question Log Edit</h4>&nbsp;
+                <apex:commandLink action="{!saveQuestionLog}"  title="Save">
+                    <!--<i class="fa fa-check-circle fa-2x"></i>-->
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/save.png')}"/>
+                </apex:commandLink>
+                &nbsp;
+                <apex:commandLink action="{!createQuestion}" html-href="#" rendered="{! ( isAccentureRepresentative && isDetail )}" title="Create Question Log" immediate="true">
+                    <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/new.png')}"/>&nbsp;&nbsp;</apex:commandLink>
+                
+                  <apex:commandLink action="/apex/SaaSQuestionLogListView" immediate="true" title="Cancel" rendered="{!NOT(isSaved)}" id="cancel">
+               <!--   <i class="fa fa-times-circle fa-2x"></i> -->
+                   <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/cancel.png')}"/>
+               </apex:commandLink>  
+                
+                  <apex:commandLink action="/apex/SaaSQuestionLogListView" reRender="errorBlock" rendered="{!(isSaved)}" immediate="true" id="back">
+               <!--   <i class="fa fa-times-circle fa-2x"></i> -->
+                          <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/back_1x.png')}"/>
+               </apex:commandLink>  
+                
+       <!--         <a href="/apex/SaaSQuestionLogListView" title="Cancel">
+                
+                
+                <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/cancel.png')}"/>
+                </a>&nbsp;&nbsp; -->
+                
+                
+                
+                <apex:commandLink action="{!convertToRequest}" rendered="{! ( isAccentureRepresentative && isDetail )}" title="Convert to Request">
+                &nbsp;   <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/convert_to_request.png')}"/>
+                    
+                </apex:commandLink>
+                
+                
+               <apex:commandLink action="/apex/SaaSLinkToQuestion?id={!Question_Log__c.id}" rendered="{! ( isAccentureRepresentative && isDetail )}" title="Link to Request" >
+                            <!--<i class="fa fa-cogs fa-2x"></i>-->
+                      &nbsp;      <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/link_to_request.png')}"/>
+                    </apex:commandLink>
+                           
+               
+<!--              <apex:commandLink action="/apex/SaaSCreateQuestionLog?id={!Question_Log__c.id}" rendered="{! (questionType == 'Value_Delivery_Question_Log' && isDetail )}" title="Answer">
+                 
+                     &nbsp;  <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/answer.png')}" />
+               </apex:commandLink>  -->
+                                                 
+                
+            </div>
+            <hr style="width: 100%; border-color: black;" />
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 Style="font-weight: bold;">Question Summary  {!QuesLogObj.Name}</h5>
+                            <hr class="hrBorder" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="form-group required">
+                                <label class='control-label'>Record Type</label>
+                                <a tabindex="0" role="button" data-toggle="popover" data-trigger="focus" data-html="true" title="Toolkit Mobile App" data-content="<b>SaaS Delivery Question Log</b> - Create/Update any Question with the Request. <br/><b>Value Delivery Question Log</b> - Create/Update any Question with VALUE Delivery Session.">       <i class="fa fa-question-circle" style="color:orange"></i></a>                                                                
+                                <apex:selectList value="{!questionType}" style="width:100%" styleClass="form-control" size="1" multiselect="false" disabled="{!disableRecType}" id="recordTypeSelection">
+                                    <apex:selectOptions value="{!RecordType}"></apex:selectOptions>
+                                    <apex:actionSupport event="onchange" action="{!disbaleRecordType}"  reRender="recordDetailPanel,recordTypeSelection"/>
+                                </apex:selectList>
+                            </div>
+                        </div>
+                    </div>
+                    <apex:outputPanel id="recordDetailPanel">
+                        <apex:outputPanel rendered="{!questionType == 'SaaS_Delivery_Question_Log'}">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Use Case</label>
+                                        <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="Use_Case__c" valueField="Id" targetField="{!QuesLogObj.Use_Case__c}" style="width:100%;" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group required">
+                                       <label class='control-label'>Request</label><br/>
+                                       <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Request_Title__c" SObject="Request__c" valueField="Id" targetField="{!QuesLogObj.Request__c}" style="width:100%;" />
+                                        <!-- <apex:outputText value=" {!req11 }" style="width:100%;" styleClass="form-control"/>-->
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group required">
+                                        <label class='control-label'>Submitter</label>
+                                        <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="User" valueField="Id" targetField="{!QuesLogObj.Submitter__c}" style="width:100%;" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Assigned To</label>
+                                        <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="User" valueField="Id" targetField="{!QuesLogObj.Assigned_To__c}" style="width:100%;" />
+                                    </div>
+                                </div>
+                               <div class="col-md-4 ">
+                                    <div class="form-group">
+                                        <label>Status</label>
+                                        <apex:inputField value="{!QuesLogObj.Status__c}" style="width:100%" styleClass="form-control" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Priority</label>
+                                        <apex:inputField value="{!QuesLogObj.Priority__c}" styleClass="form-control" />
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Expected Close Date</label>
+                                        <apex:input value="{!expectedCloseDate}" type="date" styleClass="form-control" />
+                                    </div>
+                                </div>
+                                  <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Requested Date</label>
+                                        <apex:input value="{!requestedDate}" type="date" styleClass="form-control" />
+                                    </div>
+                                </div>
+
+                                <div class="col-md-4">
+                                    <div class="form-group">
+                                    <apex:outputPanel rendered="{!isAccentureRepresentative}">
+                                        <label>Is VALUE Delivery?</label>                     
+                                        <apex:inputField value="{!QuesLogObj.Is_Value_Delivery_Question__c}" style="width:100%;" styleClass="form-control"   />
+                                    </apex:outputPanel>
+                                    
+                                    <!--    <apex:inputField value="{!QuesLogObj.Is_Value_Delivery_Question__c}" style="width:100%;" styleClass="form-control" rendered="{!isAccentureRepresentative}"/> -->
+                                    </div>
+                                </div> 
+                               
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group required">
+                                        <label class='control-label'>Question</label>
+                                        <apex:inputField value="{!QuesLogObj.Question__c}" style="width:100%;" styleClass="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Answer</label>
+                                        <apex:inputField value="{!QuesLogObj.Answer__c}" style="width:100%;" styleClass="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                        </apex:outputPanel>
+                        
+                        
+                        <!-- Fields will Change when Value Delivery Question record type is selected.-->
+                        
+                        <apex:outputPanel rendered="{!questionType == 'Value_Delivery_Question_Log'}">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="form-group required">
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class='control-label'>Phase</label>
+                                                 <!--   <apex:inputField value="{!QuesLogObj.Scope__c}" style="width:100%;" styleClass="form-control" /> -->
+                                                    <apex:selectList value="{!QuesLogObj.Scope__c}" styleClass="form-control" multiselect="false" size="1">
+                                                    <apex:selectOption itemValue="-- None --" itemLabel="-- None --"/>
+                                                    <apex:selectOption itemValue="Initiate and Confirm" itemLabel="Initiate and Confirm"/>
+                                                    <apex:selectOption itemValue="Design" itemLabel="Design "/>
+                                                    <apex:selectOption itemValue="Build" itemLabel="Build"/>
+                                                    </apex:selectList>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class='control-label'>Sub-Capability</label>
+                                                    <apex:inputField value="{!QuesLogObj.Sub_Capability__c}" style="width:100%;" styleClass="form-control" />
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label class='control-label'>Industry</label>
+                                                    <apex:inputField value="{!QuesLogObj.Industry__c}" style="width:100%;" styleClass="form-control" />
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-4">
+                                                <div class="form-group">
+                                                    <label>Request</label>
+                                                    <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Request_Title__c" SObject="Request__c" valueField="Id" targetField="{!QuesLogObj.Request__c}" style="width:100%;" />
+                                                </div>
+                                            </div>
+                                                     
+                                                     
+                             <div class="col-md-4">
+                                    <div class="form-group">
+                                        <label>Assigned To</label>
+                                        <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="User" valueField="Id" targetField="{!QuesLogObj.Assigned_To__c}" style="width:100%;" />
+                                    </div>
+                                </div>
+                                 <div class="col-md-4">
+                                    <div class="form-group">
+                                      <apex:outputPanel rendered="{!isAccentureRepresentative}">
+                                        <label>Is VALUE Delivery?</label> 
+                                                                              
+                                          <!--<apex:inputCheckbox value="{!QuesLogObj.Is_Value_Delivery_Question__c}" style="width:100%;" styleClass="form-control" disabled="{!isAccentureRepresentative}"  />-->
+                                          <apex:inputField value="{!QuesLogObj.Is_Value_Delivery_Question__c}" style="width:100%;" styleClass="form-control"   />
+                                     </apex:outputPanel>
+                                    </div>
+                                </div> 
+                                </div>  
+                                
+                                        
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label  class='control-label'>Domain</label>
+                                                    <apex:inputField value="{!QuesLogObj.Domain__c}" style="width:100%;" styleClass="listDropdown" />
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-8 col-sm-10">
+                                                <div class="form-group">
+                                                    <label class='control-label'>Question</label>
+                                                    <apex:inputField value="{!QuesLogObj.Question__c}" style="width:100%;" styleClass="form-control" />
+                                                </div>
+                                            </div>
+                                         <!--   <div class="col-md-1 col-sm-2">
+                                                <apex:outputPanel id="addComment">
+                                                    <apex:commandLink action="{!showans}" reRender="addComment,answerblock" rendered="{!NOT(showanswer)}">
+                                                        <i class="fa fa-comment-o fa-2x"></i>
+                                                        <img src="{!URLFOR($Resource.SaasDelivery_Icons, 'icon/answer.png')}" class="comment-icon sm-comment-icon"/>
+                                                    </apex:commandLink> &nbsp;
+                                                 </apex:outputPanel>
+                                            </div> -->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>                            
+                 <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label>Answer</label>
+                                        <apex:inputField value="{!QuesLogObj.Answer__c}" style="width:100%;" styleClass="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-8">
+                                    <div class="form-group">
+                                        <label class='control-label'>Tips and Comments</label>
+                                        <apex:inputField value="{!Question_Log__c.Tips_and_Comments__c}" style="width:100%;" styleClass="form-control" />
+                                    </div>
+                                </div>
+                            </div>
+                            
+                           
+                            
+                        </apex:outputPanel>
+                    </apex:outputPanel>
+                  
+                    
+                    
+                
+                 <apex:outputPanel id="detailPan">
+                    <!--  In detail mode Display releated Lst --> 
+                    <apex:outputPanel rendered="{!isDetail}">
+                   <!-- <apex:variable var="responses" value="'{!Question_Log__c.Responses__r}'" /> -->
+                   
+                         <br />
+            <div class="row">
+                            <div class="col-md-12">
+                                <h5 Style="font-weight: bold;">Related Requests</h5>
+                                <hr class="hrBorder" />
+                            </div>
+                        </div>
+            
+            <div class="row">
+                  <div class="col-lg-12 col-sm-12 col-md-12" style="width:97%;">
+                 <apex:outputPanel rendered="{!RelatedReqLst.size == 0}">
+                     No records to display.
+                  </apex:outputPanel>
+                  <apex:outputPanel rendered="{!RelatedReqLst.size > 0}">
+                  
+                       <table class="table table-fixedheader table-bordered"> 
+                            <thead class="customTableHeader">
+                                <tr>
+                                    <th class="colWidth10" style="word-wrap: normal;">Sr. No</th>
+                                    <th class="colWidth10" style="word-wrap: normal;">Request ID</th>
+                                    
+                                    <th class="colWidth50" style="word-wrap: normal;">Description</th>
+                                    
+                                    <th class="colWidth10" style="word-wrap: normal;">Converted As Request</th>
+                                    <th class="colWidth10" style="word-wrap: normal;">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody style="max-height: 200px;">
+                              <apex:variable var="i" value="{!1}" />
+                                  <apex:repeat value="{!RelatedReqLst}" var="RelatedReq">
+                                      <tr>
+                                       <td class="colWidth10">{!i} <apex:variable var="i" value="{!i+1}" />
+                                       <td class="colWidth10">
+                                     
+                                     <a onclick="openPage('/apex/SaaSCreateRequest?detail=1&&id={!RelatedReq.Request__c}');"> {!RelatedReq.Request__r.name} </a>
+                                     
+                                     
+                                     </td>
+                                        
+                                   <td class="colWidth50" style="text-align: left; padding-left: 10vh;"><apex:outputField value="{!RelatedReq.Request__r.Request_Description__c}"/></td>
+                                    <td class="colWidth10"><apex:outputField value="{!RelatedReq.Converted_Request__c}"/></td>
+                                   <td class="colWidth10">
+                                        <!--   <apex:commandLink action="{!deleteRecord}" html-href="#" rendered="{!isDetail}">
+                                               <apex:param name="RequestToDelete" value="{!RelatedReq.Id}" assignTo="{!RecordToDelete}"/>
+                                            <i class="fa fa-trash-o" />
+                                            </apex:commandLink>-->
+                                          <apex:commandLink title="Delete" rendered="{!isDetail}"  html-data-toggle="modal" html-data-target="#deleteModel" reRender="a">                        
+                        <i class="fa fa-trash-o" />
+
+                    </apex:commandLink>  
+                                            <div class="modal fade" id="deleteModel" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                                              <div class="modal-dialog" role="document">
+                                                <div class="modal-content">
+                                                  <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                                    <h4 class="modal-title" id="myModalLabel">Toolkit Mobile App</h4>
+                                                  </div>
+                                                  <div class="modal-body">
+                                                      Are you sure you want to delete?
+                                                  </div>
+                                                  <div class="modal-footer">
+                                                       <apex:commandLink action="{!deleteRecord}" html-href="#" rendered="{!isDetail}" value="Delete"  styleclass="btn btn-primary">
+                                                       <apex:param name="RequestToDelete" value="{!RelatedReq.Id}" assignTo="{!RecordToDelete}"/>   
+                                                       </apex:commandLink>
+                                                    <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>        
+                                                  </div>
+                                                </div>
+                                              </div>
+                                            </div>
+                                                                                                 
+                                         </td>
+                                     </td>
+                                    
+                                 </tr>
+                             </apex:repeat>
+                                </tbody>
+                         </table>
+                     </apex:outputPanel>
+                </div>
+            </div>
+          
+                        
+                   <!--     <apex:outputPanel id="answerPanel">
+                            <apex:outputPanel rendered="{!Question_Log__c.RecordType.DeveloperName == 'Value_Delivery_Question_Log'}"> 
+                        
+                        <div class="row" style="padding-top: 30px;">
+                            <div class="col-md-12">
+                                <h6 Style="font-weight: bold;">Answers</h6>
+                                <hr class="hrBorder" />
+                            </div>
+                        </div>
+                        <div class="row"> <div class="col-lg-12 col-sm-12 col-md-12" style="width:97%;"> 
+
+                                <apex:outputPanel rendered="{!emptyLst == responses}">
+           No records to display.
+      </apex:outputPanel>
+                                <apex:outputPanel rendered="{!emptyLst != responses}">
+                                  <table class="table table-fixedheader table-bordered"> 
+                            <thead class="customTableHeader">
+                                <tr>
+                                    <th class="colWidth10">Sr. No</th>
+                                    <th class="colWidth30">Submitter</th>
+                                    <th class="colWidth30">Answer</th>
+                                    <th class="colWidth20">Answered Date</th>
+                                    <apex:outputPanel rendered="{!isAccentureRepresentative}">
+                                    <th class="colWidth20">Rating</th> 
+                                    <th class="colWidth10"> </th>
+                                    </apex:outputPanel>
+                                </tr>
+                            </thead>
+                               <tbody style="max-height: 200px;">
+                                        <apex:variable var="i" value="{!1}" />
+                                        <apex:repeat value="{!Question_Log__c.Responses__r}" var="q">
+                                          <tr>
+                                                <td class="colWidth10">{!i} <apex:variable var="i" value="{!i+1}" /> </td>
+                                               
+                                                <td class="colWidth30">{!q.user__r.Name}</td>
+                                                <td class="colWidth30">{!q.Response__c}</td>
+                                                <td class="colWidth20">
+                                                <apex:outputText value="{0, date, MM/dd/yyyy}">
+                                                        <apex:param value="{!q.CreatedDate}" />
+                                                    </apex:outputText>
+                                                    </td>
+                                                    
+                                                <td class="colWidth20">
+                                                <img src="/img/samples/stars_{!q.Average_Rating__c}00.gif" />
+                                                </td>
+                                                
+                                          
+                                                <td class="colWidth10">
+                                               <a  href="#" onclick="openPage('/apex/SaaSRateQuestion?id={!q.id}');"> 
+                                                
+                                               <i class="fa fa-angle-right fa-2x"></i>
+                                                  </a>
+                                                
+                                              <apex:commandLink action="{!rateResponse}" html-data-toggle="modal" html-data-target="#myModal" reRender="modelPanel">
+                                                        <i class="fa fa-star"></i>
+                                                        <apex:param assignTo="{!responseID}" name="responseID" id="clientHashParm" value="{!q.id}" />
+                                                    </apex:commandLink> 
+                                                    
+                                                    
+                                                    </td>
+                                                
+                                                
+                                            </tr>
+                                        </apex:repeat>
+                                           </tbody>
+                                    </table>
+                           
+                                </apex:outputPanel>
+                            </div>
+                        </div>
+                       
+             </apex:outputPanel>
+        
+            
+                </apex:outputPanel> -->
+                    </apex:outputPanel>        </apex:outputPanel>              
+                </div>
+            </div>
+           
+        </apex:form>
+    </c:SaaSToolkitPageTemplate>
+</apex:page>

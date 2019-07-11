@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Build_Status__c</fullName>
+    <description>This is the build status</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Updated By Developer - 10%, 20%, 35%, 50%, 60%, 75%, 90% ||
+Updated By Functional Team - 70%,95%, 100% ||
+Updated by Onshore Lead - 80%</inlineHelpText>
+    <label>Build Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Started Component</fullName>
+                <default>false</default>
+                <label>Started Component</label>
+            </value>
+            <value>
+                <fullName>Development in Progress</fullName>
+                <default>false</default>
+                <label>Development in Progress</label>
+            </value>
+            <value>
+                <fullName>Review Ready</fullName>
+                <default>false</default>
+                <label>Review Ready</label>
+            </value>
+            <value>
+                <fullName>Feedback Incorporated</fullName>
+                <default>false</default>
+                <label>Feedback Incorporated</label>
+            </value>
+            <value>
+                <fullName>Offshore Unit Testing Complete</fullName>
+                <default>false</default>
+                <label>Offshore Unit Testing Complete</label>
+            </value>
+            <value>
+                <fullName>Onshore Unit Testing Complete</fullName>
+                <default>false</default>
+                <label>Onshore Unit Testing Complete</label>
+            </value>
+            <value>
+                <fullName>Onshore Unit Testing Feedback Incorporated</fullName>
+                <default>false</default>
+                <label>Onshore Unit Testing Feedback Incorporated</label>
+            </value>
+            <value>
+                <fullName>Onshore Team Review</fullName>
+                <default>false</default>
+                <label>Onshore Team Review</label>
+            </value>
+            <value>
+                <fullName>Onshore Team Feedback Incorporated</fullName>
+                <default>false</default>
+                <label>Onshore Team Feedback Incorporated</label>
+            </value>
+            <value>
+                <fullName>Onshore Team Feedback Unit Testing Complete, Ready for Next Environment</fullName>
+                <default>false</default>
+                <label>Onshore Team Feedback Unit Testing Complete</label>
+            </value>
+            <value>
+                <fullName>Client Reviewed and/or Ready for Next Environment</fullName>
+                <default>false</default>
+                <label>Client Reviewed and/or Ready for Next Environment</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

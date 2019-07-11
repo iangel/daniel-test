@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RemovedFromRelease</fullName>
+    <active>true</active>
+    <description>If Checkbox is checked, removed from release must be populated</description>
+    <errorConditionFormula>Removed_Release__c = TRUE &amp;&amp;  Removed_From_Release__c = &quot;&quot;</errorConditionFormula>
+    <errorDisplayField>Removed_From_Release__c</errorDisplayField>
+    <errorMessage>You must provide the release that the request was removed from.</errorMessage>
+</ValidationRule>

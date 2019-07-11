@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Objectives_and_Attendees_for_Participant__c</fullName>
+    <description>Objectives And Key Participants - Record type F</description>
+    <externalId>false</externalId>
+    <label>Objectives and Attendees for Participant</label>
+    <referenceTo>Value_Delivery_Setup__c</referenceTo>
+    <relationshipLabel>Value Delivery Objectives Options</relationshipLabel>
+    <relationshipName>Value_Delivery_Objectives_Options</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <constants>
+        <description>set unread email flag to false</description>
+        <name>false</name>
+        <dataType>Boolean</dataType>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </constants>
+    <description>set case with matching case number field ns_unread_email__c to false</description>
+    <interviewLabel>fSetCaseUnreadEmailToFalse {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Clear Case Unread Email Icon</label>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>ruCaseUnreadEmail</name>
+        <label>ruCaseUnreadEmail</label>
+        <locationX>138</locationX>
+        <locationY>171</locationY>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>vCaseId</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>NS_Unread_Email__c</field>
+            <value>
+                <elementReference>false</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Case</object>
+    </recordUpdates>
+    <startElementReference>ruCaseUnreadEmail</startElementReference>
+    <status>Active</status>
+    <variables>
+        <description>Case record sfdc id</description>
+        <name>vCaseId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>

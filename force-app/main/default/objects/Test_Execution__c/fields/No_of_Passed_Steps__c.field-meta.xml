@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>No_of_Passed_Steps__c</fullName>
+    <externalId>false</externalId>
+    <label>No.of Passed Steps</label>
+    <summaryFilterItems>
+        <field>Test_Execution_Steps__c.Status__c</field>
+        <operation>equals</operation>
+        <value>Passed</value>
+    </summaryFilterItems>
+    <summaryForeignKey>Test_Execution_Steps__c.Test_Execution_Name__c</summaryForeignKey>
+    <summaryOperation>count</summaryOperation>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Summary</type>
+</CustomField>

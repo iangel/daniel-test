@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Requests</value>
+    </caseValues>
+    <layouts>
+        <layout>General Request</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- New Request Detail --></label>
+            <section>New Request Detail</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Question</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Question/Answer --></label>
+            <section>Question/Answer</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Request Layout</layout>
+        <sections>
+            <label><!-- Additional Request Details --></label>
+            <section>Additional Request Details</section>
+        </sections>
+        <sections>
+            <label><!-- Build Information --></label>
+            <section>Build Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fit/Gap Information --></label>
+            <section>Fit/Gap Information</section>
+        </sections>
+        <sections>
+            <label><!-- Notes &amp; Comments --></label>
+            <section>Notes &amp; Comments</section>
+        </sections>
+        <sections>
+            <label><!-- Request Summary --></label>
+            <section>Request Summary</section>
+        </sections>
+        <sections>
+            <label><!-- Requirement Summary --></label>
+            <section>Requirement Summary</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Unit Testing --></label>
+            <section>Unit Testing</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Request to be raised with Functional team --></description>
+        <label><!-- General Request --></label>
+        <name>Norfolk_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Question to be raised with Functional team --></description>
+        <label><!-- Question --></label>
+        <name>Question</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- You must pick a value for the Closed/Deferred Reason. --></errorMessage>
+        <name>ClosedDeferredReasonRequired</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Must Enter Related Request Value --></errorMessage>
+        <name>ClosedDuplicateRelateRequest</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter a value greater than 0 for fields under Total Level of Effort. --></errorMessage>
+        <name>Positive_Effort</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must provide the release that the request was removed from. --></errorMessage>
+        <name>RemovedFromRelease</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must provide Related Request Value --></errorMessage>
+        <name>StatusClosedDuplicate</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- View_Requests_by_User_story --></label>
+        <name>View_Requests_by_User_story</name>
+    </webLinks>
+</CustomObjectTranslation>

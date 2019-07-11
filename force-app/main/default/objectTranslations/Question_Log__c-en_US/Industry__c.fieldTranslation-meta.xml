@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Industry --></label>
+    <name>Industry__c</name>
+    <picklistValues>
+        <masterLabel>Communications, Media and Technology</masterLabel>
+        <translation><!-- Communications, Media and Technology --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cross-Industry</masterLabel>
+        <translation><!-- Cross-Industry --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Financial Services</masterLabel>
+        <translation><!-- Financial Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Health &amp; Public Services</masterLabel>
+        <translation><!-- Health &amp; Public Services --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Products</masterLabel>
+        <translation><!-- Products --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Resources</masterLabel>
+        <translation><!-- Resources --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Fjord_Concept__c</fullName>
+    <externalId>false</externalId>
+    <label>Fjord Concept</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Dot Dot Dash</fullName>
+                <default>false</default>
+                <label>Dot Dot Dash</label>
+            </value>
+            <value>
+                <fullName>Signal</fullName>
+                <default>false</default>
+                <label>Signal</label>
+            </value>
+            <value>
+                <fullName>All Aboard</fullName>
+                <default>false</default>
+                <label>All Aboard</label>
+            </value>
+            <value>
+                <fullName>Single Track</fullName>
+                <default>false</default>
+                <label>Single Track</label>
+            </value>
+            <value>
+                <fullName>Spur</fullName>
+                <default>false</default>
+                <label>Spur</label>
+            </value>
+            <value>
+                <fullName>TRAX</fullName>
+                <default>false</default>
+                <label>TRAX</label>
+            </value>
+            <value>
+                <fullName>Wilbur</fullName>
+                <default>false</default>
+                <label>Wilbur</label>
+            </value>
+            <value>
+                <fullName>Gatekeeper</fullName>
+                <default>false</default>
+                <label>Gatekeeper</label>
+            </value>
+            <value>
+                <fullName>Dispatch</fullName>
+                <default>false</default>
+                <label>Dispatch</label>
+            </value>
+            <value>
+                <fullName>Interxchange</fullName>
+                <default>false</default>
+                <label>Interxchange</label>
+            </value>
+            <value>
+                <fullName>Hot Car Prime</fullName>
+                <default>false</default>
+                <label>Hot Car Prime</label>
+            </value>
+            <value>
+                <fullName>The Herd</fullName>
+                <default>false</default>
+                <label>The Herd</label>
+            </value>
+            <value>
+                <fullName>On The Spot</fullName>
+                <default>false</default>
+                <label>On The Spot</label>
+            </value>
+            <value>
+                <fullName>Traction</fullName>
+                <default>false</default>
+                <label>Traction</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

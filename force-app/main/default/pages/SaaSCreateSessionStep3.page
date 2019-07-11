@@ -1,0 +1,89 @@
+<apex:page standardStylesheets="false" sidebar="false" showHeader="false" controller="SaasCreateSessionCtrl"  docType="html-5.0">
+<body  background="{!URLFOR($Resource.ValueDeliveryApproachV1, 'img/bgimage-new.jpg')}"/> 
+<c:SaaSToolkitPageHeader ></c:SaaSToolkitPageHeader> 
+<br/><br/><br/><br/><br/>
+
+<apex:form >
+        <div class="container">
+                    <c:CustomPageMessages closableErrors="true" />
+         <div class="row">
+           <div class="col-sm-6 col-md-6">
+                       <div class="row">
+                       <div class="col-sm-12 col-md-12">
+                          <h4> Setup VALUE Delivery Project\Session  </h4>
+                          <h5> Enter Details. </h5>
+                       </div> 
+                       </div>
+                       
+                    </div> 
+                                     
+<div class="col-sm-6 col-md-6">
+             <apex:commandButton value="Cancel" action="{!cancel}" Styleclass="btn btn-primary" style="float:right;margin-left:10px;"/> 
+                      <apex:commandButton value="Next" action="{!createSessionNextStep}" Styleclass="btn btn-primary" style="float:right;margin-left:10px;"/> 
+        <apex:commandButton value="Previous" action="{!createSessionPrevoiusStep}" Styleclass="btn btn-primary" style="float:right;margin-left:10px;"/>
+
+
+
+
+           </div>       
+             </div>
+<div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h5 Style="font-weight: bold;">Session Summary</h5>
+                            <hr class="hrBorder" />
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="form-group required">
+                                <label class='control-label'>Session Name</label>
+                                <apex:inputField value="{!valueDeliverySesObj.Name}" style="width:100%;" styleClass="form-control" />
+                            </div>
+                        </div>
+                        
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>Start Date</label>
+                                <apex:input type="datetime-local"  value="{!sessonStartDate}" style="width:100%;" styleClass="form-control"  />
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label>End Date</label>
+                                <apex:input type="datetime-local" value="{!sessonEndDate }" style="width:100%;" styleClass="form-control" />
+                            </div>
+                        </div>
+                        
+                    </div>
+                      <div class="row">
+                      <div class="col-md-4">
+                            <div class="form-group required">
+                                <label class='control-label'>Project</label>
+                                <c:AutoCompleteV2 allowClear="true" syncManualEntry="false" importJquery="false" labelField="Name" SObject="Release__c" valueField="Id" targetField="{!valueDeliverySesObj.Releases__c}" style="width:100%;" />
+                            </div>
+                        </div>
+                       <div class="col-md-4">
+                            <div class="form-group">
+                                <label class='control-label'>Description</label>
+                                <apex:inputField value="{!valueDeliverySesObj.Description__c}" style="width:100%;" styleClass="form-control" />
+                            </div>
+                        </div>
+                       
+                        <div class="col-md-4">
+                            <div class="form-group">
+                                <label></label>
+                               
+                            </div>
+                        </div>
+                    </div>
+                   
+ 
+
+ </div> </div></div>
+
+
+</apex:form>
+
+</apex:page>

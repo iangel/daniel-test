@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- System --></label>
+    <name>NS_System__c</name>
+    <picklistValues>
+        <masterLabel>AccessNS</masterLabel>
+        <translation><!-- AccessNS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ConnectNS</masterLabel>
+        <translation><!-- ConnectNS --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Genesys</masterLabel>
+        <translation><!-- Genesys --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>MDM</masterLabel>
+        <translation><!-- MDM --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>SFGateway</masterLabel>
+        <translation><!-- SFGateway --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TYES</masterLabel>
+        <translation><!-- TYES --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

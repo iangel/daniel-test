@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>If_FAIL_which_step_s__c</fullName>
+    <externalId>false</externalId>
+    <inlineHelpText>In which steps did the actual outcome differ from the  expected outcome?</inlineHelpText>
+    <label>If Failed, which step(s)?</label>
+    <length>50</length>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

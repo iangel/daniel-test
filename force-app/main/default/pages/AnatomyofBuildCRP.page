@@ -1,0 +1,191 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false" docType="html-5.0">  
+
+<style type="text/css">
+.addBorder {
+  border-bottom: 1px solid #0197D5 !important;
+}
+.panel-body {
+    padding-bottom: 0px;
+}
+</style>
+    <c:CrpiPageTemplate >
+    <apex:form >
+        <br/>
+       <!-- <center> 
+                
+                     <a href="/apex/SaaSClientQuestionSearch?scope=Build" Class="btn btn-primary">Conduct VALUE Delivery Session</a> </center>
+    <br/> -->
+        <div class="row">
+             <div class="col-xs-12 col-sm-12 col-md-12">
+            
+            
+      <!--      <div class="panel panel-default">
+  <div class="panel-heading">
+   
+  
+  
+   
+          <p class="h4 text-primary"> Anatomy of Build VALUE Delivery Approach</p><br/>
+            
+            
+            
+
+             
+
+                <p>Build VALUE Delivery Approach sessions demonstrate final build to validate with business.</p>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                <div class="panel-group" id="AnatomyofBuildCRP">
+  
+    <div class="panel-heading addBorder">
+      <h4 class="panel-title removePanelAnchorDec">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofBuildCRP" href="#Objectives">
+      Objectives <i class="fa fa-chevron-down" style="float:right;"></i>
+        </a>
+      </h4>
+    </div>
+    <div id="Objectives" class="panel-collapse collapse">
+      <div class="panel-body">
+          <apex:outputPanel rendered="{!showBUoverviewresults}">
+               <Ul  class="unorder">
+                            <li >Demonstrate build of user stories and requirements</li>
+                            <li >Confirm build with Business Group Voters</li>
+                        </ul>
+           </apex:outputPanel>             
+                        
+           <apex:outputPanel rendered="{!!showBUoverviewresults}"> 
+                <ul class="unorder">
+                    <apex:repeat value="{!loverviewb}" var="p"> 
+                        <li><apex:outputText value="{!p.Objective__c}" /></li>
+                    </apex:repeat> 
+                </ul>
+         </apex:outputPanel>              
+    </div>
+  </div>
+  
+      <div class="panel-heading addBorder">
+      <h4 class="panel-title removePanelAnchorDec">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofBuildCRP" href="#who">
+        Key Participants<i class="fa fa-chevron-down" style="float:right;"></i>
+        </a>
+      </h4>
+    </div>
+    <div id="who" class="panel-collapse collapse">
+      <div class="panel-body">
+       <apex:outputPanel rendered="{!showBUparticipantresults}">
+               <ul  class="unorder">
+                            <li >Global Capability Lead</li>
+                            <li>Business Unit Leads</li>    
+                            <li >VALUE Delivery Approach Lead</li>
+                            <li >Process Analyst</li>
+                            <li >Business Analyst</li>
+                            <li >SME Advisors</li>
+                            <li >Technology/Development Team</li>
+                            <li >Data &amp; Integration SMEs</li>
+                        </ul>
+      </apex:outputPanel>
+      
+       <apex:outputPanel rendered="{!!showBUparticipantresults}"> 
+                <ul class="unorder">
+                    <apex:repeat value="{!lparticipantb}" var="p"> 
+                        <li><apex:outputText value="{!p.Participant_Name__r.Name} ({!p.Participant_Role__c})" /></li>
+                    </apex:repeat> 
+                </ul>
+         </apex:outputPanel>
+    </div>
+  </div>
+  
+   <div class="panel-heading addBorder">
+      <h4 class="panel-title removePanelAnchorDec">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofBuildCRP" href="#Inputs">
+         Inputs <i class="fa fa-chevron-down" style="float:right;"></i>
+        </a>
+      </h4>
+    </div>
+    <div id="Inputs" class="panel-collapse collapse">
+      <div class="panel-body">
+         <Ul  class="unorder">
+                            <li >Development sandbox with prototype or existing build</li>
+                            <li >End to End Business Requirements and User Stories in scope</li>
+                            <li >Estimates and assumptions of in scope user stories and requirements</li>
+                            <li >Confirmed design recommendations for user stories and requirements</li>
+                        </Ul>
+     
+    </div>
+  </div>
+  
+  
+    <div class="panel-heading addBorder">
+      <h4 class="panel-title removePanelAnchorDec">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofBuildCRP" href="#Outputs">
+         Outputs <i class="fa fa-chevron-down" style="float:right;"></i>
+        </a>
+      </h4>
+    </div>
+    <div id="Outputs" class="panel-collapse collapse">
+      <div class="panel-body">
+        <Ul  class="unorder">
+                                <li >Confirmation of build for all in scope user stories</li>
+                                <li >Tradeoffs confirmed where estimates have increased or decreased due to build decisions</li>
+                            </Ul>
+      
+    </div>
+  </div>
+                    
+                    <div class="panel-heading addBorder">
+      <h4 class="panel-title removePanelAnchorDec">
+        <a class="accordion-toggle" data-toggle="collapse" data-parent="#AnatomyofBuildCRP" href="#SessionOutcomes">
+      Session Outcomes <i class="fa fa-chevron-down" style="float:right;"></i>
+        </a>
+      </h4>
+    </div>
+    <div id="SessionOutcomes" class="panel-collapse collapse">
+      <div class="panel-body">
+               <Ul  class="unorder">
+                            <li ><b>Iteration 1</b></li>
+                   <ul>
+                       <li>Review configured and near-working application</li>
+                       <li>Identify any interative development changes that can be observed and shall be completed</li>
+                   </ul>
+                            <li ><b>Iteration 2</b></li>
+                   <ul>
+                       <li>End-to-end walkthrough</li>
+                       <li>Sign off on Build</li>
+                   </ul>
+                        </ul>
+                        
+                        
+                         
+    </div>
+  </div>
+</div>
+           
+        
+                      
+                
+                
+                
+                
+            </div>
+             </div> -->
+             
+             
+               <c:SaaSOverviewComp Name="Anatomy" Phase="Build"   title="Anatomy of Build VALUE Delivery Approach"  Description="Build VALUE Delivery Approach sessions demonstrate final build to validate with business." />
+            
+             </div>  
+      
+            
+            
+      </div>          
+ 
+        
+   </apex:form>     
+    </c:CrpiPageTemplate>
+</apex:page>

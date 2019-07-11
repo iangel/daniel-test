@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Releases_Date_Validation</fullName>
+    <active>true</active>
+    <description>Releases_Date_Validation</description>
+    <errorConditionFormula>OR( Release_Actual_End_Date__c  &lt;  Release_Start_Date__c ,  Release_Planned_End_Date__c  &lt;  Release_Start_Date__c )</errorConditionFormula>
+    <errorMessage>Release Start/End Date should be later than Release Start Date.</errorMessage>
+</ValidationRule>

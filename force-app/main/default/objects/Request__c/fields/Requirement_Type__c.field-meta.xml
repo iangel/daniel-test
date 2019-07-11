@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Requirement_Type__c</fullName>
+    <externalId>false</externalId>
+    <label>Requirement Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Evolved Requirement - Design</fullName>
+                <default>false</default>
+                <label>Evolved Requirement - Design</label>
+            </value>
+            <value>
+                <fullName>Evolved Requirement -  Build</fullName>
+                <default>false</default>
+                <label>Evolved Requirement -  Build</label>
+            </value>
+            <value>
+                <fullName>Original Requirement</fullName>
+                <default>false</default>
+                <label>Original Requirement</label>
+            </value>
+            <value>
+                <fullName>Additional Requirement</fullName>
+                <default>false</default>
+                <label>Additional Requirement</label>
+            </value>
+            <value>
+                <fullName>Requirements</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Requirements</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

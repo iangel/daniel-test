@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Participant Type --></label>
+    <name>Participant_Type__c</name>
+    <picklistValues>
+        <masterLabel>Accenture Team</masterLabel>
+        <translation><!-- Accenture Team --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Blended Core Team</masterLabel>
+        <translation><!-- Project Blended Core Team --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

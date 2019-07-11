@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Training Stakeholder Grouping --></label>
+    <name>Training_Stakeholder_Grouping__c</name>
+    <picklistValues>
+        <masterLabel>N/A</masterLabel>
+        <translation><!-- N/A --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TBD 3</masterLabel>
+        <translation><!-- TBD 3 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TBD1</masterLabel>
+        <translation><!-- TBD1 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>TBD2</masterLabel>
+        <translation><!-- TBD2 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

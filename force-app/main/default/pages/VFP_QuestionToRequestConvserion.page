@@ -1,0 +1,32 @@
+<apex:page standardController="Question_Log__c" extensions="QuestionToRequestConversion" >
+    
+    <apex:form >
+        
+        <apex:pageBlock title="New Request" id="RequestId" >
+             
+            <apex:pageBlockSection title="Request Details">
+                    
+                    <apex:inputField value="{!reqst.Client_Request_ID__c}"/>
+                    <apex:inputField value="{!reqst.Planned_Release__c}" required="true"/>
+                    <apex:inputField value="{!reqst.Request_Title__c}" />
+                    <apex:inputField value="{!reqst.Status__c}" required="true"/>
+                    <apex:inputField value="{!reqst.Request_Description__c }" required="true" style="width:100%"/>
+                    <apex:inputField value="{!reqst.Closed_Deferred__c}"/>
+                    <apex:inputField value="{!reqst.Request_Type__c}" required="true"/>
+                    <apex:inputField value="{!reqst.Comments__c}" style="width:100%"/>
+               
+               
+
+                                
+            </apex:pageBlockSection>
+                
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save"/>
+                <apex:commandButton action="{!Cancel}" value="Cancel"/>
+            </apex:pageBlockButtons>
+        
+        </apex:pageBlock>
+    
+    </apex:form>
+    
+</apex:page>

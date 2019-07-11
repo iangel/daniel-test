@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>Automotive - Loads</label>
+    <protected>false</protected>
+    <values>
+        <field>Forwarding_Address__c</field>
+        <value xsi:type="xsd:string">tnncscmlloads@nscorp.com;tnncscmlloads@exchange.nscorp.com;tncsoautomotiveloadedml@exchange.nscorp.com;tncsoautoloadedmultilevels@nscorp.com;tncsoautoloadedmultilevels@exchange.nscorp.com</value>
+    </values>
+    <values>
+        <field>Queue_Id__c</field>
+        <value xsi:type="xsd:string">00G1I000002Hpx7</value>
+    </values>
+    <values>
+        <field>Routing_Email_1__c</field>
+        <value xsi:type="xsd:string">nsautomotive.loads@f-36dp9y9ebz4dzkaw584k5qx7vpwantyjlm8vg11r3m1wtw98mr.1i-3nwseuaq.na73.apex.salesforce.com</value>
+    </values>
+</CustomMetadata>

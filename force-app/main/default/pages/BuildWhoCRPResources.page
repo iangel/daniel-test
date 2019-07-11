@@ -1,0 +1,288 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    
+    
+    <br/>
+   
+
+      
+
+            
+            <div class="panel panel-primary">
+  <div class="panel-heading">
+   
+  
+  
+   
+            
+            
+            
+            
+               Key Participants: VALUE Delivery Approach Resources
+              </div>  
+              
+             <div class="panel-body"> 
+               
+    <p>
+       VALUE Delivery Approach Resources in each Business Unit must be identified and dedicated to the VALUE Delivery Approach process for each capability.
+    </p>    
+  <center>
+    <table class="buttons" >
+        <tr>
+          <th>Project Blended Core Team</th>
+            <td>&nbsp;</td>
+          <td rowspan="5"> 
+          
+          <!-- <apex:image value="{!URLFOR($Resource.WhoCrpResourceImg)}"/>  -->
+            <center>  
+            
+            
+              <img src="{!URLFOR($Resource.ValueDeliveryApproachV1 , 'img/WhoCrpResourceImg.png')}"   class="img-responsive" alt="Responsive image" width="200px" height="332px" />
+            
+       <!--      <img src="{!URLFOR($Resource.WhoCrpResourceImg)}" class="img-responsive" alt="Responsive image" width="200px" height="332px"/>  -->
+            </center>
+          </td>
+            <td>&nbsp;</td>
+          <th style="text-align:left;">Accenture Team</th>
+        </tr>
+        <tr>
+          <td  style="float:right;" class="iPadtd">
+          
+       <button type="button" class="btn btn-sm btn-warning popover-dismiss btn-width" data-toggle="popover" title="Global Process Leads (1/capability)" data-placement="right" data-html="true" data-content="
+                           <ul><li>Provide guidance in walk through of prioritization</li>
+                            <li>Provide tie breaker in decision maker cases</li>">Global Process Lead</button>
+          
+          
+         <!--     <a href="#" data-toggle="tooltip"  title="sdafa"> Global Process Lead </a> 
+                                         
+                <div class="tooltip top" role="tooltip">
+  <div class="tooltip-arrow"></div>
+  <div class="tooltip-inner">
+                      <p>Global Process Leads (1/capability) </p>
+                      <ul>
+                            <li>Provide guidance in walk through of prioritization</li>
+                            <li>Provide tie breaker in decision maker cases</li>
+                        </ul>    
+                 </div>
+</div> -->
+
+
+
+
+
+
+
+
+
+        </td>
+        
+        <td>&nbsp;</td>
+            <td>&nbsp;</td>
+        
+        
+          <td style="vertical-align:top;" class="iPadtd">
+          
+            <button type="button" class="btn btn-sm btn-info popover-dismiss btn-width" data-toggle="popover" title="Value Delivery Lead (1/capability)" data-placement="left" data-html="true" data-content="
+                           <ul>
+                          <li>Lead Scope VALUE Delivery Approachs</li>
+                            <li>Guide Business Unit Leads through confirmation of Build understanding  </li>
+                          <li>Identify issues, risks and big rocks associated to capability design and build</li>
+                          
+                        </ul>   "       
+          >Value Delivery Lead</button>
+          
+          
+          
+          
+       <!--   <a href="#" class="speechbubble"> 
+              Functional / CRP Lead
+               <Span> 
+                      <p>CRP Lead (1/capability)</p>
+                      <ul>
+                            <li>Lead Scope CRPs</li>
+                            <li>Guide Business Unit Leads through confirmation of in and out of scope reqs</li>
+                        </ul>    
+                  </Span>     
+          </a>    -->
+          </td>
+        </tr>
+        <tr>
+          <td  style="float:right;" class="iPadtd">
+          
+           
+            <button type="button" class="btn btn-sm btn-warning popover-dismiss btn-width" data-toggle="popover" title="Business Unit Leads (1/BG/capability)" data-html="true" data-placement="right" data-content="
+                           <ul>
+                             <li>Validate fit of proposed build to user stories and requirements</li>
+                            <li>Provide clarifications and homework answers as necessary</li>
+                            <li>Provide votes to approve build recommendations</li>
+                        </ul>   "        
+          > Business Unit Leads</button>
+          
+          <!--    <a href="#" class="speechbubble"> 
+              Business Unit Leads
+               <Span> 
+                      <p>BG Process Leads  (1/BG/capability)</p>
+                      <ul>
+                               <li>Document areas of Business Unit homework for follow up</li>
+                            <li>Document changes to process flows, user stories and requirements as they are identified in the CRPs</li>
+                        </ul>    
+                  </Span>   
+              </a>   -->
+              </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          <td style="vertical-align:top;" class="iPadtd">
+          
+            <button type="button" class="btn btn-sm btn-info popover-dismiss btn-width" data-toggle="popover" title="Process Analyst(1/capability)" data-html="true" data-placement="left" data-content="
+                           <ul>
+                              <li>Document updates to user story and requirements related to clarifications and in/out of scope</li>
+                            <li>Drive to get clarifications as necessary on requirements</li>
+                             <li>Track Business Unit completion of homework assignments that will determine design and build </li>
+
+
+                        </ul>   " 
+          
+          > Process Analyst</button>
+          
+          
+           <!--   <a href="#" class="speechbubble"> 
+              Process Analyst
+                <Span> 
+                      <p>Process Analyst(1/capability)</p>
+                      <ul>
+                            <li>Document areas of Business Unit homework for follow up</li>
+                            <li>Document changes to process flows, user stories and requirements as they are identified in the CRPs</li>
+                        </ul>    
+                  </Span>   
+              </a> -->
+              </td>
+              
+        </tr>
+        <tr>
+          <td  style="float:right;" class="iPadtd">
+             
+            <button type="button" class="btn btn-sm btn-warning popover-dismiss btn-width" data-toggle="popover" title="SME Advisors (as needed)" data-html="true" data-placement="right" data-content="
+                           <ul>
+                              <li>Provide feedback on user stories and requirements</li>
+                        </ul>   "
+          
+          >  Subject Matter Advisors</button>
+          
+          <!--    <a href="#" class="speechbubble"> 
+                  Subject Matter Advisors
+                  <Span> 
+                      <p>SME Advisors (as needed)</p>
+                      <ul>
+                            <li>Provide feedback on user stories and requirements</li>
+                        </ul>    
+                  </Span>   
+              </a>    -->
+              </td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          <td style="vertical-align:top;" class="iPadtd">
+          
+         <button type="button" class="btn btn-sm btn-info popover-dismiss btn-width" data-toggle="popover" title="Configuration Lead (1/capability)" data-html="true" data-content="
+                           <ul>
+                            <li>Provide walkthrough of build and perform updates where necessary</li>
+                            <li>Work with Configurators and Developers to validate build updates recommended by business and do updated estimates as necessary</li>
+
+                        </ul>   " data-placement="left" 
+          
+          >  Configuration Lead</button>     
+          
+            <!--  <a href="#" class="speechbubble"> 
+                  Configuration Lead
+                   <Span> 
+                      <p>Configuration Lead (1/capability)</p>
+                      <ul>
+                            <li>Understand business process and help Solution Designer and Technical CRP Lead to access complexity based on whether they are out of box, configurable or custom solutions.</li>
+                        </ul>    
+                  </Span>   
+              </a>-->
+              </td>
+        </tr>
+        <tr>
+          <td  style="float:right;" class="iPadtd">
+          
+             <button type="button" class="btn btn-sm btn-warning popover-dismiss btn-width" data-toggle="popover" title="Technology Team (as needed)" data-html="true" data-placement="right" data-content="
+                           <ul>
+                          <li>Work with VALUE Delivery Approach Functional Lead in the execution of the Build VALUE Delivery Approachs</li>
+                            <li>Work with development team on proposed designs to satisfy user stories and requirements</li>
+                        </ul>   "
+          
+          > Technology Team</button>   
+          
+            <!--  <a href="#" class="speechbubble"> 
+                  Technology Team
+                 <Span> 
+                      <p>Technology Team (as needed)</p>
+                      <ul>
+                            <li>Work with VALUE Delivery Approach Lead in the execution of the Scope VALUE Delivery Approachs</li>
+                            <li>Work with Solution Designer and Development team to create capacity and estimates based upon user stories and requirements</li>
+                        </ul>    
+                  </Span>    
+              </a>     -->
+          </td>
+         <td>&nbsp;</td>
+            <td>&nbsp;</td>
+          <td style="vertical-align:top;" class="iPadtd">
+              <button type="button" class="btn btn-sm btn-info popover-dismiss btn-width" data-toggle="popover" title="Extended Team" data-html="true" data-content="
+                           <ul>
+                           <li>Provide additional expertise to Business Unit Leads as needed process flows and functionality.</li>
+                        </ul>" data-placement="left"> Extended Team</button> 
+          
+          <!--    <a href="#" class="speechbubble">   Extended Team
+              <Span> 
+                      <p>Extended Team Owners (as needed)</p>
+                      <ul>
+                            <li>Provide additional expertise to Business Unit Leads as needed process flows and functionality.</li>
+                        </ul>    
+                  </Span>   
+            
+              </a> -->
+           </td>
+        </tr>
+        
+        
+        <!--<tr>
+           
+         <td style="vertical-align:top;text-align:center;">
+          
+             
+        </tr>-->
+          
+             <!--  <a href="#" class="speechbubble">  Change Mgmt
+              <Span> 
+                      <p>Change Management (1/capability)</p>
+                      <ul>
+                            <li>Limited</li>
+                        </ul>    
+                  </Span>   
+                 
+              </a>  -->   
+             
+        <tr>
+            <td>&nbsp;</td>
+            <td colspan="3" align="center">
+             <button type="button" style="margin-top: 10px;" class="btn btn-sm btn-info popover-dismiss btn-width" data-toggle="popover" title="Change Management (1/capability)" data-html="true" data-placement="top" data-content="
+                           <ul>
+                        <li>Limited</li>
+                        </ul>   "
+          
+          >  Change Mgmt</button>
+            </td>
+        </tr>
+        
+        </table>
+  </center>
+    
+   </div>                       
+        
+   </div>                             
+<!-- <ul class="pager">
+                  <li class="previous"><a href="/apex/AnatomyofBuildCRP">&larr; Previous</a></li>
+                  <li class="next"><a href="/apex/BuildCRPTemplatesExamples">Next &rarr; </a></li>
+              </ul>  --> 
+      </c:CrpiPageTemplate>                  
+</apex:page>

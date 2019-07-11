@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Question Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Question Log</value>
+    </caseValues>
+    <layouts>
+        <layout>Question Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Question / Answer --></label>
+            <section>Question / Answer</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>SaaS Delivery Question Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Question/Answer --></label>
+            <section>Question/Answer</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Value Delivery Question Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Fields --></label>
+            <section>Fields</section>
+        </sections>
+        <sections>
+            <label><!-- Question/Answer --></label>
+            <section>Question/Answer</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- PMO Question --></label>
+        <name>SaaS_Delivery_Question_Log</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Value Delivery Question --></label>
+        <name>Value_Delivery_Question_Log</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Convert_To_Request --></label>
+        <name>Convert_To_Request</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Question_Log --></label>
+        <name>New_Question_Log</name>
+    </webLinks>
+</CustomObjectTranslation>

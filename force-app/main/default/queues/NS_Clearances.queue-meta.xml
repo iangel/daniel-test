@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Queue xmlns="http://soap.sforce.com/2006/04/metadata">
+    <doesSendEmailToMembers>false</doesSendEmailToMembers>
+    <email>nsclearances@nscorp.com</email>
+    <name>Clearances</name>
+    <queueMembers>
+        <publicGroups>
+            <publicGroup>NS_Clearances</publicGroup>
+        </publicGroups>
+        <users>
+            <user>alexander.mcneil@nscorp.com</user>
+            <user>derek.green@nscorp.com</user>
+            <user>ryan.karjala@nscorp.com</user>
+        </users>
+    </queueMembers>
+    <queueSobject>
+        <sobjectType>Case</sobjectType>
+    </queueSobject>
+</Queue>

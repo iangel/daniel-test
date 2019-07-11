@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All1</fullName>
+    <columns>NAME</columns>
+    <columns>Environment__c</columns>
+    <columns>Priority__c</columns>
+    <columns>Status__c</columns>
+    <columns>Subject__c</columns>
+    <columns>Capability__c</columns>
+    <columns>Developer_Assigned__c</columns>
+    <columns>Tester__c</columns>
+    <columns>CREATEDBY_USER</columns>
+    <columns>CREATED_DATE</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Developer_Assigned__c</field>
+        <operation>contains</operation>
+        <value>Arjun Ghosh,Gunjari Gupta</value>
+    </filters>
+    <filters>
+        <field>Environment__c</field>
+        <operation>equals</operation>
+        <value>Production</value>
+    </filters>
+    <label>All</label>
+</ListView>

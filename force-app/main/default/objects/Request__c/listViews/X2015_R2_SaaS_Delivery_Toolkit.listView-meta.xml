@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>X2015_R2_SaaS_Delivery_Toolkit</fullName>
+    <columns>NAME</columns>
+    <columns>Request_Title__c</columns>
+    <columns>Requestor__c</columns>
+    <columns>Request_Owner__c</columns>
+    <columns>Planned_Release__c</columns>
+    <columns>TotEst__c</columns>
+    <columns>Milestone__c</columns>
+    <columns>Status__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Planned_Release__c</field>
+        <operation>equals</operation>
+        <value>2015 R2 - SaaS Delivery Toolkit</value>
+    </filters>
+    <label>2015 R2 - SaaS Delivery Toolkit</label>
+</ListView>

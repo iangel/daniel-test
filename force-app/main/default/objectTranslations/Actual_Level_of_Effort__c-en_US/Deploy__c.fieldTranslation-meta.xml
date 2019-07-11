@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Actual level of effor recorded for the Deploy phase in a week for a User. --></help>
+    <label><!-- Deploy --></label>
+    <name>Deploy__c</name>
+</CustomFieldTranslation>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Tester__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <description>User who identified the failed step</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Who is the Tester who identified the failed step?</inlineHelpText>
+    <label>Tester</label>
+    <referenceTo>User</referenceTo>
+    <relationshipName>Defects</relationshipName>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

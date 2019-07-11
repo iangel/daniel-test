@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Status --></label>
+    <name>Status__c</name>
+    <picklistValues>
+        <masterLabel>Approve: Approved to Deploy</masterLabel>
+        <translation><!-- Approve: Approved to Deploy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Close: Deployed</masterLabel>
+        <translation><!-- Close: Deployed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Close: Duplicate</masterLabel>
+        <translation><!-- Close: Duplicate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Close: Rejected</masterLabel>
+        <translation><!-- Close: Rejected --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consolidate: Approve to Estimate</masterLabel>
+        <translation><!-- Consolidate: Approve to Estimate --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Consolidate: Level of Effort Complete</masterLabel>
+        <translation><!-- Consolidate: Level of Effort Complete --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Identify: Deferred</masterLabel>
+        <translation><!-- Identify: Deferred --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Identify: New Requirement</masterLabel>
+        <translation><!-- Identify: New Requirement --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Identify: Submit for Business Review</masterLabel>
+        <translation><!-- Identify: Submit for Business Review --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release: Build</masterLabel>
+        <translation><!-- Release: Build --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release: Build Production</masterLabel>
+        <translation><!-- Release: Build Production --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release: Design</masterLabel>
+        <translation><!-- Release: Design --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release: SIT</masterLabel>
+        <translation><!-- Release: SIT --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release: Test</masterLabel>
+        <translation><!-- Release: Test --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release: Test Production</masterLabel>
+        <translation><!-- Release: Test Production --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Release: UAT</masterLabel>
+        <translation><!-- Release: UAT --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Act_Resloution_Date</fullName>
+    <active>true</active>
+    <description>Actual Resolution should not be greater than current date.</description>
+    <errorConditionFormula>Actual_Resolution_Date__c &gt;  TODAY()</errorConditionFormula>
+    <errorDisplayField>Actual_Resolution_Date__c</errorDisplayField>
+    <errorMessage>Actual resolution date should not be greater than today&#39;s date</errorMessage>
+</ValidationRule>

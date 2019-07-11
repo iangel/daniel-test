@@ -1,0 +1,55 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading"> Design VALUE Delivery Approach Templates &amp; Examples</div>
+        <!--     <div class="panel-body">
+                <p>Explain brief about the template else we can remove these section.</p>
+            </div> -->
+            <!-- Table -->
+            <table class="table">
+              <!--  <tr>
+                    <th >Output</th>
+              
+                </tr> 
+                <tr>
+                    <td><a href="/apex/BuildQuestionLogProcess">Question Log and or Process </a></td>
+                   
+                </tr> -->
+                <tr>
+                    <td><a href= "/apex/DesginUpdateReqStatus">Updates to Requirements Design </a></td>
+                   
+                </tr>
+                <tr>
+                    <td><a href="/apex/DesignOptions"> Design Options </a></td>
+                   
+                </tr>
+                <tr>
+                    <td><a href="/apex/DesignFunctionalDesignDocumentation">Functional Design Document </a></td>
+                   
+                </tr>
+                <tr>
+                                    <td><a href="/apex/DashBoardExample">Example Dashboards</a></td>
+                   
+                </tr>
+                <tr>
+                    <td><a href= "/apex/DesginExampleDecks">Example Decks </a></td>
+                   
+                </tr>
+              <!--  <tr>                                      
+                    <td> <a href ="/servlet/servlet.FileDownload?file={!$Label.CRP_Common_Questions}"> <i class="fa fa-cloud-download fa-2x" title="VALUE Delivery Approach Common Questions"/> </a>VALUE Delivery Approach Common Questions </td>
+                    
+                </tr>-->
+                
+            </table>
+        </div>
+        
+ <!-- <ul class="pager">
+                  <li class="previous"><a href="/apex/DesignWhoCRPResources">&larr; Previous</a></li>
+                  <li class="next"><a href="/apex/AnatomyofBuildCRP">Next &rarr; </a></li>
+              </ul>    --> 
+        
+        
+    </c:CrpiPageTemplate>
+</apex:page>

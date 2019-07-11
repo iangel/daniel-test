@@ -1,0 +1,93 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">User Story Description</div>
+       
+            
+            <!-- Table -->
+            <table class="table">
+              <!--   <tr>
+                   <th>Output</th>
+                  <th>Page #</th> 
+                </tr>-->
+                <tr>
+                    <td>As a sales rep, I need to be able to identify and create a renewal grouping that cuts across 3 BU’s, 2 GEO’s; and results in one renewal opportunity</td>
+             
+                </tr>
+                <tr>
+                    <td>As a sales rep, I need to be able to co-term or align multiple products / services to a common end date</td>
+                  
+                </tr>
+                <tr>
+                    <td>As an inside sales team,  I need to be able to route a renewal to a renewal sales team</td>
+              
+                </tr>
+                <tr>
+                    <td>As an  sales manager, I need to be able to assign a renewal sales team to a renewal opportunity </td>
+                 
+                </tr>
+                <tr>
+                    <td>As a sales rep, I need to be able to extend mid-contract year a service contract and set up a renewal opportunity</td>
+                 
+                </tr>
+                <tr>
+                    <td>As a sales rep, I need to be able to set up a multi-year renewal opportunity</td>
+                 
+                </tr>
+                <tr>
+                    <td> Operations identifies PBM on Account</td>
+                 
+                </tr>
+                <tr>
+                    <td>Operations initiates business plan and populates previous year’s data
+</td>
+                
+                </tr>
+                <tr>
+                    <td>Operations initiates business plan and populates previous year’s data through links
+</td>
+                 
+                </tr>
+                
+                
+                                <tr>
+                    <td>Operations initiates business plan and System populates pieces of previous year’s data
+</td>
+                 
+                </tr>
+                
+           
+                                <tr>
+                    <td>System  Updates FY/Quarterly Catalogue of Strategic Initiatives and Campaigns
+
+</td>
+                 
+                </tr>
+                
+                
+                
+                                <tr>
+                    <td>Channel Management launches  JBP cycle and PBM receives notification
+
+</td>
+                 
+                </tr>
+                     
+                
+
+
+
+                
+            </table>
+        </div>
+        
+              
+      <!--   <ul class="pager">
+                  <li class="previous"><a href="/apex/PlanAndAnalyzeCRPTemplatesExamples">&larr; Back</a></li>
+
+              </ul> -->
+              
+    </c:CrpiPageTemplate>
+</apex:page>

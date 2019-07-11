@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Capability__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-Capability</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Access</fullName>
+                <default>false</default>
+                <label>Access</label>
+            </value>
+            <value>
+                <fullName>Account Hierarchy</fullName>
+                <default>false</default>
+                <label>Account Hierarchy</label>
+            </value>
+            <value>
+                <fullName>Account Maintenance</fullName>
+                <default>false</default>
+                <label>Account Maintenance</label>
+            </value>
+            <value>
+                <fullName>Account Ownership and Assignment</fullName>
+                <default>false</default>
+                <label>Account Ownership and Assignment</label>
+            </value>
+            <value>
+                <fullName>Case Solutions</fullName>
+                <default>false</default>
+                <label>Case Solutions</label>
+            </value>
+            <value>
+                <fullName>Collaboration</fullName>
+                <default>false</default>
+                <label>Collaboration</label>
+            </value>
+            <value>
+                <fullName>Custom Reports</fullName>
+                <default>false</default>
+                <label>Custom Reports</label>
+            </value>
+            <value>
+                <fullName>Dashboards</fullName>
+                <default>false</default>
+                <label>Dashboards</label>
+            </value>
+            <value>
+                <fullName>Data Management</fullName>
+                <default>false</default>
+                <label>Data Management</label>
+            </value>
+            <value>
+                <fullName>Definition</fullName>
+                <default>false</default>
+                <label>Definition</label>
+            </value>
+            <value>
+                <fullName>Email Marketing</fullName>
+                <default>false</default>
+                <label>Email Marketing</label>
+            </value>
+            <value>
+                <fullName>Fields</fullName>
+                <default>false</default>
+                <label>Fields</label>
+            </value>
+            <value>
+                <fullName>Files and Attachments</fullName>
+                <default>false</default>
+                <label>Files and Attachments</label>
+            </value>
+            <value>
+                <fullName>General</fullName>
+                <default>false</default>
+                <label>General</label>
+            </value>
+            <value>
+                <fullName>Integration</fullName>
+                <default>false</default>
+                <label>Integration</label>
+            </value>
+            <value>
+                <fullName>Knowledge Articles</fullName>
+                <default>false</default>
+                <label>Knowledge Articles</label>
+            </value>
+            <value>
+                <fullName>Lead Assignment</fullName>
+                <default>false</default>
+                <label>Lead Assignment</label>
+            </value>
+            <value>
+                <fullName>Lead Conversion</fullName>
+                <default>false</default>
+                <label>Lead Conversion</label>
+            </value>
+            <value>
+                <fullName>Lead Creation</fullName>
+                <default>false</default>
+                <label>Lead Creation</label>
+            </value>
+            <value>
+                <fullName>Lead Qualification</fullName>
+                <default>false</default>
+                <label>Lead Qualification</label>
+            </value>
+            <value>
+                <fullName>Lead Source</fullName>
+                <default>false</default>
+                <label>Lead Source</label>
+            </value>
+            <value>
+                <fullName>Lead Workflow Process</fullName>
+                <default>false</default>
+                <label>Lead Workflow Process</label>
+            </value>
+            <value>
+                <fullName>Legal</fullName>
+                <default>false</default>
+                <label>Legal</label>
+            </value>
+            <value>
+                <fullName>Managing Multiple Currencies</fullName>
+                <default>false</default>
+                <label>Managing Multiple Currencies</label>
+            </value>
+            <value>
+                <fullName>Ownership</fullName>
+                <default>false</default>
+                <label>Ownership</label>
+            </value>
+            <value>
+                <fullName>Page Layouts</fullName>
+                <default>false</default>
+                <label>Page Layouts</label>
+            </value>
+            <value>
+                <fullName>Permissions</fullName>
+                <default>false</default>
+                <label>Permissions</label>
+            </value>
+            <value>
+                <fullName>Pricing Book</fullName>
+                <default>false</default>
+                <label>Pricing Book</label>
+            </value>
+            <value>
+                <fullName>Process</fullName>
+                <default>false</default>
+                <label>Process</label>
+            </value>
+            <value>
+                <fullName>Product Catalog</fullName>
+                <default>false</default>
+                <label>Product Catalog</label>
+            </value>
+            <value>
+                <fullName>Quotas</fullName>
+                <default>false</default>
+                <label>Quotas</label>
+            </value>
+            <value>
+                <fullName>Reports</fullName>
+                <default>false</default>
+                <label>Reports</label>
+            </value>
+            <value>
+                <fullName>Validations</fullName>
+                <default>false</default>
+                <label>Validations</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

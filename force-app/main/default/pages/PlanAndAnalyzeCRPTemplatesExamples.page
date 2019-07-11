@@ -1,0 +1,100 @@
+<apex:page showHeader="false" sidebar="false" standardStylesheets="false">
+    <c:CrpiPageTemplate >
+    <br/>
+        <div class="panel panel-primary">
+            <!-- Default panel contents -->
+            <div class="panel-heading">Initiate &amp; Confirm VALUE Delivery Approach Templates &amp; Examples</div>
+         <!--    <div class="panel-body">
+                <p>Explain brief about the template else we can remove these section.</p> 
+            </div>-->
+            
+            <!-- Table -->
+            <table class="table">
+              <!--   <tr>
+                   <th>Output</th>
+                  <th>Page #</th> 
+                </tr>-->
+                <tr>
+                    <td>Capability Definition</td>
+             
+                </tr>
+                <tr>
+                    <td>
+                      <a href="/apex/PlanValueDriverTree"> 
+                    
+                    Value Proposition and Impacted Value Drivers
+                    
+                    
+                   </a></td>
+                  
+                </tr>
+                <tr>
+                    <td>E2E Process Flow</td>
+              
+                </tr>
+                <tr>
+                    <td>
+                    
+                       <a href="/apex/PlanOnePageScopeOverview"> 
+                    1-Page Scope Overview, including Deployment Direction
+                     </a></td>
+                
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/apex/PlanKeyStakeholderList"> 
+                    
+                    
+                    Resources Allocated to Team and Key Stakeholder List
+                    </a></td>
+
+                 
+                </tr>
+                <tr>
+                    <td>
+                    
+                     <a href="/apex/PlanBigRocks"> 
+                     
+                    Big Rocks / Strategic Policy Decisions / Transformations (i.e. Long-lead Time Items)
+                    
+                     </a></td>
+                 
+                </tr>
+                <tr>
+                    <td>
+                       <a href="/apex/PlanRelatedRequirements"> 
+                    
+                    Data Integration Requirements, Cross-VALUE Delivery Approach Dependencies, and Operational Impacts (Preliminary)
+                  </a></td>
+                </tr>
+                <tr>
+                    <td>
+                    <a href="/apex/PlanHighLevelUserStory"> 
+                    
+                    Inventory of User Stories and Requirements (~75% Complete), with Initial Prioritization
+                    </a>
+                    </td>
+                
+                </tr>
+                <tr>
+                    <td>Early Sizing, if available</td>
+                 
+                </tr>
+                <!-- <tr>
+
+                    
+                    <td> <a href ="/servlet/servlet.FileDownload?file={!$Label.CRP_Common_Questions}"> <i class="fa fa-cloud-download fa-2x" title="VALUE Delivery Approach Common Questions"/> </a>VALUE Delivery Approach Common Questions </td>
+                  
+                </tr>-->
+                
+            </table>
+        </div>
+        
+        <!-- <ul class="pager">
+                  <li class="previous"><a href="/apex/PlanAndAnalyzeWhoCRPResources">&larr; Previous</a></li>
+                  <li class="next"><a href="/apex/AnatomyofScopeCRP">Next &rarr; </a></li>
+              </ul> -->
+              
+              
+    </c:CrpiPageTemplate>
+</apex:page>

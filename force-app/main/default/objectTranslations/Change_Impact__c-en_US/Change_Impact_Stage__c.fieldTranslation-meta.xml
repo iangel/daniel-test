@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Stage of the change impact --></help>
+    <label><!-- Change Impact Stage --></label>
+    <name>Change_Impact_Stage__c</name>
+    <picklistValues>
+        <masterLabel>Being Validated</masterLabel>
+        <translation><!-- Being Validated --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Identified</masterLabel>
+        <translation><!-- Identified --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Removed</masterLabel>
+        <translation><!-- Removed --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Validated</masterLabel>
+        <translation><!-- Validated --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

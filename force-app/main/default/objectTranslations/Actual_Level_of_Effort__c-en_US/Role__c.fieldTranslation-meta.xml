@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Role --></label>
+    <name>Role__c</name>
+    <picklistValues>
+        <masterLabel>Business Architect</masterLabel>
+        <translation><!-- Business Architect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Configuration Resource</masterLabel>
+        <translation><!-- Configuration Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Architect</masterLabel>
+        <translation><!-- Data Architect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Data Migration Resource</masterLabel>
+        <translation><!-- Data Migration Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Development Resource</masterLabel>
+        <translation><!-- Development Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Integration Resource</masterLabel>
+        <translation><!-- Integration Resource --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Program Manager</masterLabel>
+        <translation><!-- Program Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Manager</masterLabel>
+        <translation><!-- Project Manager --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Solution Architect</masterLabel>
+        <translation><!-- Solution Architect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>System Admin</masterLabel>
+        <translation><!-- System Admin --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Technical Architect</masterLabel>
+        <translation><!-- Technical Architect --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Testing Resource</masterLabel>
+        <translation><!-- Testing Resource --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

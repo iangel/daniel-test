@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Related_Item__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF ( CONTAINS(  RecordType.DeveloperName, &quot;Release&quot;), 
+ HYPERLINK( Release__c ,   Release__r.Name   , &quot;_self&quot;) 
+,
+
+
+IF ( CONTAINS(  RecordType.DeveloperName, &quot;Capability&quot;), 
+ HYPERLINK(  Capability__c ,  Capability__r.Name, &quot;_self&quot;) 
+, 
+
+
+IF ( CONTAINS(  RecordType.DeveloperName, &quot;Request&quot;), 
+ HYPERLINK( Request__c ,    Request__r.Name   , &quot;_self&quot;) 
+,
+&quot;none&quot;
+
+)))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Related Item</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

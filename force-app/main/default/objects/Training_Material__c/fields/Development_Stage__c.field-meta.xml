@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Development_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Development Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Analyze</fullName>
+                <default>true</default>
+                <label>Analyze</label>
+            </value>
+            <value>
+                <fullName>Design Outline</fullName>
+                <default>false</default>
+                <label>Design Outline</label>
+            </value>
+            <value>
+                <fullName>Build Materials</fullName>
+                <default>false</default>
+                <label>Build Materials</label>
+            </value>
+            <value>
+                <fullName>Review Materials</fullName>
+                <default>false</default>
+                <label>Review Materials</label>
+            </value>
+            <value>
+                <fullName>Recording WBT</fullName>
+                <default>false</default>
+                <label>Recording WBT</label>
+            </value>
+            <value>
+                <fullName>Deploy/Final</fullName>
+                <default>false</default>
+                <label>Deploy/Final</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

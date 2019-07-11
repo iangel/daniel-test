@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SharingRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sharingCriteriaRules>
+        <fullName>ANI_Visible_to_OSS_Support</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>ANI Visible to OSS Support</label>
+        <sharedTo>
+            <role>OSS_Support</role>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>ANI ONLY</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+    <sharingCriteriaRules>
+        <fullName>Contact_Visible_to_All</fullName>
+        <accessLevel>Edit</accessLevel>
+        <label>Contact Visible to All</label>
+        <sharedTo>
+            <roleAndSubordinates>NS_Executive</roleAndSubordinates>
+        </sharedTo>
+        <criteriaItems>
+            <field>RecordTypeId</field>
+            <operation>equals</operation>
+            <value>General Contact,Read Only Inactive Contact</value>
+        </criteriaItems>
+    </sharingCriteriaRules>
+</SharingRules>

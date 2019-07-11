@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowDefinition xmlns="http://soap.sforce.com/2006/04/metadata">
+    <activeVersionNumber>1</activeVersionNumber>
+    <description>set case with matching case number field ns_unread_email__c to false</description>
+    <masterLabel>Clear Case Unread Email Icon</masterLabel>
+</FlowDefinition>

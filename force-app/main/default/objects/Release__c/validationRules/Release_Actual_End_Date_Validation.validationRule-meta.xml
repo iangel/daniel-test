@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Release_Actual_End_Date_Validation</fullName>
+    <active>true</active>
+    <description>Actual end date should not be greater  than today&#39;s date</description>
+    <errorConditionFormula>Release_Actual_End_Date__c  &gt; Today()</errorConditionFormula>
+    <errorDisplayField>Release_Actual_End_Date__c</errorDisplayField>
+    <errorMessage>Actual end date should not be greater  than today&#39;s date</errorMessage>
+</ValidationRule>

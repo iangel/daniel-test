@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Progress_Required</fullName>
+    <active>true</active>
+    <description>Progress on a milestone is mandatory</description>
+    <errorConditionFormula>ISPICKVAL( Progress__c,&#39;&#39;)</errorConditionFormula>
+    <errorMessage>Please select an appropriate status for this milestone.</errorMessage>
+</ValidationRule>

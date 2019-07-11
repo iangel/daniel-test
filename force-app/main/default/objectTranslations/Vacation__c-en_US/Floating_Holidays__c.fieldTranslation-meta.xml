@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Floating Holidays --></label>
+    <name>Floating_Holidays__c</name>
+    <picklistValues>
+        <masterLabel>Bakrid October 16</masterLabel>
+        <translation><!-- Bakrid October 16 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Balipadyami November 04</masterLabel>
+        <translation><!-- Balipadyami November 04 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Basant Panchami February 15</masterLabel>
+        <translation><!-- Basant Panchami February 15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bengali New Year Day April 15</masterLabel>
+        <translation><!-- Bengali New Year Day April 15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Bhai Dhuj November 05</masterLabel>
+        <translation><!-- Bhai Dhuj November 05 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chandramana Ugadi April 11</masterLabel>
+        <translation><!-- Chandramana Ugadi April 11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Chhat Puja November 08</masterLabel>
+        <translation><!-- Chhat Puja November 08 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Christmas Eve December 24</masterLabel>
+        <translation><!-- Christmas Eve December 24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Durga Puja: Saptami October 11</masterLabel>
+        <translation><!-- Durga Puja: Saptami October 11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ganesh Chaturthi September 09</masterLabel>
+        <translation><!-- Ganesh Chaturthi September 09 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Good Friday March 29</masterLabel>
+        <translation><!-- Good Friday March 29 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Guru Gobind Singh&#39;s Birthday January 18</masterLabel>
+        <translation><!-- Guru Gobind Singh&apos;s Birthday January 18 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Holi March 27</masterLabel>
+        <translation><!-- Holi March 27 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Holika Dahan March 26</masterLabel>
+        <translation><!-- Holika Dahan March 26 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>ID-E-Milad January 25</masterLabel>
+        <translation><!-- ID-E-Milad January 25 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Jamat -Ul- Vida August 02</masterLabel>
+        <translation><!-- Jamat -Ul- Vida August 02 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Janmashtami August 28</masterLabel>
+        <translation><!-- Janmashtami August 28 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Karva Chouth October 22</masterLabel>
+        <translation><!-- Karva Chouth October 22 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mahalaya Amavasya October 04</masterLabel>
+        <translation><!-- Mahalaya Amavasya October 04 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Mahavir Jayanti April 24</masterLabel>
+        <translation><!-- Mahavir Jayanti April 24 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Muharram November 14</masterLabel>
+        <translation><!-- Muharram November 14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Next day of Christmas December 26</masterLabel>
+        <translation><!-- Next day of Christmas December 26 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Next day of MahasivarathriMarch 11</masterLabel>
+        <translation><!-- Next day of MahasivarathriMarch 11 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Onam September 16</masterLabel>
+        <translation><!-- Onam September 16 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Pongal January 14</masterLabel>
+        <translation><!-- Pongal January 14 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Raksha Bandan August 20</masterLabel>
+        <translation><!-- Raksha Bandan August 20 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Ram Navami April 19</masterLabel>
+        <translation><!-- Ram Navami April 19 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shab-E-Barath June 25</masterLabel>
+        <translation><!-- Shab-E-Barath June 25 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shab-E-Meraj June 07</masterLabel>
+        <translation><!-- Shab-E-Meraj June 07 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Shab-E-Qadar August 05</masterLabel>
+        <translation><!-- Shab-E-Qadar August 05 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Thiruvalluvar Day January 15</masterLabel>
+        <translation><!-- Thiruvalluvar Day January 15 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Uzhavar Thirunal January 16</masterLabel>
+        <translation><!-- Uzhavar Thirunal January 16 --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Varalakshmi Vratham August 16</masterLabel>
+        <translation><!-- Varalakshmi Vratham August 16 --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

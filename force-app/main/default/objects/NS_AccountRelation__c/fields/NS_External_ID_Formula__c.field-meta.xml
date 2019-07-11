@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_External_ID_Formula__c</fullName>
+    <externalId>false</externalId>
+    <formula>NS_RelationParty1__r.NS_External_ID__c  + &#39;_&#39;+ NS_RelationParty2__r.NS_External_ID__c</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>External ID Formula</label>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

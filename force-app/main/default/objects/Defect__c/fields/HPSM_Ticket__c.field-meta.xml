@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>HPSM_Ticket__c</fullName>
+    <description>Corresponding HPSM Ticket #</description>
+    <externalId>false</externalId>
+    <inlineHelpText>What is the HPSM Ticket # that corresponds to this defect?</inlineHelpText>
+    <label>HPSM Ticket #</label>
+    <length>50</length>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defect_Type__c</fullName>
+    <description>This field specifies type of the defect</description>
+    <externalId>false</externalId>
+    <label>Defect Type</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Design Defect</fullName>
+                <default>false</default>
+                <label>Design Defect</label>
+            </value>
+            <value>
+                <fullName>Data Validation</fullName>
+                <default>false</default>
+                <label>Data Validation</label>
+            </value>
+            <value>
+                <fullName>General Support</fullName>
+                <default>false</default>
+                <label>General Support</label>
+            </value>
+            <value>
+                <fullName>General Access</fullName>
+                <default>false</default>
+                <label>General Access</label>
+            </value>
+            <value>
+                <fullName>Code Review Defect</fullName>
+                <default>false</default>
+                <label>API Code Defect</label>
+            </value>
+            <value>
+                <fullName>Test Script Review Defect</fullName>
+                <default>false</default>
+                <label>Test Script Defect</label>
+            </value>
+            <value>
+                <fullName>User Error</fullName>
+                <default>false</default>
+                <label>User Error</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- This is a Required Field for scoping.  Includes the details of why this request would be implemented, and the expected business value --></help>
+    <label><!-- Business Value Details --></label>
+    <name>Business_Value_Details__c</name>
+</CustomFieldTranslation>

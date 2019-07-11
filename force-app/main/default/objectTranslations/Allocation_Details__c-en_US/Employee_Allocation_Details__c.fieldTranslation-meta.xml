@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Employee Allocation Details --></label>
+    <name>Employee_Allocation_Details__c</name>
+    <relationshipLabel><!-- Allocation Details --></relationshipLabel>
+</CustomFieldTranslation>

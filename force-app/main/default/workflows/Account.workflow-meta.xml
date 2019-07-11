@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>NS_BillingCityInCapital</fullName>
+        <description>It updates Billing City to Capital.</description>
+        <field>BillingCity</field>
+        <formula>UPPER( BillingCity )</formula>
+        <name>Billing City in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_BillingCountryInCapital</fullName>
+        <description>It updates Billing Country to Capital.</description>
+        <field>BillingCountry</field>
+        <formula>UPPER( BillingCountry )</formula>
+        <name>Billing Country in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_BillingStateInCapital</fullName>
+        <description>It updates Billing State to Capital.</description>
+        <field>BillingState</field>
+        <formula>UPPER( BillingState )</formula>
+        <name>Billing State in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_BillingStreetInCapital</fullName>
+        <description>It updates Billing Street to Capital.</description>
+        <field>BillingStreet</field>
+        <formula>UPPER( BillingStreet )</formula>
+        <name>Billing Street in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_BillingZipInCapital</fullName>
+        <description>It updates Billing Zip to Capital</description>
+        <field>BillingPostalCode</field>
+        <formula>UPPER( BillingPostalCode )</formula>
+        <name>Billing Zip in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_ConvertNameToCapitals</fullName>
+        <description>Account Name is converted to capital</description>
+        <field>Name</field>
+        <formula>UPPER(Name)</formula>
+        <name>Convert Name to Capitals</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_MailingCityInCapital</fullName>
+        <description>It updates Mailing City to Capital.</description>
+        <field>NS_MailingAddressCity__c</field>
+        <formula>UPPER( NS_MailingAddressCity__c )</formula>
+        <name>Mailing City in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_MailingCountryInCapital</fullName>
+        <description>It updates Mailing Country to Capital.</description>
+        <field>NS_MailingAddressCountry__c</field>
+        <formula>UPPER( NS_MailingAddressCountry__c )</formula>
+        <name>Mailing Country in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_MailingStateInCapital</fullName>
+        <description>It updates Mailing State to Capital.</description>
+        <field>NS_MailingAddressState__c</field>
+        <formula>UPPER( NS_MailingAddressState__c )</formula>
+        <name>Mailing State in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_MailingStreetInCapital</fullName>
+        <description>It updates Mailing Street to Capital.</description>
+        <field>NS_MailingAddressStreet__c</field>
+        <formula>UPPER( NS_MailingAddressStreet__c )</formula>
+        <name>Mailing Street in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_MailingZIPInCapital</fullName>
+        <description>It updates Mailing ZIP to Capital.</description>
+        <field>NS_MailingAddressZip__c</field>
+        <formula>UPPER( NS_MailingAddressZip__c )</formula>
+        <name>Mailing ZIP in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_PhysicalCityInCapital</fullName>
+        <description>It updates Physical City to Capital.</description>
+        <field>NS_PhysicalAddressCity__c</field>
+        <formula>UPPER( NS_PhysicalAddressCity__c )</formula>
+        <name>Physical City in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_PhysicalCountryInCapital</fullName>
+        <description>It updates Physical Country to Capital.</description>
+        <field>NS_PhysicalAddressCountry__c</field>
+        <formula>UPPER( NS_PhysicalAddressCountry__c )</formula>
+        <name>Physical Country in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_PhysicalStateInCapital</fullName>
+        <description>It updates Physical State to capital</description>
+        <field>NS_PhysicalAddressState__c</field>
+        <formula>UPPER( NS_PhysicalAddressState__c )</formula>
+        <name>Physical State in capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_PhysicalStreetInCapital</fullName>
+        <description>It updates Physical Street to Capital</description>
+        <field>NS_PhysicalAddressStreet__c</field>
+        <formula>UPPER( NS_PhysicalAddressStreet__c )</formula>
+        <name>Physical Street in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_PhysicalZipInCapital</fullName>
+        <description>It updates Physical ZIP to Capital.</description>
+        <field>NS_PhysicalAddressZip__c</field>
+        <formula>UPPER( NS_PhysicalAddressZip__c )</formula>
+        <name>Physical Zip in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_ShippingCityInCapital</fullName>
+        <description>It updates Shipping City to Capital.</description>
+        <field>ShippingCity</field>
+        <formula>UPPER( ShippingCity )</formula>
+        <name>Shipping City in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_ShippingCountryInCapital</fullName>
+        <description>It updates Shipping Country to Capital.</description>
+        <field>ShippingCountry</field>
+        <formula>UPPER( ShippingCountry )</formula>
+        <name>Shipping Country in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_ShippingStateInCapital</fullName>
+        <description>It updates Shipping State to Capital.</description>
+        <field>ShippingState</field>
+        <formula>UPPER(  ShippingState )</formula>
+        <name>Shipping State in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_ShippingStreetInCapital</fullName>
+        <description>It updates Shipping Street to Capital</description>
+        <field>ShippingStreet</field>
+        <formula>UPPER( ShippingStreet )</formula>
+        <name>Shipping Street in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_ShippingZIPInCapital</fullName>
+        <description>It updates Shipping ZIP to Capital.</description>
+        <field>ShippingPostalCode</field>
+        <formula>UPPER( ShippingPostalCode )</formula>
+        <name>Shipping ZIP in Capital</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>NS_UpdateOpStation</fullName>
+        <description>It populates Op Station from Operating Station</description>
+        <field>NS_OpStation__c</field>
+        <formula>NS_OperatingStation__r.Name +&#39;-&#39;+ NS_OperatingStationState__c</formula>
+        <name>Update Op Station</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+    </fieldUpdates>
+    <rules>
+        <fullName>Account Search with Operating Station</fullName>
+        <actions>
+            <name>NS_UpdateOpStation</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>It populates Op station to make it a searchable field</description>
+        <formula>NOT(ISBLANK(NS_OperatingStation__c))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Billing Addres to Capital</fullName>
+        <actions>
+            <name>NS_BillingCityInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_BillingCountryInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_BillingStateInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_BillingStreetInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_BillingZipInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Converts Billing Address to Capital Letters</description>
+        <formula>OR(OR(ISNEW(),ISCHANGED(  BillingCity  )),OR(ISNEW(),ISCHANGED( BillingCountry )),OR(ISNEW(),ISCHANGED(  BillingState  )),OR(ISNEW(),ISCHANGED(  BillingStreet )),OR(ISNEW(),ISCHANGED(  BillingPostalCode )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Mailing Address is Capital</fullName>
+        <actions>
+            <name>NS_MailingCityInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_MailingCountryInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_MailingStateInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_MailingStreetInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_MailingZIPInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Converts Mailing Address to capital</description>
+        <formula>OR(OR(ISNEW(),ISCHANGED(	NS_MailingAddressCity__c)),OR(ISNEW(),ISCHANGED(	NS_MailingAddressCountry__c)),OR(ISNEW(),ISCHANGED(NS_MailingAddressState__c)),OR(ISNEW(),ISCHANGED(NS_MailingAddressStreet__c)),OR(ISNEW(),ISCHANGED( NS_MailingAddressZip__c )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Name is Capital</fullName>
+        <actions>
+            <name>NS_ConvertNameToCapitals</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Converts the Account name to Capital Letters</description>
+        <formula>OR( ISNEW(), ISCHANGED(Name) )</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Physical Address in Capital</fullName>
+        <actions>
+            <name>NS_PhysicalCityInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_PhysicalCountryInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_PhysicalStateInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_PhysicalStreetInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_PhysicalZipInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Converts Physical Address in Capital</description>
+        <formula>OR(OR(ISNEW(),ISCHANGED( NS_PhysicalAddressCity__c  )),OR(ISNEW(),ISCHANGED(  NS_PhysicalAddressCountry__c  )),OR(ISNEW(),ISCHANGED( NS_PhysicalAddressState__c   )),OR(ISNEW(),ISCHANGED( NS_PhysicalAddressStreet__c  )), OR(ISNEW(),ISCHANGED(  NS_PhysicalAddressZip__c )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Shipping Address in Capital</fullName>
+        <actions>
+            <name>NS_ShippingCityInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_ShippingCountryInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_ShippingStateInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_ShippingStreetInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>NS_ShippingZIPInCapital</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <description>Converts shipping address letters into Capital</description>
+        <formula>OR( OR(ISNEW(),ISCHANGED(  ShippingCity )), OR(ISNEW(),ISCHANGED(  ShippingCountry )), OR(ISNEW(),ISCHANGED(   ShippingState )), OR(ISNEW(),ISCHANGED(   ShippingStreet )), OR(ISNEW(),ISCHANGED(   ShippingPostalCode )))</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- PM Efforts --></label>
+    <name>PM_Efforts__c</name>
+    <picklistValues>
+        <masterLabel>CAR Activities</masterLabel>
+        <translation><!-- CAR Activities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DAR Activities</masterLabel>
+        <translation><!-- DAR Activities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>DART Activities</masterLabel>
+        <translation><!-- DART Activities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>EBS Reporting</masterLabel>
+        <translation><!-- EBS Reporting --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Closing</masterLabel>
+        <translation><!-- Project Closing --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Initiation</masterLabel>
+        <translation><!-- Project Initiation --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Project Planning</masterLabel>
+        <translation><!-- Project Planning --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Review Defect Logs</masterLabel>
+        <translation><!-- Review Defect Logs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Review Issue Logs</masterLabel>
+        <translation><!-- Review Issue Logs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Review Risk Logs</masterLabel>
+        <translation><!-- Review Risk Logs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Update Issue Logs</masterLabel>
+        <translation><!-- Update Issue Logs --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Update Project Plan</masterLabel>
+        <translation><!-- Update Project Plan --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Update Risk Logs</masterLabel>
+        <translation><!-- Update Risk Logs --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

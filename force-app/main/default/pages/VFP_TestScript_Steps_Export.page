@@ -1,0 +1,25 @@
+<apex:page standardController="Execution_Steps__c"  contentType="text/csv#Script_Steps.csv" cache="true" extensions="VFC_TScript_Steps_Export" recordSetVar="item" >
+      Step Name,Input Data,Expected Result,User Login Details
+         <apex:repeat value="{!scrptLst}" var="stp">
+         {!stp.Step_Name__c},{!stp.Input_Data__c},{!stp.Expected_Result__c},{!stp.User_Login_Details__c }
+         </apex:repeat>
+            
+            <!--<table>
+                 <tr>
+                     <th>Step Name</th>
+                     <th>Input Data</th>
+                     <th>Expected Result</th>
+                     <th>User Login Details</th>
+                 </tr>
+                 <apex:repeat value="{!scrptLst}" var="stp">
+                     <tr>
+                         <td>{!stp.Step_Name__c}</td>
+                         <td>{!stp.Input_Data__c}</td>
+                         <td>{!stp.Expected_Result__c}</td>
+                         <td>{!stp.User_Login_Details__c }</td>
+                     </tr>
+                 </apex:repeat>
+             </table>-->
+         
+    
+</apex:page>

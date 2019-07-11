@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Which Phase of the Project is this? (ie.g. Phase 1) --></help>
+    <label><!-- Project Phase --></label>
+    <name>Release__c</name>
+    <relationshipLabel><!-- Test Results --></relationshipLabel>
+</CustomFieldTranslation>

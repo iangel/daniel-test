@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Status_Update__c</fullName>
+    <description>Release status update</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Release status update</inlineHelpText>
+    <label>Comments</label>
+    <length>32000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

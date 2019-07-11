@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Releases__c</fullName>
+    <description>Add Session to The Existing Project</description>
+    <externalId>false</externalId>
+    <label>Releases</label>
+    <referenceTo>Release__c</referenceTo>
+    <relationshipLabel>Value Delivery Sessions</relationshipLabel>
+    <relationshipName>Value_Delivery_Sessions</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>false</reparentableMasterDetail>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Comments__c</fullName>
+    <description>Comments or additional information about Milestone.</description>
+    <externalId>false</externalId>
+    <inlineHelpText>Use this comment box to indicate the variance between milestone dates. (e.g. Holidays)</inlineHelpText>
+    <label>Comments</label>
+    <length>4000</length>
+    <trackTrending>false</trackTrending>
+    <type>LongTextArea</type>
+    <visibleLines>3</visibleLines>
+</CustomField>

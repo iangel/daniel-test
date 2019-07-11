@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Component --></label>
+    <name>Component__c</name>
+    <picklistValues>
+        <masterLabel>Accounts</masterLabel>
+        <translation><!-- Accounts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Activities</masterLabel>
+        <translation><!-- Activities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Campaigns</masterLabel>
+        <translation><!-- Campaigns --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Cases</masterLabel>
+        <translation><!-- Cases --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Contacts</masterLabel>
+        <translation><!-- Contacts --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Leads</masterLabel>
+        <translation><!-- Leads --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Opportunities</masterLabel>
+        <translation><!-- Opportunities --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Products</masterLabel>
+        <translation><!-- Products --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Report / Dashboard</masterLabel>
+        <translation><!-- Report / Dashboard --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Role Hierarchy</masterLabel>
+        <translation><!-- Role Hierarchy --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Search</masterLabel>
+        <translation><!-- Search --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Users</masterLabel>
+        <translation><!-- Users --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

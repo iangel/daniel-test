@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label><!-- Deliverable Type --></label>
+    <name>Deliverable_Type__c</name>
+    <picklistValues>
+        <masterLabel>Content</masterLabel>
+        <translation><!-- Content --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Logistics</masterLabel>
+        <translation><!-- Logistics --></translation>
+    </picklistValues>
+    <picklistValues>
+        <masterLabel>Strategy</masterLabel>
+        <translation><!-- Strategy --></translation>
+    </picklistValues>
+</CustomFieldTranslation>

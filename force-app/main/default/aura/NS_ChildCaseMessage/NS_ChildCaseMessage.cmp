@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global" >
+    
+    <div class="slds-align_absolute-center slds-theme_error">
+        
+        <h1 style="color:White;font-size:180%;">INTERNAL REQUEST</h1>
+        
+    </div>
+    <div class="slds-align_absolute-center  slds-theme_error">
+        
+        <h2 style="color:White;"> Not For External Communication</h2>    
+        
+    </div>
+    
+    
+</aura:component>

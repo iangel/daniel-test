@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Milestone</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Milestones</value>
+    </caseValues>
+    <layouts>
+        <layout>Milestone for Asset/Initiative Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestone --></label>
+            <section>Milestone</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Milestone for Releases Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestone --></label>
+            <section>Milestone</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <description><!-- Milestones for Assets/Initiatives --></description>
+        <label><!-- Milestone for Asset/Initiative --></label>
+        <name>Milestone_Asset_Initiative</name>
+    </recordTypes>
+    <recordTypes>
+        <description><!-- Milestones specific to Releases. --></description>
+        <label><!-- Milestone for Release --></label>
+        <name>Milestone_Release</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select an appropriate status for this milestone. --></errorMessage>
+        <name>Progress_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Actual End Date can&apos;t be greater than today&apos;s date. --></errorMessage>
+        <name>Release_Actual_End_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Select an appropriate Milestone. --></errorMessage>
+        <name>SetMilestone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Planned/Actual End Date must be greater than the Start Date. --></errorMessage>
+        <name>planned_end_date</name>
+    </validationRules>
+</CustomObjectTranslation>

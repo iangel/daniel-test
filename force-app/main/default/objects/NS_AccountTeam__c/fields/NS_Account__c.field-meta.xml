@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NS_Account__c</fullName>
+    <description>Related Account</description>
+    <externalId>false</externalId>
+    <label>Account</label>
+    <lookupFilter>
+        <active>false</active>
+        <errorMessage>Account must be an Active Account.</errorMessage>
+        <filterItems>
+            <field>Account.NS_StatusIndicator__c</field>
+            <operation>equals</operation>
+            <value>Active</value>
+        </filterItems>
+        <isOptional>false</isOptional>
+    </lookupFilter>
+    <referenceTo>Account</referenceTo>
+    <relationshipLabel>NS Account Team</relationshipLabel>
+    <relationshipName>Norfolk_Southern_Account_Team</relationshipName>
+    <relationshipOrder>0</relationshipOrder>
+    <reparentableMasterDetail>true</reparentableMasterDetail>
+    <trackTrending>false</trackTrending>
+    <type>MasterDetail</type>
+    <writeRequiresMasterRead>false</writeRequiresMasterRead>
+</CustomField>

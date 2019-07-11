@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Start_Date_of_Week_strt__c</fullName>
+    <externalId>false</externalId>
+    <formula>DATE(
+    YEAR( Start_Date__c ),
+    Month(Start_Date__c),
+    DAY(Start_Date__c)-MOD(Start_Date__c - DATE(1900, 1, 1), 7))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Start Date of Week_start_Date</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Date</type>
+</CustomField>

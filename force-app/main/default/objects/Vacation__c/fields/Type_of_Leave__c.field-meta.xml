@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Type_of_Leave__c</fullName>
+    <externalId>false</externalId>
+    <label>Type of Leave</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>SickLeave</fullName>
+                <default>false</default>
+                <label>SickLeave</label>
+            </value>
+            <value>
+                <fullName>Training</fullName>
+                <default>false</default>
+                <label>Training</label>
+            </value>
+            <value>
+                <fullName>Planned Vacation</fullName>
+                <default>false</default>
+                <label>Planned Vacation</label>
+            </value>
+            <value>
+                <fullName>Floating</fullName>
+                <default>false</default>
+                <label>Floating</label>
+            </value>
+            <value>
+                <fullName>Compensatory Off</fullName>
+                <default>false</default>
+                <label>Compensatory Off</label>
+            </value>
+            <value>
+                <fullName>Emergency / Unplanned</fullName>
+                <default>false</default>
+                <label>Emergency / Unplanned</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

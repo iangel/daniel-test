@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Defect_Age__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(UPPER(MID( Current_Status__c , 1, 6))=&quot;CLOSED&quot;, IF(FLOOR((Closed_Date__c - CreatedDate)/365) &gt;= 1, TEXT(FLOOR((Closed_Date__c - CreatedDate)/365))&amp; &quot; Y+&quot;, IF(FLOOR((Closed_Date__c - CreatedDate)/30) &gt;= 1, TEXT(FLOOR((Closed_Date__c - CreatedDate)/30))&amp; &quot; M+&quot;, IF(FLOOR((Closed_Date__c - CreatedDate)/7) &gt;= 1, TEXT(FLOOR((Closed_Date__c - CreatedDate)/7))&amp; &quot; W+&quot;, TEXT(FLOOR(Closed_Date__c - CreatedDate))&amp; &quot; D&quot;))), IF(FLOOR((NOW() - CreatedDate)/365) &gt;= 1, TEXT(FLOOR((NOW() - CreatedDate)/365))&amp; &quot; Y+&quot;, IF(FLOOR((NOW() - CreatedDate)/30) &gt;= 1, TEXT(FLOOR((NOW() - CreatedDate)/30))&amp; &quot; M+&quot;, IF(FLOOR((NOW() - CreatedDate)/7) &gt;= 1, TEXT(FLOOR((NOW() - CreatedDate)/7))&amp; &quot; W+&quot;, TEXT(FLOOR(NOW() - CreatedDate))&amp; &quot; D&quot;))))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Defect Age</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

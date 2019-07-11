@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomFieldTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <help><!-- Person who is responsible for the impact assessment --></help>
+    <label><!-- Impact Assessment Owner --></label>
+    <name>Impact_Assessment_Owner__c</name>
+    <relationshipLabel><!-- Impact Assessments --></relationshipLabel>
+</CustomFieldTranslation>
